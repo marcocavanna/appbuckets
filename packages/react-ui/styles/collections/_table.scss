@@ -1,0 +1,444 @@
+/**
+ * AppBuckets UI
+ *
+ * _Table @ src/styles/collections/_table.scss
+ *
+ * Defined at 29 giu 2020
+ * Copyright Marco Cavanna • 2020
+ *
+ * ---
+ * Tables Style
+ *
+ */
+
+table,
+.table {
+  color: $text;
+  width: 100%;
+  max-width: 100%;
+  display: table;
+
+  // ----
+  //  Set base Style for Cell
+  // ----
+  .head,
+  .body,
+  .foot {
+    > .row {
+      > .cell {
+        display: table-cell;
+        position: relative;
+        vertical-align: middle;
+        border: none;
+        border-collapse: collapse;
+        text-align: left;
+        outline: none;
+        padding: ($table-rows-gutter / 2) ($table-columns-gutter / 2);
+
+        &:first-child {
+          padding-left: $table-columns-gutter;
+        }
+
+        &:last-child {
+          padding-right: $table-columns-gutter;
+        }
+      }
+    }
+  }
+
+  // ----
+  //  Set Default Colors and Transition Properties
+  // ----
+  .row,
+  .cell,
+  .cell .cell-text-content,
+  .cell .cell-text-title,
+  .cell .cell-text-meta {
+    background-color: transparent;
+    opacity: 1;
+    transition-timing-function: $transition-ease;
+    transition-duration: $transition-duration;
+    transition-property: background-color, color, opacity;
+    will-change: background-color, color, opacity;
+  }
+}
+
+
+/******
+    Table Header
+******/
+table > .head,
+.table > .head {
+  display: table-header-group;
+
+  // ----
+  //  Header Row Style
+  // ----
+  > .row {
+    display: table-row;
+
+    &:last-child > .cell {
+      border-bottom-style: $table-header-border-style;
+      border-bottom-width: $table-header-border-width;
+      border-bottom-color: $table-header-border-color;
+    }
+  }
+
+  // ----
+  //  Header Cell Style
+  // ----
+  > .row > .cell {
+    display: table-cell;
+    font-weight: $table-header-font-weight;
+    color: $table-header-color;
+    text-transform: $table-header-text-transform;
+    -webkit-touch-callout: none;
+    white-space: nowrap;
+    overflow: hidden;
+
+    > .cell-text-meta {
+      font-size: $table-header-meta-font-size;
+      text-transform: $table-header-meta-text-transform;
+      opacity: $table-header-meta-opacity;
+    }
+
+    > .cell-text-content {
+      font-size: $table-header-content-font-size;
+      text-transform: $table-header-content-text-transform;
+      opacity: $table-header-content-opacity;
+    }
+  }
+}
+
+
+/******
+    Table Body
+******/
+.table > .body {
+  display: table-row-group;
+
+  // ----
+  //  Table Row Style
+  // ----
+  > .row {
+    display: table-row;
+    border-bottom-style: $table-body-border-style;
+    border-bottom-width: $table-body-border-width;
+    border-bottom-color: $table-body-border-color;
+
+    @if $table-body-border-after-last-row != true {
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+}
+
+
+/******
+    Table Footer Style
+******/
+.table > .foot {
+  display: table-footer-group;
+
+  > .row {
+    display: table-row;
+
+    &:first-child > .cell {
+      border-top-style: $table-footer-border-style;
+      border-top-color: $table-footer-border-color;
+      border-top-width: $table-footer-border-width;
+    }
+  }
+
+}
+
+
+/******
+    Table Cell Style
+******/
+.table > .body,
+.table > .foot {
+  > .row > .cell {
+
+    // ----
+    //  Set base Cell Text Style
+    // ----
+    .cell-text-meta,
+    .cell-text-title,
+    .cell-text-content {
+      color: inherit;
+      display: block;
+      line-height: 1.25;
+      width: 100%;
+      margin: 0;
+    }
+
+    .cell-text-title {
+      font-weight: $table-cell-header-font-weight;
+    }
+
+    .cell-text-content {
+      opacity: $table-cell-content-opacity;
+      font-size: $table-cell-content-font-size;
+    }
+
+
+    // ----
+    //  Set Text Style for not Wrapped Cell
+    // ----
+    &:not(.wrapped) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      .cell-text-meta,
+      .cell-text-title,
+      .cell-text-content {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+
+/******
+    Set the Checkbox Selector Base Style
+******/
+.table .row .selector.cell {
+  text-align: center;
+
+  .checkbox.field {
+    display: inline-block;
+  }
+}
+
+
+/******
+    Color Variation
+******/
+.table .row > .cell {
+  @each $label, $color in $react-bucket-color-map {
+    &.is-#{$label} {
+      background-color: transparentize($color, $table-color-variation-transparency);
+      color: $color;
+    }
+  }
+}
+
+
+/******
+    Icon Cell Content
+******/
+.table {
+
+  // ----
+  //  Set Icon Style
+  // ----
+  .row > .cell.with-icon > svg.icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  // ----
+  //  Adjust Padding
+  // ----
+  .row > .cell.with-icon {
+    padding-left: calc(#{$table-columns-gutter / 2} + #{$icon-width});
+
+    > svg.icon {
+      left: $table-columns-gutter / 2;
+    }
+
+    &:first-child {
+      padding-left: calc(#{$table-columns-gutter} + #{$icon-width});
+
+      > svg.icon {
+        left: $table-columns-gutter;
+      }
+    }
+  }
+
+  &.compressed .row > .cell.with-icon {
+    padding-left: calc(#{$table-compressed-columns-gutter / 2} + #{$icon-width});
+
+    > svg.icon {
+      left: $table-compressed-columns-gutter / 2;
+    }
+
+    &:first-child {
+      padding-left: calc(#{$table-compressed-columns-gutter} + #{$icon-width});
+
+      > svg.icon {
+        left: $table-compressed-columns-gutter;
+      }
+    }
+  }
+}
+
+
+/******
+    Sortable Header Cell
+******/
+.table .row > .sortable.cell {
+  cursor: pointer;
+
+  &.sorted {
+    color: $table-sortable-header-active-color;
+  }
+
+  // ----
+  //  Sortable Icon
+  // ----
+  .cell-text-title {
+    &:before {
+      margin-right: $table-sortable-icon-spacer;
+      opacity: $table-sortable-icon-opacity;
+    }
+  }
+
+  &.sorted {
+    .cell-text-title {
+      &:before {
+        opacity: $table-sortable-icon-sorted-opacity;
+      }
+    }
+  }
+
+  @include hover {
+    transition: color $transition-ease $transition-speed-fast;
+
+    &:hover {
+      color: $table-sortable-header-hover-color;
+
+      &.sorted {
+        color: color-shade($table-sortable-header-active-color, 1)
+      }
+    }
+  }
+}
+
+
+/******
+    Compressed Table Has half cell / row gutter
+******/
+.compressed.table .row > .cell {
+  padding: ($table-compressed-rows-gutter / 2) ($table-compressed-columns-gutter / 2);
+
+  &:first-child {
+    padding-left: $table-compressed-columns-gutter;
+  }
+
+  &:last-child {
+    padding-right: $table-compressed-columns-gutter;
+  }
+}
+
+
+/******
+    A Responsive Table container is horizontally scrollable
+******/
+.responsive-table {
+  overflow-x: auto;
+}
+
+
+/******
+    Clickable Row Behaviour
+******/
+.table .clickable.row {
+  cursor: pointer;
+}
+
+
+/******
+    On Virtualized Table, remove and reset display declaration
+******/
+.virtualized.table {
+  &,
+  & .body,
+  & .body .cell {
+    display: block !important;
+  }
+
+  &.virtualized-head {
+    z-index: 2;
+    position: relative;
+  }
+
+  .head > .filter.row > .filter.cell {
+    overflow: visible;
+  }
+
+  > .body > .row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+
+    > .cell {
+      display: flex !important;
+      align-items: center;
+    }
+
+    &:not(.last) {
+      border-bottom-style: $table-body-border-style;
+      border-bottom-width: $table-body-border-width;
+      border-bottom-color: $table-body-border-color;
+    }
+  }
+
+  .cell-content {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+
+  // ----
+  //  Set Extra Row position and Margins
+  // ----
+  > .body {
+    > .loading-row,
+    > .error-row,
+    > .no-content-row {
+      justify-content: center;
+      border-bottom: none !important;
+    }
+
+    > .error-row {
+      padding: 2em 0;
+
+      > .cell > .message {
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+/******
+    Position the Scroll On Top
+******/
+.virtualized-table {
+  position: relative;
+
+  > .scroll-on-top {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: scale(0);
+    transform-origin: center center;
+    transition-duration: $transition-duration !important;
+    transition-property: all !important;
+    transition-timing-function: $transition-ease !important;
+
+    &.visible {
+      transform: scale(1);
+    }
+  }
+}

@@ -1,0 +1,259 @@
+/**
+ * AppBuckets UI
+ *
+ * _Progress @ src/styles/elements/_progress.scss
+ *
+ * Defined at 25 giu 2020
+ * Copyright Marco Cavanna • 2020
+ *
+ * ---
+ * Progress Bar Styles
+ *
+ */
+
+.progress {
+  display: block;
+  width: 100%;
+  flex: 1 0 100%;
+}
+
+
+/******
+    Linear Progress Bar
+******/
+.linear.progress {
+  // ----
+  //  Bar will contain the Progress Value
+  // ----
+  > .bar {
+    display: block;
+    width: 100%;
+    flex: 1 0 100%;
+    position: relative;
+    height: $linear-progress-height;
+    background-color: $progress-bar-background;
+    border-radius: $linear-progress-height / 2;
+    overflow: hidden;
+    transition: background-color $transition-duration $transition-ease;
+    will-change: background-color;
+  }
+
+  // ----
+  //  Value is the extensible bar
+  // ----
+  > .bar > .value {
+    position: relative;
+    display: block;
+    height: 100%;
+    background-color: $progress-value-background;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-ease;
+    transition-property: width, background-color;
+    will-change: width, background-color;
+  }
+
+  // ----
+  //  Place the Indicator inside Value Bar
+  // ----
+  > .bar > .value > .indicator {
+    position: absolute;
+    top: 50%;
+    right: .5em;
+    left: auto;
+    transform: translateY(-50%);
+    color: $linear-progress-indicator-color;
+    font-size: $progress-indicator-size;
+    font-weight: $progress-indicator-font-weight;
+  }
+
+  // ----
+  //  Overvalued Progress must show Indicator on right
+  // ----
+  &.overvalued > .bar {
+    position: relative;
+
+    > .value {
+      position: static;
+    }
+  }
+
+  // ----
+  //  Format Limits
+  // ----
+  > .limits {
+    display: flex;
+    justify-content: space-between;
+    color: $linear-progress-limits-color;
+    font-weight: $linear-progress-limits-font-weight;
+    margin-bottom: $linear-progress-limits-spacer;
+
+    > .value {
+      flex-grow: 0;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    > .overvalue {
+      text-align: right;
+    }
+  }
+
+  // ----
+  //  Reverse Linear Logic
+  // ----
+  &.reverse {
+    > .bar > .value {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    > .bar > .value > .indicator {
+      right: auto;
+      left: .5em;
+    }
+
+    > .limits {
+      flex-direction: row-reverse;
+
+      > .value {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+
+
+/******
+    Circular Progress Style
+******/
+.circular.progress {
+  position: relative;
+
+  > svg {
+    // ----
+    //  Remove fill color
+    // ----
+    > circle {
+      fill: none;
+    }
+
+    // ----
+    //  Set Bar and Value Color
+    // ----
+    > .bar {
+      stroke: $progress-bar-background;
+    }
+
+    > .value {
+      stroke: $progress-value-background;
+      stroke-linecap: $circular-progress-linecap;
+      stroke-linejoin: $circular-progress-linejoin;
+    }
+  }
+
+  // ----
+  //  Indicator Element
+  // ----
+  > .indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $circular-progress-indicator-color;
+    font-weight: $progress-indicator-font-weight;
+    font-size: $progress-indicator-size * .75;
+  }
+}
+
+
+/******
+    Colors Step
+******/
+.progress {
+
+  // ----
+  //  Automatic Colors
+  // ----
+  &.is-low {
+    &.linear > .bar > .value {
+      background-color: $danger;
+    }
+
+    &.circular > svg > .value {
+      stroke: $danger;
+    }
+
+    &.overvalued > .bar {
+      background-color: lighten($danger, 15%);
+    }
+
+    &.overvalued > svg > .bar {
+      stroke: lighten($danger, 15%);
+    }
+  }
+
+  &.is-mid-low {
+    &.linear > .bar > .value {
+      background-color: mix($danger, $warning);
+    }
+
+    &.circular > svg > .value {
+      stroke: mix($danger, $warning);
+    }
+  }
+
+  &.is-mid {
+    &.linear > .bar > .value {
+      background-color: $warning;
+    }
+
+    &.circular > svg > .value {
+      stroke: $warning;
+    }
+  }
+
+  &.is-mid-high {
+    &.linear > .bar > .value {
+      background-color: mix($warning, $success, 25%);
+    }
+
+    &.circular > svg > .value {
+      stroke: mix($warning, $success, 25%);
+    }
+  }
+
+  &.is-high {
+    &.linear > .bar > .value {
+      background-color: $success;
+    }
+
+    &.circular > svg > .value {
+      stroke: $success;
+    }
+
+    &.overvalued > .bar {
+      background-color: lighten($success, 15%);
+    }
+
+    &.overvalued > svg > .bar {
+      stroke: lighten($success, 15%);
+    }
+  }
+
+
+  // ----
+  //  Appearance Color
+  // ----
+  @each $label, $color in $react-bucket-color-map {
+    &.is-#{$label} {
+      &.linear > .bar > .value {
+        background-color: $color;
+      }
+
+      &.overvalued > .bar {
+        background-color: lighten($color, 10%);
+      }
+    }
+  }
+}

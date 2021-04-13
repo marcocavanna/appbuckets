@@ -1,0 +1,76 @@
+@mixin each-breakpoint() {
+  @each $breakpoint in map-keys($map: $breakpoints-map) {
+    @include on-screen($breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin selectors-for-each-breakpoint(// Selectors to create,
+  // could be single or a list of selector eg. margin | 'margin'
+  // with round brackets eg. (margin, padding) | ('margin', 'padding')
+  $selectors-list,
+  // Choose if selectors must be attached to parent (if exists)
+  // If parents doesn't exists this param will be skipped
+  $attach-to-selector: false,
+  // Choose if create selectors without any breakpoints
+  $selectors-without-breakpoint: true,
+  // Choose if create selectors for each breakpoints
+  $selectors-with-breakpoint: true
+) {
+
+  // Init variables
+  $selectors: ();
+  $parent: null;
+
+  // Check if parent exists
+  @if & {
+    $parent: '&';
+  } @else {
+    $parent: '';
+  }
+
+  // Refactor $parent if must attach the selector
+  @if $attach-to-selector == false {
+    $parent: '#{$parent} ';
+  }
+
+  // If must create the selectors without any breakpoint
+  // Append each selector to selectors list
+  @if $selectors-without-breakpoint {
+    // Loop each selectors
+    @each $selector in $selectors-list {
+      $selectors: append($selectors, '#{$parent}.#{$selector}', $separator: comma);
+    }
+
+    // Check if selectors has length
+    // and create the rules
+    @if length($selectors) > 0 {
+      #{$selectors} {
+        @content;
+      }
+    }
+  }
+
+  // Check if must create the selectors for each breakpoints
+  @if $selectors-with-breakpoint {
+    // Loop each breakpoints
+    @each $breakpoint in map-keys($breakpoints-map) {
+
+      // Build breakpoints selector list
+      $breakpoint-selectors: ();
+
+      // Append each selector to breakpoints selectors
+      @each $selector in $selectors-list {
+        $breakpoint-selectors: append($breakpoint-selectors, '#{$parent}.on-#{$breakpoint}-#{$selector}', $separator: comma);
+      }
+
+      // Create the Media Query
+      @include on-screen($breakpoint) {
+        #{$breakpoint-selectors} {
+          @content;
+        }
+      }
+    }
+  }
+}

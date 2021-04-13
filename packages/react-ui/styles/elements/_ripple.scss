@@ -1,0 +1,41 @@
+/**
+ * AppBuckets UI
+ *
+ * _Ripple @ src/styles/elements/_ripple.scss
+ *
+ * Defined at 06 apr 2021
+ * Copyright Marco Cavanna • 2021
+ *
+ * ---
+ * Ripple Style and Animation
+ *
+ */
+
+@keyframes useRippleAnimation {
+  to {
+    transform: scale(15);
+    opacity: 0;
+  }
+}
+
+.ripple-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+
+  & > .ripple {
+    display: block;
+    position: absolute;
+    background: $ripple-base-color;
+    border-radius: 50%;
+    opacity: $ripple-base-opacity;
+    pointer-events: none;
+    animation-name: useRippleAnimation;
+    animation-duration: $ripple-animation-duration;
+    transform: scale(0);
+  }
+}

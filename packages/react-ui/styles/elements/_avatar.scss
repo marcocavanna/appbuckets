@@ -1,0 +1,113 @@
+/**
+ * AppBuckets UI
+ *
+ * _Avatar @ src/styles/elements/_avatar.scss
+ *
+ * Defined at 09 ott 2020
+ * Copyright Marco Cavanna • 2020
+ *
+ * ---
+ *
+ *
+ */
+
+/******
+    Base Avatar Style
+******/
+.avatar {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  flex: 0 0;
+  line-height: $avatar-base-size;
+  height: $avatar-base-size;
+
+  // ----
+  //  Avatar Shadow
+  // ----
+  box-shadow: $avatar-inner-shadow;
+  will-change: box-shadow;
+  transition: box-shadow $transition-speed-fast $transition-ease;
+
+  // ----
+  //  Content Disposition
+  // ----
+  text-align: center;
+  font-weight: $avatar-font-weight;
+  border-radius: $avatar-square-border-radius;
+
+  // ----
+  //  Flat Content Background
+  // ----
+  &.flat {
+    background-color: transparent !important;
+    box-shadow: none !important;
+
+    > .content {
+      color: $avatar-flat-content-color;
+      opacity: $avatar-flat-content-opacity;
+    }
+  }
+
+  // ----
+  //  Avatar Size for different type
+  // ----
+  &.round,
+  &.square {
+    flex-basis: $avatar-base-size;
+    width: $avatar-base-size;
+  }
+
+  &.round {
+    border-radius: $avatar-round-border-radius;
+  }
+
+  &.flex {
+    padding-left: $avatar-flex-horizontal-padding;
+    padding-right: $avatar-flex-horizontal-padding;
+  }
+
+  // ----
+  //  Adjust Content
+  // ----
+  > .content {
+    font-size: $avatar-content-font-size;
+
+    > .icon {
+      margin: 0 !important;
+      font-size: $avatar-icon-font-size;
+    }
+  }
+
+  // ----
+  //  Avatar Variation
+  // ----
+  @include color-property-variation(
+    $base-color: $avatar-base-background-color,
+    $properties-list: background-color,
+    $use-brands: $generate-button-brands-variation,
+    $use-ui: $generate-button-ui-variation,
+    $use-social: $generate-button-social-variation,
+    $is-interactive: true,
+    $interactive-class: 'clickable',
+    $hover-will-drop-shadow: false,
+    $with-hover: true,
+    $with-focus: true,
+    $with-active: true
+  )
+}
+
+
+/******
+    Avatar Badge
+******/
+.badged.avatar .badge {
+  position: absolute;
+  left: 100%;
+  bottom: 100%;
+  transform: translate(-90%, 90%);
+
+  &.with-content {
+    transform: translate(-60%, 50%);
+  }
+}

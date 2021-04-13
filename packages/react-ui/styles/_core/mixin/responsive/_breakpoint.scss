@@ -1,0 +1,147 @@
+/// Apply a set of rules for a breakpoint
+/// set of rules are applied using min or max width
+/// depending on screen-name and mobile-first option
+///
+/// @content Style to Apply
+@mixin on-screen($screen-name) {
+  @if $draw-ui-mobile-first != true {
+    // Get the next breakpoint name
+    $__next_breakpoint: next-breakpoint-name($screen-name);
+    // Get this breakpoint screen size
+    $__screen_size: max-breakpoint-size($screen-name);
+
+    // If screen size exists set rules
+    @if $__screen_size != null {
+      @if $__next_breakpoint != null {
+        @media all and (max-width: $__screen_size) {
+          @content;
+        }
+      } @else {
+        @content;
+      }
+    }
+  } @else {
+    // Get previous breakpoint name
+    $__previous_breakpoint: previous-breakpoint-name($screen-name);
+    // Get next breakpoint name
+    $__next_breakpoint: next-breakpoint-name($screen-name);
+
+    @if $__previous_breakpoint != null {
+      $__screen_size: max-breakpoint-size($__previous_breakpoint) + 1;
+
+      @if $__screen_size != null {
+        @media all and (min-width: $__screen_size) {
+          @content;
+        }
+      }
+    } @else {
+      @content;
+    }
+  }
+}
+
+
+/// Apply a set of rules to a screen only
+@mixin exact-screen($screen-name) {
+  $__screen_min_size: min-breakpoint-size($screen-name);
+  $__screen_max_size: max-breakpoint-size($screen-name);
+
+  @if $__screen_min_size == null {
+    @include on-screen($screen-name) {
+      @content;
+    }
+  } @else {
+    @media all and (min-width: $__screen_min_size) and (max-width: $__screen_max_size) {
+      @content;
+    }
+  }
+}
+
+@mixin min-screen($screen-name) {
+  $__screen_min_size: min-breakpoint-size($screen-name);
+
+  @if $__screen_min_size == null {
+    @content;
+  } @else {
+    @media all and (min-width: $__screen_min_size) {
+      @content;
+    }
+  }
+}
+
+@mixin max-screen($screen-name) {
+  $__screen_max_size: max-breakpoint-size($screen-name);
+
+  @if $__screen_max_size != null {
+    @media all and (max-width: $__screen_max_size) {
+      @content;
+    }
+  }
+}
+
+@mixin on-retina() {
+  @media(-webkit-min-device-pixel-ratio: 1.5),
+  (min--moz-device-pixel-ratio: 1.5),
+  (-o-min-device-pixel-ratio: 3/2),
+  (min-resolution: 1.5dppx) {
+    @content;
+  }
+}
+
+@function max-breakpoint-size($screen-name) {
+  @if map-has-key($breakpoints-map, $screen-name) == false {
+    @error 'Invalid Screen name #{$screen-name}';
+  }
+
+  @return map-get($breakpoints-map, $screen-name);
+}
+
+@function min-breakpoint-size($screen-name) {
+  $__previous_breakpoint: previous-breakpoint-name($screen-name);
+
+  @if $__previous_breakpoint != null {
+    @return map-get($breakpoints-map, $__previous_breakpoint) + 1;
+  }
+
+  @return null;
+}
+
+@function max-next-breakpoint-size($screen-name) {
+  $__next_breakpoint: next-breakpoint-name($screen-name);
+
+  @if $__next_breakpoint == null {
+    @return null;
+  } @else {
+    @return map-get($breakpoints-map, $__next_breakpoint) - 1;
+  }
+}
+
+@function next-breakpoint-name($screen-name) {
+  // Get Breakpoint Index
+  $__breakpoints_list: map-keys($breakpoints-map);
+  // Get Screen Index
+  $__screen_index: index($__breakpoints_list, $screen-name);
+  // Check Screen Exists
+  @if $__screen_index == null {
+    @error 'Invalid Screen name #{$screen-name}';
+  } @else if $__screen_index == length($__breakpoints_list) {
+    @return null;
+  } @else {
+    @return nth($__breakpoints_list, $__screen_index + 1);
+  }
+}
+
+@function previous-breakpoint-name($screen-name) {
+  // Get Breakpoint Index
+  $__breakpoints_list: map-keys($breakpoints-map);
+  // Get Screen Index
+  $__screen_index: index($__breakpoints_list, $screen-name);
+  // Check Screen Exists
+  @if $__screen_index == null {
+    @error 'Invalid Screen name #{$screen-name}';
+  } @else if $__screen_index == 1 {
+    @return null;
+  } @else {
+    @return nth($__breakpoints_list, $__screen_index - 1);
+  }
+}

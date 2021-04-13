@@ -1,0 +1,159 @@
+/**
+ * AppBuckets UI
+ *
+ * _Field @ src/styles/elements/_field.scss
+ *
+ * Defined at 18 set 2020
+ * Copyright Marco Cavanna • 2020
+ *
+ * ---
+ *
+ *
+ */
+
+
+/******
+    Base Field Style
+******/
+.field {
+  text-align: left;
+  position: relative;
+}
+
+
+/******
+    Field Label
+******/
+.field > label {
+  display: inline-block;
+  font-weight: $field-label-font-weight;
+  font-size: $field-label-font-size;
+  text-transform: $field-label-text-transform;
+  margin-bottom: $field-label-spacer;
+  padding-left: $field-label-spacer;
+  color: $field-label-color;
+  transition: color $transition-speed-fast $transition-ease;
+  will-change: color;
+}
+
+
+/******
+    Append the * on Required Field Label
+******/
+.required.field > label:after {
+  position: absolute;
+  transform: $field-required-symbol-transform;
+  font-size: $field-required-symbol-font-size;
+  content: $field-required-symbol-content;
+  color: $field-required-symbol-color;
+  opacity: $field-required-symbol-opacity;
+}
+
+
+/******
+    Field Container element
+******/
+.field > .wrapper {
+  display: flex;
+  width: 100%;
+
+  // ----
+  //  Content is the Main Div, must grow
+  // ----
+  > .content {
+    flex: 1 1;
+    display: flex;
+    position: relative;
+    width: 100%;
+
+    /// A Child that is an Item must be full width
+    > .item {
+      width: 100%;
+    }
+  }
+
+  // ----
+  //  Addon must not grow and shrink
+  // ----
+  > .addon {
+    flex-wrap: nowrap;
+
+    > .button {
+      margin: 0;
+    }
+  }
+}
+
+
+/******
+    Field States
+******/
+.field {
+  // ----
+  //  Organic State
+  // ----
+  &.focused {
+    > label {
+      color: $field-focus-label-color;
+    }
+
+    > .wrapper {
+      > .content {
+        > .icon:not(.clear) {
+          color: $field-focus-icon-color;
+        }
+      }
+    }
+  }
+
+  // ----
+  //  Appearance State
+  // ----
+  @each $label, $color in $react-bucket-color-map {
+    &.is-#{$label} {
+      $selector: '&';
+
+      @if $label == 'danger' or $label == 'info' or $label == 'primary' or $label == 'secondary' or $label == 'success' or $label == 'warning' {
+        $selector: '&'
+      } @else {
+        $selector: '&.focused';
+      }
+
+      #{$selector} {
+        > label {
+          color: $color;
+        }
+
+        > .wrapper {
+          > .content {
+            > .icon {
+              color: $color;
+            }
+          }
+        }
+
+        .addon.hint {
+          color: $color;
+        }
+      }
+    }
+  }
+}
+
+
+/******
+    Field Hint Message
+******/
+.field .addon.hint {
+  margin-top: $field-hint-spacer;
+  font-size: $field-hint-size;
+  padding-left: $field-hint-spacer;
+}
+
+
+/******
+    Field Actions
+******/
+.field .addon .button {
+  min-width: auto;
+}

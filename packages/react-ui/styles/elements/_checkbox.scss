@@ -1,0 +1,316 @@
+/**
+ * AppBuckets UI
+ *
+ * _Checkbox @ src/styles/elements/_checkbox.scss
+ *
+ * Defined at 25 set 2020
+ * Copyright Marco Cavanna • 2020
+ *
+ * ---
+ *
+ *
+ */
+
+/******
+    Hide the Checkbox
+******/
+input[type='checkbox'],
+input[type='radio'] {
+  @include visually-hidden;
+}
+
+
+/******
+    Set the Minimum Field Height
+******/
+.checkbox.field,
+.checkbox.field > .wrapper {
+  min-height: $checkbox-size;
+}
+
+
+/******
+    Set the Padding to the content
+    to let the checkbox be visible
+******/
+.checkbox .content,
+.switch .content {
+  $__checkbox-field-padding: ($checkbox-size - 1em) / 1.5;
+
+  @if strip-unit($__checkbox-field-padding) > 0 {
+    padding-top: $__checkbox-field-padding;
+    padding-bottom: $__checkbox-field-padding;
+  }
+}
+
+
+/******
+    Style the Label
+******/
+.checkbox .content > label,
+.switch .content > label {
+  // Heads Up! Cursor depends on disabled state
+  cursor: default;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  font-weight: $checkbox-label-font-weight;
+  vertical-align: middle;
+}
+
+
+/******
+    Draw the Box of the Checkbox
+******/
+.checkbox .content > label {
+  padding-left: $checkbox-label-distance;
+
+  // ----
+  //  Draw the Box
+  // ----
+  &:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 1px;
+    transform: translateY(-50%);
+
+    height: $checkbox-size;
+    width: $checkbox-size;
+
+    border-radius: $checkbox-border-radius;
+    background-color: $checkbox-background-color;
+    box-shadow: inset 0 0 0 $checkbox-border-width $checkbox-border-color;
+    opacity: 1;
+
+    will-change: background-color, box-shadow, opacity;
+    transition: background-color $transition-speed-fast $transition-ease,
+    box-shadow $transition-speed-fast $transition-ease,
+    opacity $transition-speed-fast $transition-ease;
+  }
+
+  // ----
+  //  Checkmark symbol
+  // ----
+  > svg.checkbox-icon {
+    position: absolute;
+    top: 50%;
+    left: 1px;
+    transform: translate(2%, -48%);
+    width: $checkbox-size;
+    margin: 0;
+
+    text-align: center;
+    color: inherit;
+    opacity: 0;
+
+    will-change: opacity, color;
+    transition: opacity $transition-speed-fast $transition-ease,
+    color $transition-speed-fast $transition-ease;
+  }
+}
+
+
+/******
+    Fix the Padding for Unlabeled Checkbox
+******/
+.checkbox .content > input.unlabeled + label {
+  padding-left: $checkbox-size;
+}
+
+
+/******
+    Draw the Switch
+******/
+.switch .content > label {
+  padding-left: $switch-label-distance;
+
+  // ----
+  //  Draw the Rail
+  // ----
+  &:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    height: $switch-bullet-size + ($switch-rail-expand-size * 2);
+    width: $switch-travel-distance;
+
+    border-radius: $border-radius-rounded;
+    background-color: $checkbox-background-color;
+    box-shadow: inset 0 0 0 $checkbox-border-width $checkbox-border-color;
+    opacity: 1;
+
+    will-change: background-color, box-shadow, opacity;
+    transition: background-color $transition-speed-fast $transition-ease,
+    box-shadow $transition-speed-fast $transition-ease,
+    opacity $transition-speed-fast $transition-ease;
+  }
+
+  // ----
+  //  Draw the Bullet
+  // ----
+  &:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: $switch-rail-expand-size;
+    transform: translateY(-50%);
+
+    height: $switch-bullet-size;
+    width: $switch-bullet-size;
+
+    border-radius: $border-radius-rounded;
+    background-color: $switch-bullet-background-color;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+
+    will-change: left, box-shadow;
+    transition: left $transition-speed-fast $transition-ease,
+    box-shadow $transition-speed-fast $transition-ease;
+  }
+}
+
+
+/******
+    Checked State
+******/
+.checkbox.field .indeterminate.checkbox + label {
+  &:before {
+    background-color: $checkbox-checked-background-color;
+    opacity: $checkbox-indeterminate-background-opacity;
+  }
+
+  > svg.checkbox-icon {
+    color: $checkbox-checked-checkmark-color;
+    opacity: 1;
+  }
+}
+
+.checkbox.field .checked.checkbox + label {
+  &:before {
+    background-color: $checkbox-checked-background-color;
+  }
+
+  > svg.checkbox-icon {
+    color: $checkbox-checked-checkmark-color;
+    opacity: 1;
+  }
+}
+
+.switch.field .checked.switch + label {
+  &:before {
+    background-color: $checkbox-checked-background-color;
+  }
+
+  &:after {
+    left: $switch-computed-travel-distance;
+  }
+}
+
+@each $label, $color in $react-bucket-color-map {
+  .checkbox.field.is-#{$label} .checked.checkbox + label:before {
+    background-color: $color;
+  }
+
+  .switch.field.is-#{$label} .switch {
+    &.checked {
+      + label:before {
+        background-color: $color;
+      }
+
+      &:not(.disabled) {
+        @include hover {
+          + label:hover:before {
+            background-color: transparentize($color, .15);
+          }
+        }
+      }
+    }
+
+    &:not(.checked):not(.disabled) + label {
+      @include hover {
+        &:hover:before {
+          background-color: transparentize($color, .85);
+        }
+      }
+    }
+  }
+}
+
+
+/******
+    Apply Transition when not disabled
+    and some additional style on disabled
+    checkbox
+******/
+.checkbox.field:not(.disabled) .checkbox {
+  + label {
+    cursor: pointer;
+  }
+
+  &:not(.checked) + label {
+    @include hover {
+      &:hover > svg.checkbox-icon {
+        opacity: .5;
+      }
+    }
+  }
+
+  &.checked + label {
+    @include hover {
+      &:hover:before {
+        opacity: .75;
+      }
+    }
+  }
+}
+
+.switch.field:not(.disabled) .switch {
+  + label {
+    cursor: pointer;
+  }
+
+  &:not(.checked) + label {
+    @include hover {
+      &:hover {
+        &:before {
+          background-color: transparentize($checkbox-checked-background-color, .75);
+        }
+      }
+    }
+  }
+
+  &.checked + label {
+    @include hover {
+      &:hover {
+        &:before {
+          background-color: transparentize($checkbox-checked-background-color, .15);
+        }
+      }
+    }
+  }
+}
+
+
+/******
+    Apply Disabled State
+******/
+.disabled.checkbox.field .content,
+.disabled.switch.field .content {
+  opacity: $disabled-element-opacity;
+}
+
+
+/******
+    Fix Text Align
+******/
+.has-text-center > .checkbox.field,
+.has-text-center > .switch.field {
+  text-align: center;
+
+  > .wrapper > .content {
+    justify-content: center;
+  }
+}

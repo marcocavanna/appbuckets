@@ -1,0 +1,179 @@
+/**
+ * AppBuckets UI
+ *
+ * _Icon @ src/styles/elements/_icon.scss
+ *
+ * Defined at 12 giu 2020
+ * Copyright Marco Cavanna • 2020
+ *
+ * ---
+ * Set the Icon Style
+ *
+ */
+
+/******
+    Build Main Icon Style
+******/
+.icon {
+  display: inline-block;
+  opacity: $icon-opacity;
+  margin: 0 $icon-spacer 0 0;
+  width: $icon-width;
+  text-decoration: inherit;
+  text-align: center;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  line-height: inherit;
+  font-size: inherit;
+  color: inherit;
+  position: relative;
+
+  // ----
+  //  Remove the fixed icon width
+  // ----
+  &.fitted {
+    width: auto;
+  }
+
+  // ----
+  //  Remove right spacing
+  // ----
+  &.unspaced {
+    margin-right: 0;
+  }
+
+  @each $label, $color in $react-bucket-color-map {
+    &.colored.is-#{$label}:before {
+      background-color: color-tint($color, 4) !important;
+    }
+
+    &.inverted.is-#{$label} {
+      color: choose-contrast-color($color, $text-contrast, $text) !important;
+
+      &:before {
+        background-color: $color !important;
+      }
+
+      &.bordered:before {
+        border-color: color-tint($color, 2) !important;
+      }
+    }
+  }
+
+  // ----
+  //  Clickable Icon must change pointer
+  // ----
+  &.clickable {
+    cursor: pointer;
+    text-shadow: none;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-ease;
+    transition-property: text-shadow, color, border-color;
+    will-change: text-shadow, color, border-color;
+  }
+
+  // ----
+  //  Disabled icon as lower opacity
+  // ----
+  &.disabled {
+    opacity: $disabled-element-opacity !important;
+
+    /// Clickable Item must show the not allowed cursor
+    &.clickable {
+      cursor: not-allowed;
+    }
+  }
+
+  // ----
+  //  Variate Icon Color
+  // ----
+  @include color-property-variation(
+    $base-color: null,
+    $properties-list: (color, border-color),
+    $use-brands: true,
+    $use-ui: true,
+    $use-social: true,
+    $is-interactive: true,
+    $interactive-class: 'clickable',
+    $hover-will-drop-shadow: $button-hover-will-drop-shadow,
+    $apply-shadow-to: text,
+    $with-hover: true,
+    $with-focus: true,
+    $with-active: true,
+    $shadow-strength: 4px,
+    $shadow-transparency: .7
+  );
+}
+
+/******
+    Div as Icon Container to apply Solid Style
+******/
+div.icon {
+  height: 1em;
+  width: $icon-width;
+
+  > svg {
+    color: inherit;
+    position: relative;
+    z-index: 2;
+  }
+
+  &:before {
+    border-color: inherit;
+  }
+
+  // ----
+  //  Set Solid / Bordered Style
+  // ----
+  &.bordered,
+  &.rounded,
+  &.circle {
+    min-width: $icon-bordered-box-size;
+
+    &:before {
+      content: '';
+      position: absolute;
+      height: $icon-bordered-box-size;
+      width: $icon-bordered-box-size;
+      border-width: $icon-bordered-border-width;
+      border-style: solid;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -47%);
+      border-radius: $border-radius;
+      z-index: 1;
+    }
+  }
+
+  &.rounded,
+  &.circle {
+    &:not(.bordered) {
+      border-color: transparent !important;
+    }
+
+    &:before {
+      background-color: rgba(0, 0, 0, .075);
+    }
+  }
+
+  &.circle {
+    > svg {
+      font-size: .85em;
+    }
+
+    &:before {
+      border-radius: 500rem;
+    }
+  }
+}
+
+/******
+    Fix SVG Vertical Align
+******/
+.fab.button.as-icon {
+  svg.icon.svg-inline--fa {
+    vertical-align: -0.2em;
+  }
+}

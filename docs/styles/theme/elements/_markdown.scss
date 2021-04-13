@@ -1,0 +1,63 @@
+.docs.markdown-docs .container > .header {
+  margin-bottom: 0;
+}
+
+.markdown-element,
+.props-table {
+
+  > .description {
+    font-size: $h4-font-size;
+    color: $text-secondary;
+    font-weight: $semi-bold;
+    margin-bottom: 2em;
+  }
+
+  .anchor-link-style {
+    display: none;
+  }
+
+  pre {
+    margin: 1.5em 0;
+    padding: 1em;
+  }
+
+  > p {
+    margin-bottom: 1em;
+  }
+
+  code {
+    border-radius: $border-radius;
+    background-color: $white-shade-2;
+    color: $primary;
+  }
+}
+
+.props-table table {
+  font-size: 14px;
+
+  .cell,
+  .cell > .cell-text-title,
+  .cell > .cell-text-content {
+    overflow: visible !important;
+    text-overflow: unset !important;
+    white-space: unset !important;
+  }
+
+  code {
+    font-size: 12px;
+    display: inline;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border-radius: 0;
+    color: $text;
+
+    &.property-name {
+      color: $primary;
+    }
+  }
+
+  .cell-text-title + .cell-text-content {
+    margin-top: 8px !important;
+  }
+}

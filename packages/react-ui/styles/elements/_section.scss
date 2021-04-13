@@ -1,0 +1,115 @@
+/**
+ * AppBuckets UI
+ *
+ * _Section @ src/styles/elements/_section.scss
+ *
+ * Defined at 08 lug 2020
+ * Copyright Marco Cavanna • 2020
+ *
+ * ---
+ *
+ *
+ */
+
+
+/******
+    Base Section Style
+******/
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  white-space: pre-line;
+  margin-bottom: $section-spacer;
+
+  > .label {
+    padding: 0;
+    border-radius: 0;
+    background-color: unset;
+    display: block;
+    color: $section-label-color;
+    font-weight: $section-label-font-weight;
+    font-size: $section-label-font-size;
+    text-transform: $section-label-text-transform;
+    margin-bottom: $section-label-spacer;
+  }
+
+  &.without-content > .label {
+    margin-bottom: 0;
+  }
+
+  // ----
+  //  Adjust the Content
+  // ----
+  > .content {
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6 {
+      margin-bottom: 0;
+      font-weight: inherit;
+    }
+  }
+
+  // ----
+  //  Reverse the Content Direction
+  // ----
+  &.reverse {
+    flex-direction: column-reverse;
+
+    &:not(.horizontal) {
+      > .label {
+        margin-bottom: 0;
+        margin-top: $section-label-spacer;
+      }
+    }
+  }
+
+  // ----
+  //  Horizontal Direction Section
+  // ----
+  &.horizontal {
+    flex-direction: row;
+
+    > .label {
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin-bottom: 0;
+      padding-right: $section-label-spacer;
+    }
+
+    > .content {
+      flex-grow: 1;
+      flex-shrink: 0;
+      text-align: right;
+    }
+
+    /// Reverse Direction
+    &.reverse {
+      flex-direction: row-reverse;
+
+      > .label {
+        text-align: right;
+        padding-right: 0;
+        padding-left: $section-label-spacer;
+      }
+
+      > .content {
+        text-align: left;
+      }
+    }
+  }
+
+  // ----
+  //  Divided Section has a Bottom Border
+  // ----
+  &.divided {
+    margin-bottom: $section-spacer / 2;
+    padding-bottom: $section-spacer / 2;
+    border-bottom-width: $section-divided-border-width;
+    border-bottom-style: $section-divided-border-style;
+    border-bottom-color: $section-divided-border-color;
+  }
+}

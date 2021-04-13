@@ -1,0 +1,210 @@
+/**
+ * AppBuckets UI
+ *
+ * _HeroButton @ src/styles/elements/_hero-button.scss
+ *
+ * Defined at 16 gen 2021
+ * Copyright Marco Cavanna • 2021
+ *
+ * ---
+ *
+ *
+ */
+
+
+/******
+    Base Hero Button Style
+******/
+.hero-button {
+  // ----
+  //  Apply Base Properties
+  // ----
+  appearance: none;
+  cursor: pointer;
+  display: block;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  border-radius: $hero-button-border-radius;
+  background-color: $hero-button-base-background;
+  color: $hero-button-base-color;
+  box-shadow: none;
+  position: relative;
+  transition: background-color $transition-duration $transition-ease,
+  color $transition-duration $transition-ease,
+  box-shadow $transition-duration $transition-ease;
+  will-change: background-color, color, box-shadow;
+
+  // ----
+  //  Content Styling
+  // ----
+  > .content {
+    height: 100%;
+    width: 100%;
+    padding: $hero-button-content-padding;
+    overflow: hidden;
+    position: relative;
+    border-radius: $hero-button-border-radius;
+  }
+
+  // ----
+  //  Base Box Shadow on Hover
+  // ----
+  @if $hero-button-discreet-shadow-strength != 0 {
+    @include hover {
+      &:not(.disabled):hover {
+        box-shadow: 0 1px $hero-button-discreet-shadow-strength transparentize(color-shade($hero-button-base-color), $hero-button-discreet-shadow-opacity);
+      }
+    }
+  }
+}
+
+
+/******
+    Text Content Styling
+******/
+.hero-button {
+  .header {
+    margin-bottom: 0;
+    opacity: $hero-button-content-opacity;
+    font-weight: $hero-button-content-font-weight;
+
+    .header-content {
+      font-size: $hero-button-content-font-size;
+    }
+  }
+
+  @include hover {
+    .header {
+      transition: opacity $transition-ease $transition-duration;
+    }
+
+    &:not(.disabled):hover .header {
+      opacity: $hero-button-hover-content-opacity;
+    }
+  }
+}
+
+
+/******
+    Icon Styling
+******/
+.hero-button {
+  > .content > .icon {
+    position: absolute;
+    font-size: $hero-button-icon-size;
+    right: 0;
+    bottom: 0;
+    opacity: $hero-button-icon-opacity;
+    transform: translate($hero-button-icon-translate) scale($hero-button-icon-scale);
+    margin: 0;
+  }
+
+  @include hover {
+    &:not(.disabled) {
+      > .content > .icon {
+        transform-origin: right bottom;
+        transition: transform $transition-ease $transition-duration,
+        opacity $transition-ease $transition-duration;
+      }
+    }
+
+    &:not(.disabled):not(.active):hover {
+      > .content > .icon {
+        opacity: $hero-button-hover-icon-opacity;
+        transform: translate($hero-button-hover-icon-translate) scale($hero-button-hover-icon-scale);
+      }
+    }
+  }
+}
+
+
+/******
+    Active Styling
+******/
+.hero-button.active {
+  .header {
+    opacity: $hero-button-hover-content-opacity;
+  }
+
+  > .content > .icon {
+    opacity: $hero-button-hover-icon-opacity;
+    transform: translate($hero-button-hover-icon-translate) scale($hero-button-hover-icon-scale);
+  }
+
+  @include hover {
+    &:not(.disabled):hover {
+      .header {
+        opacity: $hero-button-content-opacity;
+      }
+
+      > .content > .icon {
+        opacity: $hero-button-icon-opacity;
+        transform: translate($hero-button-icon-translate) scale($hero-button-icon-scale);
+      }
+    }
+  }
+}
+
+
+/******
+    Disabled Style
+******/
+.hero-button.disabled {
+  cursor: not-allowed !important;
+  opacity: $disabled-element-opacity;
+}
+
+
+/******
+    Colors
+******/
+@mixin __hero-button-variation($color) {
+  &.active {
+    &.discreet {
+      color: $color;
+    }
+
+    &:not(.discreet) {
+      background-color: $color;
+      color: choose-contrast-color($color, $hero-button-alt-color, $hero-button-base-color);
+    }
+  }
+
+  &:not(.discreet):not(.active):not(.disabled) {
+    @include hover {
+      &:hover {
+        background-color: $color;
+        color: choose-contrast-color($color, $hero-button-alt-color, $hero-button-base-color);
+
+        @if $hero-button-shadow-strength != 0 {
+          box-shadow: 0 1px $hero-button-shadow-strength transparentize(color-shade($color), $hero-button-shadow-opacity);
+        }
+      }
+    }
+  }
+
+  &.discreet:not(.active):not(.disabled) {
+    @include hover {
+      &:hover {
+        color: $color;
+
+        @if $hero-button-discreet-shadow-strength != 0 {
+          box-shadow: 0 1px $hero-button-discreet-shadow-strength transparentize(color-shade($color), $hero-button-discreet-shadow-opacity);
+        }
+      }
+    }
+  }
+}
+
+@each $color in $hero-button-color-variations {
+  .hero-button.variation-#{index($hero-button-color-variations, $color) - 1} {
+    @include __hero-button-variation($color);
+  }
+}
+
+@each $label, $color in $react-bucket-color-map {
+  .hero-button.is-#{$label} {
+    @include __hero-button-variation($color);
+  }
+}

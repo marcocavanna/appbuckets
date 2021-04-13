@@ -1,0 +1,121 @@
+/**
+ * AppBuckets UI
+ *
+ * _Base @ src/styles/_base.scss
+ *
+ * Defined at 06 giu 2020
+ * Copyright Marco Cavanna • 2020
+ *
+ * ---
+ * Define the Layout Style
+ *
+ */
+
+/******
+    HTML & Body
+******/
+html,
+body {
+  font-family: $body-font;
+  font-size: $body-font-size;
+  font-weight: $body-font-weight;
+  line-height: $body-line-height;
+  color: $body-color;
+
+  text-rendering: $font-render-mode;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  background-color: $body-background;
+
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+/******
+    DOM Elements
+******/
+
+// ----
+//  Anchor
+// ----
+a {
+  cursor: pointer;
+  color: $link-color;
+  text-decoration: none;
+  font-weight: $link-font-weight;
+
+  @include hover {
+    transition: color $transition-ease $transition-duration;
+
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+}
+
+
+// ----
+//  Code
+// ----
+code, pre {
+  font-family: $font-family-monospace;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+
+  font-size: $code-font-size;
+  font-weight: $code-font-weight;
+  color: $code-color;
+  padding: $code-padding;
+  border-radius: $code-border-radius;
+  background-color: $code-background;
+}
+
+
+// ----
+//  Divider
+// ----
+hr {
+  border: none;
+  display: block;
+  background-color: transparent;
+  height: $hr-height;
+  margin: $hr-margin 0;
+  border-top: solid 1px $hr-color-dark;
+  border-bottom: solid 1px $hr-color-light;
+}
+
+
+// ----
+//  Inline Elements
+// ----
+span, strong, i, em, b {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+}
+
+strong, b {
+  font-weight: $strong-font-weight;
+}
+
+
+// ----
+//  Headers
+// ----
+h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+  font-weight: $headers-font-weight;
+  margin: 0 0 $headers-margin-bottom;
+}
+
+@each $index, $size in (1: $h1-font-size, 2: $h2-font-size, 3: $h3-font-size, 4: $h4-font-size, 5: $h5-font-size, 6: $h6-font-size) {
+  h#{$index}, .h#{$index}, .header-#{$index} {
+    font-size: $size;
+  }
+}

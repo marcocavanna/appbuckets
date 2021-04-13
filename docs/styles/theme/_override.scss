@@ -1,0 +1,51 @@
+/// ----
+///   Core Configuration Variable Overrides
+///
+///   Use this section to change the main core variables, for example
+///   the base font size with '$base-font-size' or grid columns gutter
+///   using '$columns-gutter'
+/// ----
+$body-background: #ffffff;
+$base-font-size: 16px;
+
+/// ----
+///   Import Initial Configuration Files
+///
+///   This section is used to load the base AppBuckets ReactBucket Core
+///   this is not mandatory at this time, but is useful
+/// ----
+@import '~@appbuckets/react-ui/styles/config-core';
+@import '~@appbuckets/react-ui/styles/_core/functions/all';
+
+/// ----
+///   Color Variables Override
+///
+///   Use this section to change base ReactBucket Color
+/// ----
+
+$h1-font-size: 2.25em;
+$h2-font-size: 1.75em;
+$h3-font-size: 1.4em;
+$h4-font-size: 1.2em;
+$h5-font-size: 1em;
+
+/// ----
+///   Colors Import
+///
+///   System color import
+/// ----
+@import '~@appbuckets/react-ui/styles/_core/colors';
+@import '~@appbuckets/react-ui/styles/_core/typography';
+@import '~@appbuckets/react-ui/styles/_core/variables';
+
+
+/// ----
+///   Variable Override per Elements
+///
+///   Below this line the default element variables could be change
+///   to override default configuration for single elements.
+/// ----
+
+$code-background: transparent;
+
+$container-width-on-large-desktop: 960px;

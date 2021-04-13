@@ -1,0 +1,33 @@
+.sidebar {
+  position: fixed;
+  top: $navbar-height;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  background-color: $sidebar-background;
+  width: $sidebar-width;
+  border-right: solid 1px $sidebar-border-color;
+  overflow-y: scroll;
+  padding: 3em 0;
+
+  .button {
+    justify-content: flex-start;
+    border-radius: 0 !important;
+    color: $text;
+
+    &:focus {
+      box-shadow: none !important;
+      color: inherit !important;
+    }
+
+    &.element-link {
+      color: $text-secondary;
+      font-weight: $regular;
+      padding-left: $button-horizontal-padding * 2;
+
+      &.active {
+        color: $primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,164 @@
+/**
+ * AppBuckets UI
+ *
+ * _Config @ src/styles/_config.scss
+ *
+ * Defined at 05 giu 2020
+ * Copyright Marco Cavanna • 2020
+ *
+ * ---
+ * Main configuration Style File for React Bucket Project
+ *
+ */
+
+
+/******
+    Reset and Normalizer
+    Import some preprocessing files
+    to reset CSS and normalize style across browsers
+******/
+
+/// Import the normalize.scss file
+$import-normalize: true !default;
+
+/// Import the reset.scss file
+$import-reset: true !default;
+
+
+/******
+    Hover Settings
+    As on touch devices the hover pseudo class
+    will produce unexpected behaviour, all hover
+    style are wrapped into hover mixin.
+    Hover mixin could apply hover style using media query
+    or using a root class that must be set on non touch device
+    to show the hover style
+******/
+$use-hover-mixin-with-media-query: true !default;
+$without-touch-html-hover-class: 'no-touch' !default;
+
+
+/******
+    Core Variables
+******/
+
+/// Set the base spacer and absolute spacer
+$absolute-spacer: 1rem !default;
+$spacer: 1em !default;
+
+/// Set the base border radius
+$border-radius-rounded: 500rem !default;
+$border-radius-small: .15em !default;
+$border-radius-normal: .35em !default;
+$border-radius-big: .5em !default;
+$border-radius-huge: 1em !default;
+
+$border-radius: $border-radius-normal !default;
+
+/// Each disabled elements have a lower opacity
+$disabled-element-opacity: .5 !default;
+
+/// Choose if must generate text size class helpers
+$generate-text-size-helpers-class: true !default;
+$generate-text-size-responsive-helpers-class: false !default;
+
+/// Choose if must generate font weight class helpers
+$generate-font-weight-helpers-class: true !default;
+$generate-font-weight-responsive-helpers-class: false !default;
+
+/// Choose if must generate text align class helpers
+$generate-text-align-helpers-class: true !default;
+$generate-text-align-responsive-helpers-class: false !default;
+
+/// Choose if must generate text color class helpers
+$generate-text-color-helpers-class: true !default;
+$generate-text-color-responsive-helpers-class: false !default;
+
+/// Choose if must generate background color variation helpers
+$generate-background-color-helpers-class: true !default;
+$generate-background-color-responsive-helpers-class: false !default;
+
+/// Choose if must generate margin and padding utilities
+$margin-padding-helpers-count: 8 !default;
+$generate-margin-padding-helpers-class: true !default;
+$generate-margin-padding-responsive-helpers-class: true !default;
+
+/// Choose if must generate box shadow height
+$height-box-shadow-count: 12 !default;
+$height-smooth-box-shadow-count: 6 !default;
+$generate-height-box-shadow-helpers-class: true !default;
+
+/// Choose if must generate display helpers class
+$generate-display-helpers-class: true !default;
+$generate-display-responsive-helpers-class: true !default;
+
+
+/******
+    Typography Variables
+******/
+
+/// Set the base font size
+$base-font-size: 14px !default;
+
+/// Set the default fonts
+/// Choose from 'Roboto', 'Open Sans', 'Lato', 'Montserrat', 'Source Sans Pro', 'Poppins', 'Ubuntu', 'Dosis', 'Quicksand'
+$default-web-font: 'Nunito' !default;
+
+/// Set Default Monospace Font
+/// Choose from 'Roboto Mono', 'Source Code Pro', 'Ubuntu Mono'
+$default-monospace-font: 'Roboto Mono' !default;
+
+/// Set Default Line Height
+$default-line-height: 1.25 !default;
+
+
+/******
+    Responsive Variables
+    Set the responsive screen size
+******/
+
+/// Draw UI considering a mobile-first idea
+$draw-ui-mobile-first: true !default;
+
+/// Set screen size
+$max-size-for-phone: 576px !default;
+$max-size-for-tablet: 960px !default;
+$max-size-for-desktop: 1440px !default;
+$max-size-for-large-desktop: 1920px !default;
+
+/// Set fixed container width
+$container-width-on-phone: $max-size-for-phone - ($base-font-size * 6) !default;
+$container-width-on-tablet: $max-size-for-tablet - ($base-font-size * 12) !default;
+$container-width-on-desktop: $max-size-for-desktop - ($base-font-size * 18) !default;
+$container-width-on-large-desktop: $max-size-for-large-desktop - ($base-font-size * 24) !default;
+
+/// Set base container padding
+$container-padding: 1em !default;
+
+/// Set fluid container padding
+$fluid-container-padding-on-phone: $container-padding !default;
+$fluid-container-padding-on-tablet: $container-padding * 1.5 !default;
+$fluid-container-padding-on-desktop: $container-padding * 3 !default;
+$fluid-container-padding-on-large-desktop: $container-padding * 6 !default;
+
+
+/******
+    Grid Configuration
+    Set grid configurations like columns count
+    gutter and column class name
+******/
+
+/// Set the row class name
+$row-class-name: 'with-columns' !default;
+
+/// Set the column class name
+$column-class-name: 'column' !default;
+
+/// Set the maximum columns count on each row
+$columns-count: 24 !default;
+
+/// Set the gutter space between column
+$columns-gutter: $absolute-spacer * .5 !default;
+
+/// Set if must generate a dedicated style for row without column gutter
+$generate-row-without-gutter: true !default;

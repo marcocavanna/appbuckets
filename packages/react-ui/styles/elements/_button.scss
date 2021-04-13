@@ -1,0 +1,323 @@
+/**
+ * AppBuckets UI
+ *
+ * _Button @ src/styles/elements/_button.scss
+ *
+ * Defined at 11 giu 2020
+ * Copyright Marco Cavanna • 2020
+ *
+ * ---
+ * Button Styles
+ *
+ */
+
+/******
+    Define the Base Button Style
+******/
+.button {
+  // ----
+  //  Reset Default Properties
+  // ----
+  appearance: none !important;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  text-shadow: none;
+  background-image: none;
+  position: relative;
+
+
+  // ----
+  //  Set Button Sizing
+  //  And Box Modeling
+  // ----
+  height: $button-height;
+  padding: 0 $button-horizontal-padding;
+  min-width: $button-min-width;
+  border-radius: $button-border-radius;
+  margin: 0 $button-spacer 0 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+
+  // ----
+  //  Set Button Typography
+  // ----
+  font-style: normal;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  line-height: $button-line-height;
+  text-align: center;
+  text-decoration: none;
+  text-transform: $button-text-transform;
+  white-space: nowrap;
+
+
+  // ----
+  //  Set internal content style
+  // ----
+  > span {
+    width: 100%;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+  }
+
+
+  // ----
+  //  Fitted Buttons has no min width
+  // ----
+  &.fitted {
+    min-width: auto;
+  }
+
+  // ----
+  //  Set Button Colors and Variations
+  //  If Button is not flat, the variations are applied to Background Color
+  //  otherwise variations are applied to color
+  // ----
+  &:not(.flat) {
+    @include color-property-variation(
+      $base-color: $button-base-background-color,
+      $properties-list: background-color,
+      $use-brands: $generate-button-brands-variation,
+      $use-ui: $generate-button-ui-variation,
+      $use-social: $generate-button-social-variation,
+      $is-interactive: true,
+      $hover-will-drop-shadow: $button-hover-will-drop-shadow,
+      $with-hover: true,
+      $with-focus: true,
+      $with-active: true
+    )
+  }
+
+  &.flat {
+    /// Override background color
+    background-color: transparent;
+
+    /// Override the ripple color to current button color
+    > .ripple-container > .ripple {
+      background-color: currentColor;
+    }
+
+    @include color-property-variation(
+      $base-color: $text,
+      $properties-list: color,
+      $use-brands: $generate-button-brands-variation,
+      $use-ui: $generate-button-ui-variation,
+      $use-social: $generate-button-social-variation,
+      $is-interactive: true,
+      $with-hover: true,
+      $with-focus: true,
+      $with-active: true
+    )
+  }
+
+  &.inverted {
+    // ----
+    //  Inverted Buttons has appearance color has font color
+    //  The background color is a transparently variation of primary color
+    // ----
+    @each $label, $color in $react-bucket-color-map {
+      &.is-#{$label} {
+        background-color: transparentize($color, .8);
+        color: $color;
+
+        /// Override the ripple color to current button color
+        > .ripple-container > .ripple {
+          background-color: currentColor;
+        }
+
+        @include hover {
+          &:not([disabled]):not(:disabled):not(.is-disabled):hover {
+            background-color: transparentize($color, .9);
+            box-shadow: none;
+          }
+        }
+      }
+    }
+
+    .icon {
+      opacity: 1 !important;
+    }
+  }
+
+  // ----
+  //  Activated Toggle has darken background
+  // ----
+  &.toggle.active {
+    box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, .2), inset 0 0 500px 0 rgba(0, 0, 0, .1) !important;
+  }
+
+  // ----
+  //  Set the Icon Style for Button rendered
+  //  as icon only, or with an icon inner
+  // ----
+  &.as-icon {
+    padding: 0;
+    min-width: auto;
+    width: $button-height;
+    height: $button-height;
+
+    .icon {
+      margin: 0 !important;
+      opacity: 1;
+    }
+  }
+
+  // ----
+  //  Button with Icon on Right must invert icon spacer
+  // ----
+  &.with-icon.icon-on-right {
+    .icon {
+      margin-right: 0;
+      margin-left: $icon-spacer;
+    }
+  }
+
+  // ----
+  //  Loading Button as an internal Loader
+  // ----
+  &.loading {
+    @include overlay-loader();
+  }
+
+  // ----
+  //  A Full Button is 100% Width
+  // ----
+  &.full {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  // ----
+  //  Rounded Button has Max Border Radius
+  // ----
+  &.rounded {
+    border-radius: 500rem;
+  }
+
+  // ----
+  //  Fab Button has an increased size
+  // ----
+  &.fab {
+    @extend .rounded;
+    font-size: $button-fab-base-size;
+    margin: $button-fab-spacer;
+  }
+
+}
+
+
+/******
+    Buttons Group Style
+******/
+%buttons {
+  box-shadow: none;
+  display: inline-flex;
+  vertical-align: baseline;
+  margin: 0 $button-spacer 0 0;
+  flex-basis: auto;
+  width: auto;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  // ----
+  //  Remove Border Radius and Margin on all inner buttons
+  // ----
+  > .button {
+    flex: 1 0;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  // ----
+  //  Full width Buttons Group
+  // ----
+  &.full {
+    width: 100%;
+    flex-basis: 100%;
+  }
+}
+
+// ----
+//  Default button group is horizontal
+// ----
+.buttons:not(.vertical) {
+  @extend %buttons;
+  flex-direction: row;
+
+  > .button {
+    /// Set first button style
+    &:first-child {
+      border-left: none;
+      border-top-left-radius: $button-border-radius;
+      border-bottom-left-radius: $button-border-radius;
+
+      /// Set max border on rounded button
+      &.rounded {
+        border-top-left-radius: 500rem;
+        border-bottom-left-radius: 500rem;
+      }
+    }
+
+    /// Set last button style
+    &:last-child {
+      border-right: none;
+      border-top-right-radius: $button-border-radius;
+      border-bottom-right-radius: $button-border-radius;
+
+      /// Set max border on rounded button
+      &.rounded {
+        border-top-right-radius: 500rem;
+        border-bottom-right-radius: 500rem;
+      }
+    }
+  }
+
+}
+
+// ----
+//  Vertical Button must be showed using column flex
+// ----
+.vertical.buttons {
+  @extend %buttons;
+  flex-direction: column;
+
+  > .button {
+    /// Set first button style
+    &:first-child {
+      border-top: none;
+      border-top-left-radius: $button-border-radius;
+      border-top-right-radius: $button-border-radius;
+
+      /// Set max border on rounded button
+      &.rounded {
+        border-top-left-radius: 500rem;
+        border-top-right-radius: 500rem;
+      }
+    }
+
+    /// Set last button style
+    &:last-child {
+      border-bottom: none;
+      border-bottom-left-radius: $button-border-radius;
+      border-bottom-right-radius: $button-border-radius;
+
+      /// Set max border on rounded button
+      &.rounded {
+        border-bottom-left-radius: 500rem;
+        border-bottom-right-radius: 500rem;
+      }
+    }
+  }
+}

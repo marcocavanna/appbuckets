@@ -1,0 +1,161 @@
+/**
+ * AppBuckets UI
+ *
+ * _Colors @ src/styles/_core/_colors.scss
+ *
+ * Defined at 05 giu 2020
+ * Copyright Marco Cavanna • 2020
+ *
+ * ---
+ * Colors Variable Declaration for entire ReactBucket UI Framework
+ *
+ */
+
+
+/******
+    Blacks
+******/
+$black: hsl(0, 0%, 4%) !default;
+
+
+/******
+    Whites
+******/
+$transparent: rgba(255, 255, 255, 0) !default;
+
+$white: hsl(212, 10%, 100%) !default;
+$white-shade: hsl(212, 10%, 96%) !default;
+$white-shade-2: hsl(212, 10%, 93%) !default;
+
+
+/******
+    Text and Typography Color
+******/
+$text: rgba(61, 66, 81, .95) !default;
+$text-secondary: rgba(61, 66, 81, .6) !default;
+$text-contrast: rgba(255, 255, 255, .95) !default;
+$text-secondary-contrast: rgba(255, 255, 255, .6) !default;
+
+
+/******
+    Greys
+******/
+$cloud-light: hsl(212, 10%, 91%) !default;
+$cloud: hsl(212, 10%, 76%) !default;
+$cloud-dark: hsl(212, 10%, 61%) !default;
+
+
+/******
+    Base Colors
+******/
+$blue: hsl(226, 48%, 54%) !default;
+$teal: hsl(170, 66%, 58%) !default;
+$green: hsl(121, 44%, 54%) !default;
+$yellow: hsl(41, 93%, 55%) !default;
+$orange: hsl(20, 100%, 65%) !default;
+$red: hsl(357, 72%, 58%) !default;
+$pink: hsl(330, 100%, 65%) !default;
+$purple: hsl(260, 52%, 62%) !default;
+
+
+/******
+    Social Media Colors
+******/
+$facebook: hsl(214, 89%, 52%) !default;
+$twitter: hsl(203, 89%, 53%) !default;
+$youtube: hsl(0, 100%, 50%) !default;
+$instagram: hsl(313, 65%, 46%) !default;
+$pinterest: hsl(353, 92%, 39%) !default;
+$linkedin: hsl(199, 100%, 35%) !default;
+$google: hsl(217, 89%, 61%) !default;
+$google-plus: hsl(5, 69%, 54%) !default;
+$whatsapp: hsl(142, 70%, 49%) !default;
+$tumblr: hsl(215, 27%, 29%) !default;
+$apple: hsl(201, 11%, 68%) !default;
+$amazon: hsl(36, 100%, 50%) !default;
+$microsoft: hsl(13, 90%, 54%) !default;
+$vimeo: hsl(195, 83%, 51%) !default;
+$skype: hsl(196, 100%, 47%) !default;
+$android: hsl(74, 55%, 50%) !default;
+$dribble: hsl(337, 79%, 61%) !default;
+$slack: hsl(299, 56%, 19%) !default;
+$yahoo: hsl(266, 97%, 30%) !default;
+$telegram: hsl(200, 100%, 40%) !default;
+
+
+/******
+    UI Colors
+******/
+$primary: $blue !default;
+$primary-shade: color-shade($primary) !default;
+$primary-tint: color-tint($primary) !default;
+$warning: $orange !default;
+$warning-shade: color-shade($warning) !default;
+$warning-tint: color-tint($warning) !default;
+$info: $teal !default;
+$info-shade: color-shade($info) !default;
+$info-tint: color-tint($info) !default;
+$danger: $red !default;
+$danger-shade: color-shade($danger) !default;
+$danger-tint: color-tint($danger) !default;
+$success: $green !default;
+$success-shade: color-shade($success) !default;
+$success-tint: color-tint($success) !default;
+
+
+/******
+    Color Mapping
+******/
+$react-bucket-ui-colors-map: (
+  'hidden': $transparent,
+  'text' : $text,
+  'text-secondary' : $text-secondary,
+  'black' : $black,
+  'white' : $white,
+  'white-shade' : $white-shade,
+  'white-shade-2' : $white-shade-2,
+  'blue' : $blue,
+  'teal' : $teal,
+  'green' : $green,
+  'yellow' : $yellow,
+  'orange' : $orange,
+  'red' : $red,
+  'pink' : $pink,
+  'purple' : $purple,
+  'cloud-light' : $cloud-light,
+  'cloud' : $cloud,
+  'cloud-dark' : $cloud-dark
+);
+
+$react-bucket-socials-color-map: (
+  'facebook' : $facebook,
+  'twitter' : $twitter,
+  'youtube' : $youtube,
+  'instagram' : $instagram,
+  'pinterest' : $pinterest,
+  'linkedin' : $linkedin,
+  'google' : $google,
+  'google-plus' : $google-plus,
+  'whatsapp' : $whatsapp,
+  'tumblr' : $tumblr,
+  'apple' : $apple,
+  'amazon' : $amazon,
+  'microsoft' : $microsoft,
+  'vimeo' : $vimeo,
+  'skype' : $skype,
+  'android' : $android,
+  'dribble' : $dribble,
+  'slack' : $slack,
+  'yahoo' : $yahoo,
+  'telegram' : $telegram
+);
+
+$react-bucket-brand-colors-map: (
+  'primary' : $primary,
+  'warning' : $warning,
+  'info' : $info,
+  'success' : $success,
+  'danger' : $danger
+);
+
+$react-bucket-color-map: map-merge(map-merge($react-bucket-ui-colors-map, $react-bucket-socials-color-map), $react-bucket-brand-colors-map);

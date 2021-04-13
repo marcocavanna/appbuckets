@@ -1,0 +1,222 @@
+@mixin color-property-variation(
+  $base-color: transparent,
+  $properties-list: background-color,
+  $use-brands: true,
+  $use-ui: false,
+  $use-social: false,
+  $is-interactive: false,
+  $with-hover: false,
+  $hover-will-drop-shadow: false,
+  $with-focus: false,
+  $focus-color: null,
+  $with-active: false,
+  $active-color: null,
+  $variation-prefix: 'is-',
+  $interactive-class: null,
+  $apply-shadow-to: box,
+  $shadow-strength: 10px,
+  $shadow-transparency: .6
+) {
+
+  // Generate the Colors List to use
+  $colors-variations: ();
+
+  // Append Brand Colors to variation
+  @if $use-brands == true {
+    $colors-variations: map-merge($colors-variations, $react-bucket-brand-colors-map);
+  }
+
+  // Append UI Colors to variation
+  @if $use-ui == true {
+    $colors-variations: map-merge($colors-variations, $react-bucket-ui-colors-map);
+  }
+
+  // Append social color to variation
+  @if $use-social == true {
+    $colors-variations: map-merge($colors-variations, $react-bucket-socials-color-map);
+  }
+
+  // Build the base element style
+  @if $base-color != null and $base-color != false {
+    // Set the property
+    @include variation-style(
+      $properties-list: $properties-list,
+      $color: $base-color,
+      $is-interactive: $is-interactive,
+      $with-hover: $with-hover,
+      $hover-will-drop-shadow: $hover-will-drop-shadow,
+      $with-active: $with-active,
+      $active-color: $active-color,
+      $with-focus: $with-focus,
+      $focus-color: $focus-color,
+      $interactive-class: $interactive-class,
+      $apply-shadow-to: $apply-shadow-to,
+      $shadow-strength: $shadow-strength,
+      $shadow-transparency: $shadow-transparency
+    );
+  }
+
+  // Loop for each colors to generate variations
+  @each $label, $color in $colors-variations {
+    &.#{$variation-prefix}#{$label} {
+      @include variation-style(
+        $properties-list: $properties-list,
+        $color: $color,
+        $is-interactive: $is-interactive,
+        $is-child: true,
+        $with-hover: $with-hover,
+        $hover-will-drop-shadow: $hover-will-drop-shadow,
+        $with-active: $with-active,
+        $active-color: $active-color,
+        $with-focus: $with-focus,
+        $focus-color: $focus-color,
+        $interactive-class: $interactive-class,
+        $apply-shadow-to: $apply-shadow-to,
+        $shadow-strength: $shadow-strength,
+        $shadow-transparency: $shadow-transparency
+      );
+    }
+  }
+
+}
+
+
+@mixin variation-style(
+  $properties-list,
+  $color,
+  $is-interactive: false,
+  $is-child: false,
+  $with-hover: false,
+  $hover-will-drop-shadow: false,
+  $with-active: false,
+  $active-color: null,
+  $with-focus: false,
+  $focus-color: null,
+  $interactive-class: null,
+  $apply-shadow-to: box,
+  $shadow-strength: 10px,
+  $shadow-transparency: .6
+) {
+
+  // Choose the Contrast Color
+  $contrast-color: choose-contrast-color($color, $text-contrast, $text);
+
+  // Set the Color
+  @each $prop in $properties-list {
+    #{$prop}: $color;
+  }
+
+  // If any Prop is background-color
+  // then add the color property too
+  @if index($properties-list, background-color) != null {
+    color: $contrast-color;
+  }
+
+  @if $is-interactive == true {
+
+    $interactive-selector: '&';
+
+    @if $interactive-class != null {
+      $interactive-selector: '&.#{$interactive-class}'
+    }
+
+    // Set disabled style
+    @if $is-child != true {
+      // Change Cursor
+      #{$interactive-selector} {
+        cursor: pointer;
+
+        // Set disabled state
+        &[disabled],
+        &:disabled,
+        &.is-disabled {
+          cursor: not-allowed !important;
+          opacity: .5 !important;
+        }
+      }
+    }
+
+    // Set the Hover Color
+    $hover-color: color-tint($color, .6);
+
+    @if $color == transparent {
+      $hover-color: $white-shade;
+    }
+
+    // Fallback active color to shade
+    @if $active-color == null {
+      @if $color != transparent {
+        $active-color: color-shade($color, .75);
+      } @else {
+        $active-color: $cloud-light;
+      }
+    }
+
+    // Fallback focus color to tint
+    @if $focus-color == null {
+      @if $color != transparent {
+        $focus-color: color-tint($color, .75);
+      } @else {
+        $focus-color: $white-shade-2;
+      }
+    }
+
+    @if $with-hover == true or $with-active == true or $with-focus == true {
+      #{$interactive-selector}:not([disabled]):not(:disabled):not(.is-disabled) {
+        // Set transition start props
+        @if $is-child != true {
+          transition-duration: $transition-duration;
+          transition-timing-function: $transition-ease;
+
+          @if $hover-will-drop-shadow == true {
+            #{$apply-shadow-to}-shadow: none;
+            transition-property: #{$properties-list}, #{$apply-shadow-to}-shadow;
+            will-change: #{$properties-list}, #{$apply-shadow-to}-shadow;
+          } @else {
+            transition-property: $properties-list;
+            will-change: $properties-list;
+          }
+        }
+
+        // Set Hover Style
+        @if $with-hover == true {
+          @include hover {
+            #{$interactive-selector}:hover {
+              @if $hover-will-drop-shadow == true {
+                @each $prop in $properties-list {
+                  #{$prop}: $hover-color;
+                }
+                #{$apply-shadow-to}-shadow: 0 1px $shadow-strength transparentize(color-shade($color), $shadow-transparency);
+              } @else {
+                @each $prop in $properties-list {
+                  #{$prop}: $hover-color;
+                }
+              }
+            }
+          }
+        }
+
+        // Set Active Style
+        @if $with-active == true {
+          #{$interactive-selector}:active,
+          #{$interactive-selector}.is-active {
+            @each $prop in $properties-list {
+              #{$prop}: $active-color;
+            }
+          }
+        }
+
+        // Set Focus style
+        @if $with-focus == true {
+          #{$interactive-selector}:focus,
+          #{$interactive-selector}.is-focused {
+            box-shadow: 0 0 1px 2px color-shade($color, 1.5) inset;
+            @each $prop in $properties-list {
+              #{$prop}: $focus-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

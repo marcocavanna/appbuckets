@@ -1,0 +1,114 @@
+/**
+ * AppBuckets UI
+ *
+ * _Weather @ src/styles/widget/_weather.scss
+ *
+ * Defined at 18 giu 2020
+ * Copyright Marco Cavanna • 2020
+ *
+ * ---
+ * Current Weather Widget
+ *
+ */
+
+
+/******
+    Set the Weather Widget Style
+******/
+.weather.widget {
+  display: flex;
+  align-items: center;
+  height: 3.5em;
+
+  > .header {
+    margin-bottom: 0;
+  }
+
+  .widget-content {
+    display: flex;
+    align-items: center;
+
+    > .addon {
+      display: flex;
+      align-items: center;
+      color: $text-secondary;
+
+      > .data {
+        font-weight: $semi-bold;
+      }
+
+      + .addon {
+
+        &:after,
+        &:before {
+          display: inline-block;
+          opacity: .75;
+        }
+      }
+    }
+  }
+
+  // ----
+  //  Set the Divider and Spacing on Left | Center Aligned Element
+  // ----
+  &:not(.has-text-right) .widget-content {
+    > .addon + .addon {
+      margin-left: get-em-spacer(2);
+
+      &:before {
+        content: '|';
+        margin-right: get-em-spacer(2);
+      }
+    }
+  }
+
+  // ----
+  //  Set the Content Alignment on centered widget
+  // ----
+  &.has-text-center {
+    justify-content: center;
+  }
+
+  // ----
+  //  Set the Divider and Spacing on Right Aligned Element
+  // ----
+  &.has-text-right {
+    justify-content: flex-end;
+
+    .widget-content {
+      flex-direction: row-reverse;
+
+      > .addon + .addon {
+        margin-right: get-em-spacer(2);
+
+        &:after {
+          content: '|';
+          margin-left: get-em-spacer(1);
+        }
+      }
+    }
+  }
+
+  // ----
+  //  Decrease subheader opacity
+  // ----
+  .subheader {
+    opacity: .4;
+  }
+
+  // ----
+  //  Set the Loading Style
+  // ----
+  &.loading {
+    > .loader {
+      max-width: 240px;
+    }
+
+    &.has-text-right {
+      > .loader {
+        margin-right: 0;
+        margin-left: auto;
+      }
+    }
+  }
+}

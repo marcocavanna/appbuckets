@@ -1,0 +1,67 @@
+/**
+ * AppBuckets UI
+ *
+ * _Dropdown @ src/styles/collections/_dropdown.scss
+ *
+ * Defined at 06 lug 2020
+ * Copyright Marco Cavanna • 2020
+ *
+ * ---
+ * Dropdown Menu Style
+ *
+ */
+
+
+/******
+    Style the Popup, removing border and switching border radius
+******/
+.dropdown-container.popup:not(.basic),
+.dropdown-container.basic.popup {
+  padding: 0;
+
+  > .content {
+    padding: 0;
+    border-radius: $popup-border-radius;
+    overflow: hidden;
+  }
+}
+
+
+/******
+    Remove some Menu Style
+******/
+.dropdown-container > .content > .menu {
+  max-width: unset;
+  width: 100%;
+}
+
+
+/******
+    Style the Menu Item
+******/
+.dropdown.menu > .menu-item {
+  font-weight: $dropdown-menu-item-font-weight;
+  padding: $dropdown-menu-item-vertical-padding $dropdown-menu-item-horizontal-padding;
+  border-bottom-color: $dropdown-menu-item-border-color;
+  border-bottom-width: $dropdown-menu-item-border-width;
+  border-bottom-style: $dropdown-menu-item-border-style;
+
+  @include hover {
+    opacity: $dropdown-menu-item-base-opacity;
+
+    &:not(.disabled):hover {
+      opacity: $dropdown-menu-item-hover-opacity;
+    }
+  }
+
+  &.disabled {
+    opacity: $disabled-element-opacity !important;
+  }
+}
+
+/******
+    Invert MenuItem Color
+******/
+.inverted.dropdown-container.popup .menu > .menu-item {
+  color: $dropdown-inverted-menu-item-color;
+}

@@ -1,0 +1,75 @@
+/**
+ * AppBuckets UI
+ *
+ * _Message @ src/styles/collections/_message.scss
+ *
+ * Defined at 03 ott 2020
+ * Copyright Marco Cavanna • 2020
+ *
+ * ---
+ *
+ *
+ */
+
+/******
+    Base Message Style
+******/
+.message {
+  min-height: 1em;
+  position: relative;
+  margin-bottom: $message-spacer;
+  padding: $message-padding;
+  background-color: $message-background-color;
+  color: $message-font-color;
+  border-radius: $message-border-radius;
+  box-shadow: inset 0 0 0 $message-border-width $message-border-color;
+}
+
+/******
+    Adjust Header
+******/
+.message > .header {
+  margin: 0;
+
+  > .header-content {
+    font-size: $message-header-font-size;
+
+    > .subheader {
+      opacity: $message-content-opacity;
+    }
+  }
+}
+
+/******
+    Set colors
+******/
+.message {
+  @each $label, $color in $react-bucket-color-map {
+    &.is-#{$label} {
+      color: $color;
+      box-shadow: inset 0 0 0 $message-border-width transparentize($color, .8);
+      background-color: transparentize($color, .75);
+    }
+  }
+}
+
+/******
+    Dismiss Icon Style
+******/
+.dismissible.message > .icon.dismiss {
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  margin: 0;
+  font-size: $message-dismiss-font-size;
+
+  @include hover {
+    opacity: .75;
+    will-change: opacity;
+    transition: opacity $transition-speed-fast $transition-ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

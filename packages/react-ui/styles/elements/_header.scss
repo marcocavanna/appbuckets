@@ -1,0 +1,233 @@
+/**
+ * AppBuckets UI
+ *
+ * _Header @ src/styles/elements/_header.scss
+ *
+ * Defined at 09 giu 2020
+ * Copyright Marco Cavanna • 2020
+ *
+ * ---
+ * Define Header Style
+ *
+ */
+
+/******
+    Reset Header Fonts Size
+    As the header will be used for any other
+    component, main font size will be declared
+    only on the master header container and not
+    for its child
+******/
+.header {
+  display: block;
+  position: relative;
+  margin: $header-top-margin 0 $header-bottom-margin;
+  padding: 0;
+  text-align: inherit;
+  font-weight: $header-font-weight;
+
+  // ----
+  //  Reset heading elements font size
+  // ----
+  .header-content {
+    font-size: $header-base-font-size;
+    flex-grow: 1;
+
+    .content {
+      font-size: 1em;
+    }
+  }
+
+  // ----
+  //  Remove Margin from content
+  //  Content and Subheader will inherit font weight from parent
+  // ----
+  .content, .subheader {
+    font-weight: inherit;
+    margin: 0;
+  }
+
+
+  // ----
+  //  Set the Subheader font size and Colors
+  // ----
+  .subheader {
+    font-size: $header-subheader-relative-font-size;
+    opacity: $header-subheader-opacity;
+  }
+
+  // ----
+  //  Remove Top Margin on First Element
+  // ----
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+
+/******
+    Set Disabled Header Opacity
+******/
+.header.disabled {
+  opacity: $disabled-element-opacity !important;
+}
+
+
+/******
+    Set the Divider Element
+******/
+.header.divided:not(.solid) {
+  border-bottom: solid 1px $divider-color;
+  padding-bottom: $header-bottom-margin;
+}
+
+
+/******
+    Solid Header
+******/
+.solid.header {
+  padding: $header-solid-padding;
+  border-radius: $header-solid-border-radius;
+
+  &:not(.inverted) {
+    background-color: $header-solid-base-background;
+  }
+
+  &.inverted {
+    background-color: $text;
+  }
+
+  // ----
+  //  Style Icon on Text Center Header
+  // ----
+  &.with-icon.has-text-center {
+    padding-top: calc(#{$header-solid-padding} + #{$header-centered-icon-size} / 2);
+
+    > .header-icon {
+      position: absolute;
+      margin: 0;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .icon {
+        color: $text-contrast;
+
+        &:before {
+          background-color: $text;
+        }
+      }
+    }
+  }
+}
+
+
+/******
+    Inverted Header
+******/
+.inverted.header {
+  color: $text-contrast;
+
+  &.solid.with-icon.has-text-center > .header-icon .icon {
+    color: $text;
+
+    &:before {
+      background-color: $text-contrast;
+    }
+  }
+}
+
+
+/******
+    Header Icons
+******/
+.header.with-icon,
+.header.with-actions {
+  display: flex;
+  width: 100%;
+  flex: 1 0 100%;
+  align-items: center;
+
+  // ----
+  //  Set the Icon Style
+  // ----
+  .header-icon {
+    display: inline-flex;
+    font-size: $header-icon-size;
+
+    .icon {
+      margin-right: $header-icon-spacer;
+    }
+  }
+
+  // ----
+  //  Set Flex Direction Based on Text Align
+  // ----
+  &.has-text-right {
+    flex-direction: row-reverse;
+
+    .header-icon {
+      display: block;
+
+      .icon {
+        margin-right: 0;
+        margin-left: $header-icon-spacer;
+      }
+    }
+  }
+
+  &.has-text-center {
+    flex-direction: column;
+
+    /// Increase Icon Size on Centered Header
+    .header-icon {
+      font-size: $header-centered-icon-size;
+      margin-bottom: $header-icon-spacer;
+
+      .icon {
+        margin: 0
+      }
+    }
+
+    /// Add spacing between Actions and Content
+    .header-actions {
+      margin-top: $header-actions-spacer;
+    }
+  }
+}
+
+
+/******
+    Header Color Variation
+******/
+@each $label, $color in $react-bucket-color-map {
+  .header.is-#{$label} {
+    &:not(.inverted) {
+      color: $color;
+
+      &.solid.with-icon.has-text-center > .header-icon .icon {
+        color: choose-contrast-color($color, $text-contrast, $text);
+
+        &:before {
+          background-color: $color;
+        }
+      }
+    }
+
+    &.inverted {
+      color: choose-contrast-color($color, $text-contrast, $text);
+
+      &.solid {
+        background-color: $color;
+
+        &.with-icon.has-text-center > .header-icon .icon {
+          color: choose-contrast-color(color-shade($color, 2), $text-contrast, $text);;
+
+          &:before {
+            background-color: color-shade($color, 2);
+          }
+        }
+      }
+    }
+  }
+}

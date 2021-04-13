@@ -1,0 +1,362 @@
+/**
+ * AppBuckets UI
+ *
+ * _Loader @ src/styles/elements/_loader.scss
+ *
+ * Defined at 16 giu 2020
+ * Copyright Marco Cavanna • 2020
+ *
+ * ---
+ * Loader Component Style
+ *
+ */
+
+/******
+    Base Loader
+******/
+.loader {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  box-sizing: inherit;
+  vertical-align: middle;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: $semi-bold;
+  color: $loader-spinner-color;
+
+  // ----
+  //  Loader with content must set width and height
+  //  as auto, to let the content adjust container size
+  // ----
+  &.with-content {
+    width: auto !important;
+    height: auto !important;
+
+    /// Set a little margin between loader and Content
+    > .content {
+      padding-top: .5em;
+    }
+  }
+
+  // ----
+  //  Active Loader is Visible
+  // ----
+  &.active:not(.inline) {
+    display: block;
+  }
+
+  &.active.inline:not(.centered) {
+    display: inline-block;
+  }
+
+  // ----
+  //  Centered Loader has auto margin on x axis
+  // ----
+  &.centered,
+  &.centered.circular-dots > .dots-container {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // ----
+  //  An Overlay Loader has absolute position
+  //  Relative to its parent container
+  // ----
+  &.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: $overlay-loader-z-index;
+  }
+
+}
+
+
+/******
+    Circular Dots is built using CSS pseudo elements
+******/
+.loader.circular {
+  &:after,
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    box-sizing: inherit;
+    border-radius: 500rem;
+    border: $loader-stroke-size solid $loader-background-color;
+  }
+
+  /// After Pseudo Content is the spinning one
+  &:after {
+    border-color: $loader-spinner-color transparent transparent;
+    box-shadow: 0 0 0 1px transparent;
+    @include loaderRotation();
+  }
+}
+
+
+/******
+    Indeterminate Bar
+******/
+.loader.indeterminate-bar {
+  color: $text;
+  min-width: $loader-indeterminate-min-width;
+
+  > .progress-container {
+    position: relative;
+    height: $loader-stroke-size;
+    display: block;
+    width: 100%;
+    background-color: transparentize($text, .75);
+    border-radius: $loader-stroke-size / 2;
+    background-clip: padding-box;
+    overflow: hidden;
+
+    > .indeterminate-bar {
+      background-color: $text;
+
+      &:after,
+      &:before {
+        content: '';
+        position: absolute;
+        background-color: inherit;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        will-change: left, right;
+        border-radius: $loader-stroke-size / 2;
+      }
+
+      &:before {
+        @include animate(
+          $animation-name: indeterminateBar,
+          $timing-function: cubic-bezier(0.65, 0.815, 0.735, 0.395),
+          $duration: 2100ms,
+          $iteration-count: infinite
+        )
+      }
+
+      &:after {
+        @include animate(
+          $animation-name: indeterminateBarShort,
+          $timing-function: cubic-bezier(0.165, 0.84, 0.44, 1),
+          $duration: 2100ms,
+          $iteration-count: infinite
+        )
+      }
+    }
+  }
+}
+
+
+/******
+    Dots Loader is composed by 3 flashing dots
+******/
+.loader.dots {
+  // ----
+  //  Build the Dots Container
+  // ----
+  > .dots-container {
+    display: flex;
+    color: $loader-spinner-color;
+    transition-duration: $transition-duration;
+    transition-timing-function: initial;
+    transition-delay: initial;
+    transition-property: color;
+    align-self: center;
+    font-size: inherit;
+    text-align: center;
+    vertical-align: middle;
+
+    > .dot {
+      border-radius: 500rem;
+      height: 1em;
+      width: 1em;
+      vertical-align: top;
+      margin-right: .5em;
+
+      background-color: currentColor;
+      animation-duration: $loader-dots-animation-duration;
+      animation-timing-function: $loader-dots-timing-function;
+      animation-iteration-count: infinite;
+      animation-direction: initial;
+      animation-fill-mode: initial;
+      animation-play-state: initial;
+      animation-name: flash;
+
+      /// Set animation delay on child
+      &:nth-child(1) {
+        animation-delay: $loader-dots-animation-delay * 0;
+      }
+
+      &:nth-child(2) {
+        animation-delay: $loader-dots-animation-delay * 1;
+      }
+
+      &:nth-child(3) {
+        animation-delay: $loader-dots-animation-delay * 2;
+        margin-right: 0;
+      }
+    }
+  }
+
+  // ----
+  //  Center Dots on centered Loader
+  // ----
+  &.centered > .dots-container {
+    justify-content: center;
+  }
+}
+
+
+/******
+    Circular Dots has 4 spinning dots
+******/
+.loader.circular-dots {
+  // ----
+  //  Set Dots Position
+  // ----
+  > .dots-container {
+    position: relative;
+    @include loaderRotation($duration: $loader-circular-dots-rotate-animation-duration, $timing-function: $loader-circular-dots-rotate-timing-function);
+
+    > .dot {
+      position: absolute;
+      height: $loader-circular-dots-dot-size;
+      width: $loader-circular-dots-dot-size;
+      border-radius: 500rem;
+      background-color: currentColor;
+      opacity: $loader-circular-dots-dot-starting-opacity;
+      animation: circularDotSpin $loader-circular-dots-dot-animation-duration infinite $loader-circular-dots-dot-timing-function alternate;
+
+      &:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      &:nth-child(2) {
+        top: 0;
+        right: 0;
+        animation-delay: $loader-circular-dots-dot-animation-delay * 1;
+      }
+
+      &:nth-child(3) {
+        bottom: 0;
+        right: 0;
+        animation-delay: $loader-circular-dots-dot-animation-delay * 2;
+      }
+
+      &:nth-child(4) {
+        bottom: 0;
+        left: 0;
+        animation-delay: $loader-circular-dots-dot-animation-delay * 3;
+      }
+    }
+  }
+
+  // ----
+  //  Increase Content Padding
+  // ----
+  &.with-content > .content {
+    padding-top: 1em;
+  }
+}
+
+@keyframes circularDotSpin {
+  to {
+    opacity: 1;
+  }
+}
+
+
+/******
+    Loader Color
+******/
+.loader {
+  @each $label, $color in $react-bucket-color-map {
+    &.is-#{$label} {
+      color: $color;
+
+      &.circular {
+        &:after,
+        &:before {
+          border-color: transparentize($color, .85);
+        }
+
+        /// After Pseudo Content is the spinning one
+        &:after {
+          border-color: transparentize($color, .25) transparent transparent;
+        }
+      }
+
+      &.indeterminate-bar {
+        color: $color;
+
+        > .progress-container {
+          background-color: transparentize($color, .75);
+
+          > .indeterminate-bar {
+            background-color: $color;
+          }
+        }
+      }
+
+      &.dots > .dots-container,
+      &.circular-dots > .dots-container {
+        color: $color;
+      }
+    }
+  }
+}
+
+
+/******
+    Loader Sizing
+******/
+.loader {
+  @each $label, $size in $loader-sizing {
+    &.is-#{$label} {
+
+      /// Set the Base font Size for Loader
+      font-size: map-get($map: $loader-font-size, $key: $label) !important;
+
+      /// Adjust the minimum width on loader with content
+      &.with-content {
+        min-width: $size;
+      }
+
+      /// Set Circular Loader dimension
+      &.circular {
+        width: $size;
+        height: $size;
+
+        /// Circular Loader must have a padding top if has content
+        &.with-content {
+          padding-top: $size;
+        }
+
+        /// Set Indicators Sizing
+        &:after,
+        &:before {
+          width: $size;
+          height: $size;
+          margin: 0 0 0 ($size / 2 * -1);
+        }
+      }
+
+      /// Set Circular Dots Loader size
+      &.circular-dots > .dots-container {
+        width: $size;
+        height: $size;
+      }
+    }
+  }
+}

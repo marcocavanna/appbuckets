@@ -1,0 +1,47 @@
+/// ----
+///   Base Layout
+///
+///   Use this file to add the base style for HTML, Body and Root element
+/// ----
+
+
+/******
+    Body Style and Responsive Padding
+******/
+.docs {
+  background-color: $body-background;
+  display: flex;
+
+  > .docs-content {
+    width: 100%;
+
+    > .container {
+      padding-top: $layout-vertical-padding;
+      padding-bottom: $layout-vertical-padding;
+    }
+  }
+
+  &.with-sidebar {
+    > .docs-content {
+      width: calc(100% - #{$sidebar-width});
+    }
+  }
+
+  &.with-toc {
+    > .docs-content {
+      width: calc(100% - #{$toc-width});
+    }
+  }
+
+  &.with-sidebar.with-toc {
+    > .docs-content {
+      width: calc(100% - #{$toc-width} - #{$sidebar-width});
+    }
+  }
+
+  &.with-navbar {
+    > .docs-content > .container {
+      padding-top: calc(#{$navbar-height} + #{$layout-vertical-padding});
+    }
+  }
+}

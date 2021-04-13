@@ -1,0 +1,98 @@
+pre {
+  background: #282c34;
+  color: #bbbbbb;
+  overflow-x: scroll;
+  border-radius: $border-radius;
+  @include smoothShadow(2);
+
+  code {
+    border-radius: 0 !important;
+    background-color: transparent !important;
+    display: block !important;
+    color: inherit !important;
+    text-shadow: none !important;
+    font-family: $font-family-monospace !important;
+    font-size: .85em !important;
+  }
+
+  .linenumber {
+    padding-right: 1.5em !important;
+    font-size: .75em;
+    color: #535b6e;
+    font-weight: $regular;
+  }
+
+
+  // ----
+  //  Shared Highlighter Style
+  // ----
+  .token {
+    &.comment {
+      font-weight: $regular;
+      color: #5f7886;
+    }
+  }
+
+
+  // ----
+  //  Shell Styling
+  // ----
+  .language-bash .token {
+    &.function {
+      color: #7ac1f7;
+    }
+  }
+
+
+  // ----
+  //  TSX Styling
+  // ----
+  .language-tsx .token,
+  .language-jsx .token {
+    &.attr-name {
+      color: #cc79dc;
+    }
+
+    &.dom.variable {
+      color: #f27076;
+    }
+
+    &.function,
+    &.function.maybe-class-name {
+      color: #ffbf73;
+    }
+
+    &.keyword {
+      color: #c678dd
+    }
+
+    &.imports {
+      &.operator {
+        color: #c678dd;
+      }
+
+      &.maybe-class-name {
+        color: #f27076;
+      }
+    }
+
+    &.number {
+      color: #ff35bf;
+    }
+
+    &.punctuation {
+      color: #eff2f3;
+    }
+
+    &.tag {
+      > .class-name {
+        color: #ef513c;
+      }
+    }
+
+    &.string {
+      color: #89ca78;
+    }
+  }
+}
+

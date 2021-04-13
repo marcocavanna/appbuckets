@@ -1,0 +1,240 @@
+/**
+ * AppBuckets UI
+ *
+ * _Input @ src/styles/elements/_input.scss
+ *
+ * Defined at 17 set 2020
+ * Copyright Marco Cavanna • 2020
+ *
+ * ---
+ * Input Styles
+ *
+ */
+
+/******
+    Restore Input Style
+******/
+input[type='email'],
+input[type='password'],
+input[type='search'],
+input[type='text'],
+input[type='number'],
+input[type='time'],
+textarea {
+  box-sizing: border-box;
+  appearance: none;
+  font-family: inherit;
+  color: inherit;
+  text-align: inherit;
+  outline: 0;
+  font-weight: $input-font-weight;
+}
+
+/******
+    Set the Base Input Style
+******/
+input.text,
+textarea.text {
+  flex: 1 1 auto;
+  width: inherit;
+  max-width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: pixel-to-em($input-vertical-padding) $input-horizontal-padding;
+  height: $computed-input-height;
+  line-height: $computed-input-line-height;
+
+  border: none;
+  background-color: $input-background-color;
+  border-radius: $input-border-radius;
+  box-shadow: inset 0 0 0 $input-border-width $input-border-color;
+
+  will-change: background-color, box-shadow;
+  transition: background-color $transition-speed-fast $transition-ease,
+  box-shadow $transition-speed-fast $transition-ease;
+
+  // ----
+  //  Placeholder Style
+  // ----
+  @include input-placeholder {
+    font-weight: $regular;
+    line-height: $computed-input-line-height + strip-unit(pixel-to-em($input-placeholder-vertical-position-fix));
+  }
+
+  // ----
+  //  Focused Style
+  // ----
+  &.focused {
+    background-color: $input-focus-background-color;
+    box-shadow: inset 0 0 0 $input-border-width $input-focus-border-color;
+  }
+
+  // ----
+  //  Disabled State
+  // ----
+  &.disabled {
+    opacity: $disabled-element-opacity;
+  }
+
+  // ----
+  //  Colored Styles
+  // ----
+  @each $label, $color in $react-bucket-color-map {
+    &.is-#{$label} {
+      @if $label == 'danger' or $label == 'info' or $label == 'primary' or $label == 'secondary' or $label == 'success' or $label == 'warning' {
+        box-shadow: inset 0 0 0 $input-border-width $color;
+      } @else {
+        &.focused {
+          box-shadow: inset 0 0 0 $input-border-width $color;
+        }
+      }
+    }
+  }
+
+  // ----
+  //  Readonly State
+  // ----
+  &[readonly],
+  &:read-only {
+    cursor: default;
+  }
+}
+
+
+/******
+    Input Icon
+******/
+.input.field {
+  .content {
+    // Icon has absolute position
+    > .icon {
+      margin: 0;
+      position: absolute;
+      padding-top: $input-vertical-padding;
+      height: $computed-input-line-height * 1em;
+      color: $field-icon-base-color;
+      transition: color $transition-speed-fast $transition-ease;
+      will-change: color;
+
+      &:after {
+        left: calc(50% + #{$input-horizontal-padding / 2});
+        top: calc(50% + #{$input-vertical-padding / 2});
+      }
+    }
+
+    &.icon-on-left {
+      > .icon:not(.clear) {
+        padding-left: $input-horizontal-padding * 1.125;
+      }
+
+      > input,
+      > textarea {
+        padding-left: $input-horizontal-padding * 1.25 + $icon-width;
+      }
+    }
+
+    &.icon-on-right {
+      > .icon {
+        padding-right: $input-horizontal-padding * 1.125;
+        right: 0;
+      }
+
+      > input,
+      > textarea {
+        padding-right: $input-horizontal-padding * 1.25 + $icon-width;
+      }
+    }
+  }
+}
+
+
+/******
+    Clearable Action is only another Icon
+******/
+.clearable.input.field .content {
+  > .clear.icon {
+    color: $field-clear-icon-base-color;
+    padding-right: $input-horizontal-padding * 1.125;
+    right: 0;
+
+    @include hover {
+      cursor: pointer;
+      transition: color $transition-ease $transition-speed-fast;
+
+      &:hover {
+        color: $field-clear-icon-hover-color;
+      }
+    }
+  }
+
+  > input,
+  > textarea {
+    padding-right: $input-horizontal-padding * 1.25 + $icon-width;
+  }
+
+  &.icon-on-right {
+    > .clear.icon {
+      right: $icon-width + ($input-horizontal-padding / 2);
+    }
+
+    > input,
+    > textarea {
+      padding-right: $input-horizontal-padding * 1.5 + ($icon-width * 2);
+    }
+  }
+}
+
+
+/******
+    Input Action
+******/
+.input.field {
+  > .wrapper {
+    > .addon {
+      align-self: flex-end;
+
+      > .buttons {
+        > .button {
+          height: $computed-input-height;
+        }
+      }
+    }
+
+    &.action-on-left {
+      .content > input {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+      .content > text {
+        border-bottom-left-radius: 0;
+      }
+
+      > .addon.left {
+        > .buttons > .button:last-child {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+
+    &.action-on-right {
+      .content > input {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      .content > textarea {
+        border-bottom-right-radius: 0;
+      }
+
+      > .addon.right {
+        > .buttons > .button:first-child {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+  }
+}

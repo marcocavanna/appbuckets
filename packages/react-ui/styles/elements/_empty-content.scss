@@ -1,0 +1,44 @@
+/**
+ * AppBuckets UI
+ *
+ * _EmptyContent @ src/styles/elements/_empty-content.scss
+ *
+ * Defined at 08 lug 2020
+ * Copyright Marco Cavanna • 2020
+ *
+ * ---
+ * Empty Content Element styles
+ *
+ */
+
+
+/******
+    Empty Content Base Style
+******/
+.empty {
+  padding-top: $empty-content-vertical-spacer !important;
+  padding-bottom: $empty-content-vertical-spacer !important;
+  text-align: center;
+
+  // ----
+  //  Adjust Header
+  // ----
+  > .header {
+    opacity: $empty-content-header-opacity;
+    margin-bottom: 0 !important;
+
+    /// Increase the Icon Size
+    &.with-icon.has-text-center > .header-icon {
+      font-size: $empty-content-icon-size;
+
+      .icon {
+        margin-bottom: $icon-spacer * .5;
+      }
+    }
+
+    /// Button will have Margin from Header
+    + .button {
+      margin-top: $empty-content-button-spacer;
+    }
+  }
+}

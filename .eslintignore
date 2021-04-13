@@ -1,0 +1,8 @@
+/.git
+/.yarn
+/coverage
+/docs/.next
+/docs/export
+/tmp
+build
+node_modules

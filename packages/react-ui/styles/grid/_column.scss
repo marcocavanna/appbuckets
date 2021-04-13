@@ -1,0 +1,70 @@
+/**
+ * AppBuckets UI
+ *
+ * _Column @ src/styles/grid/_column.scss
+ *
+ * Defined at 06 giu 2020
+ * Copyright Marco Cavanna • 2020
+ *
+ * ---
+ * Style for Columns
+ *
+ */
+
+$base-column-width: percentage(1 / $columns-count);
+
+/******
+    Set the Base Column Style
+******/
+.#{$column-class-name} {
+  display: block;
+  padding-left: $columns-gutter;
+  padding-right: $columns-gutter;
+  position: relative;
+  flex-grow: 1;
+  max-width: 100%;
+  min-width: $base-column-width;
+  flex-basis: 0;
+
+  /// Set Column Vertical Disposition
+  @each $label, $align in (on-top: flex-start, center: center, on-bottom: flex-end, stretched: stretch) {
+    @include selectors-for-each-breakpoint($label) {
+      align-self: $align;
+    }
+  }
+
+  // ----
+  //  Auto Column Width will decrease its size according to content
+  // ----
+  &.is-auto {
+    flex-grow: 0;
+    min-width: auto;
+  }
+}
+
+
+/******
+    Column Class Generator
+******/
+@for $col from 1 through $columns-count {
+  $width: $col * $base-column-width;
+
+  /// Generate Column Width Class
+  @include selectors-for-each-breakpoint('is-#{$col}') {
+    // If is last column, set max width and remove flex
+    @if $col == $columns-count {
+      flex: 0 0 100%;
+      width: 100%;
+    } @else {
+      flex: 0 0 $width;
+      width: $width;
+    }
+  }
+
+  /// Generate Column Offset
+  @if $col != $columns-count {
+    @include selectors-for-each-breakpoint('offset-by-#{$col}') {
+      margin-left: $width;
+    }
+  }
+}

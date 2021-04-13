@@ -1,0 +1,102 @@
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes indeterminateBar {
+  0% {
+    left: -35%;
+    right: 100%;
+  }
+  60% {
+    left: 100%;
+    right: -90%;
+  }
+  100% {
+    left: 100%;
+    right: -90%;
+  }
+}
+
+@keyframes indeterminateBarShort {
+  0% {
+    left: -200%;
+    right: 100%;
+  }
+  60% {
+    left: 107%;
+    right: -8%;
+  }
+  100% {
+    left: 125%;
+    right: -8%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flashingPrimaryBorder {
+  0% {
+    border-color: $primary;
+  }
+
+  50% {
+    border-color: color-tint($primary, 5);
+  }
+
+  100% {
+    border-color: $primary;
+  }
+}
+
+@keyframes flash {
+  0%, 80%, 100% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+}
+
+@mixin animate($animation-name, $timing-function: $swift-ease-in, $duration: 300ms, $iteration-count: 1) {
+  animation-name: $animation-name;
+  animation-timing-function: $timing-function;
+  animation-duration: $duration;
+  animation-iteration-count: $iteration-count;
+}
+
+@mixin loaderRotation($duration: 750ms, $timing-function: linear, $iteration-count: infinite) {
+  @include animate(spin, $timing-function, $duration, $iteration-count);
+}
+
+@mixin fadeIn($duration: 300ms, $timing-function: $swift-ease-out, $iteration-count: 1) {
+  @include animate(fadeIn, $timing-function, $duration, $iteration-count);
+}
+
+@mixin fadeInDown($duration: 300ms, $timing-function: $swift-ease-out, $iteration-count: 1) {
+  @include animate(fadeInDown, $timing-function, $duration, $iteration-count);
+}
+
+@mixin flashingPrimaryBorder($duration: 1500ms, $timing-function: $swift-ease-in-out, $iteration-count: infinite) {
+  @include animate(flashingPrimaryBorder, $timing-function, $duration, $iteration-count);
+}

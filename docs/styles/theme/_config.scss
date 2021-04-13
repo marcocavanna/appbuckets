@@ -1,0 +1,46 @@
+/// ----
+///   App Style Config
+///
+///   Use this file to add configuration variables
+///   that is specific to this App
+/// ----
+
+
+/******
+    Page Layout
+******/
+$layout-vertical-padding: 3em;
+$layout-horizontal-padding: 1.5em;
+$layout-horizontal-padding-on-tablet: 3em;
+$layout-horizontal-padding-on-desktop: 5.5em;
+
+
+/******
+    NavBar
+******/
+$navbar-height: 64px;
+$navbar-background: $primary;
+
+$navbar-link-height: 48px;
+$navbar-link-color: $white;
+$navbar-link-opacity: .5;
+$navbar-link-active-opacity: 1;
+$navbar-link-hover-opacity: .75;
+$navbar-link-spacer: 1em;
+
+$navbar-logo-size: 3em;
+$navbar-logo-spacer: 1em;
+
+
+/******
+    SideBar
+******/
+$sidebar-background: #ffffff;
+$sidebar-border-color: $white-shade-2;
+$sidebar-width: 260px;
+
+
+/******
+    TOC
+******/
+$toc-width: 200px;
