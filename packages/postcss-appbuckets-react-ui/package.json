@@ -12,6 +12,10 @@
   "peerDependencies": {
     "postcss": ">=6 <8"
   },
+  "scripts": {
+    "build": "cpy '*' build",
+    "prebuild": "rimraf build"
+  },
   "dependencies": {
     "autoprefixer": "^9.8.6",
     "css-declaration-sorter": "^5.1.2",
@@ -25,5 +29,10 @@
     "postcss-single-charset": "^2.0.0",
     "postcss-single-line": "^1.0.0",
     "postcss-sort-media-queries": "^1.7.26"
+  },
+  "gitHead": "3810d66501029c842ccfb4e69f1bc25d741c545e",
+  "devDependencies": {
+    "cpy-cli": "^3.1.1",
+    "rimraf": "^3.0.2"
   }
 }
