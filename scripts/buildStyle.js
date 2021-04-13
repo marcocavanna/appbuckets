@@ -12,7 +12,7 @@ const sass = require('node-sass');
 const packageImporter = require('node-sass-package-importer');
 
 const postcss = require('postcss');
-const { getPostCSSPlugins } = require('@appbuckets/postcss-react-bucket');
+const { getPostCSSPlugins } = require('../packages/postcss-appbuckets-react-ui');
 
 
 /* --------

@@ -1,5 +1,5 @@
 {
-  "name": "@appbuckets/postcss-react-bucket",
+  "name": "@appbuckets/postcss-appbuckets-react-ui",
   "version": "0.1.2",
   "description": "PostCSS Plugin to correctly import SCSS Source File of React Bucket UI Module",
   "main": "index.js",

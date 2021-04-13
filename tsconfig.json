@@ -143,7 +143,7 @@
       "@appbuckets/react-ui": [
         "./packages/react-ui/src"
       ],
-      "@appbuckets/postcss-react-bucket": [
+      "@appbuckets/postcss-appbuckets-react-ui": [
         "./packages/postcss-appbuckets-react-ui"
       ]
     },
