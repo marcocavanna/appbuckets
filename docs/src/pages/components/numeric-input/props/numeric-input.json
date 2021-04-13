@@ -1,0 +1,1437 @@
+{
+  "filename": "packages/react-ui/src/NumericInput/NumericInput.tsx",
+  "tags": {},
+  "description": "",
+  "displayName": "NumericInput",
+  "props": {
+    "allowNegative": {
+      "defaultValue": null,
+      "description": "Set if numeric input must allow negative number",
+      "name": "allowNegative",
+      "parent": {
+        "fileName": "react-ui/src/NumericInput/NumericInput.types.ts",
+        "name": "StrictNumericInputProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/NumericInput/NumericInput.types.ts",
+          "name": "StrictNumericInputProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "defaultValue": {
+      "defaultValue": null,
+      "description": "The default input value",
+      "name": "defaultValue",
+      "parent": {
+        "fileName": "react-ui/src/NumericInput/NumericInput.types.ts",
+        "name": "StrictNumericInputProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/NumericInput/NumericInput.types.ts",
+          "name": "StrictNumericInputProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "number"
+      }
+    },
+    "max": {
+      "defaultValue": null,
+      "description": "Set a max number",
+      "name": "max",
+      "parent": {
+        "fileName": "react-ui/src/NumericInput/NumericInput.types.ts",
+        "name": "StrictNumericInputProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/NumericInput/NumericInput.types.ts",
+          "name": "StrictNumericInputProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "number"
+      }
+    },
+    "min": {
+      "defaultValue": null,
+      "description": "Set a min number",
+      "name": "min",
+      "parent": {
+        "fileName": "react-ui/src/NumericInput/NumericInput.types.ts",
+        "name": "StrictNumericInputProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/NumericInput/NumericInput.types.ts",
+          "name": "StrictNumericInputProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "number"
+      }
+    },
+    "onBlur": {
+      "defaultValue": null,
+      "description": "On Blur Event",
+      "name": "onBlur",
+      "parent": {
+        "fileName": "react-ui/src/NumericInput/NumericInput.types.ts",
+        "name": "StrictNumericInputProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/NumericInput/NumericInput.types.ts",
+          "name": "StrictNumericInputProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "FocusHandler<HTMLInputElement, NumericInputProps>"
+      }
+    },
+    "onChange": {
+      "defaultValue": null,
+      "description": "On Change Event",
+      "name": "onChange",
+      "parent": {
+        "fileName": "react-ui/src/NumericInput/NumericInput.types.ts",
+        "name": "StrictNumericInputProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/NumericInput/NumericInput.types.ts",
+          "name": "StrictNumericInputProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(nothing: null, props: NumericInputProps) => void"
+      }
+    },
+    "onFocus": {
+      "defaultValue": null,
+      "description": "On Focus Event",
+      "name": "onFocus",
+      "parent": {
+        "fileName": "react-ui/src/NumericInput/NumericInput.types.ts",
+        "name": "StrictNumericInputProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/NumericInput/NumericInput.types.ts",
+          "name": "StrictNumericInputProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "FocusHandler<HTMLInputElement, NumericInputProps>"
+      }
+    },
+    "selectAllOnClick": {
+      "defaultValue": null,
+      "description": "Auto Select all content on click",
+      "name": "selectAllOnClick",
+      "parent": {
+        "fileName": "react-ui/src/NumericInput/NumericInput.types.ts",
+        "name": "StrictNumericInputProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/NumericInput/NumericInput.types.ts",
+          "name": "StrictNumericInputProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "value": {
+      "defaultValue": null,
+      "description": "Set the input value",
+      "name": "value",
+      "parent": {
+        "fileName": "react-ui/src/NumericInput/NumericInput.types.ts",
+        "name": "StrictNumericInputProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/NumericInput/NumericInput.types.ts",
+          "name": "StrictNumericInputProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "number"
+      }
+    },
+    "actions": {
+      "defaultValue": null,
+      "description": "A Button to Show",
+      "name": "actions",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ShorthandCollection<ButtonProps>"
+      }
+    },
+    "actionsPosition": {
+      "defaultValue": null,
+      "description": "Set action button position, default to right",
+      "name": "actionsPosition",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "\"left\" | \"right\"",
+        "value": [
+          {
+            "value": "\"left\""
+          },
+          {
+            "value": "\"right\""
+          }
+        ]
+      }
+    },
+    "clearable": {
+      "defaultValue": null,
+      "description": "Set the Field as Clearable",
+      "name": "clearable",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "contentClassName": {
+      "defaultValue": null,
+      "description": "User defined className used for content element",
+      "name": "contentClassName",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "contentType": {
+      "defaultValue": null,
+      "description": "Set field content type",
+      "name": "contentType",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "\"input\" | \"color\" | \"select input\" | \"checkbox\" | \"radio\" | \"switch\"",
+        "value": [
+          {
+            "value": "\"input\""
+          },
+          {
+            "value": "\"color\""
+          },
+          {
+            "value": "\"select input\""
+          },
+          {
+            "value": "\"checkbox\""
+          },
+          {
+            "value": "\"radio\""
+          },
+          {
+            "value": "\"switch\""
+          }
+        ]
+      }
+    },
+    "disabled": {
+      "defaultValue": null,
+      "description": "Set the field as Disabled",
+      "name": "disabled",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "hint": {
+      "defaultValue": null,
+      "description": "An hint, appended after field content",
+      "name": "hint",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
+    "hintClassName": {
+      "defaultValue": null,
+      "description": "User defined className used for hint element",
+      "name": "hintClassName",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "icon": {
+      "defaultValue": null,
+      "description": "An Icon to Show",
+      "name": "icon",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "AppBucketsIcon<IconProps>"
+      }
+    },
+    "iconPosition": {
+      "defaultValue": null,
+      "description": "Set the icon position, default to left",
+      "name": "iconPosition",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "\"left\" | \"right\"",
+        "value": [
+          {
+            "value": "\"left\""
+          },
+          {
+            "value": "\"right\""
+          }
+        ]
+      }
+    },
+    "isDirty": {
+      "defaultValue": null,
+      "description": "Set field as Dirty",
+      "name": "isDirty",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "isFocused": {
+      "defaultValue": null,
+      "description": "Set field as Focused",
+      "name": "isFocused",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "isTouched": {
+      "defaultValue": null,
+      "description": "Set field as Touched",
+      "name": "isTouched",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "label": {
+      "defaultValue": null,
+      "description": "Field Label",
+      "name": "label",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
+    "onClear": {
+      "defaultValue": null,
+      "description": "On Clear Button click",
+      "name": "onClear",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(e: MouseEvent<SVGSVGElement, MouseEvent>) => void"
+      }
+    },
+    "readOnly": {
+      "defaultValue": null,
+      "description": "Set field as read only",
+      "name": "readOnly",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "required": {
+      "defaultValue": null,
+      "description": "Set the field as Required",
+      "name": "required",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "appearance": {
+      "defaultValue": null,
+      "description": "Manually set the Element appearance by Color Pool",
+      "name": "appearance",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "AppBucketsColor",
+        "value": [
+          {
+            "value": "\"danger\""
+          },
+          {
+            "value": "\"info\""
+          },
+          {
+            "value": "\"primary\""
+          },
+          {
+            "value": "\"success\""
+          },
+          {
+            "value": "\"warning\""
+          },
+          {
+            "value": "\"amazon\""
+          },
+          {
+            "value": "\"android\""
+          },
+          {
+            "value": "\"apple\""
+          },
+          {
+            "value": "\"facebook\""
+          },
+          {
+            "value": "\"google\""
+          },
+          {
+            "value": "\"google-plus\""
+          },
+          {
+            "value": "\"instagram\""
+          },
+          {
+            "value": "\"linkedin\""
+          },
+          {
+            "value": "\"microsoft\""
+          },
+          {
+            "value": "\"pinterest\""
+          },
+          {
+            "value": "\"skype\""
+          },
+          {
+            "value": "\"slack\""
+          },
+          {
+            "value": "\"telegram\""
+          },
+          {
+            "value": "\"tumblr\""
+          },
+          {
+            "value": "\"twitter\""
+          },
+          {
+            "value": "\"vimeo\""
+          },
+          {
+            "value": "\"whatsapp\""
+          },
+          {
+            "value": "\"yahoo\""
+          },
+          {
+            "value": "\"youtube\""
+          },
+          {
+            "value": "\"cloud\""
+          },
+          {
+            "value": "\"text\""
+          },
+          {
+            "value": "\"text secondary\""
+          },
+          {
+            "value": "\"black\""
+          },
+          {
+            "value": "\"white\""
+          },
+          {
+            "value": "\"white shade\""
+          },
+          {
+            "value": "\"blue\""
+          },
+          {
+            "value": "\"teal\""
+          },
+          {
+            "value": "\"green\""
+          },
+          {
+            "value": "\"yellow\""
+          },
+          {
+            "value": "\"orange\""
+          },
+          {
+            "value": "\"red\""
+          },
+          {
+            "value": "\"pink\""
+          },
+          {
+            "value": "\"purple\""
+          },
+          {
+            "value": "\"cloud light\""
+          },
+          {
+            "value": "\"cloud dark\""
+          },
+          {
+            "value": "\"dribble\""
+          }
+        ]
+      }
+    },
+    "danger": {
+      "defaultValue": null,
+      "description": "Set the Danger State",
+      "name": "danger",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "info": {
+      "defaultValue": null,
+      "description": "Set the Info State",
+      "name": "info",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "primary": {
+      "defaultValue": null,
+      "description": "Set the Primary State",
+      "name": "primary",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "secondary": {
+      "defaultValue": null,
+      "description": "Set the Secondary State",
+      "name": "secondary",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "success": {
+      "defaultValue": null,
+      "description": "Set the Success State",
+      "name": "success",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "warning": {
+      "defaultValue": null,
+      "description": "Set the Warning State",
+      "name": "warning",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "decimalSeparator": {
+      "defaultValue": null,
+      "description": "Define decimals separator, default to `.`",
+      "name": "decimalSeparator",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/formatters/dist/types/formatters/number.d.ts",
+        "name": "IFormatNumberConfig"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/formatters/dist/types/formatters/number.d.ts",
+          "name": "IFormatNumberConfig"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "flexibleDecimals": {
+      "defaultValue": null,
+      "description": "Set if decimals count could be\nflexible starting\nfrom `minPrecision` to `precision`",
+      "name": "flexibleDecimals",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/formatters/dist/types/formatters/number.d.ts",
+        "name": "IFormatNumberConfig"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/formatters/dist/types/formatters/number.d.ts",
+          "name": "IFormatNumberConfig"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "minPrecision": {
+      "defaultValue": null,
+      "description": "Set the minimum decimal count,\nthis option will be considered\nonly when `flexibleDecimals` is true",
+      "name": "minPrecision",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/formatters/dist/types/formatters/number.d.ts",
+        "name": "IFormatNumberConfig"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/formatters/dist/types/formatters/number.d.ts",
+          "name": "IFormatNumberConfig"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "number"
+      }
+    },
+    "pattern": {
+      "defaultValue": null,
+      "description": "Define the format pattern to use\nto display formatted number.\nPattern string could use some placeholder:\n - `%n` to define the number\n - `%m` to define the minus symbol (if negative)\n - `%s` to define the suffix\n - `%p` to define the prefix\n\nDefault pattern is\n`%p %m %n %s`\n\n_Attention_: multiple consecutive spacing\nare replaced with one single space",
+      "name": "pattern",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/formatters/dist/types/formatters/number.d.ts",
+        "name": "IFormatNumberConfig"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/formatters/dist/types/formatters/number.d.ts",
+          "name": "IFormatNumberConfig"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "precision": {
+      "defaultValue": null,
+      "description": "Set the number precision.\nThis option will be used also\nas `maxPrecision` number when formatting\nwith `flexbileDecimals` to true",
+      "name": "precision",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/formatters/dist/types/formatters/number.d.ts",
+        "name": "IFormatNumberConfig"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/formatters/dist/types/formatters/number.d.ts",
+          "name": "IFormatNumberConfig"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "number"
+      }
+    },
+    "prefix": {
+      "defaultValue": null,
+      "description": "Append a prefix to formatted number",
+      "name": "prefix",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/formatters/dist/types/formatters/number.d.ts",
+        "name": "IFormatNumberConfig"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/formatters/dist/types/formatters/number.d.ts",
+          "name": "IFormatNumberConfig"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "suffix": {
+      "defaultValue": null,
+      "description": "Prepend a suffix to formatted number",
+      "name": "suffix",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/formatters/dist/types/formatters/number.d.ts",
+        "name": "IFormatNumberConfig"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/formatters/dist/types/formatters/number.d.ts",
+          "name": "IFormatNumberConfig"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "thousandSeparator": {
+      "defaultValue": null,
+      "description": "Define thousand separator, default to `,`",
+      "name": "thousandSeparator",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/formatters/dist/types/formatters/number.d.ts",
+        "name": "IFormatNumberConfig"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/formatters/dist/types/formatters/number.d.ts",
+          "name": "IFormatNumberConfig"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "as": {
+      "defaultValue": null,
+      "description": "An Element used to Render the Component",
+      "name": "as",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string | ComponentClass<{}, any> | FunctionComponent<{}>"
+      }
+    },
+    "children": {
+      "defaultValue": null,
+      "description": "Main Component Content",
+      "name": "children",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "DOMAttributes"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "TypeLiteral"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
+    "className": {
+      "defaultValue": null,
+      "description": "User Defined Class Names",
+      "name": "className",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "HTMLAttributes"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "content": {
+      "defaultValue": null,
+      "description": "Content Shorthand",
+      "name": "content",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
+    "size": {
+      "defaultValue": null,
+      "description": "Change component size",
+      "name": "size",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+        "name": "InputHTMLAttributes"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "InputHTMLAttributes"
+        },
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "never"
+      }
+    },
+    "backgroundColor": {
+      "defaultValue": null,
+      "description": "Choose Main background Color",
+      "name": "backgroundColor",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "AppBucketsColor",
+        "value": [
+          {
+            "value": "\"danger\""
+          },
+          {
+            "value": "\"info\""
+          },
+          {
+            "value": "\"primary\""
+          },
+          {
+            "value": "\"success\""
+          },
+          {
+            "value": "\"warning\""
+          },
+          {
+            "value": "\"amazon\""
+          },
+          {
+            "value": "\"android\""
+          },
+          {
+            "value": "\"apple\""
+          },
+          {
+            "value": "\"facebook\""
+          },
+          {
+            "value": "\"google\""
+          },
+          {
+            "value": "\"google-plus\""
+          },
+          {
+            "value": "\"instagram\""
+          },
+          {
+            "value": "\"linkedin\""
+          },
+          {
+            "value": "\"microsoft\""
+          },
+          {
+            "value": "\"pinterest\""
+          },
+          {
+            "value": "\"skype\""
+          },
+          {
+            "value": "\"slack\""
+          },
+          {
+            "value": "\"telegram\""
+          },
+          {
+            "value": "\"tumblr\""
+          },
+          {
+            "value": "\"twitter\""
+          },
+          {
+            "value": "\"vimeo\""
+          },
+          {
+            "value": "\"whatsapp\""
+          },
+          {
+            "value": "\"yahoo\""
+          },
+          {
+            "value": "\"youtube\""
+          },
+          {
+            "value": "\"cloud\""
+          },
+          {
+            "value": "\"text\""
+          },
+          {
+            "value": "\"text secondary\""
+          },
+          {
+            "value": "\"black\""
+          },
+          {
+            "value": "\"white\""
+          },
+          {
+            "value": "\"white shade\""
+          },
+          {
+            "value": "\"blue\""
+          },
+          {
+            "value": "\"teal\""
+          },
+          {
+            "value": "\"green\""
+          },
+          {
+            "value": "\"yellow\""
+          },
+          {
+            "value": "\"orange\""
+          },
+          {
+            "value": "\"red\""
+          },
+          {
+            "value": "\"pink\""
+          },
+          {
+            "value": "\"purple\""
+          },
+          {
+            "value": "\"cloud light\""
+          },
+          {
+            "value": "\"cloud dark\""
+          },
+          {
+            "value": "\"dribble\""
+          }
+        ]
+      }
+    },
+    "display": {
+      "defaultValue": null,
+      "description": "Set element display",
+      "name": "display",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ResponsiveProps<ElementDisplay>"
+      }
+    },
+    "fontWeight": {
+      "defaultValue": null,
+      "description": "Define the main Font Weight",
+      "name": "fontWeight",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "FontWeight",
+        "value": [
+          {
+            "value": "\"bold\""
+          },
+          {
+            "value": "\"light\""
+          },
+          {
+            "value": "\"regular\""
+          },
+          {
+            "value": "\"semi bold\""
+          }
+        ]
+      }
+    },
+    "textAlign": {
+      "defaultValue": null,
+      "description": "Define Text Align",
+      "name": "textAlign",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "ContentAlign",
+        "value": [
+          {
+            "value": "\"left\""
+          },
+          {
+            "value": "\"right\""
+          },
+          {
+            "value": "\"center\""
+          }
+        ]
+      }
+    },
+    "textColor": {
+      "defaultValue": null,
+      "description": "Choose main text color",
+      "name": "textColor",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "AppBucketsColor",
+        "value": [
+          {
+            "value": "\"danger\""
+          },
+          {
+            "value": "\"info\""
+          },
+          {
+            "value": "\"primary\""
+          },
+          {
+            "value": "\"success\""
+          },
+          {
+            "value": "\"warning\""
+          },
+          {
+            "value": "\"amazon\""
+          },
+          {
+            "value": "\"android\""
+          },
+          {
+            "value": "\"apple\""
+          },
+          {
+            "value": "\"facebook\""
+          },
+          {
+            "value": "\"google\""
+          },
+          {
+            "value": "\"google-plus\""
+          },
+          {
+            "value": "\"instagram\""
+          },
+          {
+            "value": "\"linkedin\""
+          },
+          {
+            "value": "\"microsoft\""
+          },
+          {
+            "value": "\"pinterest\""
+          },
+          {
+            "value": "\"skype\""
+          },
+          {
+            "value": "\"slack\""
+          },
+          {
+            "value": "\"telegram\""
+          },
+          {
+            "value": "\"tumblr\""
+          },
+          {
+            "value": "\"twitter\""
+          },
+          {
+            "value": "\"vimeo\""
+          },
+          {
+            "value": "\"whatsapp\""
+          },
+          {
+            "value": "\"yahoo\""
+          },
+          {
+            "value": "\"youtube\""
+          },
+          {
+            "value": "\"cloud\""
+          },
+          {
+            "value": "\"text\""
+          },
+          {
+            "value": "\"text secondary\""
+          },
+          {
+            "value": "\"black\""
+          },
+          {
+            "value": "\"white\""
+          },
+          {
+            "value": "\"white shade\""
+          },
+          {
+            "value": "\"blue\""
+          },
+          {
+            "value": "\"teal\""
+          },
+          {
+            "value": "\"green\""
+          },
+          {
+            "value": "\"yellow\""
+          },
+          {
+            "value": "\"orange\""
+          },
+          {
+            "value": "\"red\""
+          },
+          {
+            "value": "\"pink\""
+          },
+          {
+            "value": "\"purple\""
+          },
+          {
+            "value": "\"cloud light\""
+          },
+          {
+            "value": "\"cloud dark\""
+          },
+          {
+            "value": "\"dribble\""
+          }
+        ]
+      }
+    }
+  }
+}

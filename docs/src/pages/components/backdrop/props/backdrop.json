@@ -1,0 +1,491 @@
+{
+  "filename": "packages/react-ui/src/Backdrop/Backdrop.tsx",
+  "tags": {},
+  "description": "",
+  "displayName": "Backdrop",
+  "props": {
+    "closeOnBackdropClick": {
+      "defaultValue": null,
+      "description": "Close backdrop on Click",
+      "name": "closeOnBackdropClick",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+        "name": "StrictBackdropProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+          "name": "StrictBackdropProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "loading": {
+      "defaultValue": null,
+      "description": "Set a Loader as Backdrop Inner Content",
+      "name": "loading",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+        "name": "StrictBackdropProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+          "name": "StrictBackdropProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "loaderProps": {
+      "defaultValue": null,
+      "description": "Manually override Loader Props",
+      "name": "loaderProps",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+        "name": "StrictBackdropProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+          "name": "StrictBackdropProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "LoaderProps"
+      }
+    },
+    "onClose": {
+      "defaultValue": null,
+      "description": "Callback fired on Backdrop try to close",
+      "name": "onClose",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+        "name": "StrictBackdropProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+          "name": "StrictBackdropProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(e: MouseEvent<HTMLElement, MouseEvent>, props: BackdropProps) => void"
+      }
+    },
+    "onMount": {
+      "defaultValue": null,
+      "description": "Callback fired on Backdrop Mount",
+      "name": "onMount",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+        "name": "StrictBackdropProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+          "name": "StrictBackdropProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(nothing: null, props: BackdropProps) => void"
+      }
+    },
+    "onOpen": {
+      "defaultValue": null,
+      "description": "Callback fired on Backdrop try to open",
+      "name": "onOpen",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+        "name": "StrictBackdropProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+          "name": "StrictBackdropProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(e: MouseEvent<HTMLElement, MouseEvent>, props: BackdropProps) => void"
+      }
+    },
+    "onUnmount": {
+      "defaultValue": null,
+      "description": "Callback fired on Backdrop Unmount",
+      "name": "onUnmount",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+        "name": "StrictBackdropProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+          "name": "StrictBackdropProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(nothing: null, props: BackdropProps) => void"
+      }
+    },
+    "page": {
+      "defaultValue": null,
+      "description": "Set the backdrop as full page",
+      "name": "page",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+        "name": "StrictBackdropProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+          "name": "StrictBackdropProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "closeOnDocumentClick": {
+      "defaultValue": null,
+      "description": "Controls if the Portal should close when document is clicked",
+      "name": "closeOnDocumentClick",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+        "name": "StrictPortalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+          "name": "StrictPortalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "closeOnEscape": {
+      "defaultValue": null,
+      "description": "Controls if the Portal should close when escape key is pressed",
+      "name": "closeOnEscape",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+        "name": "StrictPortalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+          "name": "StrictPortalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "openOnTriggerClick": {
+      "defaultValue": null,
+      "description": "Controls if the Portal should open on trigger click",
+      "name": "openOnTriggerClick",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+        "name": "StrictPortalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+          "name": "StrictPortalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "openOnTriggerFocus": {
+      "defaultValue": null,
+      "description": "Controls if the Portal should open on trigger focus",
+      "name": "openOnTriggerFocus",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+        "name": "StrictPortalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+          "name": "StrictPortalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "openOnTriggerMouseEnter": {
+      "defaultValue": null,
+      "description": "Controls if the Portal should open on trigger mouse enter",
+      "name": "openOnTriggerMouseEnter",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+        "name": "StrictPortalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+          "name": "StrictPortalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "trigger": {
+      "defaultValue": null,
+      "description": "The element to be rendered in-place where the portal is defined",
+      "name": "trigger",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+        "name": "StrictPortalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+          "name": "StrictPortalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactElement<any, string | JSXElementConstructor<any>>"
+      }
+    },
+    "triggerRef": {
+      "defaultValue": null,
+      "description": "Called with a ref to the trigger node",
+      "name": "triggerRef",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+        "name": "StrictPortalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+          "name": "StrictPortalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "Ref<HTMLElement>"
+      }
+    },
+    "animated": {
+      "defaultValue": null,
+      "description": "Set the backdrop as animated",
+      "name": "animated",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+        "name": "StrictBackdropInnerProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+          "name": "StrictBackdropInnerProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "onClick": {
+      "defaultValue": null,
+      "description": "Handle Click Event",
+      "name": "onClick",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+        "name": "StrictBackdropInnerProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+          "name": "StrictBackdropInnerProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(event: MouseEvent<HTMLElement, MouseEvent>, props: BackdropInnerProps) => void"
+      }
+    },
+    "onClickOutside": {
+      "defaultValue": null,
+      "description": "Handle Click Event occurred outside Backdrop Content, but in Backdrop Area",
+      "name": "onClickOutside",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+        "name": "StrictBackdropInnerProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+          "name": "StrictBackdropInnerProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(event: MouseEvent<HTMLElement, MouseEvent>, props: BackdropInnerProps) => void"
+      }
+    },
+    "verticalAlign": {
+      "defaultValue": null,
+      "description": "Set the content vertical align",
+      "name": "verticalAlign",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+        "name": "StrictBackdropInnerProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+          "name": "StrictBackdropInnerProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "FlexContentVerticalAlign",
+        "value": [
+          {
+            "value": "\"on top\""
+          },
+          {
+            "value": "\"on bottom\""
+          },
+          {
+            "value": "\"center\""
+          },
+          {
+            "value": "\"stretched\""
+          }
+        ]
+      }
+    },
+    "visible": {
+      "defaultValue": null,
+      "description": "Set the backdrop and its content as visible",
+      "name": "visible",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+        "name": "StrictBackdropInnerProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+          "name": "StrictBackdropInnerProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "as": {
+      "defaultValue": null,
+      "description": "An Element used to Render the Component",
+      "name": "as",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string | ComponentClass<{}, any> | FunctionComponent<{}>"
+      }
+    },
+    "children": {
+      "defaultValue": null,
+      "description": "Main Component Content",
+      "name": "children",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "DOMAttributes"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "TypeLiteral"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
+    "className": {
+      "defaultValue": null,
+      "description": "User Defined Class Names",
+      "name": "className",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "HTMLAttributes"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "content": {
+      "defaultValue": null,
+      "description": "Content Shorthand",
+      "name": "content",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    }
+  }
+}

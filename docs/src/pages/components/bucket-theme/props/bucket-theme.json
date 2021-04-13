@@ -1,0 +1,23 @@
+{
+  "filename": "packages/react-ui/src/BucketTheme/BucketTheme.tsx",
+  "tags": {},
+  "description": "",
+  "displayName": "BucketTheme",
+  "props": {
+    "theme": {
+      "defaultValue": null,
+      "description": "",
+      "name": "theme",
+      "declarations": [
+        {
+          "fileName": "react-ui/src/BucketTheme/BucketTheme.tsx",
+          "name": "TypeLiteral"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "RecursivePartial<ThemeOptions>"
+      }
+    }
+  }
+}

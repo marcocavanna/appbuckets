@@ -1,0 +1,1961 @@
+{
+  "filename": "packages/react-ui/src/Select/Select.tsx",
+  "tags": {},
+  "description": "",
+  "displayName": "Select",
+  "props": {
+    "aria-label": {
+      "defaultValue": null,
+      "description": "",
+      "name": "aria-label",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "aria-labelledby": {
+      "defaultValue": null,
+      "description": "HTML ID of an element that should be used as the label (for assistive tech)",
+      "name": "aria-labelledby",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "allowCreateWhileLoading": {
+      "defaultValue": null,
+      "description": "Allow options to be created while the `isLoading` prop is true.\nUseful to prevent the \"create new ...\" option being displayed\nwhile async results are still being loaded.",
+      "name": "allowCreateWhileLoading",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "autoFocus": {
+      "defaultValue": null,
+      "description": "Focus the control when it is mounted",
+      "name": "autoFocus",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "backspaceRemovesValue": {
+      "defaultValue": null,
+      "description": "Remove the currently focused option when the user presses backspace",
+      "name": "backspaceRemovesValue",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "blurInputOnSelect": {
+      "defaultValue": null,
+      "description": "Remove focus from the input when the user selects an option (handy for dismissing the keyboard on touch devices)",
+      "name": "blurInputOnSelect",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "captureMenuScroll": {
+      "defaultValue": null,
+      "description": "When the user reaches the top/bottom of the menu, prevent scroll on the scroll-parent",
+      "name": "captureMenuScroll",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "className": {
+      "defaultValue": null,
+      "description": "className attribute applied to the outer component",
+      "name": "className",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "classNamePrefix": {
+      "defaultValue": null,
+      "description": "classNamePrefix attribute used as a base for inner component classNames",
+      "name": "classNamePrefix",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "closeMenuOnSelect": {
+      "defaultValue": null,
+      "description": "Close the select menu when the user selects an option",
+      "name": "closeMenuOnSelect",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "closeMenuOnScroll": {
+      "defaultValue": null,
+      "description": "If `true`, close the select menu when the user scrolls the document/body.\n\nIf a function, takes a standard javascript `ScrollEvent` you return a boolean:\n\n`true` => The menu closes\n\n`false` => The menu stays open\n\nThis is useful when you have a scrollable modal and want to portal the menu out,\nbut want to avoid graphical issues.",
+      "name": "closeMenuOnScroll",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean | EventListener"
+      }
+    },
+    "components": {
+      "defaultValue": null,
+      "description": "This complex object includes all the compositional components that are used\nin `react-select`. If you wish to overwrite a component, pass in an object\nwith the appropriate namespace.\n\nIf you only wish to restyle a component, we recommend using the `styles` prop\ninstead. For a list of the components that can be passed in, and the shape\nthat will be passed to them, see [the components docs](/api#components)",
+      "name": "components",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "Partial<SelectComponents<Option, true, GroupTypeBase<Option>>>"
+      }
+    },
+    "controlShouldRenderValue": {
+      "defaultValue": null,
+      "description": "Whether the value of the select, e.g. SingleValue, should be displayed in the control.",
+      "name": "controlShouldRenderValue",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "creatable": {
+      "defaultValue": null,
+      "description": "Set the component as a Creatable Select",
+      "name": "creatable",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "defaultInputValue": {
+      "defaultValue": null,
+      "description": "Default Input Value",
+      "name": "defaultInputValue",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "defaultValue": {
+      "defaultValue": null,
+      "description": "The default starting select value",
+      "name": "defaultValue",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string | number"
+      }
+    },
+    "delimiter": {
+      "defaultValue": null,
+      "description": "Delimiter used to join multiple values into a single HTML Input value",
+      "name": "delimiter",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "escapeClearsValue": {
+      "defaultValue": null,
+      "description": "Clear all values when the user presses escape AND the menu is closed",
+      "name": "escapeClearsValue",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "formatCreateLabel": {
+      "defaultValue": null,
+      "description": "Gets the label for the \"create new ...\"\noption in the menu. Is given the current input value.",
+      "name": "formatCreateLabel",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(inputValue: string) => ReactNode"
+      }
+    },
+    "formatGroupLabel": {
+      "defaultValue": null,
+      "description": "Formats group labels in the menu as React components",
+      "name": "formatGroupLabel",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(group: GroupTypeBase<Option>) => ReactNode"
+      }
+    },
+    "formatOptionLabel": {
+      "defaultValue": null,
+      "description": "Formats option labels in the menu and control as React components",
+      "name": "formatOptionLabel",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(option: Option, labelMeta: FormatOptionLabelMeta<Option, true>) => ReactNode"
+      }
+    },
+    "getNewOptionData": {
+      "defaultValue": null,
+      "description": "Returns the data for the new option when it is created. Used to display the\nvalue, and is passed to `onChange`.",
+      "name": "getNewOptionData",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(inputValue: string, optionLabel: ReactNode) => Option"
+      }
+    },
+    "getOptionLabel": {
+      "defaultValue": null,
+      "description": "Resolves option data to a string to be displayed as the label by components",
+      "name": "getOptionLabel",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(option: Option) => string"
+      }
+    },
+    "getOptionValue": {
+      "defaultValue": null,
+      "description": "Resolves option data to a string to compare options and specify value attributes",
+      "name": "getOptionValue",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(option: Option) => string | number"
+      }
+    },
+    "hideSelectedOptions": {
+      "defaultValue": null,
+      "description": "Hide the selected option from the menu",
+      "name": "hideSelectedOptions",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "id": {
+      "defaultValue": null,
+      "description": "The id to set on the SelectContainer component.",
+      "name": "id",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "inputValue": {
+      "defaultValue": null,
+      "description": "The value of the search input",
+      "name": "inputValue",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "inputId": {
+      "defaultValue": null,
+      "description": "The id of the search input",
+      "name": "inputId",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "instanceId": {
+      "defaultValue": null,
+      "description": "Define an id prefix for the select components e.g. {your-id}-value",
+      "name": "instanceId",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string | number"
+      }
+    },
+    "isClearable": {
+      "defaultValue": null,
+      "description": "Is the select value clearable",
+      "name": "isClearable",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "isMulti": {
+      "defaultValue": null,
+      "description": "Direct declaration of isMulti props is forbidden, use the Select.Multi component instead",
+      "name": "isMulti",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "never"
+      }
+    },
+    "isOptionDisabled": {
+      "defaultValue": null,
+      "description": "Override the built-in logic to detect whether an option is disabled",
+      "name": "isOptionDisabled",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(option: Option, options: OptionsType<Option>) => boolean"
+      }
+    },
+    "isOptionSelected": {
+      "defaultValue": null,
+      "description": "Override the built-in logic to detect whether an option is selected",
+      "name": "isOptionSelected",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(option: Option, options: OptionsType<Option>) => boolean"
+      }
+    },
+    "isRtl": {
+      "defaultValue": null,
+      "description": "Is the select direction right-to-left",
+      "name": "isRtl",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "isSearchable": {
+      "defaultValue": null,
+      "description": "Whether to enable search functionality",
+      "name": "isSearchable",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "isValidNewOption": {
+      "defaultValue": null,
+      "description": "Determines whether the \"create new ...\"\noption should be displayed based on\nthe current input value, select value and options array.",
+      "name": "isValidNewOption",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(inputValue: string, value: OptionsType<Option>, options: OptionsType<Option>) => boolean"
+      }
+    },
+    "loading": {
+      "defaultValue": null,
+      "description": "Set the loading state",
+      "name": "loading",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "loadingMessage": {
+      "defaultValue": null,
+      "description": "Async: Text to display when loading options",
+      "name": "loadingMessage",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(obj: { inputValue: string; }) => string"
+      }
+    },
+    "minMenuHeight": {
+      "defaultValue": null,
+      "description": "Minimum height of the menu before flipping",
+      "name": "minMenuHeight",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "number"
+      }
+    },
+    "maxMenuHeight": {
+      "defaultValue": null,
+      "description": "Maximum height of the menu before scrolling",
+      "name": "maxMenuHeight",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "number"
+      }
+    },
+    "menuIsOpen": {
+      "defaultValue": null,
+      "description": "Whether the menu is open",
+      "name": "menuIsOpen",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "menuPlacement": {
+      "defaultValue": null,
+      "description": "Default placement of the menu in relation to the control.\n'auto' will flip when there isn't enough space below the control.",
+      "name": "menuPlacement",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "MenuPlacement",
+        "value": [
+          {
+            "value": "\"auto\""
+          },
+          {
+            "value": "\"bottom\""
+          },
+          {
+            "value": "\"top\""
+          }
+        ]
+      }
+    },
+    "menuPosition": {
+      "defaultValue": null,
+      "description": "The CSS position value of the menu, when \"fixed\" extra layout management is required",
+      "name": "menuPosition",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "MenuPosition",
+        "value": [
+          {
+            "value": "\"absolute\""
+          },
+          {
+            "value": "\"fixed\""
+          }
+        ]
+      }
+    },
+    "menuPortalTarget": {
+      "defaultValue": null,
+      "description": "Whether the menu should use a portal, and where it should attach",
+      "name": "menuPortalTarget",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "HTMLElement"
+      }
+    },
+    "menuShouldBlockScroll": {
+      "defaultValue": null,
+      "description": "Whether to block scroll events when the menu is open",
+      "name": "menuShouldBlockScroll",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "menuShouldScrollIntoView": {
+      "defaultValue": null,
+      "description": "Whether the menu should be scrolled into view when it opens",
+      "name": "menuShouldScrollIntoView",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "name": {
+      "defaultValue": null,
+      "description": "Name of the HTML Input (optional - without this, no input will be rendered)",
+      "name": "name",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "noOptionsMessage": {
+      "defaultValue": null,
+      "description": "Text to display when there are no options",
+      "name": "noOptionsMessage",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(obj: { inputValue: string; }) => string"
+      }
+    },
+    "onBlur": {
+      "defaultValue": null,
+      "description": "Handle Blur Event",
+      "name": "onBlur",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(e: FocusEvent<HTMLElement>, props: SelectEventProps<Option, string | number, null>) => void"
+      }
+    },
+    "onChange": {
+      "defaultValue": null,
+      "description": "Handle Change Event",
+      "name": "onChange",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(nothing: null, props: SelectEventProps<Option, string | number, null>) => void"
+      }
+    },
+    "onCreateOption": {
+      "defaultValue": null,
+      "description": "If provided, this will be called with the input value when a new option is\ncreated, and `onChange` will **not** be called.\nUse this when you need more control over what happens when new options are created.",
+      "name": "onCreateOption",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(inputValue: string) => void"
+      }
+    },
+    "onFocus": {
+      "defaultValue": null,
+      "description": "Handle Focus Event",
+      "name": "onFocus",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(e: FocusEvent<HTMLElement>, props: SelectEventProps<Option, string | number, null>) => void"
+      }
+    },
+    "onInputChange": {
+      "defaultValue": null,
+      "description": "On Input Change Event",
+      "name": "onInputChange",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(nothing: null, props: SelectEventProps<Option, string | number, null>) => void"
+      }
+    },
+    "onKeyDown": {
+      "defaultValue": null,
+      "description": "Handle key down events on the select",
+      "name": "onKeyDown",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "KeyboardEventHandler"
+      }
+    },
+    "onMenuClose": {
+      "defaultValue": null,
+      "description": "On Menu Close Change Event",
+      "name": "onMenuClose",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(nothing: null, props: SelectEventProps<Option, string | number, null>) => void"
+      }
+    },
+    "onMenuOpen": {
+      "defaultValue": null,
+      "description": "On Menu Open Change Event",
+      "name": "onMenuOpen",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(nothing: null, props: SelectEventProps<Option, string | number, null>) => void"
+      }
+    },
+    "onMenuScrollToBottom": {
+      "defaultValue": null,
+      "description": "On Menu Scroll to Bottom Event",
+      "name": "onMenuScrollToBottom",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(e: SyntheticEvent<HTMLElement, Event>, props: SelectEventProps<Option, string | number, null>) => void"
+      }
+    },
+    "onMenuScrollToTop": {
+      "defaultValue": null,
+      "description": "On Menu Scroll to Top Event",
+      "name": "onMenuScrollToTop",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(e: SyntheticEvent<HTMLElement, Event>, props: SelectEventProps<Option, string | number, null>) => void"
+      }
+    },
+    "openMenuOnFocus": {
+      "defaultValue": null,
+      "description": "Allows control of whether the menu is opened when the Select is focused",
+      "name": "openMenuOnFocus",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "openMenuOnClick": {
+      "defaultValue": null,
+      "description": "Allows control of whether the menu is opened when the Select is clicked",
+      "name": "openMenuOnClick",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "options": {
+      "defaultValue": null,
+      "description": "Options Array",
+      "name": "options",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": true,
+      "type": {
+        "name": "Option[]"
+      }
+    },
+    "pageSize": {
+      "defaultValue": null,
+      "description": "Number of options to jump in menu when page{up|down} keys are used",
+      "name": "pageSize",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "number"
+      }
+    },
+    "placeholder": {
+      "defaultValue": null,
+      "description": "Placeholder text for the select value",
+      "name": "placeholder",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
+    "screenReaderStatus": {
+      "defaultValue": null,
+      "description": "Status to relay to screen readers",
+      "name": "screenReaderStatus",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(obj: { count: number; }) => string"
+      }
+    },
+    "styles": {
+      "defaultValue": null,
+      "description": "Style modifier methods",
+      "name": "styles",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "Partial<Styles<Option, true, GroupTypeBase<Option>>>"
+      }
+    },
+    "tabIndex": {
+      "defaultValue": null,
+      "description": "Sets the tabIndex attribute on the input",
+      "name": "tabIndex",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "tabSelectsValue": {
+      "defaultValue": null,
+      "description": "Select the currently focused option when the user presses tab",
+      "name": "tabSelectsValue",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "theme": {
+      "defaultValue": null,
+      "description": "Theme modifier method",
+      "name": "theme",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ThemeConfig"
+      }
+    },
+    "value": {
+      "defaultValue": null,
+      "description": "The Select Value",
+      "name": "value",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string | number"
+      }
+    },
+    "actions": {
+      "defaultValue": null,
+      "description": "A Button to Show",
+      "name": "actions",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ShorthandCollection<ButtonProps>"
+      }
+    },
+    "actionsPosition": {
+      "defaultValue": null,
+      "description": "Set action button position, default to right",
+      "name": "actionsPosition",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "\"left\" | \"right\"",
+        "value": [
+          {
+            "value": "\"left\""
+          },
+          {
+            "value": "\"right\""
+          }
+        ]
+      }
+    },
+    "clearable": {
+      "defaultValue": null,
+      "description": "Set the Field as Clearable",
+      "name": "clearable",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "contentClassName": {
+      "defaultValue": null,
+      "description": "User defined className used for content element",
+      "name": "contentClassName",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "contentType": {
+      "defaultValue": null,
+      "description": "Set field content type",
+      "name": "contentType",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "\"input\" | \"select input\" | \"checkbox\" | \"radio\" | \"switch\" | \"color\"",
+        "value": [
+          {
+            "value": "\"input\""
+          },
+          {
+            "value": "\"select input\""
+          },
+          {
+            "value": "\"checkbox\""
+          },
+          {
+            "value": "\"radio\""
+          },
+          {
+            "value": "\"switch\""
+          },
+          {
+            "value": "\"color\""
+          }
+        ]
+      }
+    },
+    "disabled": {
+      "defaultValue": null,
+      "description": "Set the field as Disabled",
+      "name": "disabled",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "hint": {
+      "defaultValue": null,
+      "description": "An hint, appended after field content",
+      "name": "hint",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
+    "hintClassName": {
+      "defaultValue": null,
+      "description": "User defined className used for hint element",
+      "name": "hintClassName",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "icon": {
+      "defaultValue": null,
+      "description": "An Icon to Show",
+      "name": "icon",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "AppBucketsIcon<IconProps>"
+      }
+    },
+    "iconPosition": {
+      "defaultValue": null,
+      "description": "Set the icon position, default to left",
+      "name": "iconPosition",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "\"left\" | \"right\"",
+        "value": [
+          {
+            "value": "\"left\""
+          },
+          {
+            "value": "\"right\""
+          }
+        ]
+      }
+    },
+    "isDirty": {
+      "defaultValue": null,
+      "description": "Set field as Dirty",
+      "name": "isDirty",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "isFocused": {
+      "defaultValue": null,
+      "description": "Set field as Focused",
+      "name": "isFocused",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "isTouched": {
+      "defaultValue": null,
+      "description": "Set field as Touched",
+      "name": "isTouched",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "label": {
+      "defaultValue": null,
+      "description": "Field Label",
+      "name": "label",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
+    "onClear": {
+      "defaultValue": null,
+      "description": "On Clear Button click",
+      "name": "onClear",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(e: MouseEvent<SVGSVGElement, MouseEvent>) => void"
+      }
+    },
+    "readOnly": {
+      "defaultValue": null,
+      "description": "Set field as read only",
+      "name": "readOnly",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "required": {
+      "defaultValue": null,
+      "description": "Set the field as Required",
+      "name": "required",
+      "parent": {
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "appearance": {
+      "defaultValue": null,
+      "description": "Manually set the Element appearance by Color Pool",
+      "name": "appearance",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "AppBucketsColor",
+        "value": [
+          {
+            "value": "\"amazon\""
+          },
+          {
+            "value": "\"android\""
+          },
+          {
+            "value": "\"apple\""
+          },
+          {
+            "value": "\"facebook\""
+          },
+          {
+            "value": "\"google\""
+          },
+          {
+            "value": "\"google-plus\""
+          },
+          {
+            "value": "\"instagram\""
+          },
+          {
+            "value": "\"linkedin\""
+          },
+          {
+            "value": "\"microsoft\""
+          },
+          {
+            "value": "\"pinterest\""
+          },
+          {
+            "value": "\"skype\""
+          },
+          {
+            "value": "\"slack\""
+          },
+          {
+            "value": "\"telegram\""
+          },
+          {
+            "value": "\"tumblr\""
+          },
+          {
+            "value": "\"twitter\""
+          },
+          {
+            "value": "\"vimeo\""
+          },
+          {
+            "value": "\"whatsapp\""
+          },
+          {
+            "value": "\"yahoo\""
+          },
+          {
+            "value": "\"youtube\""
+          },
+          {
+            "value": "\"cloud\""
+          },
+          {
+            "value": "\"info\""
+          },
+          {
+            "value": "\"text\""
+          },
+          {
+            "value": "\"primary\""
+          },
+          {
+            "value": "\"danger\""
+          },
+          {
+            "value": "\"warning\""
+          },
+          {
+            "value": "\"success\""
+          },
+          {
+            "value": "\"text secondary\""
+          },
+          {
+            "value": "\"black\""
+          },
+          {
+            "value": "\"white\""
+          },
+          {
+            "value": "\"white shade\""
+          },
+          {
+            "value": "\"blue\""
+          },
+          {
+            "value": "\"teal\""
+          },
+          {
+            "value": "\"green\""
+          },
+          {
+            "value": "\"yellow\""
+          },
+          {
+            "value": "\"orange\""
+          },
+          {
+            "value": "\"red\""
+          },
+          {
+            "value": "\"pink\""
+          },
+          {
+            "value": "\"purple\""
+          },
+          {
+            "value": "\"cloud light\""
+          },
+          {
+            "value": "\"cloud dark\""
+          },
+          {
+            "value": "\"dribble\""
+          }
+        ]
+      }
+    },
+    "danger": {
+      "defaultValue": null,
+      "description": "Set the Danger State",
+      "name": "danger",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "info": {
+      "defaultValue": null,
+      "description": "Set the Info State",
+      "name": "info",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "primary": {
+      "defaultValue": null,
+      "description": "Set the Primary State",
+      "name": "primary",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "secondary": {
+      "defaultValue": null,
+      "description": "Set the Secondary State",
+      "name": "secondary",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "success": {
+      "defaultValue": null,
+      "description": "Set the Success State",
+      "name": "success",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "warning": {
+      "defaultValue": null,
+      "description": "Set the Warning State",
+      "name": "warning",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    }
+  }
+}

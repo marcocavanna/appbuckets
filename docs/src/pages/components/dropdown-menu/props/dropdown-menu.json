@@ -1,0 +1,360 @@
+{
+  "filename": "packages/react-ui/src/DropdownMenu/DropdownMenu.tsx",
+  "tags": {},
+  "description": "",
+  "displayName": "DropdownMenu",
+  "props": {
+    "basic": {
+      "defaultValue": null,
+      "description": "Draw the popup using basic style",
+      "name": "basic",
+      "parent": {
+        "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+        "name": "StrictDropdownMenuProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+          "name": "StrictDropdownMenuProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "closeOnItemClicked": {
+      "defaultValue": null,
+      "description": "Close dropdown on Item clicked",
+      "name": "closeOnItemClicked",
+      "parent": {
+        "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+        "name": "StrictDropdownMenuProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+          "name": "StrictDropdownMenuProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "defaultOpen": {
+      "defaultValue": null,
+      "description": "Set initial open value",
+      "name": "defaultOpen",
+      "parent": {
+        "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+        "name": "StrictDropdownMenuProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+          "name": "StrictDropdownMenuProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "inverted": {
+      "defaultValue": null,
+      "description": "Invert color of dropdown",
+      "name": "inverted",
+      "parent": {
+        "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+        "name": "StrictDropdownMenuProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+          "name": "StrictDropdownMenuProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "items": {
+      "defaultValue": null,
+      "description": "Menu Items",
+      "name": "items",
+      "parent": {
+        "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+        "name": "StrictDropdownMenuProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+          "name": "StrictDropdownMenuProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ShorthandCollection<MenuItemProps>"
+      }
+    },
+    "onClose": {
+      "defaultValue": null,
+      "description": "Handler Menu Close",
+      "name": "onClose",
+      "parent": {
+        "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+        "name": "StrictDropdownMenuProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+          "name": "StrictDropdownMenuProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(e: MouseEvent<HTMLElement, MouseEvent>, props: DropdownMenuProps) => void"
+      }
+    },
+    "onItemClick": {
+      "defaultValue": null,
+      "description": "On Menu Item Click",
+      "name": "onItemClick",
+      "parent": {
+        "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+        "name": "StrictDropdownMenuProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+          "name": "StrictDropdownMenuProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(e: MouseEvent<HTMLElement, MouseEvent>, props: MenuItemProps) => void"
+      }
+    },
+    "onOpen": {
+      "defaultValue": null,
+      "description": "Handler Menu Open",
+      "name": "onOpen",
+      "parent": {
+        "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+        "name": "StrictDropdownMenuProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+          "name": "StrictDropdownMenuProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(e: MouseEvent<HTMLElement, MouseEvent>, props: DropdownMenuProps) => void"
+      }
+    },
+    "open": {
+      "defaultValue": null,
+      "description": "Control open state",
+      "name": "open",
+      "parent": {
+        "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+        "name": "StrictDropdownMenuProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+          "name": "StrictDropdownMenuProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "openOn": {
+      "defaultValue": null,
+      "description": "Set the openOn behaviour",
+      "name": "openOn",
+      "parent": {
+        "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+        "name": "StrictDropdownMenuProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+          "name": "StrictDropdownMenuProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "PopupOpenEvent[]"
+      }
+    },
+    "position": {
+      "defaultValue": null,
+      "description": "Set the dropdown position, default to bottom right",
+      "name": "position",
+      "parent": {
+        "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+        "name": "StrictDropdownMenuProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+          "name": "StrictDropdownMenuProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "PopupPosition",
+        "value": [
+          {
+            "value": "\"auto\""
+          },
+          {
+            "value": "\"auto start\""
+          },
+          {
+            "value": "\"auto end\""
+          },
+          {
+            "value": "\"top left\""
+          },
+          {
+            "value": "\"top right\""
+          },
+          {
+            "value": "\"bottom left\""
+          },
+          {
+            "value": "\"bottom right\""
+          },
+          {
+            "value": "\"left center\""
+          },
+          {
+            "value": "\"right center\""
+          },
+          {
+            "value": "\"top center\""
+          },
+          {
+            "value": "\"bottom center\""
+          }
+        ]
+      }
+    },
+    "trigger": {
+      "defaultValue": null,
+      "description": "Trigger Element",
+      "name": "trigger",
+      "parent": {
+        "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+        "name": "StrictDropdownMenuProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/DropdownMenu/DropdownMenu.types.ts",
+          "name": "StrictDropdownMenuProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ShorthandValue<ButtonProps>"
+      }
+    },
+    "as": {
+      "defaultValue": null,
+      "description": "An Element used to Render the Component",
+      "name": "as",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string | ComponentClass<{}, any> | FunctionComponent<{}>"
+      }
+    },
+    "children": {
+      "defaultValue": null,
+      "description": "Main Component Content",
+      "name": "children",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "DOMAttributes"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "TypeLiteral"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
+    "className": {
+      "defaultValue": null,
+      "description": "User Defined Class Names",
+      "name": "className",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "HTMLAttributes"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "content": {
+      "defaultValue": null,
+      "description": "Content Shorthand",
+      "name": "content",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    }
+  }
+}

@@ -1,0 +1,452 @@
+{
+  "filename": "packages/react-ui/src/LinearProgress/LinearProgress.tsx",
+  "tags": {},
+  "description": "",
+  "displayName": "LinearProgress",
+  "props": {
+    "indicator": {
+      "defaultValue": null,
+      "description": "Show the Indicator",
+      "name": "indicator",
+      "parent": {
+        "fileName": "react-ui/src/LinearProgress/LinearProgress.types.ts",
+        "name": "StrictLinearProgressProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/LinearProgress/LinearProgress.types.ts",
+          "name": "StrictLinearProgressProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ProgressIndicator"
+      }
+    },
+    "limits": {
+      "defaultValue": null,
+      "description": "Show Progress Limits",
+      "name": "limits",
+      "parent": {
+        "fileName": "react-ui/src/LinearProgress/LinearProgress.types.ts",
+        "name": "StrictLinearProgressProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/LinearProgress/LinearProgress.types.ts",
+          "name": "StrictLinearProgressProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean | ((value: number) => ReactNode)"
+      }
+    },
+    "reverse": {
+      "defaultValue": null,
+      "description": "Reverse Linear Logic, value will start from right",
+      "name": "reverse",
+      "parent": {
+        "fileName": "react-ui/src/LinearProgress/LinearProgress.types.ts",
+        "name": "StrictLinearProgressProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/LinearProgress/LinearProgress.types.ts",
+          "name": "StrictLinearProgressProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "appearance": {
+      "defaultValue": null,
+      "description": "Define the LinearProgress appearance color",
+      "name": "appearance",
+      "parent": {
+        "fileName": "react-ui/src/LinearProgress/Shared.types.ts",
+        "name": "StrictSharedProgressProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/LinearProgress/Shared.types.ts",
+          "name": "StrictSharedProgressProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "AppBucketsColor",
+        "value": [
+          {
+            "value": "\"primary\""
+          },
+          {
+            "value": "\"danger\""
+          },
+          {
+            "value": "\"warning\""
+          },
+          {
+            "value": "\"success\""
+          },
+          {
+            "value": "\"info\""
+          },
+          {
+            "value": "\"text\""
+          },
+          {
+            "value": "\"text secondary\""
+          },
+          {
+            "value": "\"black\""
+          },
+          {
+            "value": "\"white\""
+          },
+          {
+            "value": "\"white shade\""
+          },
+          {
+            "value": "\"blue\""
+          },
+          {
+            "value": "\"teal\""
+          },
+          {
+            "value": "\"green\""
+          },
+          {
+            "value": "\"yellow\""
+          },
+          {
+            "value": "\"orange\""
+          },
+          {
+            "value": "\"red\""
+          },
+          {
+            "value": "\"pink\""
+          },
+          {
+            "value": "\"purple\""
+          },
+          {
+            "value": "\"cloud light\""
+          },
+          {
+            "value": "\"cloud\""
+          },
+          {
+            "value": "\"cloud dark\""
+          },
+          {
+            "value": "\"facebook\""
+          },
+          {
+            "value": "\"twitter\""
+          },
+          {
+            "value": "\"youtube\""
+          },
+          {
+            "value": "\"instagram\""
+          },
+          {
+            "value": "\"pinterest\""
+          },
+          {
+            "value": "\"linkedin\""
+          },
+          {
+            "value": "\"google\""
+          },
+          {
+            "value": "\"google-plus\""
+          },
+          {
+            "value": "\"whatsapp\""
+          },
+          {
+            "value": "\"tumblr\""
+          },
+          {
+            "value": "\"apple\""
+          },
+          {
+            "value": "\"amazon\""
+          },
+          {
+            "value": "\"microsoft\""
+          },
+          {
+            "value": "\"vimeo\""
+          },
+          {
+            "value": "\"skype\""
+          },
+          {
+            "value": "\"android\""
+          },
+          {
+            "value": "\"dribble\""
+          },
+          {
+            "value": "\"slack\""
+          },
+          {
+            "value": "\"yahoo\""
+          },
+          {
+            "value": "\"telegram\""
+          }
+        ]
+      }
+    },
+    "colorSteps": {
+      "defaultValue": null,
+      "description": "Set Color Steps, in percentage",
+      "name": "colorSteps",
+      "parent": {
+        "fileName": "react-ui/src/LinearProgress/Shared.types.ts",
+        "name": "StrictSharedProgressProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/LinearProgress/Shared.types.ts",
+          "name": "StrictSharedProgressProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ProgressColorSteps"
+      }
+    },
+    "discreet": {
+      "defaultValue": null,
+      "description": "Disable all color, event if appearance has been declared",
+      "name": "discreet",
+      "parent": {
+        "fileName": "react-ui/src/LinearProgress/Shared.types.ts",
+        "name": "StrictSharedProgressProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/LinearProgress/Shared.types.ts",
+          "name": "StrictSharedProgressProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "inverted": {
+      "defaultValue": null,
+      "description": "Invert the automatic color logic",
+      "name": "inverted",
+      "parent": {
+        "fileName": "react-ui/src/LinearProgress/Shared.types.ts",
+        "name": "StrictSharedProgressProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/LinearProgress/Shared.types.ts",
+          "name": "StrictSharedProgressProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "max": {
+      "defaultValue": null,
+      "description": "Maximum progress value, default to 100",
+      "name": "max",
+      "parent": {
+        "fileName": "react-ui/src/LinearProgress/Shared.types.ts",
+        "name": "StrictSharedProgressProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/LinearProgress/Shared.types.ts",
+          "name": "StrictSharedProgressProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "number"
+      }
+    },
+    "min": {
+      "defaultValue": null,
+      "description": "Minimum progress value, default to 0",
+      "name": "min",
+      "parent": {
+        "fileName": "react-ui/src/LinearProgress/Shared.types.ts",
+        "name": "StrictSharedProgressProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/LinearProgress/Shared.types.ts",
+          "name": "StrictSharedProgressProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "number"
+      }
+    },
+    "size": {
+      "defaultValue": null,
+      "description": "Change LinearProgress Size",
+      "name": "size",
+      "parent": {
+        "fileName": "react-ui/src/LinearProgress/Shared.types.ts",
+        "name": "StrictSharedProgressProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/LinearProgress/Shared.types.ts",
+          "name": "StrictSharedProgressProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "ElementSize",
+        "value": [
+          {
+            "value": "\"extra small\""
+          },
+          {
+            "value": "\"small\""
+          },
+          {
+            "value": "\"normal\""
+          },
+          {
+            "value": "\"large\""
+          },
+          {
+            "value": "\"big\""
+          },
+          {
+            "value": "\"huge\""
+          }
+        ]
+      }
+    },
+    "value": {
+      "defaultValue": null,
+      "description": "Current LinearProgress Value",
+      "name": "value",
+      "parent": {
+        "fileName": "react-ui/src/LinearProgress/Shared.types.ts",
+        "name": "StrictSharedProgressProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/LinearProgress/Shared.types.ts",
+          "name": "StrictSharedProgressProps"
+        }
+      ],
+      "required": true,
+      "type": {
+        "name": "number"
+      }
+    },
+    "as": {
+      "defaultValue": null,
+      "description": "An Element used to Render the Component",
+      "name": "as",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string | ComponentClass<{}, any> | FunctionComponent<{}>"
+      }
+    },
+    "children": {
+      "defaultValue": null,
+      "description": "Main Component Content",
+      "name": "children",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "DOMAttributes"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "TypeLiteral"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
+    "className": {
+      "defaultValue": null,
+      "description": "User Defined Class Names",
+      "name": "className",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "HTMLAttributes"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "content": {
+      "defaultValue": null,
+      "description": "Content Shorthand",
+      "name": "content",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    }
+  }
+}

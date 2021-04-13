@@ -1,0 +1,1013 @@
+{
+  "filename": "packages/react-ui/src/Modal/Modal.tsx",
+  "tags": {},
+  "description": "",
+  "displayName": "Modal",
+  "props": {
+    "actions": {
+      "defaultValue": null,
+      "description": "Modal Actions Shorthand",
+      "name": "actions",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ShorthandCollection<ButtonProps>"
+      }
+    },
+    "basic": {
+      "defaultValue": null,
+      "description": "Remove all Modal style",
+      "name": "basic",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "children": {
+      "defaultValue": null,
+      "description": "Children could be component, that receive close modal function",
+      "name": "children",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "TypeLiteral"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
+    "closeIcon": {
+      "defaultValue": null,
+      "description": "Set close icon",
+      "name": "closeIcon",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "false | AppBucketsIcon<IconProps>"
+      }
+    },
+    "closeOnBackdropClick": {
+      "defaultValue": null,
+      "description": "Close modal on Backdrop Click",
+      "name": "closeOnBackdropClick",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "content": {
+      "defaultValue": null,
+      "description": "Modal Content Shorthand",
+      "name": "content",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ShorthandItem<ModalContentProps>"
+      }
+    },
+    "defaultOpen": {
+      "defaultValue": null,
+      "description": "Set initial open prop and let it to be auto controlled",
+      "name": "defaultOpen",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "header": {
+      "defaultValue": null,
+      "description": "Modal Header Shorthand",
+      "name": "header",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ShorthandItem<ModalHeaderProps>"
+      }
+    },
+    "icon": {
+      "defaultValue": null,
+      "description": "A modal Top Icon to show",
+      "name": "icon",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "AppBucketsIcon<IconProps>"
+      }
+    },
+    "mountNode": {
+      "defaultValue": null,
+      "description": "Set modal Mount Node",
+      "name": "mountNode",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "HTMLElement"
+      }
+    },
+    "onActionClick": {
+      "defaultValue": null,
+      "description": "When using Actions Shorthand, a global callback could be applied",
+      "name": "onActionClick",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(e: MouseEvent<HTMLElement, MouseEvent>, props: ButtonProps) => void"
+      }
+    },
+    "onClose": {
+      "defaultValue": null,
+      "description": "On Modal Close callback",
+      "name": "onClose",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(e: MouseEvent<HTMLElement, MouseEvent>, props: ModalProps) => void"
+      }
+    },
+    "onOpen": {
+      "defaultValue": null,
+      "description": "On Modal Open callback",
+      "name": "onOpen",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(e: MouseEvent<HTMLElement, MouseEvent>, props: ModalProps) => void"
+      }
+    },
+    "open": {
+      "defaultValue": null,
+      "description": "Control if Modal is Open or Not",
+      "name": "open",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "size": {
+      "defaultValue": null,
+      "description": "Set modal Size\nChange component size",
+      "name": "size",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        },
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "\"small\" | \"large\" | \"big\" | \"huge\"",
+        "value": [
+          {
+            "value": "\"small\""
+          },
+          {
+            "value": "\"large\""
+          },
+          {
+            "value": "\"big\""
+          },
+          {
+            "value": "\"huge\""
+          }
+        ]
+      }
+    },
+    "closeOnEscape": {
+      "defaultValue": null,
+      "description": "Controls if the Portal should close when escape key is pressed",
+      "name": "closeOnEscape",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+        "name": "StrictPortalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+          "name": "StrictPortalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "openOnTriggerClick": {
+      "defaultValue": null,
+      "description": "Controls if the Portal should open on trigger click",
+      "name": "openOnTriggerClick",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+        "name": "StrictPortalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+          "name": "StrictPortalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "openOnTriggerFocus": {
+      "defaultValue": null,
+      "description": "Controls if the Portal should open on trigger focus",
+      "name": "openOnTriggerFocus",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+        "name": "StrictPortalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+          "name": "StrictPortalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "openOnTriggerMouseEnter": {
+      "defaultValue": null,
+      "description": "Controls if the Portal should open on trigger mouse enter",
+      "name": "openOnTriggerMouseEnter",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+        "name": "StrictPortalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+          "name": "StrictPortalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "trigger": {
+      "defaultValue": null,
+      "description": "The element to be rendered in-place where the portal is defined",
+      "name": "trigger",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+        "name": "StrictPortalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+          "name": "StrictPortalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactElement<any, string | JSXElementConstructor<any>>"
+      }
+    },
+    "triggerRef": {
+      "defaultValue": null,
+      "description": "Called with a ref to the trigger node",
+      "name": "triggerRef",
+      "parent": {
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+        "name": "StrictPortalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+          "name": "StrictPortalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "Ref<HTMLElement>"
+      }
+    },
+    "loading": {
+      "defaultValue": null,
+      "description": "Set a Loader as Backdrop Inner Content",
+      "name": "loading",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+        "name": "StrictBackdropProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+          "name": "StrictBackdropProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "loaderProps": {
+      "defaultValue": null,
+      "description": "Manually override Loader Props",
+      "name": "loaderProps",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+        "name": "StrictBackdropProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+          "name": "StrictBackdropProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "LoaderProps"
+      }
+    },
+    "onMount": {
+      "defaultValue": null,
+      "description": "Callback fired on Backdrop Mount",
+      "name": "onMount",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+        "name": "StrictBackdropProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+          "name": "StrictBackdropProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(nothing: null, props: BackdropProps) => void"
+      }
+    },
+    "onUnmount": {
+      "defaultValue": null,
+      "description": "Callback fired on Backdrop Unmount",
+      "name": "onUnmount",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+        "name": "StrictBackdropProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
+          "name": "StrictBackdropProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(nothing: null, props: BackdropProps) => void"
+      }
+    },
+    "animated": {
+      "defaultValue": null,
+      "description": "Set the backdrop as animated",
+      "name": "animated",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+        "name": "StrictBackdropInnerProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+          "name": "StrictBackdropInnerProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "onClick": {
+      "defaultValue": null,
+      "description": "Handle Click Event",
+      "name": "onClick",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+        "name": "StrictBackdropInnerProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+          "name": "StrictBackdropInnerProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(event: MouseEvent<HTMLElement, MouseEvent>, props: BackdropInnerProps) => void"
+      }
+    },
+    "onClickOutside": {
+      "defaultValue": null,
+      "description": "Handle Click Event occurred outside Backdrop Content, but in Backdrop Area",
+      "name": "onClickOutside",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+        "name": "StrictBackdropInnerProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+          "name": "StrictBackdropInnerProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(event: MouseEvent<HTMLElement, MouseEvent>, props: BackdropInnerProps) => void"
+      }
+    },
+    "verticalAlign": {
+      "defaultValue": null,
+      "description": "Set the content vertical align",
+      "name": "verticalAlign",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+        "name": "StrictBackdropInnerProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+          "name": "StrictBackdropInnerProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "FlexContentVerticalAlign",
+        "value": [
+          {
+            "value": "\"on top\""
+          },
+          {
+            "value": "\"on bottom\""
+          },
+          {
+            "value": "\"center\""
+          },
+          {
+            "value": "\"stretched\""
+          }
+        ]
+      }
+    },
+    "as": {
+      "defaultValue": null,
+      "description": "An Element used to Render the Component",
+      "name": "as",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string | ComponentClass<{}, any> | FunctionComponent<{}>"
+      }
+    },
+    "className": {
+      "defaultValue": null,
+      "description": "User Defined Class Names",
+      "name": "className",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "HTMLAttributes"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "backgroundColor": {
+      "defaultValue": null,
+      "description": "Choose Main background Color",
+      "name": "backgroundColor",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "AppBucketsColor",
+        "value": [
+          {
+            "value": "\"amazon\""
+          },
+          {
+            "value": "\"android\""
+          },
+          {
+            "value": "\"apple\""
+          },
+          {
+            "value": "\"facebook\""
+          },
+          {
+            "value": "\"google\""
+          },
+          {
+            "value": "\"google-plus\""
+          },
+          {
+            "value": "\"instagram\""
+          },
+          {
+            "value": "\"linkedin\""
+          },
+          {
+            "value": "\"microsoft\""
+          },
+          {
+            "value": "\"pinterest\""
+          },
+          {
+            "value": "\"skype\""
+          },
+          {
+            "value": "\"slack\""
+          },
+          {
+            "value": "\"telegram\""
+          },
+          {
+            "value": "\"tumblr\""
+          },
+          {
+            "value": "\"twitter\""
+          },
+          {
+            "value": "\"vimeo\""
+          },
+          {
+            "value": "\"whatsapp\""
+          },
+          {
+            "value": "\"yahoo\""
+          },
+          {
+            "value": "\"youtube\""
+          },
+          {
+            "value": "\"cloud\""
+          },
+          {
+            "value": "\"info\""
+          },
+          {
+            "value": "\"text\""
+          },
+          {
+            "value": "\"primary\""
+          },
+          {
+            "value": "\"danger\""
+          },
+          {
+            "value": "\"warning\""
+          },
+          {
+            "value": "\"success\""
+          },
+          {
+            "value": "\"text secondary\""
+          },
+          {
+            "value": "\"black\""
+          },
+          {
+            "value": "\"white\""
+          },
+          {
+            "value": "\"white shade\""
+          },
+          {
+            "value": "\"blue\""
+          },
+          {
+            "value": "\"teal\""
+          },
+          {
+            "value": "\"green\""
+          },
+          {
+            "value": "\"yellow\""
+          },
+          {
+            "value": "\"orange\""
+          },
+          {
+            "value": "\"red\""
+          },
+          {
+            "value": "\"pink\""
+          },
+          {
+            "value": "\"purple\""
+          },
+          {
+            "value": "\"cloud light\""
+          },
+          {
+            "value": "\"cloud dark\""
+          },
+          {
+            "value": "\"dribble\""
+          }
+        ]
+      }
+    },
+    "display": {
+      "defaultValue": null,
+      "description": "Set element display",
+      "name": "display",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ResponsiveProps<ElementDisplay>"
+      }
+    },
+    "fontWeight": {
+      "defaultValue": null,
+      "description": "Define the main Font Weight",
+      "name": "fontWeight",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "FontWeight",
+        "value": [
+          {
+            "value": "\"bold\""
+          },
+          {
+            "value": "\"light\""
+          },
+          {
+            "value": "\"regular\""
+          },
+          {
+            "value": "\"semi bold\""
+          }
+        ]
+      }
+    },
+    "textAlign": {
+      "defaultValue": null,
+      "description": "Define Text Align",
+      "name": "textAlign",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "ContentAlign",
+        "value": [
+          {
+            "value": "\"center\""
+          },
+          {
+            "value": "\"left\""
+          },
+          {
+            "value": "\"right\""
+          }
+        ]
+      }
+    },
+    "textColor": {
+      "defaultValue": null,
+      "description": "Choose main text color",
+      "name": "textColor",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "AppBucketsColor",
+        "value": [
+          {
+            "value": "\"amazon\""
+          },
+          {
+            "value": "\"android\""
+          },
+          {
+            "value": "\"apple\""
+          },
+          {
+            "value": "\"facebook\""
+          },
+          {
+            "value": "\"google\""
+          },
+          {
+            "value": "\"google-plus\""
+          },
+          {
+            "value": "\"instagram\""
+          },
+          {
+            "value": "\"linkedin\""
+          },
+          {
+            "value": "\"microsoft\""
+          },
+          {
+            "value": "\"pinterest\""
+          },
+          {
+            "value": "\"skype\""
+          },
+          {
+            "value": "\"slack\""
+          },
+          {
+            "value": "\"telegram\""
+          },
+          {
+            "value": "\"tumblr\""
+          },
+          {
+            "value": "\"twitter\""
+          },
+          {
+            "value": "\"vimeo\""
+          },
+          {
+            "value": "\"whatsapp\""
+          },
+          {
+            "value": "\"yahoo\""
+          },
+          {
+            "value": "\"youtube\""
+          },
+          {
+            "value": "\"cloud\""
+          },
+          {
+            "value": "\"info\""
+          },
+          {
+            "value": "\"text\""
+          },
+          {
+            "value": "\"primary\""
+          },
+          {
+            "value": "\"danger\""
+          },
+          {
+            "value": "\"warning\""
+          },
+          {
+            "value": "\"success\""
+          },
+          {
+            "value": "\"text secondary\""
+          },
+          {
+            "value": "\"black\""
+          },
+          {
+            "value": "\"white\""
+          },
+          {
+            "value": "\"white shade\""
+          },
+          {
+            "value": "\"blue\""
+          },
+          {
+            "value": "\"teal\""
+          },
+          {
+            "value": "\"green\""
+          },
+          {
+            "value": "\"yellow\""
+          },
+          {
+            "value": "\"orange\""
+          },
+          {
+            "value": "\"red\""
+          },
+          {
+            "value": "\"pink\""
+          },
+          {
+            "value": "\"purple\""
+          },
+          {
+            "value": "\"cloud light\""
+          },
+          {
+            "value": "\"cloud dark\""
+          },
+          {
+            "value": "\"dribble\""
+          }
+        ]
+      }
+    }
+  }
+}

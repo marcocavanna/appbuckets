@@ -1,0 +1,864 @@
+{
+  "filename": "packages/react-ui/src/Table/TableRow.tsx",
+  "tags": {},
+  "description": "",
+  "displayName": "TableRow",
+  "props": {
+    "active": {
+      "defaultValue": null,
+      "description": "Set the Row as Active",
+      "name": "active",
+      "parent": {
+        "fileName": "react-ui/src/Table/TableRow.types.ts",
+        "name": "StrictTableRowProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Table/TableRow.types.ts",
+          "name": "StrictTableRowProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "cellAs": {
+      "defaultValue": null,
+      "description": "Set the ElementType for rendered cells",
+      "name": "cellAs",
+      "parent": {
+        "fileName": "react-ui/src/Table/TableRow.types.ts",
+        "name": "StrictTableRowProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Table/TableRow.types.ts",
+          "name": "StrictTableRowProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ElementType<any>"
+      }
+    },
+    "cells": {
+      "defaultValue": null,
+      "description": "Cells array",
+      "name": "cells",
+      "parent": {
+        "fileName": "react-ui/src/Table/TableRow.types.ts",
+        "name": "StrictTableRowProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Table/TableRow.types.ts",
+          "name": "StrictTableRowProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ShorthandCollection<TableCellProps & TableHeaderCellProps>"
+      }
+    },
+    "disabled": {
+      "defaultValue": null,
+      "description": "Set the Row Disabled State",
+      "name": "disabled",
+      "parent": {
+        "fileName": "react-ui/src/Table/TableRow.types.ts",
+        "name": "StrictTableRowProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Table/TableRow.types.ts",
+          "name": "StrictTableRowProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "selectable": {
+      "defaultValue": null,
+      "description": "Set the Row as Selectable",
+      "name": "selectable",
+      "parent": {
+        "fileName": "react-ui/src/Table/TableRow.types.ts",
+        "name": "StrictTableRowProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Table/TableRow.types.ts",
+          "name": "StrictTableRowProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "appearance": {
+      "defaultValue": null,
+      "description": "Manually set the Element appearance by Color Pool",
+      "name": "appearance",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "AppBucketsColor",
+        "value": [
+          {
+            "value": "\"danger\""
+          },
+          {
+            "value": "\"info\""
+          },
+          {
+            "value": "\"primary\""
+          },
+          {
+            "value": "\"success\""
+          },
+          {
+            "value": "\"warning\""
+          },
+          {
+            "value": "\"text\""
+          },
+          {
+            "value": "\"text secondary\""
+          },
+          {
+            "value": "\"black\""
+          },
+          {
+            "value": "\"white\""
+          },
+          {
+            "value": "\"white shade\""
+          },
+          {
+            "value": "\"blue\""
+          },
+          {
+            "value": "\"teal\""
+          },
+          {
+            "value": "\"green\""
+          },
+          {
+            "value": "\"yellow\""
+          },
+          {
+            "value": "\"orange\""
+          },
+          {
+            "value": "\"red\""
+          },
+          {
+            "value": "\"pink\""
+          },
+          {
+            "value": "\"purple\""
+          },
+          {
+            "value": "\"cloud light\""
+          },
+          {
+            "value": "\"cloud\""
+          },
+          {
+            "value": "\"cloud dark\""
+          },
+          {
+            "value": "\"facebook\""
+          },
+          {
+            "value": "\"twitter\""
+          },
+          {
+            "value": "\"youtube\""
+          },
+          {
+            "value": "\"instagram\""
+          },
+          {
+            "value": "\"pinterest\""
+          },
+          {
+            "value": "\"linkedin\""
+          },
+          {
+            "value": "\"google\""
+          },
+          {
+            "value": "\"google-plus\""
+          },
+          {
+            "value": "\"whatsapp\""
+          },
+          {
+            "value": "\"tumblr\""
+          },
+          {
+            "value": "\"apple\""
+          },
+          {
+            "value": "\"amazon\""
+          },
+          {
+            "value": "\"microsoft\""
+          },
+          {
+            "value": "\"vimeo\""
+          },
+          {
+            "value": "\"skype\""
+          },
+          {
+            "value": "\"android\""
+          },
+          {
+            "value": "\"dribble\""
+          },
+          {
+            "value": "\"slack\""
+          },
+          {
+            "value": "\"yahoo\""
+          },
+          {
+            "value": "\"telegram\""
+          }
+        ]
+      }
+    },
+    "danger": {
+      "defaultValue": null,
+      "description": "Set the Danger State",
+      "name": "danger",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "info": {
+      "defaultValue": null,
+      "description": "Set the Info State",
+      "name": "info",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "primary": {
+      "defaultValue": null,
+      "description": "Set the Primary State",
+      "name": "primary",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "secondary": {
+      "defaultValue": null,
+      "description": "Set the Secondary State",
+      "name": "secondary",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "success": {
+      "defaultValue": null,
+      "description": "Set the Success State",
+      "name": "success",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "warning": {
+      "defaultValue": null,
+      "description": "Set the Warning State",
+      "name": "warning",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "as": {
+      "defaultValue": null,
+      "description": "An Element used to Render the Component",
+      "name": "as",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string | ComponentClass<{}, any> | FunctionComponent<{}>"
+      }
+    },
+    "children": {
+      "defaultValue": null,
+      "description": "Main Component Content",
+      "name": "children",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "DOMAttributes"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "TypeLiteral"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
+    "className": {
+      "defaultValue": null,
+      "description": "User Defined Class Names",
+      "name": "className",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "HTMLAttributes"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "content": {
+      "defaultValue": null,
+      "description": "Content Shorthand",
+      "name": "content",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
+    "backgroundColor": {
+      "defaultValue": null,
+      "description": "Choose Main background Color",
+      "name": "backgroundColor",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "AppBucketsColor",
+        "value": [
+          {
+            "value": "\"danger\""
+          },
+          {
+            "value": "\"info\""
+          },
+          {
+            "value": "\"primary\""
+          },
+          {
+            "value": "\"success\""
+          },
+          {
+            "value": "\"warning\""
+          },
+          {
+            "value": "\"text\""
+          },
+          {
+            "value": "\"text secondary\""
+          },
+          {
+            "value": "\"black\""
+          },
+          {
+            "value": "\"white\""
+          },
+          {
+            "value": "\"white shade\""
+          },
+          {
+            "value": "\"blue\""
+          },
+          {
+            "value": "\"teal\""
+          },
+          {
+            "value": "\"green\""
+          },
+          {
+            "value": "\"yellow\""
+          },
+          {
+            "value": "\"orange\""
+          },
+          {
+            "value": "\"red\""
+          },
+          {
+            "value": "\"pink\""
+          },
+          {
+            "value": "\"purple\""
+          },
+          {
+            "value": "\"cloud light\""
+          },
+          {
+            "value": "\"cloud\""
+          },
+          {
+            "value": "\"cloud dark\""
+          },
+          {
+            "value": "\"facebook\""
+          },
+          {
+            "value": "\"twitter\""
+          },
+          {
+            "value": "\"youtube\""
+          },
+          {
+            "value": "\"instagram\""
+          },
+          {
+            "value": "\"pinterest\""
+          },
+          {
+            "value": "\"linkedin\""
+          },
+          {
+            "value": "\"google\""
+          },
+          {
+            "value": "\"google-plus\""
+          },
+          {
+            "value": "\"whatsapp\""
+          },
+          {
+            "value": "\"tumblr\""
+          },
+          {
+            "value": "\"apple\""
+          },
+          {
+            "value": "\"amazon\""
+          },
+          {
+            "value": "\"microsoft\""
+          },
+          {
+            "value": "\"vimeo\""
+          },
+          {
+            "value": "\"skype\""
+          },
+          {
+            "value": "\"android\""
+          },
+          {
+            "value": "\"dribble\""
+          },
+          {
+            "value": "\"slack\""
+          },
+          {
+            "value": "\"yahoo\""
+          },
+          {
+            "value": "\"telegram\""
+          }
+        ]
+      }
+    },
+    "display": {
+      "defaultValue": null,
+      "description": "Set element display",
+      "name": "display",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ResponsiveProps<ElementDisplay>"
+      }
+    },
+    "fontWeight": {
+      "defaultValue": null,
+      "description": "Define the main Font Weight",
+      "name": "fontWeight",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "FontWeight",
+        "value": [
+          {
+            "value": "\"light\""
+          },
+          {
+            "value": "\"regular\""
+          },
+          {
+            "value": "\"semi bold\""
+          },
+          {
+            "value": "\"bold\""
+          }
+        ]
+      }
+    },
+    "size": {
+      "defaultValue": null,
+      "description": "Change component size",
+      "name": "size",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "ElementSize",
+        "value": [
+          {
+            "value": "\"big\""
+          },
+          {
+            "value": "\"small\""
+          },
+          {
+            "value": "\"extra small\""
+          },
+          {
+            "value": "\"normal\""
+          },
+          {
+            "value": "\"large\""
+          },
+          {
+            "value": "\"huge\""
+          }
+        ]
+      }
+    },
+    "textAlign": {
+      "defaultValue": null,
+      "description": "Define Text Align",
+      "name": "textAlign",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "ContentAlign",
+        "value": [
+          {
+            "value": "\"left\""
+          },
+          {
+            "value": "\"center\""
+          },
+          {
+            "value": "\"right\""
+          }
+        ]
+      }
+    },
+    "textColor": {
+      "defaultValue": null,
+      "description": "Choose main text color",
+      "name": "textColor",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "AppBucketsColor",
+        "value": [
+          {
+            "value": "\"danger\""
+          },
+          {
+            "value": "\"info\""
+          },
+          {
+            "value": "\"primary\""
+          },
+          {
+            "value": "\"success\""
+          },
+          {
+            "value": "\"warning\""
+          },
+          {
+            "value": "\"text\""
+          },
+          {
+            "value": "\"text secondary\""
+          },
+          {
+            "value": "\"black\""
+          },
+          {
+            "value": "\"white\""
+          },
+          {
+            "value": "\"white shade\""
+          },
+          {
+            "value": "\"blue\""
+          },
+          {
+            "value": "\"teal\""
+          },
+          {
+            "value": "\"green\""
+          },
+          {
+            "value": "\"yellow\""
+          },
+          {
+            "value": "\"orange\""
+          },
+          {
+            "value": "\"red\""
+          },
+          {
+            "value": "\"pink\""
+          },
+          {
+            "value": "\"purple\""
+          },
+          {
+            "value": "\"cloud light\""
+          },
+          {
+            "value": "\"cloud\""
+          },
+          {
+            "value": "\"cloud dark\""
+          },
+          {
+            "value": "\"facebook\""
+          },
+          {
+            "value": "\"twitter\""
+          },
+          {
+            "value": "\"youtube\""
+          },
+          {
+            "value": "\"instagram\""
+          },
+          {
+            "value": "\"pinterest\""
+          },
+          {
+            "value": "\"linkedin\""
+          },
+          {
+            "value": "\"google\""
+          },
+          {
+            "value": "\"google-plus\""
+          },
+          {
+            "value": "\"whatsapp\""
+          },
+          {
+            "value": "\"tumblr\""
+          },
+          {
+            "value": "\"apple\""
+          },
+          {
+            "value": "\"amazon\""
+          },
+          {
+            "value": "\"microsoft\""
+          },
+          {
+            "value": "\"vimeo\""
+          },
+          {
+            "value": "\"skype\""
+          },
+          {
+            "value": "\"android\""
+          },
+          {
+            "value": "\"dribble\""
+          },
+          {
+            "value": "\"slack\""
+          },
+          {
+            "value": "\"yahoo\""
+          },
+          {
+            "value": "\"telegram\""
+          }
+        ]
+      }
+    }
+  }
+}

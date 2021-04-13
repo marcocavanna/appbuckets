@@ -1,0 +1,544 @@
+{
+  "filename": "packages/react-ui/src/Dropzone/Dropzone.tsx",
+  "tags": {},
+  "description": "",
+  "displayName": "Dropzone",
+  "props": {
+    "accept": {
+      "defaultValue": null,
+      "description": "Set the accepted files mimeType",
+      "name": "accept",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string[]"
+      }
+    },
+    "children": {
+      "defaultValue": null,
+      "description": "Dropzone children are forbidden",
+      "name": "children",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "TypeLiteral"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "never"
+      }
+    },
+    "className": {
+      "defaultValue": null,
+      "description": "User defined classes",
+      "name": "className",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "clearButton": {
+      "defaultValue": null,
+      "description": "Clear Button",
+      "name": "clearButton",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ButtonProps"
+      }
+    },
+    "defaultFiles": {
+      "defaultValue": null,
+      "description": "The default value",
+      "name": "defaultFiles",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "DropzoneFile[]"
+      }
+    },
+    "disabled": {
+      "defaultValue": null,
+      "description": "Set the dropzone as disabled",
+      "name": "disabled",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "editItemTool": {
+      "defaultValue": null,
+      "description": "Edit Item Tool",
+      "name": "editItemTool",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ButtonProps"
+      }
+    },
+    "files": {
+      "defaultValue": null,
+      "description": "The dropzone value",
+      "name": "files",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "DropzoneFile[]"
+      }
+    },
+    "hintOnIdle": {
+      "defaultValue": null,
+      "description": "Hint to show on idle",
+      "name": "hintOnIdle",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
+    "hintTitle": {
+      "defaultValue": null,
+      "description": "The hint title text",
+      "name": "hintTitle",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
+    "hintWhileDisabled": {
+      "defaultValue": null,
+      "description": "Hint text to show while disabled",
+      "name": "hintWhileDisabled",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
+    "hintWhileDragging": {
+      "defaultValue": null,
+      "description": "Hint to show while dragging",
+      "name": "hintWhileDragging",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
+    "iconOnDragging": {
+      "defaultValue": null,
+      "description": "Set the hint icon on dragging",
+      "name": "iconOnDragging",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "AppBucketsIcon<IconProps>"
+      }
+    },
+    "iconOnIdle": {
+      "defaultValue": null,
+      "description": "Set the hint icon on idle",
+      "name": "iconOnIdle",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "AppBucketsIcon<IconProps>"
+      }
+    },
+    "maxFiles": {
+      "defaultValue": null,
+      "description": "Max Files Accepted, restricted automatically to 1 on multiple={false}",
+      "name": "maxFiles",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "number"
+      }
+    },
+    "maxSize": {
+      "defaultValue": null,
+      "description": "Max File Size to be Accepted",
+      "name": "maxSize",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "number"
+      }
+    },
+    "minSize": {
+      "defaultValue": null,
+      "description": "Min File Size to be Accepted",
+      "name": "minSize",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "number"
+      }
+    },
+    "multiple": {
+      "defaultValue": null,
+      "description": "Accept multiple files",
+      "name": "multiple",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "on": {
+      "defaultValue": null,
+      "description": "Set the event that will accept file",
+      "name": "on",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(\"click\" | \"drop\")[]"
+      }
+    },
+    "onChange": {
+      "defaultValue": null,
+      "description": "Fired every time file changed",
+      "name": "onChange",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(files: DropzoneFile[], rejectedFiles: FileRejection[]) => void"
+      }
+    },
+    "onFilesReadError": {
+      "defaultValue": null,
+      "description": "On file read error handler",
+      "name": "onFilesReadError",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(error: Error) => void"
+      }
+    },
+    "onUpload": {
+      "defaultValue": null,
+      "description": "On Files Upload",
+      "name": "onUpload",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(filesToUpload: DropzoneFile[], helpers: DropzoneHelpers) => Promise<void>"
+      }
+    },
+    "onUploadEnd": {
+      "defaultValue": null,
+      "description": "On Upload Ended handler",
+      "name": "onUploadEnd",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(uploadedFiles: DropzoneFile[]) => void"
+      }
+    },
+    "onUploadError": {
+      "defaultValue": null,
+      "description": "On Upload Error",
+      "name": "onUploadError",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(error: any) => void"
+      }
+    },
+    "removeItemTool": {
+      "defaultValue": null,
+      "description": "Remove item icon",
+      "name": "removeItemTool",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ButtonProps"
+      }
+    },
+    "showPreview": {
+      "defaultValue": null,
+      "description": "Choose if must show preview on image file",
+      "name": "showPreview",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "style": {
+      "defaultValue": null,
+      "description": "Custom container style",
+      "name": "style",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "CSSProperties"
+      }
+    },
+    "uploadButton": {
+      "defaultValue": null,
+      "description": "Upload Button",
+      "name": "uploadButton",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ButtonProps"
+      }
+    }
+  }
+}
