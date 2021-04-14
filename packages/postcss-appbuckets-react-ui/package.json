@@ -30,7 +30,7 @@
     "postcss-single-line": "^1.0.0",
     "postcss-sort-media-queries": "^1.7.26"
   },
-  "gitHead": "3810d66501029c842ccfb4e69f1bc25d741c545e",
+  "gitHead": "534c098394455d5dae88c7178047b353480db65b",
   "devDependencies": {
     "cpy-cli": "^3.1.1",
     "rimraf": "^3.0.2"
