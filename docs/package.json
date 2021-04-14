@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@appbuckets/postcss-react-bucket": "^0.1.1",
-    "@appbuckets/react-ui": "1.5.0-alpha.2",
+    "@appbuckets/react-ui": "1.5.0-alpha.1",
     "array-sort": "^1.0.0",
     "marked": "^2.0.1",
     "next": "10.1.3",
