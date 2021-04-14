@@ -1,6 +1,6 @@
 {
   "name": "react-bucket-docs",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,8 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
-    "@appbuckets/postcss-appbuckets-react-ui": "^0.1.4",
-    "@appbuckets/react-ui": "1.5.0-alpha.2",
+    "@appbuckets/postcss-appbuckets-react-ui": "0.1.5",
+    "@appbuckets/react-ui": "1.5.0-alpha.3",
     "array-sort": "^1.0.0",
     "marked": "^2.0.1",
     "next": "10.1.3",
