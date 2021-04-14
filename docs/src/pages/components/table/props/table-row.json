@@ -374,7 +374,7 @@
       ],
       "required": false,
       "type": {
-        "name": "string | ComponentClass<{}, any> | FunctionComponent<{}>"
+        "name": "ElementType<any>"
       }
     },
     "children": {

@@ -317,12 +317,12 @@
       "description": "Controls if the Portal should close when escape key is pressed",
       "name": "closeOnEscape",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+        "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
         "name": "StrictPortalProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+          "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
           "name": "StrictPortalProps"
         }
       ],
@@ -336,12 +336,12 @@
       "description": "Controls if the Portal should open on trigger click",
       "name": "openOnTriggerClick",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+        "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
         "name": "StrictPortalProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+          "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
           "name": "StrictPortalProps"
         }
       ],
@@ -355,12 +355,12 @@
       "description": "Controls if the Portal should open on trigger focus",
       "name": "openOnTriggerFocus",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+        "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
         "name": "StrictPortalProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+          "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
           "name": "StrictPortalProps"
         }
       ],
@@ -374,12 +374,12 @@
       "description": "Controls if the Portal should open on trigger mouse enter",
       "name": "openOnTriggerMouseEnter",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+        "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
         "name": "StrictPortalProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+          "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
           "name": "StrictPortalProps"
         }
       ],
@@ -393,12 +393,12 @@
       "description": "The element to be rendered in-place where the portal is defined",
       "name": "trigger",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+        "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
         "name": "StrictPortalProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+          "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
           "name": "StrictPortalProps"
         }
       ],
@@ -412,12 +412,12 @@
       "description": "Called with a ref to the trigger node",
       "name": "triggerRef",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+        "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
         "name": "StrictPortalProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@appbuckets/react-ui-core/dist/types/components/Portal/Portal.d.ts",
+          "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
           "name": "StrictPortalProps"
         }
       ],
@@ -609,7 +609,7 @@
       ],
       "required": false,
       "type": {
-        "name": "string | ComponentClass<{}, any> | FunctionComponent<{}>"
+        "name": "ElementType<any>"
       }
     },
     "className": {

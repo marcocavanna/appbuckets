@@ -195,7 +195,7 @@
       ],
       "required": false,
       "type": {
-        "name": "string | ComponentClass<{}, any> | FunctionComponent<{}>"
+        "name": "ElementType<any>"
       }
     },
     "className": {
@@ -458,19 +458,19 @@
         "raw": "ElementSize",
         "value": [
           {
-            "value": "\"extra small\""
+            "value": "\"big\""
           },
           {
             "value": "\"small\""
+          },
+          {
+            "value": "\"extra small\""
           },
           {
             "value": "\"normal\""
           },
           {
             "value": "\"large\""
-          },
-          {
-            "value": "\"big\""
           },
           {
             "value": "\"huge\""
