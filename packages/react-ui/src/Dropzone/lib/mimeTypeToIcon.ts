@@ -1,14 +1,14 @@
-import { FontAwesomeIcon } from '../../generic';
+import { IconName } from '@fortawesome/free-regular-svg-icons';
 
 
 /** Build a Fast Cache Object to avoid multiple match */
-const cache: Record<string, FontAwesomeIcon> = {};
+const cache: Record<string, IconName> = {};
 
 /** Set the fallback icon */
-const fallback: FontAwesomeIcon = 'file-alt';
+const fallback: IconName = 'file-alt';
 
 /** Build a Mapping Array */
-const mapping: [ FontAwesomeIcon, (string | RegExp)[] ][] = [
+const mapping: [ IconName, (string | RegExp)[] ][] = [
 
   /** Image Files */
   [ 'file-image', [ /^image\// ] ],
@@ -95,7 +95,7 @@ const match = (mimeType: string, conditions: (string | RegExp)[]): boolean => {
 };
 
 
-export default function mimeTypeToIcon(mimeType: string): FontAwesomeIcon {
+export default function mimeTypeToIcon(mimeType: string): IconName {
   /** Check if exists in cache */
   if (cache[mimeType]) {
     return cache[mimeType];

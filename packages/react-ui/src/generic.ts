@@ -1,3 +1,5 @@
+/// <reference types="@fortawesome/fontawesome-svg-core" />
+
 /* --------
  * Default React Bucket Types Explained
  * All default React Bucket Component Interface
@@ -94,7 +96,7 @@ export { ShorthandItem, ShorthandCollection };
 /* --------
  * Re Export Icon name from FontAwesome
  * -------- */
-export { IconName as FontAwesomeIcon };
+// export { IconName as FontAwesomeIcon };
 
 
 /** Generic Object */

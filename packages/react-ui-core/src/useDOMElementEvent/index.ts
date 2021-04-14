@@ -37,15 +37,17 @@ export default function useDOMElementEvent(config: UseDOMElementEvent) {
   React.useEffect(
     () => {
       /** If hook is disabled return */
-      if (disabled || !target) {
+      if (disabled) {
         return;
       }
 
+      const elementTarget = target || document.documentElement;
+
       /** Attach the event */
-      target.addEventListener(event, callback);
+      elementTarget.addEventListener(event, callback);
 
       /** On component unmount, detach the event */
-      return () => target.removeEventListener(event, callback);
+      return () => elementTarget.removeEventListener(event, callback);
     },
     [ disabled, event, target, callback ]
   );

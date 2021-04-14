@@ -84,7 +84,11 @@ export function useElementSize(
   // ----
   // Create the Unique DetectorID
   // ----
-  const [ widthDetectorID ] = React.useState(`__rx-width-detector-${Math.round(Math.random() * 1000)}`);
+  // const [ widthDetectorID ] = React.useState(`__rx-width-detector-${Math.round(Math.random() * 1000)}`);
+  const widthDetectorID = React.useRef<string | undefined>(undefined);
+  React.useEffect(() => {
+    widthDetectorID.current = Math.random().toString(36).slice(2);
+  }, []);
 
 
   // ----
@@ -173,14 +177,14 @@ export function useElementSize(
     () => (
       <div
         ref={elementRef}
-        id={widthDetectorID}
+        id={widthDetectorID.current}
         style={{
           visibility: 'hidden',
           opacity   : 0
         }}
       />
     ),
-    [ widthDetectorID ]
+    []
   );
 
 

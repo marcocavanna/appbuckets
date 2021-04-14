@@ -254,7 +254,6 @@ const Portal: React.FunctionComponent<PortalProps> = (props) => {
 
   useDOMElementEvent({
     disabled: !closeOnDocumentClick,
-    target  : document.documentElement,
     event   : 'mousedown',
     callback: handleDocumentMouseDown
   });
@@ -291,7 +290,6 @@ const Portal: React.FunctionComponent<PortalProps> = (props) => {
 
   useDOMElementEvent({
     disabled: !closeOnDocumentClick,
-    target  : document.documentElement,
     event   : 'click',
     callback: handleDocumentClick
   });
@@ -311,7 +309,6 @@ const Portal: React.FunctionComponent<PortalProps> = (props) => {
 
   useDOMElementEvent({
     disabled: !closeOnEscape,
-    target  : document.documentElement,
     event   : 'keydown',
     callback: handleEscapeKey
   });

@@ -7,56 +7,6 @@
   resolved "https://registry.yarnpkg.com/@appbuckets/formatters/-/formatters-0.2.0.tgz#5cd48800c41de987408feacf0d29c32a4382b452"
   integrity sha512-VjB/FoIBx5Oyr5DXtKhdrjGw9ncVudGQvFyVqV0osdFqt1uXwfkWZ7kSW4qr5+GC0VVK4Ph3c9DSGGNoIRrj+A==
 
-"@appbuckets/postcss-react-bucket@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@appbuckets/postcss-react-bucket/-/postcss-react-bucket-0.1.1.tgz#079263a818b4712e5c939b7ca073ce0087cd0c76"
-  integrity sha512-Jd30pUTsA/jKN7cpKpkiXBqb4hxVkKMIh23bsnAxQaPRl4jaBbtQpeZ8CUO6NtSNJLnJ9iqC2WvnsL5HbsmAxA==
-  dependencies:
-    autoprefixer "^9.8.6"
-    css-declaration-sorter "^5.1.2"
-    cssnano "^4.1.10"
-    postcss-discard-comments "^4.0.2"
-    postcss-discard-duplicates "^4.0.2"
-    postcss-import "^12.0.1"
-    postcss-import-url "^5.1.0"
-    postcss-merge-rules "^4.0.3"
-    postcss-momentum-scrolling "^2.8.20"
-    postcss-single-charset "^2.0.0"
-    postcss-single-line "^1.0.0"
-    postcss-sort-media-queries "^1.7.26"
-
-"@appbuckets/react-ui@1.5.0-alpha.2":
-  version "1.5.0-alpha.1"
-  dependencies:
-    "@appbuckets/formatters" "^0.2.0"
-    "@appbuckets/react-ui-core" "0.2.1"
-    "@fortawesome/fontawesome-svg-core" "^1.2.35"
-    "@fortawesome/free-brands-svg-icons" "^5.15.3"
-    "@fortawesome/free-regular-svg-icons" "^5.15.3"
-    "@fortawesome/free-solid-svg-icons" "^5.15.3"
-    "@fortawesome/react-fontawesome" "^0.1.14"
-    "@popperjs/core" "^2.9.2"
-    "@semantic-ui-react/event-stack" "^3.1.2"
-    array-sort "^1.0.0"
-    clsx "^1.1.1"
-    deep-extend "^0.6.0"
-    formik "^2.2.6"
-    kind-of "^6.0.3"
-    p-limit "^3.1.0"
-    pretty-bytes "^5.6.0"
-    react-color "^2.19.3"
-    react-day-picker "^7.4.10"
-    react-dropzone "^11.3.2"
-    react-input-mask "^2.0.4"
-    react-popper "^2.2.5"
-    react-select "^4.3.0"
-    react-sticky "^6.0.3"
-    react-textarea-autosize "^8.3.2"
-    react-window "^1.8.6"
-    rfdc "^1.3.0"
-    tiny-invariant "^1.1.0"
-    tslib "^2.2.0"
-
 "@babel/code-frame@7.12.11":
   version "7.12.11"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.12.11.tgz#f4ad435aa263db935b8f10f2c552d23fb716a63f"

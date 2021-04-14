@@ -1,1 +1,2 @@
-export { default, RefProps } from './Ref';
+export { default } from './Ref';
+export type { RefProps } from './Ref';
