@@ -25,11 +25,16 @@ const columns: RxTableColumnProps<ComponentProp>[] = [
     header   : 'Name',
     cell     : {
       header : (prop) => ({
-        content: <code className={'property-name'}>{prop.name}</code>
+        content: (
+          <React.Fragment>
+            <code className={'property-name'}>{prop.name}</code>
+            {prop.required && (<Label as={'span'} warning className={'ml-4'} size={'small'} content={'Required'} />)}
+          </React.Fragment>
+        )
       }),
       content: (prop) => prop.description
     },
-    width    : 40,
+    width    : 50,
     widthType: 'percentage'
   },
   {
@@ -40,25 +45,13 @@ const columns: RxTableColumnProps<ComponentProp>[] = [
         content : <code>{prop.type.raw || prop.type.name}</code>,
         truncate: false
       }),
-      content: (props) => ({
-        content: Array.isArray(props.type.value) && (
+      content: (props) => (Array.isArray(props.type.value) ? {
+        content: (
           props.type.value.map((v) => v.value.replace(/^"|"$/g, '')).join(', ')
         )
-      })
+      } : undefined)
     },
     width    : 50,
-    widthType: 'percentage'
-  },
-  {
-    key      : 'required',
-    header   : 'Required',
-    textAlign: 'center',
-    render   : (prop) => (
-      prop.required
-        ? <Label warning content={'Yes'} />
-        : <Label content={'No'} />
-    ),
-    width    : 10,
     widthType: 'percentage'
   }
 ];
@@ -92,7 +85,10 @@ const PropsTable: React.FunctionComponent<PropsTableProps> = (props) => {
         style={{ tableLayout: 'fixed' }}
         getRowKey={'name'}
         columns={columns}
-        data={arraySort(arrangedProps, [ 'name' ])}
+        data={[
+          ...arraySort(arrangedProps.filter(prop => prop.required), [ 'name' ]),
+          ...arraySort(arrangedProps.filter(prop => !prop.required), [ 'name' ])
+        ]}
       />
     </div>
   );

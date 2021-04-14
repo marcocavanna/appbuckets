@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import * as React from 'react';
+
 import { highlightCode } from '../utils/parseMarkdown';
 import MarkdownElement from './MarkdownElement';
 
@@ -28,13 +29,19 @@ const HighlightedCode: React.FunctionComponent<HighlightedCodeProps> = (props) =
     [ code, language ]
   );
 
-  const classes = clsx(`language-${language}`);
+  const classes = React.useRef<string>('');
+  React.useEffect(
+    () => {
+      classes.current = clsx(`language-${language}`);
+    },
+    [ language ]
+  );
 
   return (
     <MarkdownElement>
       <pre>
         <code
-          className={classes}
+          className={classes.current}
           dangerouslySetInnerHTML={{ __html: renderedCode }}
         />
       </pre>

@@ -72,7 +72,7 @@
   position: relative;
   height: $navbar-link-height;
   line-height: $navbar-link-height;
-  padding: 0 $navbar-link-height / 4;
+  padding: 0 $navbar-link-spacer / 2;
   color: $navbar-link-color;
   font-weight: $semi-bold;
 
@@ -141,7 +141,16 @@
 
   > svg {
     height: $navbar-logo-size;
+    width: $navbar-logo-size;
     fill: $navbar-link-color;
+
+    path {
+      opacity: .2;
+
+      &.slice-bottom-right {
+        opacity: .4;
+      }
+    }
   }
 }
 

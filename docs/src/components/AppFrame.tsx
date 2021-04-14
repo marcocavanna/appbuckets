@@ -8,6 +8,7 @@ import Head from './Head';
 import Navbar from './Navbar';
 
 import { HeroProvider } from './Hero';
+import Sidebar from './Sidebar';
 import TableOfContent from './TableOfContent';
 
 /* --------
@@ -66,6 +67,10 @@ const AppFrame: React.FunctionComponent<AppFrameProps> = (props) => {
         <Head section={title} />
 
         <Navbar title={title} description={description} />
+
+        {hasSidebar && (
+          <Sidebar />
+        )}
 
         <div className={'docs-content'}>
           <Container as={'main'}>

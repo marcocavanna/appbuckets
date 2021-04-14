@@ -27,6 +27,7 @@ const MarkdownDocs: React.FunctionComponent<MarkdownDocsProps> = (props) => {
 
   return (
     <AppFrame
+      hasSidebar
       toc={doc.toc}
       className={'markdown-docs'}
       title={doc.title}

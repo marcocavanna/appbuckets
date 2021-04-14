@@ -23,13 +23,16 @@
 
   &.with-sidebar {
     > .docs-content {
+      margin-left: $sidebar-width;
       width: calc(100% - #{$sidebar-width});
     }
   }
 
-  &.with-toc {
-    > .docs-content {
-      width: calc(100% - #{$toc-width});
+  @include on-screen('tablet') {
+    &.with-toc {
+      > .docs-content {
+        width: calc(100% - #{$toc-width});
+      }
     }
   }
 

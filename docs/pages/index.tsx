@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Image from 'next/image';
+import { GetStaticProps } from 'next';
 
 import { Box, Button, Container, Divider, Header, Panel } from '@appbuckets/react-ui';
 
@@ -8,28 +8,28 @@ import AppFrame from '../src/components/AppFrame';
 import HighlightedCode from '../src/components/HighlightedCode';
 import { Text } from '../src/components/Text';
 
+import AppLogo from '../src/components/Navbar/atoms/AppLogo';
 
-const version = '1.5.0';
 
-
-export default function Home() {
+export default function Home(props: { version: string }) {
   return (
     <AppFrame description={'Just another React UI Framework'}>
       <Container className={'pt-8'}>
 
         <div>
+          <Box className={'main-logo'} textAlign={'center'}>
+            <AppLogo />
+          </Box>
+
           <Header
             textAlign={'center'}
-            icon={(
-              <Image src={'/static/logo_transparent.png'} height={128} width={128} alt={'react-bucket-logo'} />
-            )}
             content={'ReactBucket'}
             subheader={'Just another React UI Framework'}
           />
 
           <Box textAlign={'center'}>
             <Text>
-              Current Documented version is <b>{version}</b>
+              Current Documented version is <b>{props.version}</b>
             </Text>
             <div className={'mt-4'}>
               <Button
@@ -142,3 +142,16 @@ ReactDOM.render(
     </AppFrame>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  /** Get the Package JSON to set the Documented Version */
+  const pkg = await import('../package.json');
+
+  /** Parse into object */
+  const parsed = JSON.parse((pkg as any).default);
+
+  /** Return version */
+  return {
+    props: { version: parsed?.dependencies?.['@appbuckets/react-ui'] || 'Error' }
+  };
+};
