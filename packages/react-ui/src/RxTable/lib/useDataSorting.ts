@@ -1,7 +1,8 @@
 import * as React from 'react';
 import arraySort from 'array-sort';
 
-import { useAutoControlledValue } from '../../hooks/useAutoControlledValue';
+import { useAutoControlledValue } from '@appbuckets/react-ui-core';
+
 import { areEqualStringArray } from '../../utils';
 
 

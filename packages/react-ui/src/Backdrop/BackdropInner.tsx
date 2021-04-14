@@ -3,13 +3,9 @@ import clsx from 'clsx';
 
 import {
   childrenUtils,
-  classByPattern,
-  Ref
-} from '@appbuckets/react-ui-core';
-
-import {
+  Ref,
   useElementType
-} from '../utils';
+} from '@appbuckets/react-ui-core';
 
 import { useWithDefaultProps } from '../BucketTheme';
 
@@ -101,7 +97,7 @@ const BackdropInner: BackdropInnerComponent = (receivedProps) => {
   // ----
   const classes = clsx(
     { visible: !animated && visible, animated },
-    classByPattern(verticalAlign, 'content-%value%'),
+    verticalAlign && `content-${verticalAlign.replace(/\s/g, '-')}`,
     'backdrop',
     className
   );

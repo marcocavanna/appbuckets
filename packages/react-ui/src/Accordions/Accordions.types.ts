@@ -1,9 +1,11 @@
-import { IconProps } from '../Icon';
+import { ShorthandItem } from '@appbuckets/react-ui-core';
+
 import {
-  AppBucketsComponentProps, AppBucketsIcon,
-  ShorthandItem
+  AppBucketsComponentProps,
+  AppBucketsIcon
 } from '../generic';
 
+import { IconProps } from '../Icon';
 import { HeaderProps } from '../Header';
 
 import { CollapsableProps } from '../Collapsable';

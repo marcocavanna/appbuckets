@@ -1,15 +1,17 @@
-import { createShorthandFactory } from '@appbuckets/react-ui-core';
-import clsx from 'clsx';
 import * as React from 'react';
-import { MutableRefObject } from 'react';
+import type { MutableRefObject } from 'react';
+import clsx from 'clsx';
+
+import {
+  CreatableFunctionComponent,
+  createShorthandFactory,
+  useAutoControlledValue
+} from '@appbuckets/react-ui-core';
 
 import ReactSelect, { ActionMeta, ValueType } from 'react-select';
 
 import CreatableReactSelect from 'react-select/creatable';
 
-import { CreatableFunctionComponent } from '../generic';
-
-import { useAutoControlledValue } from '../hooks/useAutoControlledValue';
 import { useWithDefaultProps } from '../BucketTheme';
 
 import { splitFieldProps, useSharedClassName, useSplitStateClassName } from '../utils';

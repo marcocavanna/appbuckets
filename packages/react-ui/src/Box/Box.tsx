@@ -2,7 +2,7 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  getElementType,
+  useElementType,
   childrenUtils
 } from '@appbuckets/react-ui-core';
 
@@ -55,7 +55,7 @@ const Box: React.FunctionComponent<BoxProps> = (receivedProps) => {
     }
   } = useSharedClassName(props);
 
-  const ElementType = getElementType(Box, props);
+  const ElementType = useElementType(Box, props);
 
   const classes = React.useMemo(
     () => clsx(

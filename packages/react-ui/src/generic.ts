@@ -70,16 +70,15 @@
  * -------- */
 import {
   ReactNode,
-  ReactElement,
-  ComponentClass,
-  FunctionComponent,
-  Key,
+  ElementType,
   ChangeEvent,
   FocusEvent,
   MouseEvent
 } from 'react';
 
-import { CreateShorthandOptions, ShorthandValue, ShorthandRenderFunctionValue } from '@appbuckets/react-ui-core';
+import {
+  ShorthandContent
+} from '@appbuckets/react-ui-core';
 
 import { IconName } from '@fortawesome/fontawesome-svg-core';
 
@@ -90,23 +89,11 @@ export { IconName as FontAwesomeIcon };
 /** Generic Object */
 export type AnyObject = { [key: string]: any };
 
+
 /* --------
- * Shorthand Props
+ * Icon
  * -------- */
-export type ShorthandContent = ReactNode;
-export type ShorthandItem<P> = ReactNode | P | ShorthandRenderFunctionValue<P>;
-export type ShorthandCollection<P> = ShorthandItem<P & { key: Key }>[];
-
-export type CreateComponentFactory<P> = {
-  create: (
-    value: ShorthandValue<P> | ShorthandRenderFunctionValue<P>,
-    options: CreateShorthandOptions<P>
-  ) => ReactElement<P> | null
-};
-
-export type CreatableFunctionComponent<P> = FunctionComponent<P> & CreateComponentFactory<P>;
-
-export type AppBucketsIcon<T> = IconName | T | ShorthandRenderFunctionValue<T>;
+export type AppBucketsIcon<T> = IconName | T;
 
 
 /* --------
@@ -150,7 +137,7 @@ export type FlexboxContent<P, E extends keyof JSX.IntrinsicElements = 'div'> =
  */
 export interface CoreAppBucketsComponentProps {
   /** An Element used to Render the Component */
-  as?: string | ComponentClass | FunctionComponent;
+  as?: ElementType;
 
   /** Main Component Content */
   children?: ReactNode;

@@ -1,4 +1,6 @@
-import { FlexboxContainer, ShorthandCollection } from '../generic';
+import { ShorthandCollection } from '@appbuckets/react-ui-core';
+
+import { FlexboxContainer } from '../generic';
 
 import { ColumnProps } from '../Column';
 

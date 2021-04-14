@@ -1,7 +1,6 @@
-import {
-  AppBucketsComponentProps,
-  ShorthandContent
-} from '../generic';
+import { ShorthandContent } from '@appbuckets/react-ui-core';
+
+import { AppBucketsComponentProps } from '../generic';
 
 import {
   StrictHeaderProps

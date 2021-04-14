@@ -1,4 +1,6 @@
-import { ElementSize, AppBucketsColor, ShorthandContent } from '../generic';
+import { ShorthandContent } from '@appbuckets/react-ui-core';
+
+import { ElementSize, AppBucketsColor } from '../generic';
 
 
 export type ProgressColorSteps = {

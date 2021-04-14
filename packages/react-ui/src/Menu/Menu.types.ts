@@ -1,10 +1,7 @@
 import * as React from 'react';
 
-import {
-  AppBucketsComponentProps,
-  ShorthandCollection,
-  ShorthandItem
-} from '../generic';
+import { ShorthandItem, ShorthandCollection } from '@appbuckets/react-ui-core';
+import { AppBucketsComponentProps } from '../generic';
 
 import { MenuItemProps } from './MenuItem.types';
 

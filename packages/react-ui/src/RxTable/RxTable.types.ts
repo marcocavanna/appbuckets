@@ -1,8 +1,9 @@
 import * as React from 'react';
 
+import { ShorthandItem } from '@appbuckets/react-ui-core';
+
 import {
   ContentAlign,
-  ShorthandItem,
   AppBucketsComponentProps,
   AnyObject
 } from '../generic';
@@ -25,7 +26,7 @@ export interface RxTableProps<Data> extends AppBucketsComponentProps<StrictRxTab
 
 export interface StrictRxTableProps<Data> extends Omit<UseRxTableFactoryConfig<Data>, 'width'> {
   /** An Element used to Render the Component */
-  as?: string | React.ComponentClass | React.FunctionComponent;
+  as?: React.ElementType;
 
   /** Children ar not permitted */
   children?: never;

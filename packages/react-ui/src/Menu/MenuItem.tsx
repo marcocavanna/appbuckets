@@ -2,16 +2,16 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
+  CreatableFunctionComponent,
   createShorthandFactory,
-  childrenUtils
+  childrenUtils,
+  useAutoControlledValue,
+  useElementType
 } from '@appbuckets/react-ui-core';
 
-import { CreatableFunctionComponent } from '../generic';
-import { useAutoControlledValue } from '../hooks/useAutoControlledValue';
 import { useRipples } from '../hooks/useRipples';
 
 import {
-  useElementType,
   useSharedClassName,
   useSplitStateClassName
 } from '../utils';

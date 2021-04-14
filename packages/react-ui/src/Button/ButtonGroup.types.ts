@@ -1,7 +1,6 @@
-import {
-  ShorthandCollection,
-  FlexboxContainer
-} from '../generic';
+import { ShorthandCollection } from '@appbuckets/react-ui-core';
+
+import { FlexboxContainer } from '../generic';
 
 import { ButtonProps } from './Button.types';
 

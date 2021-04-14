@@ -2,23 +2,16 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
+  CreatableFunctionComponent,
+  ShorthandCollection,
   createShorthandFactory,
-  childrenUtils
+  childrenUtils,
+  useAutoControlledValue,
+  useElementType
 } from '@appbuckets/react-ui-core';
 
-import {
-  CreatableFunctionComponent,
-  ShorthandCollection
-} from '../generic';
+import { useSharedClassName } from '../utils';
 
-import {
-  useElementType,
-  useSharedClassName
-} from '../utils';
-
-import {
-  useAutoControlledValue
-} from '../hooks/useAutoControlledValue';
 import { useWithDefaultProps } from '../BucketTheme';
 
 import { MenuProps } from './Menu.types';

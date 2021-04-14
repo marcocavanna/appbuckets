@@ -1,11 +1,6 @@
 import clsx from 'clsx';
 
 import {
-  classByPattern,
-  isValue
-} from '@appbuckets/react-ui-core';
-
-import {
   SharedAppBucketsComponentProps,
   SharedFlexboxContainerProps,
   SharedFlexboxContentProps,
@@ -27,6 +22,22 @@ export type SharedClassNamesAndProps<P> = {
     [K in keyof P]: K extends keyof SharedProps ? never : P[K]
   }
 };
+
+function isValue(value: any): string | undefined {
+  if (typeof value === 'string' || typeof value === 'number') {
+    return `is-${value.toString().replace(/\s/g, '-')}`;
+  }
+
+  return undefined;
+}
+
+function classByPattern(value: any, pattern: string, replacer: string = '%value%'): string | undefined {
+  if (typeof value === 'string' || typeof value === 'number') {
+    return pattern.replace(new RegExp(replacer, 'g'), value.toString().replace(/\s/g, '-'));
+  }
+
+  return undefined;
+}
 
 
 function fallBackTrueValue(original: any): string | undefined {

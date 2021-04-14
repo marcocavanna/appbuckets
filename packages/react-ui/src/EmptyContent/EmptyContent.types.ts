@@ -1,9 +1,6 @@
-import {
-  AppBucketsComponentProps,
-  AppBucketsIcon,
-  ShorthandContent,
-  ShorthandItem
-} from '../generic';
+import { ShorthandItem, ShorthandContent } from '@appbuckets/react-ui-core';
+
+import { AppBucketsComponentProps, AppBucketsIcon } from '../generic';
 
 import { ButtonProps } from '../Button';
 import { IconProps } from '../Icon';

@@ -2,11 +2,10 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  createShorthandFactory
+  CreatableFunctionComponent,
+  createShorthandFactory,
+  useElementType
 } from '@appbuckets/react-ui-core';
-import { CreatableFunctionComponent } from '../generic';
-
-import { useElementType } from '../utils';
 
 import { useWithDefaultProps } from '../BucketTheme';
 

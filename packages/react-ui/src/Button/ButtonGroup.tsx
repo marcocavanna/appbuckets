@@ -2,18 +2,16 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
+  CreatableFunctionComponent,
+  ShorthandCollection,
   childrenUtils,
-  createShorthandFactory
+  createShorthandFactory,
+  useElementType
 } from '@appbuckets/react-ui-core';
 
-import {
-  useSharedClassName,
-  useElementType
-} from '../utils';
+import { useSharedClassName } from '../utils';
 
 import { useWithDefaultProps } from '../BucketTheme';
-
-import { CreatableFunctionComponent, ShorthandCollection } from '../generic';
 
 import { ButtonGroupProps } from './ButtonGroup.types';
 

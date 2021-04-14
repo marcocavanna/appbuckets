@@ -1,10 +1,10 @@
 import * as React from 'react';
 
+import { ShorthandItem } from '@appbuckets/react-ui-core';
+
 import { DayPickerProps as ReactDayPickerProps } from 'react-day-picker';
 
-import {
-  AppBucketsComponentProps, ShorthandItem
-} from '../generic';
+import { AppBucketsComponentProps } from '../generic';
 
 import { ButtonProps } from '../Button';
 import { FieldProps } from '../Field';

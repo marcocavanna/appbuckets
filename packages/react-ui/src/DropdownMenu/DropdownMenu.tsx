@@ -1,11 +1,8 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
-import {
-  useElementType
-} from '../utils';
+import { useAutoControlledValue, useElementType } from '@appbuckets/react-ui-core';
 
-import { useAutoControlledValue } from '../hooks/useAutoControlledValue';
 import { useWithDefaultProps } from '../BucketTheme';
 
 import Button from '../Button';

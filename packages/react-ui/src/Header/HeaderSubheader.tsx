@@ -2,12 +2,11 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
+  CreatableFunctionComponent,
   createShorthandFactory,
   getElementType,
   childrenUtils
 } from '@appbuckets/react-ui-core';
-
-import { CreatableFunctionComponent } from '../generic';
 
 import { getSharedClassNames } from '../utils';
 

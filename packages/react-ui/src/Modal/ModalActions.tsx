@@ -2,11 +2,14 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  childrenUtils, createShorthandFactory
+  CreatableFunctionComponent,
+  ShorthandCollection,
+  childrenUtils,
+  createShorthandFactory,
+  useElementType
 } from '@appbuckets/react-ui-core';
 
 import {
-  useElementType,
   useSharedClassName
 } from '../utils';
 
@@ -16,8 +19,6 @@ import { ModalActionsProps } from './ModalActions.types';
 
 import Button from '../Button';
 import type { ButtonProps } from '../Button';
-
-import { CreatableFunctionComponent, ShorthandCollection } from '../generic';
 
 
 /* --------

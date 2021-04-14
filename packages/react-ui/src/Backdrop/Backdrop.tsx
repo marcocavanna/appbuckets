@@ -2,13 +2,12 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
+  CreatableFunctionComponent,
   createShorthandFactory,
   childrenUtils,
   isBrowser as checkIsBrowser,
   Portal
 } from '@appbuckets/react-ui-core';
-
-import { CreatableFunctionComponent } from '../generic';
 
 import { useWithDefaultProps } from '../BucketTheme';
 

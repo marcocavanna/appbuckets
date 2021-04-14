@@ -1,8 +1,6 @@
 import * as React from 'react';
 
-import {
-  childrenUtils
-} from '@appbuckets/react-ui-core';
+import { childrenUtils } from '@appbuckets/react-ui-core';
 
 
 /* --------

@@ -2,16 +2,15 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
+  CreatableFunctionComponent,
   createShorthandFactory,
   childrenUtils,
-  classByPattern
+  useElementType
 } from '@appbuckets/react-ui-core';
 
-import { CreatableFunctionComponent } from '../generic';
 import { useRipples } from '../hooks/useRipples';
 
 import {
-  useElementType,
   useSharedClassName,
   useSplitStateClassName
 } from '../utils';
@@ -156,7 +155,7 @@ const Button: CreatableFunctionComponent<ButtonProps> & ButtonChildren = (
       'with-icon': icon && (children || content),
       'as-icon'  : icon && !children && !content
     },
-    classByPattern(icon && (children || content) && iconPosition, 'icon-on-%value%'),
+    icon && (children || content) && iconPosition && `icon-on-${iconPosition}`,
     stateClasses,
     'button',
     className

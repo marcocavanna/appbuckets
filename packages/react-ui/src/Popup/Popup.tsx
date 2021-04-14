@@ -8,13 +8,11 @@ import { usePopper } from 'react-popper';
 import {
   childrenUtils,
   Portal,
-  PortalProps
+  PortalProps,
+  useElementType
 } from '@appbuckets/react-ui-core';
 
-import {
-  useSharedClassName,
-  useElementType
-} from '../utils';
+import { useSharedClassName } from '../utils';
 
 import { useWithDefaultProps } from '../BucketTheme';
 

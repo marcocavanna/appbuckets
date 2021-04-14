@@ -1,8 +1,9 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
+import { useElementType } from '@appbuckets/react-ui-core';
+
 import {
-  useElementType,
   useSharedClassName,
   useSplitStateClassName
 } from '../utils';

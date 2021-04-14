@@ -1,12 +1,13 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
+import { useElementType, useAutoControlledValue } from '@appbuckets/react-ui-core';
+
 import ReactInputMask from 'react-input-mask';
 import TextareaAutosize from 'react-textarea-autosize';
 
-import { useElementType, useSharedClassName, useSplitStateClassName } from '../utils';
+import { useSharedClassName, useSplitStateClassName } from '../utils';
 
-import { useAutoControlledValue } from '../hooks/useAutoControlledValue';
 import { useTabIndex } from '../hooks/useTabIndex';
 
 import { useWithDefaultProps } from '../BucketTheme';

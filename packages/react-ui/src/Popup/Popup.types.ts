@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-import { PortalProps } from '@appbuckets/react-ui-core';
+import { PortalProps, ShorthandItem } from '@appbuckets/react-ui-core';
 
 import { Placement, Rect } from '@popperjs/core';
 import { Modifier, StrictModifierNames } from 'react-popper';
 
-import { AppBucketsComponentProps, ShorthandItem } from '../generic';
+import { AppBucketsComponentProps } from '../generic';
 
 import { HeaderProps } from '../Header';
 

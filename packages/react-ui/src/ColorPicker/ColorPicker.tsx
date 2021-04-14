@@ -1,9 +1,10 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
+import { useAutoControlledValue } from '@appbuckets/react-ui-core';
+
 import { BlockPicker, CirclePicker, ColorChangeHandler, TwitterPicker } from 'react-color';
 
-import { useAutoControlledValue } from '../hooks/useAutoControlledValue';
 import Popup from '../Popup/Popup';
 
 import {

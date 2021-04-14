@@ -1,4 +1,6 @@
-import { MinimalAppBucketsComponentProps, ShorthandContent } from '../generic';
+import { ShorthandContent } from '@appbuckets/react-ui-core';
+
+import { MinimalAppBucketsComponentProps } from '../generic';
 
 import { ProgressIndicator, StrictSharedProgressProps } from './Shared.types';
 

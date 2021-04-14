@@ -2,16 +2,14 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
+  CreatableFunctionComponent,
   childrenUtils,
-  classByValue,
-  createShorthandFactory
+  createShorthandFactory,
+  useElementType
 } from '@appbuckets/react-ui-core';
-
-import { CreatableFunctionComponent } from '../generic';
 
 import {
   useSharedClassName,
-  useElementType,
   useSplitStateClassName
 } from '../utils';
 
@@ -53,7 +51,7 @@ const Loader: CreatableFunctionComponent<LoaderProps> = (receivedProps) => {
 
   /** Build Loader classes */
   const classes = clsx(
-    classByValue(type),
+    type && type.replace(/\s/g, '-'),
     {
       centered,
       inverted,

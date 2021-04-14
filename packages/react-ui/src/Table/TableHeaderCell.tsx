@@ -1,9 +1,7 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
-import { classByValue, createShorthandFactory } from '@appbuckets/react-ui-core';
-
-import { CreatableFunctionComponent } from '../generic';
+import { CreatableFunctionComponent, createShorthandFactory } from '@appbuckets/react-ui-core';
 
 import {
   useSharedClassName
@@ -34,7 +32,7 @@ const TableHeaderCell: CreatableFunctionComponent<TableHeaderCellProps> = (recei
   const classes = clsx(
     className,
     sorted && 'sorted',
-    classByValue(sorted),
+    sorted,
     sortable && 'sortable'
   );
 

@@ -1,11 +1,8 @@
 import * as React from 'react';
 
-import { ShorthandValue } from '@appbuckets/react-ui-core';
+import { ShorthandValue, ShorthandCollection } from '@appbuckets/react-ui-core';
 
-import {
-  MinimalAppBucketsComponentProps,
-  ShorthandCollection
-} from '../generic';
+import { MinimalAppBucketsComponentProps } from '../generic';
 
 import { ButtonProps } from '../Button';
 import { PopupOpenEvent, PopupPosition } from '../Popup';

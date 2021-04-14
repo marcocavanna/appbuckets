@@ -1,4 +1,6 @@
-import { AppBucketsComponentProps, SharedComponentStateProps, ShorthandItem } from '../generic';
+import { ShorthandItem } from '@appbuckets/react-ui-core';
+
+import { AppBucketsComponentProps, SharedComponentStateProps } from '../generic';
 
 import { PanelHeaderProps } from './PanelHeader.types';
 import { PanelFooterProps } from './PanelFooter.types';

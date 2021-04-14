@@ -1,8 +1,6 @@
 import * as React from 'react';
 
-import {
-  AppBucketsComponentProps
-} from '../generic';
+import { AppBucketsComponentProps } from '../generic';
 
 
 export interface CollapsableState {

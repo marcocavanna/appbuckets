@@ -1,8 +1,8 @@
+import { ShorthandCollection, ShorthandItem } from '@appbuckets/react-ui-core';
+
 import {
   AppBucketsComponentProps,
   AppBucketsIcon,
-  ShorthandCollection,
-  ShorthandItem,
   SharedComponentStateProps
 } from '../generic';
 

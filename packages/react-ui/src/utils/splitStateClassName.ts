@@ -1,11 +1,6 @@
 import clsx from 'clsx';
 
 import {
-  classByKey,
-  classByPattern
-} from '@appbuckets/react-ui-core';
-
-import {
   SharedComponentStateProps
 } from '../generic';
 
@@ -17,6 +12,15 @@ export type SplitStateClassName<P> = [
   },
   SharedComponentStateProps
 ];
+
+
+function classByPattern(value: any, pattern: string, replacer: string = '%value%'): string | undefined {
+  if (typeof value === 'string' || typeof value === 'number') {
+    return pattern.replace(new RegExp(replacer, 'g'), value.toString().replace(/\s/g, '-'));
+  }
+
+  return undefined;
+}
 
 
 export default function splitStateClassName<P extends SharedComponentStateProps>(props: P): SplitStateClassName<P> {
@@ -33,12 +37,14 @@ export default function splitStateClassName<P extends SharedComponentStateProps>
   } = props as P & SharedComponentStateProps;
 
   const classes = clsx(
-    classByKey(danger, 'is-danger'),
-    classByKey(info, 'is-info'),
-    classByKey(primary, 'is-primary'),
-    classByKey(secondary, 'is-secondary'),
-    classByKey(success, 'is-success'),
-    classByKey(warning, 'is-warning'),
+    {
+      'is-danger'   : danger,
+      'is-info'     : info,
+      'is-primary'  : primary,
+      'is-secondary': secondary,
+      'is-success'  : success,
+      'is-warning'  : warning
+    },
     /** Apply manual color only if any other shorthand is falsy */
     classByPattern(
       (!danger && !info && !primary && !secondary && !success && !warning && appearance),

@@ -1,15 +1,15 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
+import { useElementType, useAutoControlledValue } from '@appbuckets/react-ui-core';
+
 import {
-  useElementType,
   useSharedClassName,
   useSplitStateClassName
 } from '../utils';
 
 import { useWithDefaultProps } from '../BucketTheme';
 
-import { useAutoControlledValue } from '../hooks/useAutoControlledValue';
 import { useTabIndex } from '../hooks/useTabIndex';
 
 import Icon from '../Icon';

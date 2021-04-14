@@ -3,13 +3,12 @@ import clsx from 'clsx';
 
 import {
   childrenUtils,
-  createShorthandFactory
+  createShorthandFactory,
+  CreatableFunctionComponent,
+  useElementType
 } from '@appbuckets/react-ui-core';
 
-import { CreatableFunctionComponent } from '../generic';
-
 import {
-  useElementType,
   useSharedClassName,
   useSplitStateClassName
 } from '../utils';

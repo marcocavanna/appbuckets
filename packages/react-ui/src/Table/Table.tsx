@@ -2,16 +2,11 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  childrenUtils
+  ShorthandCollection,
+  childrenUtils,
+  useElementType
 } from '@appbuckets/react-ui-core';
 
-import {
-  ShorthandCollection
-} from '../generic';
-
-import {
-  useElementType
-} from '../utils';
 import { useWithDefaultProps } from '../BucketTheme';
 
 import { TableProps } from './Table.types';

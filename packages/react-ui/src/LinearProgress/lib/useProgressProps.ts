@@ -1,8 +1,6 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
-import { classByKey, isValue } from '@appbuckets/react-ui-core';
-
 import { MinimalAppBucketsComponentProps, AppBucketsColor } from '../../generic';
 
 import { StrictSharedProgressProps } from '../Shared.types';
@@ -107,11 +105,13 @@ export default function useProgressProps<P extends ExtendedSharedProgressProps>(
       // Build Component Classes and Element Type
       // ----
       const classes = clsx(
-        classByKey(hasOverValue, 'overvalued'),
-        classByKey(inverted, 'inverted'),
-        'progress',
-        isValue(size),
-        isValue(colorClassName),
+        {
+          overvalued                                   : hasOverValue,
+          inverted,
+          progress                                     : true,
+          [`is-${size?.replace(/\s/g, '-')}`]          : size,
+          [`is-${colorClassName?.replace(/\s/g, '-')}`]: colorClassName
+        },
         className
       );
 

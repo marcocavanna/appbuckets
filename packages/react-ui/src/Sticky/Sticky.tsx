@@ -3,9 +3,9 @@ import clsx from 'clsx';
 
 import { Sticky as NativeSticky, StickyContainer } from 'react-sticky';
 
-import { childrenUtils } from '@appbuckets/react-ui-core';
+import { childrenUtils, useElementType } from '@appbuckets/react-ui-core';
 
-import { useElementType, useSharedClassName } from '../utils';
+import { useSharedClassName } from '../utils';
 
 import { useWithDefaultProps } from '../BucketTheme';
 

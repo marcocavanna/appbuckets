@@ -1,9 +1,10 @@
 import * as React from 'react';
 
+import { ShorthandCollection } from '@appbuckets/react-ui-core';
+
 import {
   AppBucketsComponentProps,
-  SharedComponentStateProps,
-  ShorthandCollection
+  SharedComponentStateProps
 } from '../generic';
 
 import { TableCellProps } from './TableCell.types';

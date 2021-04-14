@@ -1,6 +1,8 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
+import { useAutoControlledValue } from '@appbuckets/react-ui-core';
+
 import { DayModifiers } from 'react-day-picker';
 import ReactDayPicker from 'react-day-picker/DayPicker';
 
@@ -10,7 +12,6 @@ import {
   useSplitStateClassName
 } from '../utils';
 
-import { useAutoControlledValue } from '../hooks/useAutoControlledValue';
 import { useWithDefaultProps } from '../BucketTheme';
 
 import Button from '../Button';

@@ -1,14 +1,9 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
-import { ShorthandItem } from '../generic';
+import { useAutoControlledValue, useElementType, ShorthandItem } from '@appbuckets/react-ui-core';
 
-import { useAutoControlledValue } from '../hooks/useAutoControlledValue';
-
-import {
-  useElementType,
-  useSharedClassName
-} from '../utils';
+import { useSharedClassName } from '../utils';
 
 import { useWithDefaultProps } from '../BucketTheme';
 

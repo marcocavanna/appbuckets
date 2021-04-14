@@ -1,10 +1,11 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
+import { useElementType } from '@appbuckets/react-ui-core';
+
 import { AnyObject } from '../generic';
 import { useElementSize } from '../hooks/useElementSize';
 
-import { useElementType } from '../utils';
 import { useWithDefaultProps } from '../BucketTheme';
 
 import { RxTableContext, RxTableProvider } from './RxTable.context';

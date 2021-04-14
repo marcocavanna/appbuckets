@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { FormikConfig, FormikHelpers } from 'formik';
 
-import { ShorthandItem } from '../generic';
+import { ShorthandItem } from '@appbuckets/react-ui-core';
 
 import { ButtonProps } from '../Button';
 

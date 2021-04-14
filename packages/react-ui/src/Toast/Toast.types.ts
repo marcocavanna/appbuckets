@@ -1,11 +1,11 @@
 import * as React from 'react';
 
+import { ShorthandItem, ShorthandContent } from '@appbuckets/react-ui-core';
+
 import {
   AppBucketsComponentProps,
   AppBucketsIcon,
-  SharedComponentStateProps,
-  ShorthandContent,
-  ShorthandItem
+  SharedComponentStateProps
 } from '../generic';
 
 import { HeaderContentProps, HeaderSubheaderProps } from '../Header';

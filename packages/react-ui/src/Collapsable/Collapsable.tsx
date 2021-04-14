@@ -2,17 +2,15 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
+  CreatableFunctionComponent,
   childrenUtils,
   Ref,
   handleRef,
-  createShorthandFactory
+  createShorthandFactory,
+  useAutoControlledValue
 } from '@appbuckets/react-ui-core';
 
-import { CreatableFunctionComponent } from '../generic';
-
 import { useSharedClassName } from '../utils';
-
-import { useAutoControlledValue } from '../hooks/useAutoControlledValue';
 
 import { useWithDefaultProps } from '../BucketTheme';
 

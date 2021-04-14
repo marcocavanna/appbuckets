@@ -1,12 +1,11 @@
 import * as React from 'react';
 
+import { ShorthandContent, ShorthandCollection, ShorthandItem } from '@appbuckets/react-ui-core';
+
 import {
   AppBucketsComponentProps,
-  ShorthandCollection,
   AppBucketsIcon,
-  ElementSize,
-  ShorthandItem,
-  ShorthandContent
+  ElementSize
 } from '../generic';
 
 import { ButtonProps } from '../Button';

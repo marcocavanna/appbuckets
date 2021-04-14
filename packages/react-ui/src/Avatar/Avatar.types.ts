@@ -1,11 +1,11 @@
 import * as React from 'react';
 
+import { ShorthandContent, ShorthandItem } from '@appbuckets/react-ui-core';
+
 import {
   AppBucketsComponentProps,
   AppBucketsIcon,
-  SharedComponentStateProps,
-  ShorthandContent,
-  ShorthandItem
+  SharedComponentStateProps
 } from '../generic';
 
 import { BadgeProps } from '../Badge';

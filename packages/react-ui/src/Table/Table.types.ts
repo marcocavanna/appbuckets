@@ -1,7 +1,6 @@
-import {
-  MinimalAppBucketsComponentProps,
-  ShorthandCollection
-} from '../generic';
+import { ShorthandCollection } from '@appbuckets/react-ui-core';
+
+import { MinimalAppBucketsComponentProps } from '../generic';
 
 import { TableCellProps } from './TableCell.types';
 import { TableRowProps } from './TableRow.types';

@@ -1,10 +1,12 @@
+import { ShorthandItem } from '@appbuckets/react-ui-core';
+
 import { IconProps } from '../Icon';
 
 import {
   AppBucketsComponentProps,
-  ShorthandItem,
   SharedComponentStateProps,
-  SharedFlexboxContentProps, AppBucketsIcon
+  SharedFlexboxContentProps,
+  AppBucketsIcon
 } from '../generic';
 
 import { TableCellContentProps } from './TableCellContent.types';

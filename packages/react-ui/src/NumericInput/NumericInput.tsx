@@ -1,10 +1,10 @@
 import * as React from 'react';
 
+import { useAutoControlledValue } from '@appbuckets/react-ui-core';
 import { formatNumber as defaultFormatNumber } from '@appbuckets/formatters';
 
 import { ChangeHandler, FocusHandler } from '../generic';
 
-import { useAutoControlledValue } from '../hooks/useAutoControlledValue';
 import { useWithDefaultProps } from '../BucketTheme';
 
 import Input from '../Input';

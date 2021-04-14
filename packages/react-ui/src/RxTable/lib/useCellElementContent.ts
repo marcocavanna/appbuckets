@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { ShorthandItem } from '../../generic';
+import { ShorthandItem } from '@appbuckets/react-ui-core';
+
 import { TableCellContentProps } from '../../Table';
 
 import { ComputedCellContentField } from '../RxTable.types';

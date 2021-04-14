@@ -2,6 +2,7 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
+  CreatableFunctionComponent,
   createShorthandFactory,
   childrenUtils
 } from '@appbuckets/react-ui-core';
@@ -10,10 +11,6 @@ import {
   useSharedClassName,
   useSplitStateClassName
 } from '../utils';
-
-import {
-  CreatableFunctionComponent
-} from '../generic';
 
 import { FieldProps } from './Field.types';
 import Icon from '../Icon';

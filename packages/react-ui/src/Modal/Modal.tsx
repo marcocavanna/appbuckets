@@ -3,15 +3,15 @@ import clsx from 'clsx';
 
 import {
   MountNode,
-  childrenUtils
+  childrenUtils,
+  useAutoControlledValue,
+  useElementType
 } from '@appbuckets/react-ui-core';
 
 import {
-  useElementType,
   useSharedClassName
 } from '../utils';
 
-import { useAutoControlledValue } from '../hooks/useAutoControlledValue';
 import { useWithDefaultProps } from '../BucketTheme';
 
 import Backdrop from '../Backdrop';

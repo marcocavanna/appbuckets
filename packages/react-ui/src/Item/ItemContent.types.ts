@@ -1,7 +1,6 @@
-import {
-  AppBucketsComponentProps,
-  ShorthandItem
-} from '../generic';
+import { ShorthandItem } from '@appbuckets/react-ui-core';
+
+import { AppBucketsComponentProps } from '../generic';
 
 import { LoaderProps } from '../Loader';
 import { ItemHeaderProps } from './ItemHeader.types';

@@ -1,9 +1,10 @@
 import * as React from 'react';
 
+import { ShorthandItem } from '@appbuckets/react-ui-core';
+
 import {
   AppBucketsComponentProps,
-  ResponsiveContentWidth,
-  ShorthandItem
+  ResponsiveContentWidth
 } from '../generic';
 
 import { MenuProps } from '../Menu';
