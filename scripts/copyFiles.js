@@ -61,6 +61,8 @@ async function createModulePackages({ from, to }) {
         ? 'index.js'
         : `${dirName}.js`;
 
+      const mainDeclarationExists = fse.existsSync(path.join(to, dirName, 'index.d.ts'));
+
       /** Do some check only if entry name is not index.js */
       if (mainFileName !== 'index.js') {
         /** Assert the resolved filename exists into directory, else skip */
@@ -73,7 +75,9 @@ async function createModulePackages({ from, to }) {
       }
 
       const packageJsonPath = path.join(to, dirName, 'package.json');
-      const typingsFilename = mainFileName.replace(/\.js$/, '.d.ts');
+      const typingsFilename = mainDeclarationExists
+        ? 'index.d.ts'
+        : mainFileName.replace(/\.js$/, '.d.ts');
       const typingsPath = path.join(to, dirName, typingsFilename);
 
       /** Build the new package */
@@ -177,13 +181,9 @@ async function run() {
       './styles'
     ].map((file) => includeFileInBuild(file)));
 
-    /** Abort other */
-    if (packageDate.name !== '@appbuckets/react-ui') {
-      return;
-    }
-
     /** Remove invalid d.ts files */
-    purgeInvalidTypes({ to: buildPath });
+    // TODO: Check index.d.ts Purge Process
+    // purgeInvalidTypes({ to: buildPath });
 
     /** Create single file package */
     await createModulePackages({ from: srcPath, to: buildPath });
