@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 
-export type UseAutoControlledValueConfig<State> = {
+type UseAutoControlledValueConfig<State> = {
   /** Control the Props at any Render, use this to get external controls */
   prop?: State;
 
@@ -9,12 +9,10 @@ export type UseAutoControlledValueConfig<State> = {
   defaultProp?: State;
 };
 
-export function useAutoControlledValue<State>(initialState: State, config?: UseAutoControlledValueConfig<State>): [
-  State,
-  React.Dispatch<React.SetStateAction<State>>,
-  React.Dispatch<React.SetStateAction<State>>,
-  () => void
-] {
+export default function useAutoControlledValue<State>(
+  initialState: State,
+  config?: UseAutoControlledValueConfig<State>
+): [ State, React.Dispatch<React.SetStateAction<State>>, React.Dispatch<React.SetStateAction<State>>, () => void ] {
 
   const { prop, defaultProp } = config ?? {};
   const [ state, setState ] = React.useState(prop === undefined

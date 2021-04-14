@@ -7,14 +7,18 @@
     "release:publish": "lerna publish from-package --contents build"
   },
   "devDependencies": {
+    "@optimize-lodash/rollup-plugin": "^1.0.0",
     "@rollup/plugin-commonjs": "^18.0.0",
     "@types/array-sort": "^1.0.0",
     "@types/deep-extend": "^0.4.31",
     "@types/fs-extra": "^9.0.10",
+    "@types/kind-of": "^6.0.0",
+    "@types/lodash": "^4.14.168",
     "@types/react": "^17.0.3",
     "@types/react-color": "^3.0.4",
     "@types/react-dom": "^17.0.3",
     "@types/react-input-mask": "^3.0.0",
+    "@types/react-is": "^17.0.0",
     "@types/react-select": "^4.0.14",
     "@types/react-sticky": "^6.0.3",
     "@types/react-window": "^1.8.2",
