@@ -1,12 +1,11 @@
 import * as React from 'react';
 
 import { FileRejection } from 'react-dropzone';
+import { IconName } from '@fortawesome/fontawesome-svg-core';
+
 import { ButtonProps } from '../Button';
 
-import {
-  FontAwesomeIcon,
-  AppBucketsIcon
-} from '../generic';
+import { AppBucketsIcon } from '../generic';
 
 import { IconProps } from '../Icon';
 
@@ -127,7 +126,7 @@ export interface DropzoneFile {
   height: number;
 
   /** The file icon */
-  icon: FontAwesomeIcon;
+  icon: IconName;
 
   /** Internal file id */
   id: string;
