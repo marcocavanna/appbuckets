@@ -177,6 +177,11 @@ async function run() {
       './styles'
     ].map((file) => includeFileInBuild(file)));
 
+    /** Abort other */
+    if (packageDate.name !== '@appbuckets/react-ui') {
+      return;
+    }
+
     /** Remove invalid d.ts files */
     purgeInvalidTypes({ to: buildPath });
 
