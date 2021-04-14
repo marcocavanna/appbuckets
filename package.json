@@ -2,7 +2,7 @@
   "name": "appbuckets-ui",
   "private": true,
   "scripts": {
-    "release:version": "lerna version --exact --no-changelog",
+    "release:version": "lerna version --exact --no-changelog --no-push --no-git-tag-version",
     "release:build": "lerna run --parallel --scope \"@appbuckets/*\" build",
     "release:publish": "lerna publish from-package --contents build"
   },
