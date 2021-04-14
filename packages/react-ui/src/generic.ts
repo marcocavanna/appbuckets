@@ -77,12 +77,23 @@ import {
 } from 'react';
 
 import {
-  ShorthandContent
+  ShorthandContent,
+  ShorthandItem,
+  ShorthandCollection
 } from '@appbuckets/react-ui-core';
 
 import { IconName } from '@fortawesome/fontawesome-svg-core';
 
 
+/* --------
+ * Re Export Type from ReactUI Core
+ * -------- */
+export { ShorthandItem, ShorthandCollection };
+
+
+/* --------
+ * Re Export Icon name from FontAwesome
+ * -------- */
 export { IconName as FontAwesomeIcon };
 
 
