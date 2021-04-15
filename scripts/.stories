@@ -1,0 +1,21 @@
+import * as React from 'react';
+
+import { Meta, Story } from '@storybook/react';
+
+import {{componentName}} from '@appbuckets/react-ui/src/{{componentName}}';
+import type { {{componentName}}Props } from '@appbuckets/react-ui/src/{{componentName}}';
+
+
+export default {
+  title    : '__Replace/{{componentName}}',
+  component: {{componentName}}
+} as Meta;
+
+
+/* --------
+ * Component Template
+ * -------- */
+const Template: Story<{{componentName}}Props> = (props) => (<{{componentName}} {...props} />);
+
+
+export const Overview = Template.bind({});

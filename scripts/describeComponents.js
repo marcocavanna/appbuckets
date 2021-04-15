@@ -13,6 +13,7 @@ const cacheFilePath = path.resolve(__dirname, '.descriptorcache');
 const rootPath = path.resolve(__dirname, '..');
 const docsPath = path.resolve(rootPath, 'docs', 'src', 'pages', 'components');
 const docsPages = path.resolve(rootPath, 'docs', 'pages', 'components');
+const storiesFolder = path.resolve(rootPath, 'storybook', 'stories');
 
 const sourcePath = path.resolve(process.cwd(), 'src');
 
@@ -29,6 +30,7 @@ if (!fse.existsSync(cacheFilePath)) {
  * Get the Components Page Template
  * -------- */
 const componentPageTemplate = fse.readFileSync(path.resolve(__dirname, '.componentpage'), 'utf-8');
+const storiesTemplate = fse.readFileSync(path.resolve(__dirname, '.stories'), 'utf-8');
 
 
 /* --------
@@ -84,6 +86,19 @@ async function run() {
     if (!fse.existsSync(pagePosition)) {
       const componentPage = componentPageTemplate.replace(/{{componentName}}/g, dirnameKebabCase);
       fse.writeFileSync(pagePosition, componentPage);
+    }
+
+
+    // ----
+    // Assert Stories Exists
+    // ----
+    const storiesToOmit = [ 'BucketTheme', 'Column', 'Field', 'Form', 'Row' ];
+    if (!storiesToOmit.includes(dirname)) {
+      const storiesPosition = path.join(storiesFolder, `${dirname}.stories.tsx`);
+      if (!fse.existsSync(storiesPosition)) {
+        const stories = storiesTemplate.replace(/{{componentName}}/g, dirname);
+        fse.writeFileSync(storiesPosition, stories);
+      }
     }
 
 

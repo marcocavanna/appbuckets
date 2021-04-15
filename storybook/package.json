@@ -1,0 +1,27 @@
+{
+  "name": "@appbuckets/react-ui-storybook",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "start-storybook -p 57000"
+  },
+  "dependencies": {
+    "@appbuckets/react-ui": "^1.5.0-alpha.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@storybook/addon-actions": "^6.2.8",
+    "@storybook/addon-essentials": "^6.2.8",
+    "@storybook/addon-links": "^6.2.8",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^6.2.8",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.1",
+    "sass": "^1.32.8",
+    "sass-loader": "10.1.1",
+    "style-loader": "^2.0.0"
+  }
+}

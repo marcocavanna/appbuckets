@@ -51,6 +51,7 @@
   },
   "workspaces": [
     "docs",
+    "storybook",
     "packages/*"
   ]
 }
