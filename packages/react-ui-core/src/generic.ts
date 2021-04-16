@@ -10,7 +10,7 @@ export type AnyObject = { [key: string]: any };
  * Any Content that could be rendered
  * using React
  */
-export type ShorthandContent = React.ReactNode;
+export type ShorthandContent = React.ReactNode | React.ElementType;
 
 
 /**

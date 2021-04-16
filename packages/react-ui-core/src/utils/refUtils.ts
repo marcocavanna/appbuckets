@@ -8,7 +8,10 @@ import invariant from 'tiny-invariant';
  * @param ref The ref Object or Function
  * @param node The node that should by passed by ref
  */
-export function handleRef<E>(ref: React.Ref<E> | undefined, node: E) {
+export function handleRef<E>(
+  ref: React.MutableRefObject<E | null> | ((instance: E | null) => void) | null | undefined,
+  node: E | null
+) {
 
   // Check Ref is not a deprecated string
   // This check is necessary for JavaScript only usage
@@ -30,7 +33,7 @@ export function handleRef<E>(ref: React.Ref<E> | undefined, node: E) {
   if (ref !== null && typeof ref === 'object') {
     // The current property is defined as readonly
     // but this ia valid way to assign ref, because is a mutable object
-    (ref as React.MutableRefObject<E>).current = node;
+    (ref as React.MutableRefObject<E | null>).current = node;
   }
 
 }
