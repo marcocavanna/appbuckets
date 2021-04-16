@@ -162,6 +162,19 @@ export const defaultBucketThemeConfig: ThemeOptions = {
 
 
   // ----
+  // Fade Component
+  // ----
+  fade: {
+    appear       : true,
+    timeout      : {
+      enter: 300,
+      exit : 300
+    },
+    unMountOnExit: true
+  },
+
+
+  // ----
   // Form Component
   // ----
   form      : {},

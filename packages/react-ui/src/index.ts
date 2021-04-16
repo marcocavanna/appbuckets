@@ -57,6 +57,9 @@ export * from './Dropzone';
 export { default as EmptyContent } from './EmptyContent';
 export * from './EmptyContent';
 
+export { default as Fade } from './Fade';
+export * from './Fade';
+
 export { default as Field } from './Field';
 export * from './Field';
 

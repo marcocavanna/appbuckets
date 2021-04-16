@@ -1,0 +1,10 @@
+.transitionable {
+  &.fade {
+    opacity: 0;
+
+    &.entering,
+    &.entered {
+      opacity: 1;
+    }
+  }
+}

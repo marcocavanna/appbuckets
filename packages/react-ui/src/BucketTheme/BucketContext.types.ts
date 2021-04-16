@@ -1,32 +1,23 @@
 import { AccordionsProps } from '../Accordions';
-import { ColumnProps } from '../Column';
-import { ContainerProps } from '../Container';
-import { CircularProgressProps } from '../CircularProgress';
-import { DropdownMenuProps } from '../DropdownMenu';
-import { MultiSelectProps } from '../MultiSelect';
-import { FormFormikProps, FormProps } from '../Form';
-import { RowProps } from '../Row';
-import { MenuItemProps, MenuProps } from '../Menu';
-import { MessageProps } from '../Message';
-import { RxTableProps } from '../RxTable';
-import {
-  TableBodyProps,
-  TableCellContentProps,
-  TableCellProps,
-  TableFooterProps, TableHeaderCellProps, TableHeaderProps,
-  TableProps, TableRowProps
-} from '../Table';
-import { TabsProps } from '../Tabs';
-import { TabPanelProps } from '../Tabs/TabPanel.types';
 import { AvatarProps } from '../Avatar';
+import { AutoSpacerProps } from '../AutoSpacer';
+import { BackdropInnerProps, BackdropProps } from '../Backdrop';
 import { BadgeProps } from '../Badge';
 import { BoxProps } from '../Box';
 import { ButtonGroupProps, ButtonProps } from '../Button';
 import { CheckboxProps } from '../Checkbox';
+import { CollapsableProps } from '../Collapsable';
+import { ColumnProps } from '../Column';
 import { ColorPickerProps } from '../ColorPicker';
+import { ContainerProps } from '../Container';
+import { CircularProgressProps } from '../CircularProgress';
 import { DayPickerProps } from '../DayPicker';
 import { DividerProps } from '../Divider';
+import { DropdownMenuProps } from '../DropdownMenu';
+import { DropzoneProps } from '../Dropzone';
 import { EmptyContentProps } from '../EmptyContent';
+import { FadeProps } from '../Fade';
+import { FormFormikProps, FormProps } from '../Form';
 import { HeaderContentProps, HeaderProps, HeaderSubheaderProps } from '../Header';
 import { HeroButtonProps } from '../HeroButton';
 import { IconProps } from '../Icon';
@@ -37,24 +28,36 @@ import {
   ItemHeaderProps,
   ItemMetaProps,
   ItemProps,
-  ItemTextProps, ItemToolsProps
+  ItemTextProps,
+  ItemToolsProps
 } from '../Item';
-import { LabelProps } from '../Label';
-import { LabelGroupProps } from '../Label/LabelGroup.types';
+import { LabelProps, LabelGroupProps } from '../Label';
+import { LinearProgressProps } from '../LinearProgress';
 import { LoaderProps } from '../Loader';
+import { MenuItemProps, MenuProps } from '../Menu';
+import { MessageProps } from '../Message';
+import { ModalActionsProps, ModalContentProps, ModalHeaderProps, ModalProps } from '../Modal';
+import { MultiSelectProps } from '../MultiSelect';
 import { NumericInputProps } from '../NumericInput';
 import { PanelBodyProps, PanelFooterProps, PanelHeaderProps, PanelProps } from '../Panel';
-import { LinearProgressProps } from '../LinearProgress';
+import { PopupProps } from '../Popup';
+import { RowProps } from '../Row';
+import { RxTableProps } from '../RxTable';
 import { SectionProps } from '../Section';
 import { SelectProps } from '../Select';
-import { ToastProps } from '../Toast';
-import { AutoSpacerProps } from '../AutoSpacer';
-import { BackdropInnerProps, BackdropProps } from '../Backdrop';
-import { CollapsableProps } from '../Collapsable';
-import { DropzoneProps } from '../Dropzone';
-import { ModalActionsProps, ModalContentProps, ModalHeaderProps, ModalProps } from '../Modal';
-import { PopupProps } from '../Popup';
 import { StickyProps } from '../Sticky';
+import {
+  TableBodyProps,
+  TableCellContentProps,
+  TableCellProps,
+  TableFooterProps,
+  TableHeaderCellProps,
+  TableHeaderProps,
+  TableProps,
+  TableRowProps
+} from '../Table';
+import { TabsProps, TabPanelProps } from '../Tabs';
+import { ToastProps } from '../Toast';
 import { VirtualizedTableProps } from '../VirtualizedTable';
 
 
@@ -111,6 +114,8 @@ export interface ThemeOptions {
   dropzone: ThemeComponentProps<DropzoneProps>;
 
   emptyContent: ThemeComponentProps<EmptyContentProps>;
+
+  fade: ThemeComponentProps<FadeProps>;
 
   form: ThemeComponentProps<FormProps>;
 
