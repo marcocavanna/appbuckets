@@ -4,25 +4,6 @@
   "description": "",
   "displayName": "BackdropInner",
   "props": {
-    "animated": {
-      "defaultValue": null,
-      "description": "Set the backdrop as animated",
-      "name": "animated",
-      "parent": {
-        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
-        "name": "StrictBackdropInnerProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
-          "name": "StrictBackdropInnerProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
     "onClick": {
       "defaultValue": null,
       "description": "Handle Click Event",
@@ -59,6 +40,63 @@
       "required": false,
       "type": {
         "name": "(event: MouseEvent<HTMLElement, MouseEvent>, props: BackdropInnerProps) => void"
+      }
+    },
+    "onEntered": {
+      "defaultValue": null,
+      "description": "Callback used once the BackdropInner has completed the fade in animation",
+      "name": "onEntered",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+        "name": "StrictBackdropInnerProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+          "name": "StrictBackdropInnerProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(node: HTMLElement, isAppearing: boolean) => void"
+      }
+    },
+    "onExited": {
+      "defaultValue": null,
+      "description": "Callback used once the BackdropInner has has completed the fade out animation",
+      "name": "onExited",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+        "name": "StrictBackdropInnerProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+          "name": "StrictBackdropInnerProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(node: HTMLElement) => void"
+      }
+    },
+    "timeout": {
+      "defaultValue": null,
+      "description": "Set transition timeout",
+      "name": "timeout",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+        "name": "StrictBackdropInnerProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+          "name": "StrictBackdropInnerProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "TransitionModeDependantType<number>"
       }
     },
     "verticalAlign": {
@@ -199,7 +237,7 @@
       ],
       "required": false,
       "type": {
-        "name": "ReactNode"
+        "name": "ShorthandContent"
       }
     }
   }

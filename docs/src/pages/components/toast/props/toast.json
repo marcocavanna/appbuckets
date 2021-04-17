@@ -24,7 +24,7 @@
       ],
       "required": false,
       "type": {
-        "name": "ReactNode"
+        "name": "(ShorthandContent | ((tools: { dismiss: (e: MouseEvent<HTMLElement, MouseEvent>) => void; }) => void)) & ReactNode"
       }
     },
     "content": {
@@ -218,6 +218,9 @@
             "value": "\"warning\""
           },
           {
+            "value": "\"text\""
+          },
+          {
             "value": "\"amazon\""
           },
           {
@@ -276,9 +279,6 @@
           },
           {
             "value": "\"cloud\""
-          },
-          {
-            "value": "\"text\""
           },
           {
             "value": "\"text secondary\""
@@ -487,6 +487,9 @@
             "value": "\"warning\""
           },
           {
+            "value": "\"text\""
+          },
+          {
             "value": "\"amazon\""
           },
           {
@@ -545,9 +548,6 @@
           },
           {
             "value": "\"cloud\""
-          },
-          {
-            "value": "\"text\""
           },
           {
             "value": "\"text secondary\""
@@ -632,6 +632,9 @@
             "value": "\"warning\""
           },
           {
+            "value": "\"text\""
+          },
+          {
             "value": "\"amazon\""
           },
           {
@@ -690,9 +693,6 @@
           },
           {
             "value": "\"cloud\""
-          },
-          {
-            "value": "\"text\""
           },
           {
             "value": "\"text secondary\""

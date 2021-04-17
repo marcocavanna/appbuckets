@@ -161,12 +161,12 @@
       "description": "Controls if the Portal should close when document is clicked",
       "name": "closeOnDocumentClick",
       "parent": {
-        "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui-core/src/Portal/Portal.types.ts",
         "name": "StrictPortalProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui-core/src/Portal/Portal.types.ts",
           "name": "StrictPortalProps"
         }
       ],
@@ -180,12 +180,12 @@
       "description": "Controls if the Portal should close when escape key is pressed",
       "name": "closeOnEscape",
       "parent": {
-        "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui-core/src/Portal/Portal.types.ts",
         "name": "StrictPortalProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui-core/src/Portal/Portal.types.ts",
           "name": "StrictPortalProps"
         }
       ],
@@ -199,12 +199,12 @@
       "description": "Controls if the Portal should open on trigger click",
       "name": "openOnTriggerClick",
       "parent": {
-        "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui-core/src/Portal/Portal.types.ts",
         "name": "StrictPortalProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui-core/src/Portal/Portal.types.ts",
           "name": "StrictPortalProps"
         }
       ],
@@ -218,12 +218,12 @@
       "description": "Controls if the Portal should open on trigger focus",
       "name": "openOnTriggerFocus",
       "parent": {
-        "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui-core/src/Portal/Portal.types.ts",
         "name": "StrictPortalProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui-core/src/Portal/Portal.types.ts",
           "name": "StrictPortalProps"
         }
       ],
@@ -237,12 +237,12 @@
       "description": "Controls if the Portal should open on trigger mouse enter",
       "name": "openOnTriggerMouseEnter",
       "parent": {
-        "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui-core/src/Portal/Portal.types.ts",
         "name": "StrictPortalProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui-core/src/Portal/Portal.types.ts",
           "name": "StrictPortalProps"
         }
       ],
@@ -256,12 +256,12 @@
       "description": "The element to be rendered in-place where the portal is defined",
       "name": "trigger",
       "parent": {
-        "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui-core/src/Portal/Portal.types.ts",
         "name": "StrictPortalProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui-core/src/Portal/Portal.types.ts",
           "name": "StrictPortalProps"
         }
       ],
@@ -275,37 +275,18 @@
       "description": "Called with a ref to the trigger node",
       "name": "triggerRef",
       "parent": {
-        "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui-core/src/Portal/Portal.types.ts",
         "name": "StrictPortalProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui-core/src/Portal/Portal.types.ts",
           "name": "StrictPortalProps"
         }
       ],
       "required": false,
       "type": {
         "name": "Ref<HTMLElement>"
-      }
-    },
-    "animated": {
-      "defaultValue": null,
-      "description": "Set the backdrop as animated",
-      "name": "animated",
-      "parent": {
-        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
-        "name": "StrictBackdropInnerProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
-          "name": "StrictBackdropInnerProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
       }
     },
     "onClick": {
@@ -344,6 +325,63 @@
       "required": false,
       "type": {
         "name": "(event: MouseEvent<HTMLElement, MouseEvent>, props: BackdropInnerProps) => void"
+      }
+    },
+    "onEntered": {
+      "defaultValue": null,
+      "description": "Callback used once the BackdropInner has completed the fade in animation",
+      "name": "onEntered",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+        "name": "StrictBackdropInnerProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+          "name": "StrictBackdropInnerProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(node: HTMLElement, isAppearing: boolean) => void"
+      }
+    },
+    "onExited": {
+      "defaultValue": null,
+      "description": "Callback used once the BackdropInner has has completed the fade out animation",
+      "name": "onExited",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+        "name": "StrictBackdropInnerProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+          "name": "StrictBackdropInnerProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(node: HTMLElement) => void"
+      }
+    },
+    "timeout": {
+      "defaultValue": null,
+      "description": "Set transition timeout",
+      "name": "timeout",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+        "name": "StrictBackdropInnerProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+          "name": "StrictBackdropInnerProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "TransitionModeDependantType<number>"
       }
     },
     "verticalAlign": {
@@ -484,7 +522,7 @@
       ],
       "required": false,
       "type": {
-        "name": "ReactNode"
+        "name": "ShorthandContent"
       }
     }
   }

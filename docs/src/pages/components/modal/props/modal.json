@@ -62,7 +62,7 @@
       ],
       "required": false,
       "type": {
-        "name": "ReactNode"
+        "name": "(ShorthandContent | ((tools: { closeModal: (e: MouseEvent<HTMLElement, MouseEvent>) => void; }) => void)) & ReactNode"
       }
     },
     "closeIcon": {
@@ -177,6 +177,44 @@
       "required": false,
       "type": {
         "name": "AppBucketsIcon<IconProps>"
+      }
+    },
+    "loading": {
+      "defaultValue": null,
+      "description": "Enable loading state for Backdrop",
+      "name": "loading",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "loaderProps": {
+      "defaultValue": null,
+      "description": "Set loader props of Backdrop Component",
+      "name": "loaderProps",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "LoaderProps"
       }
     },
     "mountNode": {
@@ -312,285 +350,23 @@
         ]
       }
     },
-    "closeOnEscape": {
+    "timeout": {
       "defaultValue": null,
-      "description": "Controls if the Portal should close when escape key is pressed",
-      "name": "closeOnEscape",
+      "description": "Set transition timeout",
+      "name": "timeout",
       "parent": {
-        "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
-        "name": "StrictPortalProps"
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
-          "name": "StrictPortalProps"
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "boolean"
-      }
-    },
-    "openOnTriggerClick": {
-      "defaultValue": null,
-      "description": "Controls if the Portal should open on trigger click",
-      "name": "openOnTriggerClick",
-      "parent": {
-        "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
-        "name": "StrictPortalProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
-          "name": "StrictPortalProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "openOnTriggerFocus": {
-      "defaultValue": null,
-      "description": "Controls if the Portal should open on trigger focus",
-      "name": "openOnTriggerFocus",
-      "parent": {
-        "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
-        "name": "StrictPortalProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
-          "name": "StrictPortalProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "openOnTriggerMouseEnter": {
-      "defaultValue": null,
-      "description": "Controls if the Portal should open on trigger mouse enter",
-      "name": "openOnTriggerMouseEnter",
-      "parent": {
-        "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
-        "name": "StrictPortalProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
-          "name": "StrictPortalProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "trigger": {
-      "defaultValue": null,
-      "description": "The element to be rendered in-place where the portal is defined",
-      "name": "trigger",
-      "parent": {
-        "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
-        "name": "StrictPortalProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
-          "name": "StrictPortalProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "ReactElement<any, string | JSXElementConstructor<any>>"
-      }
-    },
-    "triggerRef": {
-      "defaultValue": null,
-      "description": "Called with a ref to the trigger node",
-      "name": "triggerRef",
-      "parent": {
-        "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
-        "name": "StrictPortalProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/node_modules/@appbuckets/react-ui-core/Portal/Portal.types.d.ts",
-          "name": "StrictPortalProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "Ref<HTMLElement>"
-      }
-    },
-    "loading": {
-      "defaultValue": null,
-      "description": "Set a Loader as Backdrop Inner Content",
-      "name": "loading",
-      "parent": {
-        "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
-        "name": "StrictBackdropProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
-          "name": "StrictBackdropProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "loaderProps": {
-      "defaultValue": null,
-      "description": "Manually override Loader Props",
-      "name": "loaderProps",
-      "parent": {
-        "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
-        "name": "StrictBackdropProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
-          "name": "StrictBackdropProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "LoaderProps"
-      }
-    },
-    "onMount": {
-      "defaultValue": null,
-      "description": "Callback fired on Backdrop Mount",
-      "name": "onMount",
-      "parent": {
-        "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
-        "name": "StrictBackdropProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
-          "name": "StrictBackdropProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "(nothing: null, props: BackdropProps) => void"
-      }
-    },
-    "onUnmount": {
-      "defaultValue": null,
-      "description": "Callback fired on Backdrop Unmount",
-      "name": "onUnmount",
-      "parent": {
-        "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
-        "name": "StrictBackdropProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Backdrop/Backdrop.types.ts",
-          "name": "StrictBackdropProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "(nothing: null, props: BackdropProps) => void"
-      }
-    },
-    "animated": {
-      "defaultValue": null,
-      "description": "Set the backdrop as animated",
-      "name": "animated",
-      "parent": {
-        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
-        "name": "StrictBackdropInnerProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
-          "name": "StrictBackdropInnerProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "onClick": {
-      "defaultValue": null,
-      "description": "Handle Click Event",
-      "name": "onClick",
-      "parent": {
-        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
-        "name": "StrictBackdropInnerProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
-          "name": "StrictBackdropInnerProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "(event: MouseEvent<HTMLElement, MouseEvent>, props: BackdropInnerProps) => void"
-      }
-    },
-    "onClickOutside": {
-      "defaultValue": null,
-      "description": "Handle Click Event occurred outside Backdrop Content, but in Backdrop Area",
-      "name": "onClickOutside",
-      "parent": {
-        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
-        "name": "StrictBackdropInnerProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
-          "name": "StrictBackdropInnerProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "(event: MouseEvent<HTMLElement, MouseEvent>, props: BackdropInnerProps) => void"
-      }
-    },
-    "verticalAlign": {
-      "defaultValue": null,
-      "description": "Set the content vertical align",
-      "name": "verticalAlign",
-      "parent": {
-        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
-        "name": "StrictBackdropInnerProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
-          "name": "StrictBackdropInnerProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "enum",
-        "raw": "FlexContentVerticalAlign",
-        "value": [
-          {
-            "value": "\"on top\""
-          },
-          {
-            "value": "\"on bottom\""
-          },
-          {
-            "value": "\"center\""
-          },
-          {
-            "value": "\"stretched\""
-          }
-        ]
+        "name": "TransitionModeDependantType<number>"
       }
     },
     "as": {
@@ -655,6 +431,9 @@
         "raw": "AppBucketsColor",
         "value": [
           {
+            "value": "\"text\""
+          },
+          {
             "value": "\"amazon\""
           },
           {
@@ -716,9 +495,6 @@
           },
           {
             "value": "\"info\""
-          },
-          {
-            "value": "\"text\""
           },
           {
             "value": "\"primary\""
@@ -853,10 +629,10 @@
         "raw": "ContentAlign",
         "value": [
           {
-            "value": "\"center\""
+            "value": "\"left\""
           },
           {
-            "value": "\"left\""
+            "value": "\"center\""
           },
           {
             "value": "\"right\""
@@ -883,6 +659,9 @@
         "name": "enum",
         "raw": "AppBucketsColor",
         "value": [
+          {
+            "value": "\"text\""
+          },
           {
             "value": "\"amazon\""
           },
@@ -945,9 +724,6 @@
           },
           {
             "value": "\"info\""
-          },
-          {
-            "value": "\"text\""
           },
           {
             "value": "\"primary\""
