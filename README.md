@@ -205,8 +205,8 @@ module.exports = {
 
 ## TODO
 
-- [ ] Optimize to use with SSR
 - [ ] Optimize Icon library
+- [ ] Think about convert .SCSS style using @emotion
 - [ ] Write Docs and Demos
 - [ ] Complete Tests
 - [ ] Refactor Storybook
