@@ -1,6 +1,8 @@
 import clsx from 'clsx';
 import * as React from 'react';
 
+import NoSsr from '@appbuckets/react-ui/NoSsr';
+
 import { highlightCode } from '../utils/parseMarkdown';
 import MarkdownElement from './MarkdownElement';
 
@@ -29,23 +31,19 @@ const HighlightedCode: React.FunctionComponent<HighlightedCodeProps> = (props) =
     [ code, language ]
   );
 
-  const classes = React.useRef<string>('');
-  React.useEffect(
-    () => {
-      classes.current = clsx(`language-${language}`);
-    },
-    [ language ]
-  );
+  const classes = clsx(`language-${language}`);
 
   return (
-    <MarkdownElement>
-      <pre>
-        <code
-          className={classes.current}
-          dangerouslySetInnerHTML={{ __html: renderedCode }}
-        />
-      </pre>
-    </MarkdownElement>
+    <NoSsr>
+      <MarkdownElement>
+        <pre>
+          <code
+            className={classes}
+            dangerouslySetInnerHTML={{ __html: renderedCode }}
+          />
+        </pre>
+      </MarkdownElement>
+    </NoSsr>
   );
 };
 
