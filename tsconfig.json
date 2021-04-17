@@ -152,6 +152,12 @@
       "@appbuckets/react-ui-core/*": [
         "./packages/react-ui-core/src/*"
       ],
+      "@appbuckets/react-ui-styles": [
+        "./packages/react-ui-styles/src"
+      ],
+      "@appbuckets/react-ui-styles/*": [
+        "./packages/react-ui-styles/src/*"
+      ],
       "@appbuckets/utils": [
         "./packages/utils/src"
       ],
