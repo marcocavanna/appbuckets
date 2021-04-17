@@ -53,6 +53,7 @@ function formatMs(milliseconds: number): string {
 /* --------
  * Exported Const and Functions
  * -------- */
+export const reflow = (node: HTMLElement) => node.scrollTop;
 
 /** Transition Easing constants */
 export const easing = {
