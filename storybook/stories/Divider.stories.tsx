@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Divider from '@appbuckets/react-ui/src/Divider';
-import type { DividerProps } from '@appbuckets/react-ui/src/Divider';
+import Divider from '@appbuckets/react-ui/Divider';
+import type { DividerProps } from '@appbuckets/react-ui/Divider';
 
 
 export default {

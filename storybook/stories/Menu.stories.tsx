@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Menu from '@appbuckets/react-ui/src/Menu';
-import type { MenuProps } from '@appbuckets/react-ui/src/Menu';
+import Menu from '@appbuckets/react-ui/Menu';
+import type { MenuProps } from '@appbuckets/react-ui/Menu';
 
 
 export default {

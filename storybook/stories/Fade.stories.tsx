@@ -3,8 +3,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Fade from '@appbuckets/react-ui/src/Fade';
-import type { FadeProps } from '@appbuckets/react-ui/src/Fade';
+import Fade from '@appbuckets/react-ui/Fade';
+import type { FadeProps } from '@appbuckets/react-ui/Fade';
 
 
 export default {

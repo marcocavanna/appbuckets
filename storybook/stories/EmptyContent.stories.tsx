@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import EmptyContent from '@appbuckets/react-ui/src/EmptyContent';
-import type { EmptyContentProps } from '@appbuckets/react-ui/src/EmptyContent';
+import EmptyContent from '@appbuckets/react-ui/EmptyContent';
+import type { EmptyContentProps } from '@appbuckets/react-ui/EmptyContent';
 
 
 export default {

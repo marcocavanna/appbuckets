@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import ColorPicker from '@appbuckets/react-ui/src/ColorPicker';
-import type { ColorPickerProps } from '@appbuckets/react-ui/src/ColorPicker';
+import ColorPicker from '@appbuckets/react-ui/ColorPicker';
+import type { ColorPickerProps } from '@appbuckets/react-ui/ColorPicker';
 
 
 export default {

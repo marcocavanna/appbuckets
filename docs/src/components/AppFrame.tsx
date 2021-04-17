@@ -1,7 +1,7 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
-import { Container } from '@appbuckets/react-ui';
+import Container from '@appbuckets/react-ui/Container';
 import { TOCElement } from '../utils/parseMarkdown';
 
 import Head from './Head';

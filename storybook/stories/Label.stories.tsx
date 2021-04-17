@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Label from '@appbuckets/react-ui/src/Label';
-import type { LabelProps } from '@appbuckets/react-ui/src/Label';
+import Label from '@appbuckets/react-ui/Label';
+import type { LabelProps } from '@appbuckets/react-ui/Label';
 
 
 export default {

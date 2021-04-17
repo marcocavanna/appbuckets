@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import LinearProgress from '@appbuckets/react-ui/src/LinearProgress';
-import type { LinearProgressProps } from '@appbuckets/react-ui/src/LinearProgress';
+import LinearProgress from '@appbuckets/react-ui/LinearProgress';
+import type { LinearProgressProps } from '@appbuckets/react-ui/LinearProgress';
 
 
 export default {

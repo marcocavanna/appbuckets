@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Collapsable from '@appbuckets/react-ui/src/Collapsable';
-import type { CollapsableProps } from '@appbuckets/react-ui/src/Collapsable';
+import Collapsable from '@appbuckets/react-ui/Collapsable';
+import type { CollapsableProps } from '@appbuckets/react-ui/Collapsable';
 
 
 export default {

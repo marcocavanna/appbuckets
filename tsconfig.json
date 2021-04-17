@@ -143,8 +143,14 @@
       "@appbuckets/react-ui": [
         "./packages/react-ui/src"
       ],
-      "@appbuckets/react-ui-core":[
+      "@appbuckets/react-ui/*": [
+        "./packages/react-ui/src/*"
+      ],
+      "@appbuckets/react-ui-core": [
         "./packages/react-ui-core/src"
+      ],
+      "@appbuckets/react-ui-core/*": [
+        "./packages/react-ui-core/src/*"
       ],
       "@appbuckets/postcss-appbuckets-react-ui": [
         "./packages/postcss-appbuckets-react-ui"

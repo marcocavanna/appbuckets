@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import AutoSpacer from '@appbuckets/react-ui/src/AutoSpacer';
-import type { AutoSpacerProps } from '@appbuckets/react-ui/src/AutoSpacer';
+import AutoSpacer from '@appbuckets/react-ui/AutoSpacer';
+import type { AutoSpacerProps } from '@appbuckets/react-ui/AutoSpacer';
 
 
 export default {

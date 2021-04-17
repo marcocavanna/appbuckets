@@ -2,7 +2,8 @@ import * as React from 'react';
 
 import { useRouter } from 'next/router';
 
-import { Button, Collapsable } from '@appbuckets/react-ui';
+import Button from '@appbuckets/react-ui/Button';
+import Collapsable from '@appbuckets/react-ui/Collapsable';
 
 
 /* --------

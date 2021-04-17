@@ -72,5 +72,6 @@
   "Tabs/TabPanel.tsx": "778e3500862e7e821e6d6c0bf65024dfc3981a38",
   "Tabs/Tabs.tsx": "778e3500862e7e821e6d6c0bf65024dfc3981a38",
   "Toast/Toast.tsx": "778e3500862e7e821e6d6c0bf65024dfc3981a38",
-  "VirtualizedTable/VirtualizedTable.tsx": "c37b085b7177f7ded883b4161886c4cf4534e79f"
+  "VirtualizedTable/VirtualizedTable.tsx": "c37b085b7177f7ded883b4161886c4cf4534e79f",
+  "Fade/Fade.tsx": "2e0945138565dc086fb2a49961f44da7d82ecd23"
 }

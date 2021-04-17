@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {
+import type {
   ButtonProps,
   HeaderContentProps,
   HeaderSubheaderProps,

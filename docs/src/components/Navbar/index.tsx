@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { useRouter } from 'next/router';
 
-import { Header, Button } from '@appbuckets/react-ui';
+import Button from '@appbuckets/react-ui/Button';
+import Header from '@appbuckets/react-ui/Header';
 
 import { useHero } from '../Hero';
 

@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import VirtualizedTable from '@appbuckets/react-ui/src/VirtualizedTable';
-import type { VirtualizedTableProps } from '@appbuckets/react-ui/src/VirtualizedTable';
+import VirtualizedTable from '@appbuckets/react-ui/VirtualizedTable';
+import type { VirtualizedTableProps } from '@appbuckets/react-ui/VirtualizedTable';
 
 
 export default {

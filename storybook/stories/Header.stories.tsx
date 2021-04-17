@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Header from '@appbuckets/react-ui/src/Header';
-import type { HeaderProps } from '@appbuckets/react-ui/src/Header';
+import Header from '@appbuckets/react-ui/Header';
+import type { HeaderProps } from '@appbuckets/react-ui/Header';
 
 
 export default {

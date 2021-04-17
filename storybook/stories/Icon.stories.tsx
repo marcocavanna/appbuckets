@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Icon from '@appbuckets/react-ui/src/Icon';
-import type { IconProps } from '@appbuckets/react-ui/src/Icon';
+import Icon from '@appbuckets/react-ui/Icon';
+import type { IconProps } from '@appbuckets/react-ui/Icon';
 
 
 export default {

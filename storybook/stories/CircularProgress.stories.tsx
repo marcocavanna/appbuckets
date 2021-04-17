@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import CircularProgress from '@appbuckets/react-ui/src/CircularProgress';
-import type { CircularProgressProps } from '@appbuckets/react-ui/src/CircularProgress';
+import CircularProgress from '@appbuckets/react-ui/CircularProgress';
+import type { CircularProgressProps } from '@appbuckets/react-ui/CircularProgress';
 
 
 export default {

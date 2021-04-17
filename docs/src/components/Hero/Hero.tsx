@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Panel } from '@appbuckets/react-ui';
+import Panel from '@appbuckets/react-ui/Panel';
 import { useHero } from './hero.context';
 
 

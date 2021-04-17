@@ -1,7 +1,8 @@
-import { Section } from '@appbuckets/react-ui';
-import clsx from 'clsx';
 import * as React from 'react';
+import clsx from 'clsx';
 import { throttle } from 'throttle-debounce';
+
+import Section from '@appbuckets/react-ui/Section';
 
 import { useRouter } from 'next/router';
 

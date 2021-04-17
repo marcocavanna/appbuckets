@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import MultiSelect from '@appbuckets/react-ui/src/MultiSelect';
-import type { MultiSelectProps } from '@appbuckets/react-ui/src/MultiSelect';
+import MultiSelect from '@appbuckets/react-ui/MultiSelect';
+import type { MultiSelectProps } from '@appbuckets/react-ui/MultiSelect';
 
 
 export default {

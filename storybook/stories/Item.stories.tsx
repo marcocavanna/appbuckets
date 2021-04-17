@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Item from '@appbuckets/react-ui/src/Item';
-import type { ItemProps } from '@appbuckets/react-ui/src/Item';
+import Item from '@appbuckets/react-ui/Item';
+import type { ItemProps } from '@appbuckets/react-ui/Item';
 
 
 export default {

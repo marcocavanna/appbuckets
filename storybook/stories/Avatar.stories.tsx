@@ -2,7 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import { Avatar, AvatarProps } from '@appbuckets/react-ui';
+import Avatar from '@appbuckets/react-ui/Avatar';
+import type { AvatarProps } from '@appbuckets/react-ui/Avatar';
 
 
 export default {

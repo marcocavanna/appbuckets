@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Box from '@appbuckets/react-ui/src/Box';
-import type { BoxProps } from '@appbuckets/react-ui/src/Box';
+import Box from '@appbuckets/react-ui/Box';
+import type { BoxProps } from '@appbuckets/react-ui/Box';
 
 
 export default {

@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import DropdownMenu from '@appbuckets/react-ui/src/DropdownMenu';
-import type { DropdownMenuProps } from '@appbuckets/react-ui/src/DropdownMenu';
+import DropdownMenu from '@appbuckets/react-ui/DropdownMenu';
+import type { DropdownMenuProps } from '@appbuckets/react-ui/DropdownMenu';
 
 
 export default {

@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Panel from '@appbuckets/react-ui/src/Panel';
-import type { PanelProps } from '@appbuckets/react-ui/src/Panel';
+import Panel from '@appbuckets/react-ui/Panel';
+import type { PanelProps } from '@appbuckets/react-ui/Panel';
 
 
 export default {

@@ -1,6 +1,10 @@
-import { Button, Collapsable, Column, Row } from '@appbuckets/react-ui';
 import clsx from 'clsx';
 import * as React from 'react';
+
+import Button from '@appbuckets/react-ui/Button';
+import Collapsable from '@appbuckets/react-ui/Collapsable';
+import Column from '@appbuckets/react-ui/Column';
+import Row from '@appbuckets/react-ui/Row';
 
 import { Demo as DemoType, DemoOptions } from '../utils/parseMarkdown';
 import HighlightedCode from './HighlightedCode';

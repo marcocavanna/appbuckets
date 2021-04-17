@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Dropzone from '@appbuckets/react-ui/src/Dropzone';
-import type { DropzoneProps } from '@appbuckets/react-ui/src/Dropzone';
+import Dropzone from '@appbuckets/react-ui/Dropzone';
+import type { DropzoneProps } from '@appbuckets/react-ui/Dropzone';
 
 
 export default {

@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Modal from '@appbuckets/react-ui/src/Modal';
-import type { ModalProps } from '@appbuckets/react-ui/src/Modal';
+import Modal from '@appbuckets/react-ui/Modal';
+import type { ModalProps } from '@appbuckets/react-ui/Modal';
 
 
 export default {

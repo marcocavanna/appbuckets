@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Container } from '@appbuckets/react-ui';
+import Container from '@appbuckets/react-ui/Container';
 
 
 export default function FixedContainer() {

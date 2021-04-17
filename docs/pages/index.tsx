@@ -2,7 +2,12 @@ import * as React from 'react';
 
 import { GetStaticProps } from 'next';
 
-import { Box, Button, Container, Divider, Header, Panel } from '@appbuckets/react-ui';
+import Box from '@appbuckets/react-ui/Box';
+import Button from '@appbuckets/react-ui/Button';
+import Container from '@appbuckets/react-ui/Container';
+import Divider from '@appbuckets/react-ui/Divider';
+import Header from '@appbuckets/react-ui/Header';
+import Panel from '@appbuckets/react-ui/Panel';
 
 import AppFrame from '../src/components/AppFrame';
 import HighlightedCode from '../src/components/HighlightedCode';
@@ -111,7 +116,15 @@ import '@appbuckets/react-ui/styles/index.css';
 // BucketTheme is the Theme Provider, use this to change the
 // default prop of each single component.
 // This Provider is not required, and it's optional
-import { BucketTheme, Button, Box } from '@appbuckets/react-ui';
+import BucketTheme from '@appbuckets/react-ui/BucketTheme';
+import Box from '@appbuckets/react-ui/Box';
+import Button from '@appbuckets/react-ui/Button';
+
+// Obviously, you could import all components in one statement,
+// keeping in mind that the following statements would include
+// all source files into your build.
+// This could slow down your first page load
+// import { BucketTheme, Button, Box } from '@appbuckets/react-ui';
 
 
 function App() {

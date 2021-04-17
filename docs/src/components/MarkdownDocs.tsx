@@ -1,5 +1,6 @@
-import { Header } from '@appbuckets/react-ui';
 import * as React from 'react';
+
+import Header from '@appbuckets/react-ui/Header';
 
 import AppFrame from './AppFrame';
 import Demo from './Demo';

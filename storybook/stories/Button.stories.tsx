@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Button from '@appbuckets/react-ui/src/Button';
-import type { ButtonProps } from '@appbuckets/react-ui/src/Button';
+import Button from '@appbuckets/react-ui/Button';
+import type { ButtonProps } from '@appbuckets/react-ui/Button';
 
 
 export default {

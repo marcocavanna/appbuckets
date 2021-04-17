@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import RxTable from '@appbuckets/react-ui/src/RxTable';
-import type { RxTableProps } from '@appbuckets/react-ui/src/RxTable';
+import RxTable from '@appbuckets/react-ui/RxTable';
+import type { RxTableProps } from '@appbuckets/react-ui/RxTable';
 
 
 export default {

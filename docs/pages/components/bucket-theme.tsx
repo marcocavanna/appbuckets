@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { NextPage } from 'next';
+import { NextPage, GetStaticProps } from 'next';
 
 import MarkdownDocs from '../../src/components/MarkdownDocs';
 
@@ -24,6 +24,8 @@ const Page: NextPage<PreparedMarkdown> = (props) => {
   );
 };
 
-Page.getInitialProps = () => prepareMarkdown({ pageFilename, requireRaw });
+export const getStaticProps: GetStaticProps<PreparedMarkdown> = async () => ({
+  props: prepareMarkdown({ pageFilename, requireRaw })
+});
 
 export default Page;

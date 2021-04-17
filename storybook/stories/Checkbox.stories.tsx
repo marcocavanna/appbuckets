@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Checkbox from '@appbuckets/react-ui/src/Checkbox';
-import type { CheckboxProps } from '@appbuckets/react-ui/src/Checkbox';
+import Checkbox from '@appbuckets/react-ui/Checkbox';
+import type { CheckboxProps } from '@appbuckets/react-ui/Checkbox';
 
 
 export default {

@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Table from '@appbuckets/react-ui/src/Table';
-import type { TableProps } from '@appbuckets/react-ui/src/Table';
+import Table from '@appbuckets/react-ui/Table';
+import type { TableProps } from '@appbuckets/react-ui/Table';
 
 
 export default {

@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import HeroButton from '@appbuckets/react-ui/src/HeroButton';
-import type { HeroButtonProps } from '@appbuckets/react-ui/src/HeroButton';
+import HeroButton from '@appbuckets/react-ui/HeroButton';
+import type { HeroButtonProps } from '@appbuckets/react-ui/HeroButton';
 
 
 export default {

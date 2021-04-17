@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Popup from '@appbuckets/react-ui/src/Popup';
-import type { PopupProps } from '@appbuckets/react-ui/src/Popup';
+import Popup from '@appbuckets/react-ui/Popup';
+import type { PopupProps } from '@appbuckets/react-ui/Popup';
 
 
 export default {

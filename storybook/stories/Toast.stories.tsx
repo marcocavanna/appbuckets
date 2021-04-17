@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Toast from '@appbuckets/react-ui/src/Toast';
-import type { ToastProps } from '@appbuckets/react-ui/src/Toast';
+import Toast from '@appbuckets/react-ui/Toast';
+import type { ToastProps } from '@appbuckets/react-ui/Toast';
 
 
 export default {

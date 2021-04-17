@@ -6,10 +6,10 @@ import MarkdownDocs from '../../src/components/MarkdownDocs';
 import { PreparedMarkdown, prepareMarkdown } from '../../src/utils/parseMarkdown';
 
 
-const pageFilename = 'components/field';
-const requireDemo = require.context('../../src/pages/components/field', false, /\.(js|tsx)$/);
+const pageFilename = 'components/fade';
+const requireDemo = require.context('../../src/pages/components/fade', false, /\.(js|tsx)$/);
 const requireRaw = require.context(
-  '!raw-loader!../../src/pages/components/field',
+  '!raw-loader!../../src/pages/components/fade',
   true,
   /\.(js|md|tsx|json)$/
 );

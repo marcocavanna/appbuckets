@@ -374,21 +374,5 @@ export function prepareMarkdown(ctx: PrepareMarkdownContext): PreparedMarkdown {
     }
   });
 
-  /** Loop each JSON File */
-  // requireProps.keys().forEach((filename) => {
-  //   /** Get the props file content */
-  //   try {
-  //     console.log(requireProps);
-  //     const content = require.resolve(requireProps.resolve(filename));
-  //     console.log(content);
-  //     // const propsContent = JSON.parse(requireProps(filename).default) as PropsDoc;
-  //     // props[propsContent.displayName] = propsContent;
-  //   }
-  //   catch (error) {
-  //     global.console.error('JSON.parse fails with: ', `{${filename}}`);
-  //     global.console.error(error);
-  //   }
-  // });
-
   return { demos, doc: doc!, documentedComponents: props };
 }

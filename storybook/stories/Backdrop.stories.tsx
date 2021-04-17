@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Backdrop from '@appbuckets/react-ui/src/Backdrop';
-import type { BackdropProps } from '@appbuckets/react-ui/src/Backdrop';
+import Backdrop from '@appbuckets/react-ui/Backdrop';
+import type { BackdropProps } from '@appbuckets/react-ui/Backdrop';
 
 
 export default {

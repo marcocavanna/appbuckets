@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Accordions from '@appbuckets/react-ui/src/Accordions';
-import type { AccordionsProps } from '@appbuckets/react-ui/src/Accordions';
+import Accordions from '@appbuckets/react-ui/Accordions';
+import type { AccordionsProps } from '@appbuckets/react-ui/Accordions';
 
 
 export default {

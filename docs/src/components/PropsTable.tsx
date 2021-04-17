@@ -1,7 +1,10 @@
 import * as React from 'react';
 import arraySort from 'array-sort';
 
-import { Button, Box, RxTable, RxTableColumnProps, Label } from '@appbuckets/react-ui';
+import Box from '@appbuckets/react-ui/Box';
+import Button from '@appbuckets/react-ui/Button';
+import Label from '@appbuckets/react-ui/Label';
+import RxTable, { RxTableColumnProps } from '@appbuckets/react-ui/RxTable';
 
 import { ComponentProp, ComponentsDoc, PropsOptions } from '../utils/parseMarkdown';
 

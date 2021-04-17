@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Badge from '@appbuckets/react-ui/src/Badge';
-import type { BadgeProps } from '@appbuckets/react-ui/src/Badge';
+import Badge from '@appbuckets/react-ui/Badge';
+import type { BadgeProps } from '@appbuckets/react-ui/Badge';
 
 
 export default {

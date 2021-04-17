@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Container from '@appbuckets/react-ui/src/Container';
-import type { ContainerProps } from '@appbuckets/react-ui/src/Container';
+import Container from '@appbuckets/react-ui/Container';
+import type { ContainerProps } from '@appbuckets/react-ui/Container';
 
 
 export default {

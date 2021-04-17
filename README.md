@@ -34,27 +34,35 @@ npm install -S @appbuckets/react-ui
 A quick example of how can you use AppBuckets UI is the following:
 
 ```tsx
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 
 // Import the base CSS file
 // using SCSS could be done to, check documentation below
-import "@appbuckets/react-ui/styles/index.css";
+import '@appbuckets/react-ui/styles/index.css';
 
 // BucketTheme is the Theme Provider, use this to change the
 // default prop of each single component.
 // This Provider is not required, and it's optional
-import { BucketTheme, Button, Box } from "@appbuckets/react-ui";
+import BucketTheme from '@appbuckets/react-ui/BucketTheme';
+import Box from '@appbuckets/react-ui/Box';
+import Button from '@appbuckets/react-ui/Button';
+
+// Obviously, you could import all components in one statement,
+// keeping in mind that the following statements would include
+// all source files into your build.
+// This could slow down your first page load
+// import { BucketTheme, Button, Box } from '@appbuckets/react-ui';
 
 
 function App() {
   return (
-    <Box textAlign="center" mt="8">
+    <Box textAlign='center' mt={8}>
       <Button
         primary
-        icon={"rocket"}
-        content={"Launch to the Moon"}
-        tooltip={"Write wonderful Code"}
+        icon={'rocket'}
+        content={'Launch to the Moon'}
+        tooltip={'Write wonderful Code'}
       />
     </Box>
   );
@@ -64,7 +72,7 @@ ReactDOM.render(
   <BucketTheme>
     <App />
   </BucketTheme>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
 ```
 
@@ -197,6 +205,8 @@ module.exports = {
 
 ## TODO
 
+- [ ] Optimize to use with SSR
+- [ ] Optimize Icon library
 - [ ] Write Docs and Demos
 - [ ] Complete Tests
 - [ ] Refactor Storybook

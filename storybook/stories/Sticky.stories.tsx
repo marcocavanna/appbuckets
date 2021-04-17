@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Sticky from '@appbuckets/react-ui/src/Sticky';
-import type { StickyProps } from '@appbuckets/react-ui/src/Sticky';
+import Sticky from '@appbuckets/react-ui/Sticky';
+import type { StickyProps } from '@appbuckets/react-ui/Sticky';
 
 
 export default {

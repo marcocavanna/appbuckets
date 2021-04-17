@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 
-import Section from '@appbuckets/react-ui/src/Section';
-import type { SectionProps } from '@appbuckets/react-ui/src/Section';
+import Section from '@appbuckets/react-ui/Section';
+import type { SectionProps } from '@appbuckets/react-ui/Section';
 
 
 export default {

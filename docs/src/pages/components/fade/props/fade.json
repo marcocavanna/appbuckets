@@ -1,0 +1,160 @@
+{
+  "filename": "packages/react-ui/src/Fade/Fade.tsx",
+  "tags": {},
+  "description": "",
+  "displayName": "Fade",
+  "props": {
+    "appear": {
+      "defaultValue": null,
+      "description": "Normally a component is not transitioned if it is shown when the\n`<Transition>` component mounts. If you want to transition on the first\nmount set  appear to true, and the component will transition in as soon\nas the `<Transition>` mounts. Note: there are no specific \"appear\" states.\nappear only adds an additional enter transition.",
+      "name": "appear",
+      "parent": {
+        "fileName": "react-ui/src/Fade/Fade.types.ts",
+        "name": "StrictFadeProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Fade/Fade.types.ts",
+          "name": "StrictFadeProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "children": {
+      "defaultValue": null,
+      "description": "Children is limited to one element only",
+      "name": "children",
+      "parent": {
+        "fileName": "react-ui/src/Fade/Fade.types.ts",
+        "name": "StrictFadeProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Fade/Fade.types.ts",
+          "name": "StrictFadeProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactElement<any, string | JSXElementConstructor<any>> & RefAttributes<any>"
+      }
+    },
+    "mountOnEnter": {
+      "defaultValue": null,
+      "description": "Mount component on enter",
+      "name": "mountOnEnter",
+      "parent": {
+        "fileName": "react-ui/src/Fade/Fade.types.ts",
+        "name": "StrictFadeProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Fade/Fade.types.ts",
+          "name": "StrictFadeProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "visible": {
+      "defaultValue": null,
+      "description": "Visible, if `true` component will appear",
+      "name": "visible",
+      "parent": {
+        "fileName": "react-ui/src/Fade/Fade.types.ts",
+        "name": "StrictFadeProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Fade/Fade.types.ts",
+          "name": "StrictFadeProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "unMountOnExit": {
+      "defaultValue": null,
+      "description": "Unmount component on exit",
+      "name": "unMountOnExit",
+      "parent": {
+        "fileName": "react-ui/src/Fade/Fade.types.ts",
+        "name": "StrictFadeProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Fade/Fade.types.ts",
+          "name": "StrictFadeProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "easing": {
+      "defaultValue": null,
+      "description": "Set transition timing function",
+      "name": "easing",
+      "parent": {
+        "fileName": "react-ui/src/utils/transitions.ts",
+        "name": "TransitionUtilsProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/utils/transitions.ts",
+          "name": "TransitionUtilsProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "TransitionModeDependantType<TransitionTimingFunction>"
+      }
+    },
+    "style": {
+      "defaultValue": null,
+      "description": "CSS Style",
+      "name": "style",
+      "parent": {
+        "fileName": "react-ui/src/utils/transitions.ts",
+        "name": "TransitionUtilsProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/utils/transitions.ts",
+          "name": "TransitionUtilsProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "CSSProperties"
+      }
+    },
+    "timeout": {
+      "defaultValue": null,
+      "description": "Set transition duration",
+      "name": "timeout",
+      "parent": {
+        "fileName": "react-ui/src/utils/transitions.ts",
+        "name": "TransitionUtilsProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/utils/transitions.ts",
+          "name": "TransitionUtilsProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "TransitionModeDependantType<number>"
+      }
+    }
+  }
+}
