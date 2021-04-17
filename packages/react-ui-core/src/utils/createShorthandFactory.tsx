@@ -115,7 +115,7 @@ export function createShorthand<P extends ShorthandComponentProps<P> = {}>(
       overrideProps?.className
     );
 
-    props.className = [ ...new Set(...mergedClassNames.split(' ')).values() ].join(' ');
+    props.className = Array.from(new Set(mergedClassNames.split(' ')).values()).join(' ');
   }
 
   // Merge Style
