@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import { useRouter } from 'next/router';
 
+import { toKebabCase } from '@appbuckets/utils';
+
 import Button from '@appbuckets/react-ui/Button';
 import Collapsable from '@appbuckets/react-ui/Collapsable';
 
@@ -107,8 +109,7 @@ const Sidebar: React.FunctionComponent<SidebarProps> = () => {
               <Button flat full content={group.section} />
             )}
             content={group.elements.map((content) => {
-              const page = content.replace(/\B(?:([A-Z])(?=[a-z]))|(?:(?<=[a-z0-9])([A-Z]))/g, '-$1$2')
-                .toLowerCase();
+              const page = toKebabCase(content);
 
               return (
                 <Button
