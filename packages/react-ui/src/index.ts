@@ -102,6 +102,9 @@ export * from './Modal';
 export { default as MultiSelect } from './MultiSelect';
 export * from './MultiSelect';
 
+export { default as NoSsr } from './NoSsr';
+export * from './NoSsr';
+
 export { default as NumericInput } from './NumericInput';
 export * from './NumericInput';
 
