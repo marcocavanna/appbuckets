@@ -1,0 +1,50 @@
+{
+  "filename": "packages/react-ui/src/NoSsr/NoSsr.tsx",
+  "tags": {},
+  "description": "",
+  "displayName": "NoSsr",
+  "props": {
+    "children": {
+      "defaultValue": null,
+      "description": "Component content",
+      "name": "children",
+      "parent": {
+        "fileName": "react-ui/src/NoSsr/NoSsr.types.ts",
+        "name": "StrictNoSsrProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/NoSsr/NoSsr.types.ts",
+          "name": "StrictNoSsrProps"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "TypeLiteral"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
+    "fallback": {
+      "defaultValue": null,
+      "description": "A fallback component to render",
+      "name": "fallback",
+      "parent": {
+        "fileName": "react-ui/src/NoSsr/NoSsr.types.ts",
+        "name": "StrictNoSsrProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/NoSsr/NoSsr.types.ts",
+          "name": "StrictNoSsrProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    }
+  }
+}

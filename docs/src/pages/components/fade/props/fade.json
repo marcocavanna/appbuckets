@@ -104,18 +104,18 @@
       "description": "Set transition timing function",
       "name": "easing",
       "parent": {
-        "fileName": "react-ui/src/utils/transitions.ts",
+        "fileName": "react-ui/node_modules/@appbuckets/react-ui-styles/transitions.d.ts",
         "name": "TransitionUtilsProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/src/utils/transitions.ts",
+          "fileName": "react-ui/node_modules/@appbuckets/react-ui-styles/transitions.d.ts",
           "name": "TransitionUtilsProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "TransitionModeDependantType<TransitionTimingFunction>"
+        "name": "TransitionModeDependantType<string>"
       }
     },
     "style": {
@@ -123,12 +123,12 @@
       "description": "CSS Style",
       "name": "style",
       "parent": {
-        "fileName": "react-ui/src/utils/transitions.ts",
+        "fileName": "react-ui/node_modules/@appbuckets/react-ui-styles/transitions.d.ts",
         "name": "TransitionUtilsProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/src/utils/transitions.ts",
+          "fileName": "react-ui/node_modules/@appbuckets/react-ui-styles/transitions.d.ts",
           "name": "TransitionUtilsProps"
         }
       ],
@@ -142,12 +142,12 @@
       "description": "Set transition duration",
       "name": "timeout",
       "parent": {
-        "fileName": "react-ui/src/utils/transitions.ts",
+        "fileName": "react-ui/node_modules/@appbuckets/react-ui-styles/transitions.d.ts",
         "name": "TransitionUtilsProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/src/utils/transitions.ts",
+          "fileName": "react-ui/node_modules/@appbuckets/react-ui-styles/transitions.d.ts",
           "name": "TransitionUtilsProps"
         }
       ],
