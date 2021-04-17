@@ -3,9 +3,10 @@ import clsx from 'clsx';
 
 import {
   childrenUtils,
-  Ref,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import Fade from '../Fade';
 
 import { useWithDefaultProps } from '../BucketTheme';
 
@@ -25,12 +26,14 @@ const BackdropInner: BackdropInnerComponent = (receivedProps) => {
   const props = useWithDefaultProps('backdropInner', receivedProps);
 
   const {
-    animated,
     content,
     children,
     className,
     onClick,
     onClickOutside,
+    onExited,
+    onEntered,
+    timeout,
     verticalAlign,
     visible,
     ...rest
@@ -69,41 +72,17 @@ const BackdropInner: BackdropInnerComponent = (receivedProps) => {
 
 
   // ----
-  // Animate the Backdrop Enter, if is necessary
-  // ----
-  React.useEffect(
-    () => {
-      /** Exit if no need to animate container visibility */
-      if (!animated) {
-        return;
-      }
-
-      /** Add/Remove the visible classes */
-      setTimeout(() => {
-        if (containerRef.current && visible) {
-          containerRef.current.classList.add('visible');
-        }
-
-        if (contentRef.current && visible) {
-          contentRef.current.classList.add('visible');
-        }
-      });
-    },
-    [ animated, visible ]
-  );
-
-  // ----
   // Build Element Classes
   // ----
   const classes = clsx(
-    { visible: !animated && visible, animated },
+    { visible },
     verticalAlign && `content-${verticalAlign.replace(/\s/g, '-')}`,
     'backdrop',
     className
   );
 
   const contentClasses = clsx(
-    { visible: !animated && visible, animated },
+    { visible },
     'content'
   );
 
@@ -118,7 +97,13 @@ const BackdropInner: BackdropInnerComponent = (receivedProps) => {
   // Render the Content
   // ----
   return (
-    <Ref innerRef={containerRef}>
+    <Fade
+      ref={containerRef}
+      onExited={onExited}
+      onEntered={onEntered}
+      visible={visible}
+      timeout={timeout}
+    >
       <ElementType {...rest} className={classes} onClick={handleClick}>
         {innerContent && (
           <div ref={contentRef} className={contentClasses}>
@@ -126,7 +111,7 @@ const BackdropInner: BackdropInnerComponent = (receivedProps) => {
           </div>
         )}
       </ElementType>
-    </Ref>
+    </Fade>
   );
 };
 

@@ -94,13 +94,6 @@ $backdrop-content-color: $white-shade !default;
 $backdrop-color: #3b414f !default;
 $backdrop-opacity: .8 !default;
 $backdrop-padding: 1em !default;
-$backdrop-animation-duration: $transition-speed-medium !default;
-$backdrop-transition-duration: $backdrop-animation-duration !default;
-$backdrop-transition-timing-function: $transition-ease !default;
-
-$backdrop-content-animated-transition-offset: -10% !default;
-$backdrop-content-animated-transition-duration: $backdrop-transition-duration !default;
-$backdrop-content-animated-transition-timing-function: $backdrop-transition-timing-function !default;
 
 
 /******
@@ -498,6 +491,10 @@ $message-dismiss-font-size: 1.25em !default;
 /******
     Modal
 ******/
+$modal-transition-offset: -2em !default;
+$modal-transition-duration: $transition-duration !default;
+$modal-transition-timing-function: $transition-ease !default;
+
 $modal-background-color: $white !default;
 $modal-color: $text !default;
 $modal-border-radius: $border-radius-big * 2 !default;

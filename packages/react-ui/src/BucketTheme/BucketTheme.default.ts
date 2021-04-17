@@ -266,7 +266,11 @@ export const defaultBucketThemeConfig: ThemeOptions = {
   // ----
   modal       : {
     closeIcon           : 'times',
-    closeOnBackdropClick: true
+    closeOnBackdropClick: true,
+    timeout             : {
+      enter: 300,
+      exit : 150
+    }
   },
   modalActions: {},
   modalContent: {},

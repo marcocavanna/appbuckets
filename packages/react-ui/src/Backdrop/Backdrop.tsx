@@ -82,6 +82,13 @@ const Backdrop: CreatableFunctionComponent<BackdropProps> & BackdropChildren = (
 
 
   // ----
+  // Save the state of the Inner Backdrop
+  // to close using transition
+  // ----
+  const [ backdropInnerVisible, setBackdropInnerVisible ] = React.useState<boolean>(!!visible);
+
+
+  // ----
   // Define Backdrop Handlers
   // ----
   const handlePortalMount = () => {
@@ -126,6 +133,14 @@ const Backdrop: CreatableFunctionComponent<BackdropProps> & BackdropChildren = (
     }
   };
 
+  const handleBackdropInnerExited = () => {
+    setBackdropInnerVisible(false);
+  };
+
+  const handleBackdropInnerEntered = () => {
+    setBackdropInnerVisible(true);
+  };
+
 
   // ----
   // Define Classes
@@ -145,6 +160,8 @@ const Backdrop: CreatableFunctionComponent<BackdropProps> & BackdropChildren = (
       className={innerClasses}
       visible={visible}
       onClickOutside={handleOutsideContentClick}
+      onEntered={handleBackdropInnerEntered}
+      onExited={handleBackdropInnerExited}
     >
       {loading
         ? Loader.create(
@@ -161,7 +178,7 @@ const Backdrop: CreatableFunctionComponent<BackdropProps> & BackdropChildren = (
       <Portal
         closeOnEscape={closeOnEscape}
         closeOnDocumentClick={closeOnDocumentClick}
-        open={visible}
+        open={visible || backdropInnerVisible}
         openOnTriggerClick={openOnTriggerClick}
         openOnTriggerMouseEnter={openOnTriggerMouseEnter}
         openOnTriggerFocus={openOnTriggerFocus}

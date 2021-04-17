@@ -20,7 +20,7 @@ import { ModalContentProps } from './ModalContent.types';
 export interface ModalProps extends AppBucketsComponentProps<StrictModalProps> {
 }
 
-export interface StrictModalProps extends Omit<StrictBackdropProps, 'closeOnDocumentClick' | 'page' | 'visible'> {
+export interface StrictModalProps {
   /** Modal Actions Shorthand */
   actions?: ShorthandCollection<ButtonProps>;
 
@@ -28,7 +28,7 @@ export interface StrictModalProps extends Omit<StrictBackdropProps, 'closeOnDocu
   basic?: boolean;
 
   /** Children could be component, that receive close modal function */
-  children?: ShorthandContent;
+  children?: ShorthandContent | ((tools: { closeModal: (e: React.MouseEvent<HTMLElement>) => void }) => void);
 
   /** Set close icon */
   closeIcon?: AppBucketsIcon<IconProps> | null | false;
@@ -48,6 +48,12 @@ export interface StrictModalProps extends Omit<StrictBackdropProps, 'closeOnDocu
   /** A modal Top Icon to show */
   icon?: AppBucketsIcon<IconProps>;
 
+  /** Enable loading state for Backdrop */
+  loading?: StrictBackdropProps['loading'];
+
+  /** Set loader props of Backdrop Component */
+  loaderProps?: StrictBackdropProps['loaderProps'];
+
   /** Set modal Mount Node */
   mountNode?: HTMLElement;
 
@@ -65,4 +71,7 @@ export interface StrictModalProps extends Omit<StrictBackdropProps, 'closeOnDocu
 
   /** Set modal Size */
   size?: Exclude<ElementSize, 'extra small' | 'normal'> | 'auto';
+
+  /** Set transition timeout */
+  timeout?: StrictBackdropProps['timeout'];
 }

@@ -76,6 +76,7 @@ const Modal: React.FunctionComponent<ModalProps> & ModalChildren = (
       /** Handled Backdrop Props */
       loading,
       loaderProps,
+      timeout,
 
       /** Handled Portal Props */
       closeOnEscape,
@@ -241,7 +242,7 @@ const Modal: React.FunctionComponent<ModalProps> & ModalChildren = (
           </React.Fragment>
         ) : (
           typeof children === 'function'
-            ? children({ closeModal: handleModalClose })
+            ? (children as (...args: any[]) => void)({ closeModal: handleModalClose })
             : children
         )}
       </ElementType>
@@ -255,7 +256,6 @@ const Modal: React.FunctionComponent<ModalProps> & ModalChildren = (
   return (
     <Backdrop
       page
-      animated
       className={'modals'}
       visible={open}
       closeOnBackdropClick={closeOnBackdropClick}
@@ -269,6 +269,7 @@ const Modal: React.FunctionComponent<ModalProps> & ModalChildren = (
       verticalAlign={'on top'}
       loading={loading}
       loaderProps={loaderProps}
+      timeout={timeout}
       onClose={handleModalClose}
       onOpen={handleModalOpen}
     >

@@ -228,3 +228,22 @@
     }
   }
 }
+
+
+/******
+    Set the Modal Animation on Enter / Exit
+******/
+.transitionable.modals.backdrop {
+  > .content {
+    transform: translateY($modal-transition-offset);
+    will-change: transform;
+    transition-property: transform;
+    transition-duration: $modal-transition-duration;
+    transition-timing-function: $modal-transition-timing-function;
+  }
+
+  &.entering > .content,
+  &.entered > .content {
+    transform: translateY(0);
+  }
+}
