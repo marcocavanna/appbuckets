@@ -5,10 +5,14 @@ import { Transition } from 'react-transition-group';
 import { EnterHandler, ExitHandler } from 'react-transition-group/Transition';
 
 import { childrenUtils, Ref } from '@appbuckets/react-ui-core';
+import {
+  createTransitionStyle,
+  getTransitionProps,
+  reflow
+} from '@appbuckets/react-ui-styles/transitions';
 
 import { useWithDefaultProps } from '../BucketTheme';
 import { useForkRef } from '../hooks/useForkRef';
-import { createTransitionStyle, getTransitionProps, reflow } from '../utils/transitions';
 
 import { FadeProps } from './Fade.types';
 

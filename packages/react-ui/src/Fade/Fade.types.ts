@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { TransitionProps } from 'react-transition-group/Transition';
 
-import { TransitionUtilsProps } from '../utils/transitions';
+import { TransitionUtilsProps } from '@appbuckets/react-ui-styles';
 
 
 type TransitionHandlerKeys =
