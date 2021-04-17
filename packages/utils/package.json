@@ -34,8 +34,5 @@
     "release": "yarn build && npm publish build",
     "eslint": "eslint ./src",
     "prettier": "prettier --config ../../.prettierrc --write \"build/**/*{.js,.ts}\""
-  },
-  "dependencies": {
-
   }
 }
