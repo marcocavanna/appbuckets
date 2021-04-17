@@ -134,7 +134,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = (props) => {
               <Button
                 primary
                 target={'_blank'}
-                href={'https://github.com/marcocavanna/react-bucket'}
+                href={'https://github.com/marcocavanna/appbuckets'}
                 tooltip={'View on GitHub'}
                 icon={{
                   iconStyle: 'fab',
