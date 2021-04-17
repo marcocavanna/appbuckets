@@ -45,6 +45,7 @@ export default function splitFieldProps<P extends StrictFieldProps & AnyObject>(
 
   Object.keys(props).forEach((propKey) => {
     if (fieldPropsKey.includes(propKey as any)) {
+      // @ts-ignore
       fieldProps[propKey as keyof StrictFieldProps] = props[propKey];
     }
     else {

@@ -17,7 +17,7 @@ export interface ToastProps extends AppBucketsComponentProps<StrictToastProps>, 
 
 export interface StrictToastProps {
   /** Children component */
-  children?: ShorthandContent;
+  children?: ShorthandContent | ((tools: { dismiss: (e: React.MouseEvent<HTMLElement>) => void }) => void);
 
   /** Toast Content */
   content?: ShorthandItem<HeaderSubheaderProps>;

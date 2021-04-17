@@ -117,7 +117,7 @@ const Toast: React.FunctionComponent<ToastProps> = (receivedProps) => {
   if (!childrenUtils.isNil(children)) {
     return (
       <ElementType {...rest} className={classes} onClick={handleClick}>
-        {typeof children === 'function' ? children({ dismiss: handleDismiss }) : children}
+        {typeof children === 'function' ? (children as (...args: any[]) => void)({ dismiss: handleDismiss }) : children}
       </ElementType>
     );
   }
