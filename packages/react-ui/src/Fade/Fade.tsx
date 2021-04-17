@@ -29,8 +29,6 @@ const Fade = React.forwardRef<HTMLElement, FadeProps>((receivedProps, ref) => {
   const {
     appear,
     children,
-    className,
-    content,
     easing,
     mountOnEnter,
     style,
@@ -46,14 +44,9 @@ const Fade = React.forwardRef<HTMLElement, FadeProps>((receivedProps, ref) => {
     onExited  : userDefinedOnExitedHandler
   } = props;
 
-  /** Check if component has content */
-  const contentElement: React.ReactElement & React.RefAttributes<any> = childrenUtils.isNil(children)
-    ? content as React.ReactElement
-    : children;
-
   /** Initialize Ref */
   const nodeRef = React.useRef<HTMLElement>(null);
-  const foreignRef = useForkRef<HTMLElement>(contentElement?.ref, ref);
+  const foreignRef = useForkRef<HTMLElement>(children?.ref, ref);
   const handleRef = useForkRef<HTMLElement>(nodeRef, foreignRef);
 
   /** Normalize transition handler */
@@ -142,20 +135,19 @@ const Fade = React.forwardRef<HTMLElement, FadeProps>((receivedProps, ref) => {
         const classes = clsx(
           state,
           'transitionable fade',
-          className,
-          contentElement?.props.className
+          children?.props.className
         );
 
-        return contentElement && (
+        return !childrenUtils.isNil(children) && (
           <Ref innerRef={handleRef}>
             {React.cloneElement(
-              contentElement as React.ReactElement,
+              children,
               {
                 className: classes,
                 style    : {
                   visibility: state === 'exited' && !visible ? 'hidden' : undefined,
                   ...style,
-                  ...contentElement?.props.style
+                  ...children?.props.style
                 }
               }
             )}

@@ -2,8 +2,6 @@ import * as React from 'react';
 
 import { TransitionProps } from 'react-transition-group/Transition';
 
-import { MinimalAppBucketsComponentProps } from '../generic';
-
 import { TransitionUtilsProps } from '../utils/transitions';
 
 
@@ -17,7 +15,7 @@ type TransitionHandlerKeys =
 
 type TransitionHandlerProps = Pick<TransitionProps, TransitionHandlerKeys>;
 
-export interface FadeProps extends MinimalAppBucketsComponentProps<StrictFadeProps> {
+export interface FadeProps extends StrictFadeProps {
 
 }
 
@@ -39,7 +37,7 @@ export interface StrictFadeProps extends TransitionUtilsProps, TransitionHandler
   mountOnEnter?: boolean;
 
   /** Forwarded Ref */
-  ref?: React.Ref<unknown>;
+  ref?: React.Ref<HTMLElement>;
 
   /** Visible, if `true` component will appear */
   visible?: boolean;
