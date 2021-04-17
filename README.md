@@ -6,7 +6,7 @@
 
 <div align="center">
 
-An Old School [React](https://reactjs.org/) UI Framework based on TypeScript and SCSS, fully customizable, with a dedicated [CreateReactApp](https://create-react-app.dev) template. Check it out [here](https://www.npmjs.com/package/cra-template-appbuckets-app)
+An Old School [React](https://reactjs.org/) UI Framework based on TypeScript and SCSS, fully customizable
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/marcocavanna/appbuckets-ui/blob/master/LICENSE)
 [![npm latest package](https://img.shields.io/npm/v/@appbuckets/react-ui/latest.svg)](https://www.npmjs.com/package/@appbuckets/react-ui)
@@ -76,7 +76,7 @@ ReactDOM.render(
 );
 ```
 
-[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/reactbucket-starter-rshi0)
+[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/reactui-starter-rshi0?file=/src/index.tsx)
 
 ## Docs
 
@@ -86,22 +86,9 @@ Full documentation is still to write.
 
 ### Storybook
 
-To view Storybook download repo and launch `yarn start:storybook`.
+To view Storybook download repo and launch `yarn start` from `storybook` folder.
 
 Storybook has been used to check the develop process, it is not fully documented and components doesn't have all style and props table.
-
-## Use with `create-react-app` template
-
-A new template has been released. It won't contain only `@appbuckets/react-ui` package (fully configured to work out of the box), but it contains also two additional module called `@appbuckets/app-router`
-and `@appbuckets/react-app-client`. Unfortunately they are not documented yet, but are two powerful tools to help you build new WebApp with routing and Auth Client.
-
-To create a new React App using `create-react-app` and this template open the terminal and write
-
-```shell
-npx create-react-app <my-app-name> --template appbuckets-app
-```
-
-This template will replace `react-script` with `@craco` to use SCSS style instead CSS, as described below.
 
 ## Using SCSS Styles
 
@@ -205,6 +192,7 @@ module.exports = {
 
 ## TODO
 
+- [ ] Update the CreateReactApp Template
 - [ ] Optimize Icon library
 - [ ] Think about convert .SCSS style using @emotion
 - [ ] Write Docs and Demos
