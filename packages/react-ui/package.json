@@ -1,6 +1,6 @@
 {
   "name": "@appbuckets/react-ui",
-  "version": "1.5.0-alpha.5",
+  "version": "1.5.0-alpha.6",
   "description": "Just Another React UI Framework",
   "keywords": [
     "react",
@@ -48,7 +48,7 @@
   "dependencies": {
     "@appbuckets/formatters": "^0.2.0",
     "@appbuckets/react-ui-core": "0.2.4",
-    "@appbuckets/react-ui-styles": "^0.1.0",
+    "@appbuckets/react-ui-styles": "0.1.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
