@@ -10,6 +10,7 @@
   "dependencies": {
     "@appbuckets/postcss-appbuckets-react-ui": "0.1.6",
     "@appbuckets/react-ui": "1.5.0-alpha.8",
+    "@appbuckets/react-ui-core": "^0.2.6",
     "@appbuckets/utils": "0.1.0",
     "array-sort": "^1.0.0",
     "marked": "^2.0.1",

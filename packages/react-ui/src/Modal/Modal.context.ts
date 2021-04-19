@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { contextBuilder } from '../utils';
+import { contextBuilder } from '@appbuckets/react-ui-core';
 
 
 export type ModalContext = {

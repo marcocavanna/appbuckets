@@ -24,6 +24,8 @@ export * from './Ref';
  * -------- */
 export { childrenUtils };
 
+export * from './utils/contextBuilder';
+
 export * from './utils/createShorthandFactory';
 
 export * from './utils/doesNodeContainClick';

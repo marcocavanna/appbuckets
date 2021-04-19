@@ -2,7 +2,8 @@ import * as React from 'react';
 
 import { DropzoneState } from 'react-dropzone';
 
-import { contextBuilder } from '../utils';
+import { contextBuilder } from '@appbuckets/react-ui-core';
+
 import { DropzoneFile, DropzoneProps } from './Dropzone.types';
 
 

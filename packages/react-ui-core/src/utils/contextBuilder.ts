@@ -5,18 +5,7 @@ import invariant from 'tiny-invariant';
 /* --------
  * Interface and Types Definition
  * -------- */
-export type ProviderProps<Context> = {
-  initialState?: Context;
-  children: React.ReactNode
-};
-
-
-export type ConsumerProps<Context> = {
-  children: (props: Context) => React.ReactNode
-};
-
-
-export type BuiltContext<Context> = {
+type BuiltContext<Context> = {
   hook: () => Context,
   Provider: React.Provider<Context>,
   Consumer: React.Consumer<Context>
@@ -26,7 +15,7 @@ export type BuiltContext<Context> = {
 /* --------
  * Context Builder
  * -------- */
-export default function contextBuilder<Context>(
+export function contextBuilder<Context>(
   initialContext?: Context,
   name?: string
 ): BuiltContext<Context> {

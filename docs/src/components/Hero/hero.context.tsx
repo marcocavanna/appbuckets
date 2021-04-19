@@ -10,7 +10,7 @@ import type {
   ShorthandItem
 } from '@appbuckets/react-ui';
 
-import { contextBuilder } from '../../utils';
+import { contextBuilder } from '@appbuckets/react-ui-core';
 
 
 /* --------

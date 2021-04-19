@@ -1,5 +1,6 @@
+import { contextBuilder } from '@appbuckets/react-ui-core';
+
 import { AnyObject } from '../generic';
-import { contextBuilder } from '../utils';
 
 import { EmptyContentProps } from '../EmptyContent';
 import { LoaderProps } from '../Loader';
