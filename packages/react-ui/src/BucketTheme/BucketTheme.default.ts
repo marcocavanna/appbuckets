@@ -177,11 +177,7 @@ export const defaultBucketThemeConfig: ThemeOptions = {
   // ----
   // Form Component
   // ----
-  form      : {},
-  formFormik: {
-    formActionWrapper : 'div',
-    formContentWrapper: 'div'
-  },
+  form: {},
 
 
   // ----

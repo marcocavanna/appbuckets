@@ -59,7 +59,6 @@
     "array-sort": "^1.0.0",
     "clsx": "^1.1.1",
     "deep-extend": "^0.6.0",
-    "formik": "^2.2.6",
     "kind-of": "^6.0.3",
     "p-limit": "^3.1.0",
     "pretty-bytes": "^5.6.0",

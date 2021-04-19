@@ -17,7 +17,7 @@ import { DropdownMenuProps } from '../DropdownMenu';
 import { DropzoneProps } from '../Dropzone';
 import { EmptyContentProps } from '../EmptyContent';
 import { FadeProps } from '../Fade';
-import { FormFormikProps, FormProps } from '../Form';
+import { FormProps } from '../Form';
 import { HeaderContentProps, HeaderProps, HeaderSubheaderProps } from '../Header';
 import { HeroButtonProps } from '../HeroButton';
 import { IconProps } from '../Icon';
@@ -118,8 +118,6 @@ export interface ThemeOptions {
   fade: ThemeComponentProps<FadeProps>;
 
   form: ThemeComponentProps<FormProps>;
-
-  formFormik: ThemeComponentProps<FormFormikProps<any>>;
 
   header: ThemeComponentProps<HeaderProps>;
 
