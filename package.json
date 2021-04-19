@@ -1,5 +1,5 @@
 {
-  "name": "appbuckets-ui",
+  "name": "appbuckets",
   "private": true,
   "scripts": {
     "release:version": "lerna version --exact",

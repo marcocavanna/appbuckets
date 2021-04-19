@@ -8,10 +8,10 @@
 
 An Old School [React](https://reactjs.org/) UI Framework based on TypeScript and SCSS, fully customizable
 
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/marcocavanna/appbuckets-ui/blob/master/LICENSE)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/marcocavanna/appbuckets/blob/master/LICENSE)
 [![npm latest package](https://img.shields.io/npm/v/@appbuckets/react-ui/latest.svg)](https://www.npmjs.com/package/@appbuckets/react-ui)
 [![npm downloads](https://img.shields.io/npm/dm/@appbuckets/react-ui.svg)](https://www.npmjs.com/package/@appbuckets/react-ui)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=marcocavanna/appbuckets-ui)](https://dependabot.com)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=marcocavanna/appbuckets)](https://dependabot.com)
 
 </div>
 

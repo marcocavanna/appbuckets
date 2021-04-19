@@ -79,7 +79,7 @@ const PropsTable: React.FunctionComponent<PropsTableProps> = (props) => {
           flat
           tooltip={'View Source'}
           target={'_blank'}
-          href={`https://github.com/marcocavanna/appbuckets-ui/tree/master/${component.filename}`}
+          href={`https://github.com/marcocavanna/appbuckets/tree/master/${component.filename}`}
           icon={{ iconStyle: 'fab', name: 'github' }}
         />
       </Box>

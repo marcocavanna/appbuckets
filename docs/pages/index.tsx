@@ -38,7 +38,7 @@ export default function Home(props: { version: string }) {
             </Text>
             <div className={'mt-4'}>
               <Button
-                href={'https://github.com/marcocavanna/appbuckets-ui'}
+                href={'https://github.com/marcocavanna/appbuckets'}
                 target={'_blank'}
                 icon={{
                   iconStyle: 'fab',
