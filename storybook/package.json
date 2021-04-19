@@ -18,7 +18,7 @@
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.2.8",
-    "babel-loader": "^8.2.2",
+    "babel-loader": "8.1.0",
     "css-loader": "^5.2.1",
     "sass": "^1.32.8",
     "sass-loader": "10.1.1",
