@@ -19,7 +19,8 @@ module.exports = {
       alias: {
         ...config.resolve.alias,
         '@appbuckets/react-ui/styles': path.resolve(__dirname, '..', '..', 'packages', 'react-ui', 'styles'),
-        '@appbuckets/react-ui'       : path.resolve(__dirname, '..', '..', 'packages', 'react-ui', 'src')
+        '@appbuckets/react-ui'       : path.resolve(__dirname, '..', '..', 'packages', 'react-ui', 'src'),
+        '@appbuckets/react-ui-styles': path.resolve(__dirname, '..', '..', 'packages', 'react-ui-styles', 'src')
       }
     };
 
