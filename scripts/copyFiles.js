@@ -106,29 +106,6 @@ async function createModulePackages({ from, to }) {
 
 
 /**
- * When using Rollup to build module
- * the entry point named index.js for each folder
- * won't be emitted if is an exporting only file.
- * Instead, the emit declaration process will produce the index.d.ts.
- * This could be an error and must be fixed
- *
- * @param to
- */
-function purgeInvalidTypes({ to }) {
-  /** Get all folder containing index.d.ts file */
-  const directories = glob.sync('*/index.d.ts', { cwd: to }).map(path.dirname);
-
-  /** Loop each directory and check if the index.d.ts must be deleted */
-  directories.forEach((dirName) => {
-    /** Check index.js exists */
-    if (!fse.existsSync(path.join(to, dirName, 'index.js'))) {
-      return fse.removeSync(path.join(to, dirName, 'index.d.ts'));
-    }
-  });
-}
-
-
-/**
  * Create the main package file
  */
 async function createPackageFile() {
