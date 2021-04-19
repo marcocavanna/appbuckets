@@ -1,0 +1,62 @@
+{
+  "name": "cra-template-appbuckets-react-ui",
+  "version": "1.0.0",
+  "description": "Starter template for CreateReactApp with Typescript, AppBuckets ReactUI and SCSS",
+  "keywords": [
+    "react",
+    "appbuckets",
+    "react-ui",
+    "typescript"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=development craco start",
+    "build": "node ../../scripts/createCraTemplate.js",
+    "prebuild": "rimraf build",
+    "release": "yarn build && yarn publish build"
+  },
+  "templateScripts": {
+    "start:prod": "NODE_ENV=production craco start",
+    "start": "NODE_ENV=development craco start",
+    "build": "NODE_ENV=production craco build",
+    "test": "NODE_ENV=test craco test",
+    "start-original-cra": "react-scripts start",
+    "build-original-cra": "react-scripts build",
+    "test-original-cra": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@appbuckets/react-ui": "1.5.0-alpha.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "web-vitals": "^1.0.1"
+  },
+  "devDependencies": {
+    "@appbuckets/postcss-appbuckets-react-ui": "0.1.6",
+    "@craco/craco": "^6.1.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "react-scripts": "4.0.3",
+    "sass": "^1.32.8",
+    "tslib": "^2.2.0",
+    "typescript": "^4.2.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
