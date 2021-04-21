@@ -12,6 +12,7 @@
     "@types/array-sort": "^1.0.0",
     "@types/deep-extend": "^0.4.31",
     "@types/fs-extra": "^9.0.10",
+    "@types/get-value": "^3.0.1",
     "@types/kind-of": "^6.0.0",
     "@types/lodash": "^4.14.168",
     "@types/react": "^17.0.3",
