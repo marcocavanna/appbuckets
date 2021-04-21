@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { useEnhancedEffect } from '../hooks/useEnhancedEffect';
+import { useEnhancedEffect } from '@appbuckets/react-ui-core';
 
 import { NoSsrProps } from './NoSsr.types';
 

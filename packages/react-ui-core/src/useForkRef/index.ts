@@ -3,7 +3,7 @@ import * as React from 'react';
 import { handleRef } from '@appbuckets/react-ui-core';
 
 
-export function useForkRef<Instance>(
+export default function useForkRef<Instance>(
   refA: React.Ref<Instance> | null | undefined,
   refB: React.Ref<Instance> | null | undefined
 ): React.Ref<Instance> | null {

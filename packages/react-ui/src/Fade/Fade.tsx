@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { Transition } from 'react-transition-group';
 import { EnterHandler, ExitHandler } from 'react-transition-group/Transition';
 
-import { childrenUtils, Ref } from '@appbuckets/react-ui-core';
+import { childrenUtils, Ref, useForkRef } from '@appbuckets/react-ui-core';
 import {
   createTransitionStyle,
   getTransitionProps,
@@ -12,7 +12,6 @@ import {
 } from '@appbuckets/react-ui-styles/transitions';
 
 import { useWithDefaultProps } from '../BucketTheme';
-import { useForkRef } from '../hooks/useForkRef';
 
 import { FadeProps } from './Fade.types';
 

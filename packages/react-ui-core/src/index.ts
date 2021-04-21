@@ -41,3 +41,9 @@ export * from './utils/refUtils';
  * Exporting Hooks
  * -------- */
 export { default as useAutoControlledValue } from './useAutoControlledValue';
+
+export { default as useDOMElementEvent } from './useDOMElementEvent';
+
+export { default as useEnhancedEffect } from './useEnhancedEffect';
+
+export { default as useForkRef } from './useForkRef';
