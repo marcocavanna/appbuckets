@@ -1,7 +1,7 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
-import { useElementType, useAutoControlledValue } from '@appbuckets/react-ui-core';
+import { useAutoControlledValue, useForkRef } from '@appbuckets/react-ui-core';
 
 import {
   useSharedClassName,
@@ -21,7 +21,11 @@ import { CheckboxProps } from './Checkbox.types';
 /* --------
  * Component Render
  * -------- */
-const Checkbox: React.FunctionComponent<CheckboxProps> = (receivedProps) => {
+type CheckboxComponent = React.VFC<CheckboxProps & React.RefAttributes<HTMLInputElement>>;
+
+const Checkbox: CheckboxComponent = React.forwardRef<HTMLInputElement, CheckboxProps>((
+  receivedProps, ref
+) => {
 
   /** Get component props */
   const props = useWithDefaultProps('checkbox', receivedProps);
@@ -62,7 +66,6 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = (receivedProps) => {
   } = useSharedClassName(props);
 
   const [ stateClassName, rest ] = useSplitStateClassName(rawRest);
-  const ElementType = useElementType(Checkbox, receivedProps, props);
 
 
   /* --------
@@ -75,6 +78,8 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = (receivedProps) => {
    * Internal Component Ref
    * -------- */
   const fieldRef = React.useRef<HTMLDivElement>(null!);
+  const inputRef = React.useRef<HTMLInputElement>(null);
+  const handleRef = useForkRef(ref, inputRef);
 
 
   /* --------
@@ -198,7 +203,6 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = (receivedProps) => {
    * -------- */
   return (
     <Field
-      as={ElementType}
       ref={fieldRef}
       disabled={disabled}
       required={required}
@@ -219,6 +223,7 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = (receivedProps) => {
     >
       <input
         {...rest}
+        ref={handleRef}
         readOnly
         className={classes}
         disabled={disabled}
@@ -229,7 +234,7 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = (receivedProps) => {
       {labelElement}
     </Field>
   );
-};
+});
 
 Checkbox.displayName = 'Checkbox';
 

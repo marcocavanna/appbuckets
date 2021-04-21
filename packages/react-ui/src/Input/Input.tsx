@@ -1,7 +1,7 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
-import { useElementType, useAutoControlledValue } from '@appbuckets/react-ui-core';
+import { useAutoControlledValue, useForkRef } from '@appbuckets/react-ui-core';
 
 import ReactInputMask from 'react-input-mask';
 import TextareaAutosize from 'react-textarea-autosize';
@@ -20,7 +20,11 @@ import { InputProps } from './Input.types';
 /* --------
  * Component Render
  * -------- */
-const Input: React.FunctionComponent<InputProps> = (receivedProps) => {
+type InputComponent = React.VFC<InputProps & React.RefAttributes<HTMLInputElement>>;
+
+const Input: InputComponent = React.forwardRef<HTMLInputElement, InputProps>((
+  receivedProps, ref
+) => {
 
   const props = useWithDefaultProps('input', receivedProps);
 
@@ -66,7 +70,6 @@ const Input: React.FunctionComponent<InputProps> = (receivedProps) => {
   } = useSharedClassName(props);
 
   const [ stateClassName, rest ] = useSplitStateClassName(rawRest);
-  const ElementType = useElementType(Input, receivedProps, props);
 
 
   /* --------
@@ -82,7 +85,8 @@ const Input: React.FunctionComponent<InputProps> = (receivedProps) => {
    * Internal Component Ref
    * -------- */
   const fieldRef = React.useRef<HTMLDivElement>(null);
-  const inputRef = React.useRef<HTMLInputElement | HTMLTextAreaElement>(null);
+  const inputRef = React.useRef<HTMLInputElement>(null);
+  const handleRef = useForkRef(ref, inputRef);
 
 
   /* --------
@@ -281,7 +285,7 @@ const Input: React.FunctionComponent<InputProps> = (receivedProps) => {
               <input
                 {...restInputProps}
                 {...rest}
-                ref={inputRef as React.RefObject<HTMLInputElement>}
+                ref={handleRef}
                 {...baseProps}
               />
             );
@@ -294,7 +298,7 @@ const Input: React.FunctionComponent<InputProps> = (receivedProps) => {
       return (
         <TextareaAutosize
           {...rest}
-          ref={inputRef as React.RefObject<HTMLTextAreaElement>}
+          ref={handleRef}
           {...textareaProps}
           {...baseProps}
         />
@@ -304,7 +308,7 @@ const Input: React.FunctionComponent<InputProps> = (receivedProps) => {
     return (
       <input
         {...rest}
-        ref={inputRef as React.RefObject<HTMLInputElement>}
+        ref={handleRef}
         {...baseProps}
       />
     );
@@ -316,7 +320,6 @@ const Input: React.FunctionComponent<InputProps> = (receivedProps) => {
    * -------- */
   return (
     <Field
-      as={ElementType}
       ref={fieldRef}
       disabled={disabled}
       required={required}
@@ -343,7 +346,7 @@ const Input: React.FunctionComponent<InputProps> = (receivedProps) => {
       {renderInputElement()}
     </Field>
   );
-};
+});
 
 Input.displayName = 'Input';
 
