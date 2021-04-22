@@ -117,8 +117,15 @@ export function createHookedField<Props, RefType, TValue, TDisplayedValue = TVal
         || (localGetErrorOnSubmitted && formState.submitCount > 0);
       const hasError = (showError && fieldState.invalid) || props.danger;
 
+      // Field state data must passed directly
+      // because are plain getter and cannot be
+      // enumerated, spread won't work here
       const meta: FieldMeta = {
-        ...fieldState,
+        invalid     : fieldState.invalid,
+        isTouched   : fieldState.isTouched,
+        isDirty     : fieldState.isDirty,
+        isValidating: fieldState.isValidating,
+        error       : fieldState.error,
         appearance  : {
           appearance: !hasError ? props.appearance : undefined,
           danger    : hasError,
