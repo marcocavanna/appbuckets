@@ -24,3 +24,6 @@ export * from './HookedInput';
 
 export { default as HookedNumericInput } from './HookedNumericInput';
 export * from './HookedNumericInput';
+
+export { default as HookedTimeInput } from './HookedTimeInput';
+export * from './HookedTimeInput';
