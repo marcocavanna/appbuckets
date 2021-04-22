@@ -16,6 +16,9 @@ export * from './HookedCheckbox';
 export { default as HookedColorPicker } from './HookedColorPicker';
 export * from './HookedColorPicker';
 
+export { default as HookedDayPicker } from './HookedDayPicker';
+export * from './HookedDayPicker';
+
 export { default as HookedInput } from './HookedInput';
 export * from './HookedInput';
 
