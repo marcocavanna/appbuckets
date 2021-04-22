@@ -13,5 +13,8 @@ export * from './HookedForm';
 export { default as HookedCheckbox } from './HookedCheckbox';
 export * from './HookedCheckbox';
 
+export { default as HookedColorPicker } from './HookedColorPicker';
+export * from './HookedColorPicker';
+
 export { default as HookedInput } from './HookedInput';
 export * from './HookedInput';
