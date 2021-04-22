@@ -21,9 +21,7 @@ import { CheckboxProps } from './Checkbox.types';
 /* --------
  * Component Render
  * -------- */
-type CheckboxComponent = React.VFC<CheckboxProps & React.RefAttributes<HTMLInputElement>>;
-
-const Checkbox: CheckboxComponent = React.forwardRef<HTMLInputElement, CheckboxProps>((
+const Checkbox: React.VFC<CheckboxProps> = React.forwardRef<HTMLInputElement, CheckboxProps>((
   receivedProps, ref
 ) => {
 

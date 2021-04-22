@@ -18,7 +18,11 @@ import { NumericInputProps } from './NumericInput.types';
 /* --------
  * Component Render
  * -------- */
-const NumericInput: React.FunctionComponent<NumericInputProps> = (receivedProps) => {
+type NumericInputComponent = React.VFC<NumericInputProps & React.RefAttributes<HTMLInputElement>>;
+
+const NumericInput: NumericInputComponent = React.forwardRef<HTMLInputElement, NumericInputProps>((
+  receivedProps, ref
+) => {
 
   const props = useWithDefaultProps('numericInput', receivedProps);
 
@@ -251,6 +255,7 @@ const NumericInput: React.FunctionComponent<NumericInputProps> = (receivedProps)
   return (
     <Input
       {...restFieldProps}
+      ref={ref}
       value={isFocused ? inputValue : formattedInputValue}
       onBlur={handleInputBlur}
       onChange={handleInputChange}
@@ -259,7 +264,7 @@ const NumericInput: React.FunctionComponent<NumericInputProps> = (receivedProps)
     />
   );
 
-};
+});
 
 NumericInput.displayName = 'NumericInput';
 

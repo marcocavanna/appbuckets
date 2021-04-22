@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 import { ClickHandler, AppBucketsComponentProps } from '../generic';
 
 import { StrictFieldProps } from '../Field';
@@ -28,6 +30,9 @@ export interface StrictCheckboxProps extends Omit<StrictFieldProps, 'actions' | 
 
   /** Format the Checkbox as a Radio Button */
   radio?: boolean;
+
+  /** Ref to Input element */
+  ref?: React.Ref<HTMLInputElement>;
 
   /** Format the Checkbox as a Switch */
   switch?: boolean;

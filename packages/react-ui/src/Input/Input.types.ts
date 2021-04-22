@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 import { Props as InputMaskProps } from 'react-input-mask';
 import { TextareaAutosizeProps } from 'react-textarea-autosize';
 
@@ -27,6 +29,9 @@ export interface StrictInputProps extends StrictFieldProps {
 
   /** On Focus Event */
   onFocus?: FocusHandler<HTMLInputElement, InputProps>;
+
+  /** Ref to Input */
+  ref?: React.Ref<HTMLInputElement>;
 
   /** Auto Select all content on click */
   selectAllOnClick?: boolean;

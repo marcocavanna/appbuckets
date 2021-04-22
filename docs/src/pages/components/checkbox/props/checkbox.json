@@ -137,6 +137,25 @@
         "name": "boolean"
       }
     },
+    "ref": {
+      "defaultValue": null,
+      "description": "Ref to Input element",
+      "name": "ref",
+      "parent": {
+        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
+        "name": "StrictCheckboxProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
+          "name": "StrictCheckboxProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "Ref<HTMLInputElement>"
+      }
+    },
     "switch": {
       "defaultValue": null,
       "description": "Format the Checkbox as a Switch",
@@ -269,7 +288,7 @@
       ],
       "required": false,
       "type": {
-        "name": "ReactNode"
+        "name": "ShorthandContent"
       }
     },
     "hintClassName": {
@@ -411,7 +430,7 @@
       ],
       "required": false,
       "type": {
-        "name": "ReactNode"
+        "name": "ShorthandContent"
       }
     },
     "onClear": {
@@ -506,67 +525,10 @@
             "value": "\"warning\""
           },
           {
-            "value": "\"amazon\""
-          },
-          {
-            "value": "\"android\""
-          },
-          {
-            "value": "\"apple\""
-          },
-          {
-            "value": "\"facebook\""
-          },
-          {
-            "value": "\"google\""
-          },
-          {
-            "value": "\"google-plus\""
-          },
-          {
-            "value": "\"instagram\""
-          },
-          {
-            "value": "\"linkedin\""
-          },
-          {
-            "value": "\"microsoft\""
-          },
-          {
-            "value": "\"pinterest\""
-          },
-          {
-            "value": "\"skype\""
-          },
-          {
-            "value": "\"slack\""
-          },
-          {
-            "value": "\"telegram\""
-          },
-          {
-            "value": "\"tumblr\""
-          },
-          {
-            "value": "\"twitter\""
-          },
-          {
-            "value": "\"vimeo\""
-          },
-          {
-            "value": "\"whatsapp\""
-          },
-          {
-            "value": "\"yahoo\""
-          },
-          {
-            "value": "\"youtube\""
+            "value": "\"text\""
           },
           {
             "value": "\"cloud\""
-          },
-          {
-            "value": "\"text\""
           },
           {
             "value": "\"text secondary\""
@@ -609,9 +571,6 @@
           },
           {
             "value": "\"cloud dark\""
-          },
-          {
-            "value": "\"dribble\""
           }
         ]
       }
@@ -765,10 +724,6 @@
         {
           "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
           "name": "DOMAttributes"
-        },
-        {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
-          "name": "TypeLiteral"
         }
       ],
       "required": false,
@@ -815,7 +770,7 @@
       ],
       "required": false,
       "type": {
-        "name": "ReactNode"
+        "name": "ShorthandContent"
       }
     },
     "size": {
@@ -876,67 +831,10 @@
             "value": "\"warning\""
           },
           {
-            "value": "\"amazon\""
-          },
-          {
-            "value": "\"android\""
-          },
-          {
-            "value": "\"apple\""
-          },
-          {
-            "value": "\"facebook\""
-          },
-          {
-            "value": "\"google\""
-          },
-          {
-            "value": "\"google-plus\""
-          },
-          {
-            "value": "\"instagram\""
-          },
-          {
-            "value": "\"linkedin\""
-          },
-          {
-            "value": "\"microsoft\""
-          },
-          {
-            "value": "\"pinterest\""
-          },
-          {
-            "value": "\"skype\""
-          },
-          {
-            "value": "\"slack\""
-          },
-          {
-            "value": "\"telegram\""
-          },
-          {
-            "value": "\"tumblr\""
-          },
-          {
-            "value": "\"twitter\""
-          },
-          {
-            "value": "\"vimeo\""
-          },
-          {
-            "value": "\"whatsapp\""
-          },
-          {
-            "value": "\"yahoo\""
-          },
-          {
-            "value": "\"youtube\""
+            "value": "\"text\""
           },
           {
             "value": "\"cloud\""
-          },
-          {
-            "value": "\"text\""
           },
           {
             "value": "\"text secondary\""
@@ -979,9 +877,6 @@
           },
           {
             "value": "\"cloud dark\""
-          },
-          {
-            "value": "\"dribble\""
           }
         ]
       }
@@ -1105,67 +1000,10 @@
             "value": "\"warning\""
           },
           {
-            "value": "\"amazon\""
-          },
-          {
-            "value": "\"android\""
-          },
-          {
-            "value": "\"apple\""
-          },
-          {
-            "value": "\"facebook\""
-          },
-          {
-            "value": "\"google\""
-          },
-          {
-            "value": "\"google-plus\""
-          },
-          {
-            "value": "\"instagram\""
-          },
-          {
-            "value": "\"linkedin\""
-          },
-          {
-            "value": "\"microsoft\""
-          },
-          {
-            "value": "\"pinterest\""
-          },
-          {
-            "value": "\"skype\""
-          },
-          {
-            "value": "\"slack\""
-          },
-          {
-            "value": "\"telegram\""
-          },
-          {
-            "value": "\"tumblr\""
-          },
-          {
-            "value": "\"twitter\""
-          },
-          {
-            "value": "\"vimeo\""
-          },
-          {
-            "value": "\"whatsapp\""
-          },
-          {
-            "value": "\"yahoo\""
-          },
-          {
-            "value": "\"youtube\""
+            "value": "\"text\""
           },
           {
             "value": "\"cloud\""
-          },
-          {
-            "value": "\"text\""
           },
           {
             "value": "\"text secondary\""
@@ -1208,9 +1046,6 @@
           },
           {
             "value": "\"cloud dark\""
-          },
-          {
-            "value": "\"dribble\""
           }
         ]
       }

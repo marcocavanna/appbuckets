@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 import { IFormatNumberConfig } from '@appbuckets/formatters';
 
 import {
@@ -32,6 +34,9 @@ export interface StrictNumericInputProps extends StrictFieldProps, IFormatNumber
 
   /** On Focus Event */
   onFocus?: FocusHandler<HTMLInputElement, NumericInputProps>;
+
+  /** Ref to Input element */
+  ref?: React.Ref<HTMLInputElement>;
 
   /** Auto Select all content on click */
   selectAllOnClick?: boolean;

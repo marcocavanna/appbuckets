@@ -20,9 +20,7 @@ import { InputProps } from './Input.types';
 /* --------
  * Component Render
  * -------- */
-type InputComponent = React.VFC<InputProps & React.RefAttributes<HTMLInputElement>>;
-
-const Input: InputComponent = React.forwardRef<HTMLInputElement, InputProps>((
+const Input: React.VFC<InputProps> = React.forwardRef<HTMLInputElement, InputProps>((
   receivedProps, ref
 ) => {
 
