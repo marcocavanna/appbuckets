@@ -34,10 +34,10 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = (receivedProps) =
     className,
     rest: {
       clearable,
-      color: userDefinedDefaultColor,
+      color: userDefinedColor,
       colors,
       disabled,
-      defaultColor: userDefinedColor,
+      defaultColor: userDefinedDefaultColor,
       defaultOpen : userDefinedDefaultOpen,
       onClick,
       onChange,
