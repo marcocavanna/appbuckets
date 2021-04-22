@@ -178,6 +178,11 @@
     Panel Appearance
 ******/
 .panel {
+
+  &.solid > .body {
+    box-shadow: none !important;
+  }
+
   @each $label, $color in $react-bucket-color-map {
     &.is-#{$label} {
       $shadow: inset 0 $panel-appearance-border-consistence 0 (-$panel-appearance-border-consistence + $panel-appearance-border-width) $color;
@@ -186,14 +191,8 @@
         box-shadow: $shadow;
       }
 
-      &.solid {
-        > .head {
-          box-shadow: $shadow;
-        }
-
-        > .body {
-          box-shadow: none !important;
-        }
+      &.solid > .head {
+        box-shadow: $shadow;
       }
     }
   }

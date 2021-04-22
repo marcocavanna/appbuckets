@@ -416,26 +416,4 @@ export type UIColor =
   | 'cloud'
   | 'cloud dark';
 
-export type SocialColor =
-  'facebook'
-  | 'twitter'
-  | 'youtube'
-  | 'instagram'
-  | 'pinterest'
-  | 'linkedin'
-  | 'google'
-  | 'google-plus'
-  | 'whatsapp'
-  | 'tumblr'
-  | 'apple'
-  | 'amazon'
-  | 'microsoft'
-  | 'vimeo'
-  | 'skype'
-  | 'android'
-  | 'dribble'
-  | 'slack'
-  | 'yahoo'
-  | 'telegram';
-
-export type AppBucketsColor = BrandColor | UIColor | SocialColor;
+export type AppBucketsColor = BrandColor | UIColor;

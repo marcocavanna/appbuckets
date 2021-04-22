@@ -128,7 +128,6 @@ $button-hover-will-drop-shadow: true !default;
 /// Generate Button Variation using Colors
 $generate-button-brands-variation: true !default;
 $generate-button-ui-variation: true !default;
-$generate-button-social-variation: true !default;
 
 
 /******
@@ -311,7 +310,7 @@ $hero-button-shadow-strength: 10px !default;
 $hero-button-discreet-shadow-strength: 0 !default;
 $hero-button-shadow-opacity: .6 !default;
 $hero-button-discreet-shadow-opacity: .8 !default;
-$hero-button-color-variations: ($blue, $teal, $green, $yellow, $orange, $red, $pink, $purple, $facebook, $pinterest, $google-plus, $whatsapp, $amazon, $microsoft, $dribble, $telegram) !default;
+$hero-button-color-variations: ($blue, $teal, $green, $yellow, $orange, $red, $pink, $purple) !default;
 
 
 /******

@@ -3,7 +3,6 @@
   $properties-list: background-color,
   $use-brands: true,
   $use-ui: false,
-  $use-social: false,
   $is-interactive: false,
   $with-hover: false,
   $hover-will-drop-shadow: false,
@@ -29,11 +28,6 @@
   // Append UI Colors to variation
   @if $use-ui == true {
     $colors-variations: map-merge($colors-variations, $react-bucket-ui-colors-map);
-  }
-
-  // Append social color to variation
-  @if $use-social == true {
-    $colors-variations: map-merge($colors-variations, $react-bucket-socials-color-map);
   }
 
   // Build the base element style

@@ -88,7 +88,6 @@
       $properties-list: background-color,
       $use-brands: $generate-button-brands-variation,
       $use-ui: $generate-button-ui-variation,
-      $use-social: $generate-button-social-variation,
       $is-interactive: true,
       $hover-will-drop-shadow: $button-hover-will-drop-shadow,
       $with-hover: true,
@@ -111,7 +110,6 @@
       $properties-list: color,
       $use-brands: $generate-button-brands-variation,
       $use-ui: $generate-button-ui-variation,
-      $use-social: $generate-button-social-variation,
       $is-interactive: true,
       $with-hover: true,
       $with-focus: true,
@@ -124,20 +122,26 @@
     //  Inverted Buttons has appearance color has font color
     //  The background color is a transparently variation of primary color
     // ----
+
+    /// Override the ripple color to current button color
+    > .ripple-container > .ripple {
+      background-color: currentColor !important;
+    }
+
+    /// Remove box shadow
+    &:not([disabled]):not(:disabled):not(.is-disabled):hover {
+      box-shadow: none;
+    }
+
+    /// Set color variation
     @each $label, $color in $react-bucket-color-map {
       &.is-#{$label} {
         background-color: transparentize($color, .8);
         color: $color;
 
-        /// Override the ripple color to current button color
-        > .ripple-container > .ripple {
-          background-color: currentColor;
-        }
-
         @include hover {
           &:not([disabled]):not(:disabled):not(.is-disabled):hover {
             background-color: transparentize($color, .9);
-            box-shadow: none;
           }
         }
       }

@@ -59,31 +59,6 @@ $purple: hsl(260, 52%, 62%) !default;
 
 
 /******
-    Social Media Colors
-******/
-$facebook: hsl(214, 89%, 52%) !default;
-$twitter: hsl(203, 89%, 53%) !default;
-$youtube: hsl(0, 100%, 50%) !default;
-$instagram: hsl(313, 65%, 46%) !default;
-$pinterest: hsl(353, 92%, 39%) !default;
-$linkedin: hsl(199, 100%, 35%) !default;
-$google: hsl(217, 89%, 61%) !default;
-$google-plus: hsl(5, 69%, 54%) !default;
-$whatsapp: hsl(142, 70%, 49%) !default;
-$tumblr: hsl(215, 27%, 29%) !default;
-$apple: hsl(201, 11%, 68%) !default;
-$amazon: hsl(36, 100%, 50%) !default;
-$microsoft: hsl(13, 90%, 54%) !default;
-$vimeo: hsl(195, 83%, 51%) !default;
-$skype: hsl(196, 100%, 47%) !default;
-$android: hsl(74, 55%, 50%) !default;
-$dribble: hsl(337, 79%, 61%) !default;
-$slack: hsl(299, 56%, 19%) !default;
-$yahoo: hsl(266, 97%, 30%) !default;
-$telegram: hsl(200, 100%, 40%) !default;
-
-
-/******
     UI Colors
 ******/
 $primary: $blue !default;
@@ -127,29 +102,6 @@ $react-bucket-ui-colors-map: (
   'cloud-dark' : $cloud-dark
 );
 
-$react-bucket-socials-color-map: (
-  'facebook' : $facebook,
-  'twitter' : $twitter,
-  'youtube' : $youtube,
-  'instagram' : $instagram,
-  'pinterest' : $pinterest,
-  'linkedin' : $linkedin,
-  'google' : $google,
-  'google-plus' : $google-plus,
-  'whatsapp' : $whatsapp,
-  'tumblr' : $tumblr,
-  'apple' : $apple,
-  'amazon' : $amazon,
-  'microsoft' : $microsoft,
-  'vimeo' : $vimeo,
-  'skype' : $skype,
-  'android' : $android,
-  'dribble' : $dribble,
-  'slack' : $slack,
-  'yahoo' : $yahoo,
-  'telegram' : $telegram
-);
-
 $react-bucket-brand-colors-map: (
   'primary' : $primary,
   'warning' : $warning,
@@ -158,4 +110,4 @@ $react-bucket-brand-colors-map: (
   'danger' : $danger
 );
 
-$react-bucket-color-map: map-merge(map-merge($react-bucket-ui-colors-map, $react-bucket-socials-color-map), $react-bucket-brand-colors-map);
+$react-bucket-color-map: map-merge($react-bucket-ui-colors-map, $react-bucket-brand-colors-map);

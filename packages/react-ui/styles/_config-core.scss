@@ -161,4 +161,4 @@ $columns-count: 24 !default;
 $columns-gutter: $absolute-spacer * .5 !default;
 
 /// Set if must generate a dedicated style for row without column gutter
-$generate-row-without-gutter: true !default;
+$generate-row-without-gutter: false !default;
