@@ -149,7 +149,7 @@ async function run() {
     /** Parse the component */
     const parsed = docgen.parse(path.join(sourcePath, componentPath), {
       /** Add custom component types */
-      customComponentTypes: [ 'CreatableFunctionComponent', 'DropzoneComponent', '__type' ],
+      customComponentTypes: [ 'VoidFunctionComponent', 'CreatableFunctionComponent', 'DropzoneComponent', '__type' ],
       /** Remove all HTML Props */
       propFilter: (prop) => {
         if (prop.declarations !== undefined && prop.declarations.length > 0) {
