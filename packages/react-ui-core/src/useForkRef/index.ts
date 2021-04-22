@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { handleRef } from '@appbuckets/react-ui-core';
+import { handleRef } from '../utils/refUtils';
 
 
 export default function useForkRef<Instance>(
