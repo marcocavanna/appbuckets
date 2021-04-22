@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { useAutoControlledValue } from '@appbuckets/react-ui-core';
+import { useAutoControlledValue, useEnhancedEffect, useForkRef } from '@appbuckets/react-ui-core';
 import { formatNumber as defaultFormatNumber } from '@appbuckets/formatters';
 
 import { ChangeHandler, FocusHandler } from '../generic';
@@ -175,6 +175,32 @@ const NumericInput: NumericInputComponent = React.forwardRef<HTMLInputElement, N
   );
 
 
+  // ----
+  // Asserting Formatted Value is Visualized
+  // --
+  // Some libraries (as React Hook Form) will
+  // set the value using internal dispatcher and
+  // the ref object.
+  // This produce an unexpected behaviour resulting
+  // in an invalid formatted input.
+  // Use a render effect to avoid this
+  // ----
+
+  /** Get Refs and ref Handler */
+  const inputRef = React.useRef<HTMLInputElement>(null);
+  const handleRef = useForkRef(inputRef, ref);
+
+  /** Register an effect */
+  useEnhancedEffect(
+    () => {
+      /** Assert only on not focused element */
+      if (!isFocused && inputRef.current !== null) {
+        inputRef.current.value = formattedInputValue;
+      }
+    }
+  );
+
+
   /* --------
    * Handlers
    * -------- */
@@ -255,7 +281,7 @@ const NumericInput: NumericInputComponent = React.forwardRef<HTMLInputElement, N
   return (
     <Input
       {...restFieldProps}
-      ref={ref}
+      ref={handleRef}
       value={isFocused ? inputValue : formattedInputValue}
       onBlur={handleInputBlur}
       onChange={handleInputChange}
