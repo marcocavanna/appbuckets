@@ -18,3 +18,6 @@ export * from './HookedColorPicker';
 
 export { default as HookedInput } from './HookedInput';
 export * from './HookedInput';
+
+export { default as HookedNumericInput } from './HookedNumericInput';
+export * from './HookedNumericInput';
