@@ -6,13 +6,14 @@ import { createHookedField } from '../utils/createHookedField';
 import type { HookedFieldProps } from '../utils/createHookedField.types';
 
 
-export type HookedInputProps = HookedFieldProps<InputProps>;
+type HookedInputValueType = string | number | null;
+export type HookedInputProps = HookedFieldProps<InputProps, HookedInputValueType>;
 
 
 /* --------
  * Component Definition
  * -------- */
-const HookedInput = createHookedField<InputProps, HTMLInputElement, string | number | null, string>({
+const HookedInput = createHookedField<InputProps, HTMLInputElement, HookedInputValueType, string>({
 
   displayName: 'HookedInput',
 

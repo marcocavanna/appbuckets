@@ -7,8 +7,7 @@ import type {
   ControllerFieldState,
   ValidationRule,
   Message,
-  Validate,
-  FieldPathValue, FieldPath
+  Validate
 } from 'react-hook-form';
 
 
@@ -20,7 +19,7 @@ export interface CreateHookedFieldOptions<Props extends {} = {}, RefType = any, 
   Component: React.ComponentType<HookedFieldComponentProps<Props, RefType, TValue, TDisplayedValue>>;
 
   /** Set component default props */
-  defaultProps?: Partial<HookedFieldProps<Props>>;
+  defaultProps?: Partial<HookedFieldProps<Props, TValue>>;
 
   /** Set wrapped component display name */
   displayName?: string;
@@ -29,13 +28,13 @@ export interface CreateHookedFieldOptions<Props extends {} = {}, RefType = any, 
   formatValue?: HookedFieldFormatValue<Props, TValue, TDisplayedValue>;
 
   /** Override components Props */
-  overrideProps?: Partial<HookedFieldProps<Props>>;
+  overrideProps?: Partial<HookedFieldProps<Props, TValue>>;
 
   /** Parse the value received from HookedFields before save on form */
   parseValue?: HookedFieldParseValue<Props, TValue>;
 
   /** Global Validation options */
-  validation?: HookedFieldValidation<any, any>;
+  validation?: HookedFieldValidation<TValue>;
 }
 
 
@@ -43,15 +42,15 @@ export interface CreateHookedFieldOptions<Props extends {} = {}, RefType = any, 
  * Augmented Props used to render the Hooked Wrapped
  * field after applying the HOC Function
  * -------- */
-export type HookedFieldComponent<Props, RefType> =
-  React.ForwardRefExoticComponent<HookedFieldProps<Props> & React.RefAttributes<RefType>>;
+export type HookedFieldComponent<Props, RefType, TValue> =
+  React.ForwardRefExoticComponent<HookedFieldProps<Props, TValue> & React.RefAttributes<RefType>>;
 
-export type HookedFieldProps<Props> =
-  & StrictHookFieldProps<Props>
+export type HookedFieldProps<Props, TValue> =
+  & StrictHookFieldProps<Props, TValue>
   & SharedComponentStateProps
   & Props;
 
-export type StrictHookFieldProps<Props> = {
+export type StrictHookFieldProps<Props, TValue> = {
   /** The field name is required to let hook form work */
   name: string;
 
@@ -71,10 +70,10 @@ export type StrictHookFieldProps<Props> = {
   setTouchedOnChange?: boolean;
 
   /** Validation options */
-  validation?: HookedFieldValidation<any, string>;
+  validation?: HookedFieldValidation<TValue>;
 };
 
-export type HookedFieldValidation<Values, FieldName extends FieldPath<Values>> = {
+export type HookedFieldValidation<TValue> = {
   /** A Boolean which, if true, indicates that the input must have a value before the form can be submitted */
   required?: Message | ValidationRule<boolean>;
 
@@ -97,7 +96,7 @@ export type HookedFieldValidation<Values, FieldName extends FieldPath<Values>> =
    * You can pass a callback function as the argument to validate,
    * or you can pass an object of callback functions to validate all of them.
    */
-  validate?: Validate<FieldPathValue<Values, FieldName>>
+  validate?: Validate<TValue>
 };
 
 
@@ -114,7 +113,7 @@ export type HookedFieldFormatValue<Props, TValue, TDisplayedValue> = (
   /** Received Event from Component */
   value: TValue,
   /** Component Props */
-  props?: HookedFieldProps<Props>
+  props?: HookedFieldProps<Props, TValue>
 ) => TDisplayedValue;
 
 

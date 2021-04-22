@@ -20,7 +20,7 @@ import type {
  * -------- */
 export function createHookedField<Props, RefType, TValue, TDisplayedValue = TValue>(
   options: CreateHookedFieldOptions<Props, RefType, TValue, TDisplayedValue>
-): HookedFieldComponent<Props, RefType> {
+): HookedFieldComponent<Props, RefType, TValue> {
 
 
   // ----
@@ -40,9 +40,9 @@ export function createHookedField<Props, RefType, TValue, TDisplayedValue = TVal
   // ----
   // Component Definition
   // ----
-  const HookedField = React.forwardRef<RefType, HookedFieldProps<Props>>(
+  const HookedField = React.forwardRef<RefType, HookedFieldProps<Props, TValue>>(
     (
-      receivedProps: HookedFieldProps<Props>,
+      receivedProps: HookedFieldProps<Props, TValue>,
       ref: React.ForwardedRef<RefType>
     ) => {
 
@@ -199,5 +199,5 @@ export function createHookedField<Props, RefType, TValue, TDisplayedValue = TVal
   HookedField.displayName = displayName || 'HookedField';
   HookedField.defaultProps = defaultProps as any;
 
-  return HookedField as any as HookedFieldComponent<Props, RefType>;
+  return HookedField as any as HookedFieldComponent<Props, RefType, TValue>;
 }

@@ -6,13 +6,14 @@ import { createHookedField } from '../utils/createHookedField';
 import type { HookedFieldProps } from '../utils/createHookedField.types';
 
 
-export type HookedColorPickerProps = HookedFieldProps<ColorPickerProps>;
+type HookedColorPickerValueType = string | null;
+export type HookedColorPickerProps = HookedFieldProps<ColorPickerProps, HookedColorPickerValueType>;
 
 
 /* --------
  * Component Definition
  * -------- */
-const HookedColorPicker = createHookedField<ColorPickerProps, null, string | null>({
+const HookedColorPicker = createHookedField<ColorPickerProps, null, HookedColorPickerValueType>({
 
   displayName: 'HookedColorPicker',
 

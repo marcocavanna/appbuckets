@@ -6,13 +6,14 @@ import { createHookedField } from '../utils/createHookedField';
 import type { HookedFieldProps } from '../utils/createHookedField.types';
 
 
-export type HookedCheckboxProps = HookedFieldProps<CheckboxProps>;
+type HookedCheckboxValueType = boolean;
+export type HookedCheckboxProps = HookedFieldProps<CheckboxProps, HookedCheckboxValueType>;
 
 
 /* --------
  * Component Definition
  * -------- */
-const HookedCheckbox = createHookedField<CheckboxProps, HTMLInputElement, boolean>({
+const HookedCheckbox = createHookedField<CheckboxProps, HTMLInputElement, HookedCheckboxValueType>({
 
   displayName: 'HookedCheckbox',
 
