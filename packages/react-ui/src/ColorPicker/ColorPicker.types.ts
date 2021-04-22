@@ -1,8 +1,10 @@
+import { Merge } from '../generic';
+
 import { StrictFieldProps } from '../Field';
 import { ItemProps } from '../Item';
 
 
-export interface ColorPickerProps extends Omit<ItemProps, 'onChange'>, StrictColorPickerProps {
+export interface ColorPickerProps extends Merge<ItemProps, StrictColorPickerProps> {
 }
 
 export interface StrictColorPickerProps extends StrictFieldProps {

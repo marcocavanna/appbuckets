@@ -96,11 +96,17 @@ export { ShorthandItem, ShorthandCollection };
 /* --------
  * Re Export Icon name from FontAwesome
  * -------- */
-// export { IconName as FontAwesomeIcon };
-
 
 /** Generic Object */
 export type AnyObject = { [key: string]: any };
+
+export type Merge<P extends {}, T extends {}> = {
+  [K in keyof P]: K extends keyof T ? T[K] : P[K]
+};
+
+export type Subtract<P extends {}, T extends {}> = {
+  [K in keyof P]: K extends keyof T ? never : P[K]
+};
 
 
 /* --------
@@ -127,8 +133,8 @@ export type AppBucketsComponentProps<P, E extends keyof JSX.IntrinsicElements = 
  */
 export type MinimalAppBucketsComponentProps<P, E extends keyof JSX.IntrinsicElements = 'div'> =
   P
-  & Omit<CoreAppBucketsComponentProps, keyof P>
-  & Omit<JSX.IntrinsicElements[E], keyof P>
+  & Subtract<CoreAppBucketsComponentProps, P>
+  & Subtract<JSX.IntrinsicElements[E], P>
   & AnyObject;
 
 /**
