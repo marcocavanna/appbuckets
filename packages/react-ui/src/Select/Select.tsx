@@ -5,7 +5,8 @@ import clsx from 'clsx';
 import {
   CreatableFunctionComponent,
   createShorthandFactory,
-  useAutoControlledValue
+  useAutoControlledValue,
+  useForkRef
 } from '@appbuckets/react-ui-core';
 
 import ReactSelect, { ActionMeta, ValueType } from 'react-select';
@@ -18,7 +19,7 @@ import { splitFieldProps, useSharedClassName, useSplitStateClassName } from '../
 
 import Field from '../Field';
 
-import { SelectDefaultOption, SelectOption, SelectProps } from './Select.types';
+import { SelectDefaultOption, SelectOption, SelectProps, MutableReactSelect } from './Select.types';
 
 
 /* --------
@@ -26,8 +27,6 @@ import { SelectDefaultOption, SelectOption, SelectProps } from './Select.types';
  * -------- */
 export type SelectComponent<Option extends SelectOption = SelectDefaultOption> =
   CreatableFunctionComponent<SelectProps<Option>>;
-
-export type MutableReactSelect<Option> = ReactSelect<Option> | CreatableReactSelect<Option>;
 
 
 /* --------
@@ -98,18 +97,7 @@ const SelectRender: React.ForwardRefRenderFunction<MutableReactSelect<SelectDefa
 
     const fieldRef = React.useRef<HTMLDivElement>(null);
     const selectRef = React.useRef<MutableReactSelect<Option>>(null);
-
-    React.useEffect(
-      () => {
-        if (typeof ref === 'function') {
-          ref(selectRef.current);
-        }
-        else if (ref) {
-          ref.current = selectRef.current;
-        }
-      },
-      [ ref ]
-    );
+    const handleRef = useForkRef(ref, selectRef);
 
 
     // ----
@@ -363,7 +351,7 @@ const SelectRender: React.ForwardRefRenderFunction<MutableReactSelect<SelectDefa
       >
         <ElementType
           {...rest}
-          ref={ref}
+          ref={handleRef}
           className={classes}
           classNamePrefix={' '}
           getOptionValue={getOptionValueAsString}

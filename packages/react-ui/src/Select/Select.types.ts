@@ -1,9 +1,8 @@
 import { ReactNode } from 'react';
 import * as React from 'react';
 
-import {
-  ActionMeta
-} from 'react-select';
+import ReactSelect, { ActionMeta } from 'react-select';
+import CreatableReactSelect from 'react-select/creatable';
 
 import { SelectComponentsConfig } from 'react-select/src/components';
 
@@ -33,8 +32,6 @@ export type SelectDefaultOption = { label: string, value: string };
 /* --------
  * Define Main Props
  * -------- */
-// export interface Overridden extends Omit<ReportedProps<any>, 'onChange'> {}
-
 export type SelectProps<Option extends SelectOption = SelectDefaultOption, Value = string | number, FallbackValue = null> =
   StrictSelectProps<Option, Value, FallbackValue>
   & StrictFieldProps;
@@ -43,6 +40,8 @@ export type SelectProps<Option extends SelectOption = SelectDefaultOption, Value
 /* --------
  * Define Strict Select Props
  * -------- */
+export type MutableReactSelect<Option> = ReactSelect<Option> | CreatableReactSelect<Option>;
+
 export type SelectEventProps<Option extends SelectOption,
   Value = string | number,
   Fallback = null> =
@@ -290,6 +289,9 @@ export interface StrictSelectProps<Option extends SelectOption, Value = string |
 
   /** Placeholder text for the select value */
   placeholder?: React.ReactNode;
+
+  /** Ref to select */
+  ref?: React.Ref<MutableReactSelect<Option>>;
 
   /** Status to relay to screen readers */
   screenReaderStatus?: (obj: { count: number }) => string;
