@@ -14,4 +14,7 @@ export interface StrictFormProps {
 
   /** On Form Submit handler */
   onSubmit?: (e: React.FormEvent<HTMLFormElement>, props: FormProps) => void;
+
+  /** Ref to form element */
+  ref?: React.Ref<HTMLFormElement>;
 }

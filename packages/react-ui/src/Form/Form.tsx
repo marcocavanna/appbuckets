@@ -1,5 +1,6 @@
 import * as React from 'react';
 import clsx from 'clsx';
+
 import { useWithDefaultProps } from '../BucketTheme';
 
 import {
@@ -8,29 +9,14 @@ import {
 
 import { FormProps } from './Form.types';
 
-import Button from '../Button';
-import Checkbox from '../Checkbox';
-import DayPicker from '../DayPicker';
-import Input from '../Input';
-import Select from '../Select';
-
-
-/* --------
- * Declare Component
- * -------- */
-type FormChildren = {
-  Button: typeof Button;
-  Checkbox: typeof Checkbox;
-  DayPicker: typeof DayPicker;
-  Input: typeof Input;
-  Select: typeof Select;
-};
-
 
 /* --------
  * Component Render
  * -------- */
-const Form: React.FunctionComponent<FormProps> & FormChildren = (receivedProps) => {
+const Form: React.FunctionComponent<FormProps> = React.forwardRef<HTMLFormElement, FormProps>((
+  receivedProps,
+  ref
+) => {
 
   const props = useWithDefaultProps('form', receivedProps);
 
@@ -78,22 +64,12 @@ const Form: React.FunctionComponent<FormProps> & FormChildren = (receivedProps) 
    * Render the Form
    * -------- */
   return (
-    <form {...rest} className={classes} onSubmit={handleFormSubmit}>
+    <form {...rest} ref={ref} className={classes} onSubmit={handleFormSubmit}>
       {children}
     </form>
   );
-};
+});
 
 Form.displayName = 'Form';
-
-
-/* --------
- * Base Form Element
- * -------- */
-Form.Button = Button;
-Form.Checkbox = Checkbox;
-Form.DayPicker = DayPicker;
-Form.Input = Input;
-Form.Select = Select;
 
 export default Form;
