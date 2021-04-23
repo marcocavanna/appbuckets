@@ -1,7 +1,12 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
-import { useAutoControlledValue, useForkRef } from '@appbuckets/react-ui-core';
+import {
+  CreatableFunctionComponent,
+  createShorthandFactory,
+  useAutoControlledValue,
+  useForkRef
+} from '@appbuckets/react-ui-core';
 
 import {
   useSharedClassName,
@@ -236,4 +241,8 @@ const Checkbox: React.VFC<CheckboxProps> = React.forwardRef<HTMLInputElement, Ch
 
 Checkbox.displayName = 'Checkbox';
 
-export default Checkbox;
+(Checkbox as CreatableFunctionComponent<CheckboxProps>).create = createShorthandFactory(Checkbox, (label) => (
+  { label }
+));
+
+export default Checkbox as CreatableFunctionComponent<CheckboxProps>;
