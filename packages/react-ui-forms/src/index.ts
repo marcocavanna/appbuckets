@@ -22,8 +22,14 @@ export * from './HookedDayPicker';
 export { default as HookedInput } from './HookedInput';
 export * from './HookedInput';
 
+export { default as HookedMultiSelect } from './HookedMultiSelect';
+export * from './HookedMultiSelect';
+
 export { default as HookedNumericInput } from './HookedNumericInput';
 export * from './HookedNumericInput';
+
+export { default as HookedSelect } from './HookedSelect';
+export * from './HookedSelect';
 
 export { default as HookedTimeInput } from './HookedTimeInput';
 export * from './HookedTimeInput';
