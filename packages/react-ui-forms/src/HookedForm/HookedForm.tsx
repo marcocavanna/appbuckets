@@ -3,6 +3,8 @@ import clsx from 'clsx';
 
 import { useForm, SubmitHandler, SubmitErrorHandler } from 'react-hook-form';
 
+import Form from '@appbuckets/react-ui/Form';
+
 import { HookedFormContext, HookedFormProvider } from '../context/HookedForm.context';
 
 import { HookedFormProps } from './HookedForm.types';
@@ -163,7 +165,7 @@ const HookedForm = React.forwardRef<HTMLFormElement, HookedFormProps>((
   // ----
   return (
     <HookedFormProvider value={ctxValue}>
-      <form
+      <Form
         {...restFormComponent}
         ref={ref}
         className={classes}
@@ -173,7 +175,7 @@ const HookedForm = React.forwardRef<HTMLFormElement, HookedFormProps>((
           {children}
         </HookedFormContent>
         <HookedFormActions />
-      </form>
+      </Form>
     </HookedFormProvider>
   );
 
