@@ -100,6 +100,10 @@ export { ShorthandItem, ShorthandCollection };
 /** Generic Object */
 export type AnyObject = { [key: string]: any };
 
+export type ExcludeKeys<P extends {}, K extends string | number | symbol> = {
+  [KK in keyof P as KK extends K ? KK : never]: P[KK]
+};
+
 export type Merge<P extends {}, T extends {}> = {
   [K in keyof P]: K extends keyof T ? T[K] : P[K]
 };
@@ -133,8 +137,8 @@ export type AppBucketsComponentProps<P, E extends keyof JSX.IntrinsicElements = 
  */
 export type MinimalAppBucketsComponentProps<P, E extends keyof JSX.IntrinsicElements = 'div'> =
   P
-  & Subtract<CoreAppBucketsComponentProps, P>
-  & Subtract<JSX.IntrinsicElements[E], P>
+  & Omit<CoreAppBucketsComponentProps, keyof P>
+  & Omit<JSX.IntrinsicElements[E], keyof P>
   & AnyObject;
 
 /**
