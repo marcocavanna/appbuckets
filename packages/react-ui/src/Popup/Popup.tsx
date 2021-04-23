@@ -94,7 +94,7 @@ const Popup: React.FunctionComponent<PopupProps> = (receivedProps) => {
     [
       { name: 'arrow', enabled: false },
       { name: 'offset', enabled: !!offset, options: { offset } },
-      { name: 'preventOverflow', enabled: false }
+      { name: 'preventOverflow', enabled: true, options: { padding: 8 } }
     ],
     userDefinedPopperModifiers ?? [],
     [ offset ]
@@ -106,7 +106,8 @@ const Popup: React.FunctionComponent<PopupProps> = (receivedProps) => {
   const {
     styles: popperStyle,
     attributes,
-    update: scheduleUpdate
+    update: scheduleUpdate,
+    state
   } = usePopper(
     referenceElement,
     popperElement,
@@ -120,6 +121,15 @@ const Popup: React.FunctionComponent<PopupProps> = (receivedProps) => {
   // ----
   // Component LifeCycle Hooks
   // ----
+  const updateSchedulerDependencies = React.useMemo(
+    () => (
+      updateDependencies
+        ? [ scheduleUpdate, state, ...updateDependencies ]
+        : [ scheduleUpdate, state ]
+    ),
+    [ updateDependencies, scheduleUpdate, state ]
+  );
+
   React.useEffect(
     () => {
       /** On Dependencies Update, reload Position */
@@ -127,8 +137,8 @@ const Popup: React.FunctionComponent<PopupProps> = (receivedProps) => {
         scheduleUpdate();
       }
     },
-    // eslint-disable-next-line
-    updateDependencies ? [ scheduleUpdate, ...updateDependencies ] : [ scheduleUpdate, true ]
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [ updateSchedulerDependencies ]
   );
 
   React.useEffect(
