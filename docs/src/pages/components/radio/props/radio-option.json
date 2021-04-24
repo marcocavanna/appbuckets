@@ -1,178 +1,45 @@
 {
-  "filename": "packages/react-ui/src/Checkbox/Checkbox.tsx",
+  "filename": "packages/react-ui/src/Radio/RadioOption.tsx",
   "tags": {},
   "description": "",
-  "displayName": "Checkbox",
+  "displayName": "RadioOption",
   "props": {
-    "checked": {
-      "defaultValue": null,
-      "description": "Manual control checked state",
-      "name": "checked",
-      "parent": {
-        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-        "name": "StrictCheckboxProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-          "name": "StrictCheckboxProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "defaultChecked": {
-      "defaultValue": null,
-      "description": "Set the default checked value",
-      "name": "defaultChecked",
-      "parent": {
-        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-        "name": "StrictCheckboxProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-          "name": "StrictCheckboxProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "indeterminate": {
-      "defaultValue": null,
-      "description": "Is indeterminate",
-      "name": "indeterminate",
-      "parent": {
-        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-        "name": "StrictCheckboxProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-          "name": "StrictCheckboxProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "onChecked": {
-      "defaultValue": null,
-      "description": "On Checked Event",
-      "name": "onChecked",
-      "parent": {
-        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-        "name": "StrictCheckboxProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-          "name": "StrictCheckboxProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "ClickHandler<HTMLLabelElement, CheckboxProps>"
-      }
-    },
     "onClick": {
       "defaultValue": null,
-      "description": "On Click Handler",
+      "description": "On radio click event",
       "name": "onClick",
       "parent": {
-        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-        "name": "StrictCheckboxProps"
+        "fileName": "react-ui/src/Radio/RadioOption.types.ts",
+        "name": "StrictRadioOptionProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-          "name": "StrictCheckboxProps"
+          "fileName": "react-ui/src/Radio/RadioOption.types.ts",
+          "name": "StrictRadioOptionProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "ClickHandler<HTMLLabelElement, CheckboxProps>"
+        "name": "(e: MouseEvent<HTMLLabelElement, MouseEvent>, props: RadioOptionProps) => void"
       }
     },
-    "onUnchecked": {
+    "value": {
       "defaultValue": null,
-      "description": "On Unchecked Event",
-      "name": "onUnchecked",
+      "description": "Radio value",
+      "name": "value",
       "parent": {
-        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-        "name": "StrictCheckboxProps"
+        "fileName": "react-ui/src/Radio/RadioOption.types.ts",
+        "name": "StrictRadioOptionProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-          "name": "StrictCheckboxProps"
+          "fileName": "react-ui/src/Radio/RadioOption.types.ts",
+          "name": "StrictRadioOptionProps"
         }
       ],
-      "required": false,
+      "required": true,
       "type": {
-        "name": "ClickHandler<HTMLLabelElement, CheckboxProps>"
-      }
-    },
-    "radio": {
-      "defaultValue": null,
-      "description": "Format the Checkbox as a Radio Button",
-      "name": "radio",
-      "parent": {
-        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-        "name": "StrictCheckboxProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-          "name": "StrictCheckboxProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "ref": {
-      "defaultValue": null,
-      "description": "Ref to Input element",
-      "name": "ref",
-      "parent": {
-        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-        "name": "StrictCheckboxProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-          "name": "StrictCheckboxProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "Ref<HTMLInputElement>"
-      }
-    },
-    "switch": {
-      "defaultValue": null,
-      "description": "Format the Checkbox as a Switch",
-      "name": "switch",
-      "parent": {
-        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-        "name": "StrictCheckboxProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-          "name": "StrictCheckboxProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
+        "name": "string | number"
       }
     },
     "clearable": {
@@ -682,6 +549,158 @@
         {
           "fileName": "react-ui/src/generic.ts",
           "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "checked": {
+      "defaultValue": null,
+      "description": "Manual control checked state",
+      "name": "checked",
+      "parent": {
+        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
+        "name": "StrictCheckboxProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
+          "name": "StrictCheckboxProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "defaultChecked": {
+      "defaultValue": null,
+      "description": "Set the default checked value",
+      "name": "defaultChecked",
+      "parent": {
+        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
+        "name": "StrictCheckboxProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
+          "name": "StrictCheckboxProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "indeterminate": {
+      "defaultValue": null,
+      "description": "Is indeterminate",
+      "name": "indeterminate",
+      "parent": {
+        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
+        "name": "StrictCheckboxProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
+          "name": "StrictCheckboxProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "onChecked": {
+      "defaultValue": null,
+      "description": "On Checked Event",
+      "name": "onChecked",
+      "parent": {
+        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
+        "name": "StrictCheckboxProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
+          "name": "StrictCheckboxProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ClickHandler<HTMLLabelElement, CheckboxProps>"
+      }
+    },
+    "onUnchecked": {
+      "defaultValue": null,
+      "description": "On Unchecked Event",
+      "name": "onUnchecked",
+      "parent": {
+        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
+        "name": "StrictCheckboxProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
+          "name": "StrictCheckboxProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ClickHandler<HTMLLabelElement, CheckboxProps>"
+      }
+    },
+    "radio": {
+      "defaultValue": null,
+      "description": "Format the Checkbox as a Radio Button",
+      "name": "radio",
+      "parent": {
+        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
+        "name": "StrictCheckboxProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
+          "name": "StrictCheckboxProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "ref": {
+      "defaultValue": null,
+      "description": "Ref to Input element",
+      "name": "ref",
+      "parent": {
+        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
+        "name": "StrictCheckboxProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
+          "name": "StrictCheckboxProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "Ref<HTMLInputElement>"
+      }
+    },
+    "switch": {
+      "defaultValue": null,
+      "description": "Format the Checkbox as a Switch",
+      "name": "switch",
+      "parent": {
+        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
+        "name": "StrictCheckboxProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
+          "name": "StrictCheckboxProps"
         }
       ],
       "required": false,

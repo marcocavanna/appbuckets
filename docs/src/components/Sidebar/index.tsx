@@ -33,7 +33,8 @@ const menus: { elements: string[], section: string }[] = [
       'HeroButton',
       'Input',
       'MultiSelect',
-      'NumericInput'
+      'NumericInput',
+      'Radio'
     ]
   },
   {

@@ -4,75 +4,56 @@
   "description": "",
   "displayName": "ColorPicker",
   "props": {
-    "color": {
+    "active": {
       "defaultValue": null,
-      "description": "Manually control Color",
-      "name": "color",
+      "description": "Show item as Active",
+      "name": "active",
       "parent": {
-        "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-        "name": "StrictColorPickerProps"
+        "fileName": "react-ui/src/Item/Item.types.ts",
+        "name": "StrictItemProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-          "name": "StrictColorPickerProps"
+          "fileName": "react-ui/src/Item/Item.types.ts",
+          "name": "StrictItemProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "string"
+        "name": "boolean"
       }
     },
-    "colors": {
+    "avatar": {
       "defaultValue": null,
-      "description": "Color available",
-      "name": "colors",
+      "description": "Avatar Shorthand Props",
+      "name": "avatar",
       "parent": {
-        "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-        "name": "StrictColorPickerProps"
+        "fileName": "react-ui/src/Item/Item.types.ts",
+        "name": "StrictItemProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-          "name": "StrictColorPickerProps"
+          "fileName": "react-ui/src/Item/Item.types.ts",
+          "name": "StrictItemProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "string[]"
+        "name": "ShorthandItem<AvatarProps>"
       }
     },
-    "defaultColor": {
+    "centered": {
       "defaultValue": null,
-      "description": "Set initial Color",
-      "name": "defaultColor",
+      "description": "Align centered vertically",
+      "name": "centered",
       "parent": {
-        "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-        "name": "StrictColorPickerProps"
+        "fileName": "react-ui/src/Item/Item.types.ts",
+        "name": "StrictItemProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-          "name": "StrictColorPickerProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "defaultOpen": {
-      "defaultValue": null,
-      "description": "Set default Open State for Picker Popup",
-      "name": "defaultOpen",
-      "parent": {
-        "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-        "name": "StrictColorPickerProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-          "name": "StrictColorPickerProps"
+          "fileName": "react-ui/src/Item/Item.types.ts",
+          "name": "StrictItemProps"
         }
       ],
       "required": false,
@@ -82,16 +63,16 @@
     },
     "disabled": {
       "defaultValue": null,
-      "description": "Disable the Picker",
+      "description": "Show item as Disabled",
       "name": "disabled",
       "parent": {
-        "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-        "name": "StrictColorPickerProps"
+        "fileName": "react-ui/src/Item/Item.types.ts",
+        "name": "StrictItemProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-          "name": "StrictColorPickerProps"
+          "fileName": "react-ui/src/Item/Item.types.ts",
+          "name": "StrictItemProps"
         }
       ],
       "required": false,
@@ -99,75 +80,37 @@
         "name": "boolean"
       }
     },
-    "onChange": {
+    "onClick": {
       "defaultValue": null,
-      "description": "On Change Color event Handler",
-      "name": "onChange",
+      "description": "On Click event Handler",
+      "name": "onClick",
       "parent": {
-        "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-        "name": "StrictColorPickerProps"
+        "fileName": "react-ui/src/Item/Item.types.ts",
+        "name": "StrictItemProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-          "name": "StrictColorPickerProps"
+          "fileName": "react-ui/src/Item/Item.types.ts",
+          "name": "StrictItemProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "(nothing: null, props: ColorPickerProps) => void"
+        "name": "(e: MouseEvent<HTMLElement, MouseEvent>, props: ItemProps) => void"
       }
     },
-    "onPickerClose": {
+    "solid": {
       "defaultValue": null,
-      "description": "Handler for Picker Close event",
-      "name": "onPickerClose",
+      "description": "Put the Item into a Solid Box",
+      "name": "solid",
       "parent": {
-        "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-        "name": "StrictColorPickerProps"
+        "fileName": "react-ui/src/Item/Item.types.ts",
+        "name": "StrictItemProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-          "name": "StrictColorPickerProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "() => void"
-      }
-    },
-    "onPickerOpen": {
-      "defaultValue": null,
-      "description": "Handler for Picker Open event",
-      "name": "onPickerOpen",
-      "parent": {
-        "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-        "name": "StrictColorPickerProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-          "name": "StrictColorPickerProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "() => void"
-      }
-    },
-    "open": {
-      "defaultValue": null,
-      "description": "Manually control Open State for Picker Popup",
-      "name": "open",
-      "parent": {
-        "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-        "name": "StrictColorPickerProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-          "name": "StrictColorPickerProps"
+          "fileName": "react-ui/src/Item/Item.types.ts",
+          "name": "StrictItemProps"
         }
       ],
       "required": false,
@@ -175,87 +118,18 @@
         "name": "boolean"
       }
     },
-    "pickerType": {
+    "tools": {
       "defaultValue": null,
-      "description": "Set the Picker Type",
-      "name": "pickerType",
+      "description": "Shorthand tools",
+      "name": "tools",
       "parent": {
-        "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-        "name": "StrictColorPickerProps"
+        "fileName": "react-ui/src/Item/Item.types.ts",
+        "name": "StrictItemProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-          "name": "StrictColorPickerProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "enum",
-        "raw": "\"block\" | \"twitter\" | \"circle\"",
-        "value": [
-          {
-            "value": "\"block\""
-          },
-          {
-            "value": "\"twitter\""
-          },
-          {
-            "value": "\"circle\""
-          }
-        ]
-      }
-    },
-    "placeholder": {
-      "defaultValue": null,
-      "description": "Placeholder",
-      "name": "placeholder",
-      "parent": {
-        "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-        "name": "StrictColorPickerProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-          "name": "StrictColorPickerProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "showColorValue": {
-      "defaultValue": null,
-      "description": "Show the Color Value",
-      "name": "showColorValue",
-      "parent": {
-        "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-        "name": "StrictColorPickerProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/ColorPicker/ColorPicker.types.ts",
-          "name": "StrictColorPickerProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "actions": {
-      "defaultValue": null,
-      "description": "A Button to Show",
-      "name": "actions",
-      "parent": {
-        "fileName": "react-ui/src/Field/Field.types.ts",
-        "name": "StrictFieldProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Field/Field.types.ts",
-          "name": "StrictFieldProps"
+          "fileName": "react-ui/src/Item/Item.types.ts",
+          "name": "StrictItemProps"
         }
       ],
       "required": false,
@@ -263,342 +137,163 @@
         "name": "ShorthandCollection<ButtonProps>"
       }
     },
-    "actionsPosition": {
+    "content": {
       "defaultValue": null,
-      "description": "Set action button position, default to right",
-      "name": "actionsPosition",
+      "description": "Item Content shorthand",
+      "name": "content",
       "parent": {
-        "fileName": "react-ui/src/Field/Field.types.ts",
-        "name": "StrictFieldProps"
+        "fileName": "react-ui/src/Item/ItemContent.types.ts",
+        "name": "StrictItemContentProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/src/Field/Field.types.ts",
-          "name": "StrictFieldProps"
+          "fileName": "react-ui/src/Item/ItemContent.types.ts",
+          "name": "StrictItemContentProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "enum",
-        "raw": "\"left\" | \"right\"",
-        "value": [
-          {
-            "value": "\"left\""
-          },
-          {
-            "value": "\"right\""
-          }
-        ]
+        "name": "ShorthandItem<ItemContentProps>"
       }
     },
-    "clearable": {
+    "header": {
       "defaultValue": null,
-      "description": "Set the Field as Clearable",
-      "name": "clearable",
+      "description": "Item Header shorthand",
+      "name": "header",
       "parent": {
-        "fileName": "react-ui/src/Field/Field.types.ts",
-        "name": "StrictFieldProps"
+        "fileName": "react-ui/src/Item/ItemContent.types.ts",
+        "name": "StrictItemContentProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/src/Field/Field.types.ts",
-          "name": "StrictFieldProps"
+          "fileName": "react-ui/src/Item/ItemContent.types.ts",
+          "name": "StrictItemContentProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "boolean"
+        "name": "ShorthandItem<ItemHeaderProps>"
       }
     },
-    "contentClassName": {
+    "loading": {
       "defaultValue": null,
-      "description": "User defined className used for content element",
-      "name": "contentClassName",
+      "description": "Show the Loader instead of main content",
+      "name": "loading",
       "parent": {
-        "fileName": "react-ui/src/Field/Field.types.ts",
-        "name": "StrictFieldProps"
+        "fileName": "react-ui/src/Item/ItemContent.types.ts",
+        "name": "StrictItemContentProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/src/Field/Field.types.ts",
-          "name": "StrictFieldProps"
+          "fileName": "react-ui/src/Item/ItemContent.types.ts",
+          "name": "StrictItemContentProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "string"
+        "name": "boolean | LoaderProps"
       }
     },
-    "contentType": {
+    "meta": {
       "defaultValue": null,
-      "description": "Set field content type",
-      "name": "contentType",
+      "description": "Item Meta shorthand",
+      "name": "meta",
       "parent": {
-        "fileName": "react-ui/src/Field/Field.types.ts",
-        "name": "StrictFieldProps"
+        "fileName": "react-ui/src/Item/ItemContent.types.ts",
+        "name": "StrictItemContentProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/src/Field/Field.types.ts",
-          "name": "StrictFieldProps"
+          "fileName": "react-ui/src/Item/ItemContent.types.ts",
+          "name": "StrictItemContentProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "enum",
-        "raw": "\"color\" | \"input\" | \"select input\" | \"checkbox\" | \"radio\" | \"switch\"",
-        "value": [
-          {
-            "value": "\"color\""
-          },
-          {
-            "value": "\"input\""
-          },
-          {
-            "value": "\"select input\""
-          },
-          {
-            "value": "\"checkbox\""
-          },
-          {
-            "value": "\"radio\""
-          },
-          {
-            "value": "\"switch\""
-          }
-        ]
+        "name": "ShorthandItem<ItemMetaProps>"
       }
     },
-    "hint": {
+    "as": {
       "defaultValue": null,
-      "description": "An hint, appended after field content",
-      "name": "hint",
-      "parent": {
-        "fileName": "react-ui/src/Field/Field.types.ts",
-        "name": "StrictFieldProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Field/Field.types.ts",
-          "name": "StrictFieldProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
-    "hintClassName": {
-      "defaultValue": null,
-      "description": "User defined className used for hint element",
-      "name": "hintClassName",
-      "parent": {
-        "fileName": "react-ui/src/Field/Field.types.ts",
-        "name": "StrictFieldProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Field/Field.types.ts",
-          "name": "StrictFieldProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "icon": {
-      "defaultValue": null,
-      "description": "An Icon to Show",
-      "name": "icon",
-      "parent": {
-        "fileName": "react-ui/src/Field/Field.types.ts",
-        "name": "StrictFieldProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Field/Field.types.ts",
-          "name": "StrictFieldProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "AppBucketsIcon<IconProps>"
-      }
-    },
-    "iconPosition": {
-      "defaultValue": null,
-      "description": "Set the icon position, default to left",
-      "name": "iconPosition",
-      "parent": {
-        "fileName": "react-ui/src/Field/Field.types.ts",
-        "name": "StrictFieldProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Field/Field.types.ts",
-          "name": "StrictFieldProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "enum",
-        "raw": "\"left\" | \"right\"",
-        "value": [
-          {
-            "value": "\"left\""
-          },
-          {
-            "value": "\"right\""
-          }
-        ]
-      }
-    },
-    "isDirty": {
-      "defaultValue": null,
-      "description": "Set field as Dirty",
-      "name": "isDirty",
-      "parent": {
-        "fileName": "react-ui/src/Field/Field.types.ts",
-        "name": "StrictFieldProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Field/Field.types.ts",
-          "name": "StrictFieldProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "isFocused": {
-      "defaultValue": null,
-      "description": "Set field as Focused",
-      "name": "isFocused",
-      "parent": {
-        "fileName": "react-ui/src/Field/Field.types.ts",
-        "name": "StrictFieldProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Field/Field.types.ts",
-          "name": "StrictFieldProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "isTouched": {
-      "defaultValue": null,
-      "description": "Set field as Touched",
-      "name": "isTouched",
-      "parent": {
-        "fileName": "react-ui/src/Field/Field.types.ts",
-        "name": "StrictFieldProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Field/Field.types.ts",
-          "name": "StrictFieldProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "label": {
-      "defaultValue": null,
-      "description": "Field Label",
-      "name": "label",
-      "parent": {
-        "fileName": "react-ui/src/Field/Field.types.ts",
-        "name": "StrictFieldProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Field/Field.types.ts",
-          "name": "StrictFieldProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
-    "onClear": {
-      "defaultValue": null,
-      "description": "On Clear Button click",
-      "name": "onClear",
-      "parent": {
-        "fileName": "react-ui/src/Field/Field.types.ts",
-        "name": "StrictFieldProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Field/Field.types.ts",
-          "name": "StrictFieldProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "(e: MouseEvent<SVGSVGElement, MouseEvent>) => void"
-      }
-    },
-    "readOnly": {
-      "defaultValue": null,
-      "description": "Set field as read only",
-      "name": "readOnly",
-      "parent": {
-        "fileName": "react-ui/src/Field/Field.types.ts",
-        "name": "StrictFieldProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Field/Field.types.ts",
-          "name": "StrictFieldProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "required": {
-      "defaultValue": null,
-      "description": "Set the field as Required",
-      "name": "required",
-      "parent": {
-        "fileName": "react-ui/src/Field/Field.types.ts",
-        "name": "StrictFieldProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Field/Field.types.ts",
-          "name": "StrictFieldProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "appearance": {
-      "defaultValue": null,
-      "description": "Manually set the Element appearance by Color Pool",
-      "name": "appearance",
+      "description": "An Element used to Render the Component",
+      "name": "as",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "CoreAppBucketsComponentProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "CoreAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ElementType<any>"
+      }
+    },
+    "children": {
+      "defaultValue": null,
+      "description": "Main Component Content",
+      "name": "children",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "DOMAttributes"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "TypeLiteral"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
+    "className": {
+      "defaultValue": null,
+      "description": "User Defined Class Names",
+      "name": "className",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreAppBucketsComponentProps"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "HTMLAttributes"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "backgroundColor": {
+      "defaultValue": null,
+      "description": "Choose Main background Color",
+      "name": "backgroundColor",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
         }
       ],
       "required": false,
@@ -620,66 +315,6 @@
           },
           {
             "value": "\"warning\""
-          },
-          {
-            "value": "\"twitter\""
-          },
-          {
-            "value": "\"amazon\""
-          },
-          {
-            "value": "\"android\""
-          },
-          {
-            "value": "\"apple\""
-          },
-          {
-            "value": "\"facebook\""
-          },
-          {
-            "value": "\"google\""
-          },
-          {
-            "value": "\"google-plus\""
-          },
-          {
-            "value": "\"instagram\""
-          },
-          {
-            "value": "\"linkedin\""
-          },
-          {
-            "value": "\"microsoft\""
-          },
-          {
-            "value": "\"pinterest\""
-          },
-          {
-            "value": "\"skype\""
-          },
-          {
-            "value": "\"slack\""
-          },
-          {
-            "value": "\"telegram\""
-          },
-          {
-            "value": "\"tumblr\""
-          },
-          {
-            "value": "\"vimeo\""
-          },
-          {
-            "value": "\"whatsapp\""
-          },
-          {
-            "value": "\"yahoo\""
-          },
-          {
-            "value": "\"youtube\""
-          },
-          {
-            "value": "\"cloud\""
           },
           {
             "value": "\"text\""
@@ -724,10 +359,304 @@
             "value": "\"cloud light\""
           },
           {
-            "value": "\"cloud dark\""
+            "value": "\"cloud\""
           },
           {
-            "value": "\"dribble\""
+            "value": "\"cloud dark\""
+          }
+        ]
+      }
+    },
+    "display": {
+      "defaultValue": null,
+      "description": "Set element display",
+      "name": "display",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ResponsiveProps<ElementDisplay>"
+      }
+    },
+    "fontWeight": {
+      "defaultValue": null,
+      "description": "Define the main Font Weight",
+      "name": "fontWeight",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "FontWeight",
+        "value": [
+          {
+            "value": "\"light\""
+          },
+          {
+            "value": "\"regular\""
+          },
+          {
+            "value": "\"semi bold\""
+          },
+          {
+            "value": "\"bold\""
+          }
+        ]
+      }
+    },
+    "size": {
+      "defaultValue": null,
+      "description": "Change component size",
+      "name": "size",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "ElementSize",
+        "value": [
+          {
+            "value": "\"big\""
+          },
+          {
+            "value": "\"small\""
+          },
+          {
+            "value": "\"extra small\""
+          },
+          {
+            "value": "\"normal\""
+          },
+          {
+            "value": "\"large\""
+          },
+          {
+            "value": "\"huge\""
+          }
+        ]
+      }
+    },
+    "textAlign": {
+      "defaultValue": null,
+      "description": "Define Text Align",
+      "name": "textAlign",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "ContentAlign",
+        "value": [
+          {
+            "value": "\"left\""
+          },
+          {
+            "value": "\"center\""
+          },
+          {
+            "value": "\"right\""
+          }
+        ]
+      }
+    },
+    "textColor": {
+      "defaultValue": null,
+      "description": "Choose main text color",
+      "name": "textColor",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "AppBucketsColor",
+        "value": [
+          {
+            "value": "\"danger\""
+          },
+          {
+            "value": "\"info\""
+          },
+          {
+            "value": "\"primary\""
+          },
+          {
+            "value": "\"success\""
+          },
+          {
+            "value": "\"warning\""
+          },
+          {
+            "value": "\"text\""
+          },
+          {
+            "value": "\"text secondary\""
+          },
+          {
+            "value": "\"black\""
+          },
+          {
+            "value": "\"white\""
+          },
+          {
+            "value": "\"white shade\""
+          },
+          {
+            "value": "\"blue\""
+          },
+          {
+            "value": "\"teal\""
+          },
+          {
+            "value": "\"green\""
+          },
+          {
+            "value": "\"yellow\""
+          },
+          {
+            "value": "\"orange\""
+          },
+          {
+            "value": "\"red\""
+          },
+          {
+            "value": "\"pink\""
+          },
+          {
+            "value": "\"purple\""
+          },
+          {
+            "value": "\"cloud light\""
+          },
+          {
+            "value": "\"cloud\""
+          },
+          {
+            "value": "\"cloud dark\""
+          }
+        ]
+      }
+    },
+    "appearance": {
+      "defaultValue": null,
+      "description": "Manually set the Element appearance by Color Pool",
+      "name": "appearance",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedComponentStateProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedComponentStateProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "AppBucketsColor",
+        "value": [
+          {
+            "value": "\"danger\""
+          },
+          {
+            "value": "\"info\""
+          },
+          {
+            "value": "\"primary\""
+          },
+          {
+            "value": "\"success\""
+          },
+          {
+            "value": "\"warning\""
+          },
+          {
+            "value": "\"text\""
+          },
+          {
+            "value": "\"text secondary\""
+          },
+          {
+            "value": "\"black\""
+          },
+          {
+            "value": "\"white\""
+          },
+          {
+            "value": "\"white shade\""
+          },
+          {
+            "value": "\"blue\""
+          },
+          {
+            "value": "\"teal\""
+          },
+          {
+            "value": "\"green\""
+          },
+          {
+            "value": "\"yellow\""
+          },
+          {
+            "value": "\"orange\""
+          },
+          {
+            "value": "\"red\""
+          },
+          {
+            "value": "\"pink\""
+          },
+          {
+            "value": "\"purple\""
+          },
+          {
+            "value": "\"cloud light\""
+          },
+          {
+            "value": "\"cloud\""
+          },
+          {
+            "value": "\"cloud dark\""
           }
         ]
       }

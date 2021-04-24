@@ -42,6 +42,25 @@
         "name": "(e: FormEvent<HTMLFormElement>, props: FormProps) => void"
       }
     },
+    "ref": {
+      "defaultValue": null,
+      "description": "Ref to form element",
+      "name": "ref",
+      "parent": {
+        "fileName": "react-ui/src/Form/Form.types.ts",
+        "name": "StrictFormProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Form/Form.types.ts",
+          "name": "StrictFormProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "Ref<HTMLFormElement>"
+      }
+    },
     "as": {
       "defaultValue": null,
       "description": "An Element used to Render the Component",
@@ -58,7 +77,7 @@
       ],
       "required": false,
       "type": {
-        "name": "string | ComponentClass<{}, any> | FunctionComponent<{}>"
+        "name": "ElementType<any>"
       }
     },
     "children": {
@@ -127,7 +146,7 @@
       ],
       "required": false,
       "type": {
-        "name": "ReactNode"
+        "name": "ShorthandContent"
       }
     },
     "backgroundColor": {
@@ -211,66 +230,6 @@
           },
           {
             "value": "\"cloud dark\""
-          },
-          {
-            "value": "\"facebook\""
-          },
-          {
-            "value": "\"twitter\""
-          },
-          {
-            "value": "\"youtube\""
-          },
-          {
-            "value": "\"instagram\""
-          },
-          {
-            "value": "\"pinterest\""
-          },
-          {
-            "value": "\"linkedin\""
-          },
-          {
-            "value": "\"google\""
-          },
-          {
-            "value": "\"google-plus\""
-          },
-          {
-            "value": "\"whatsapp\""
-          },
-          {
-            "value": "\"tumblr\""
-          },
-          {
-            "value": "\"apple\""
-          },
-          {
-            "value": "\"amazon\""
-          },
-          {
-            "value": "\"microsoft\""
-          },
-          {
-            "value": "\"vimeo\""
-          },
-          {
-            "value": "\"skype\""
-          },
-          {
-            "value": "\"android\""
-          },
-          {
-            "value": "\"dribble\""
-          },
-          {
-            "value": "\"slack\""
-          },
-          {
-            "value": "\"yahoo\""
-          },
-          {
-            "value": "\"telegram\""
           }
         ]
       }
@@ -348,19 +307,19 @@
         "raw": "ElementSize",
         "value": [
           {
-            "value": "\"extra small\""
+            "value": "\"big\""
           },
           {
             "value": "\"small\""
+          },
+          {
+            "value": "\"extra small\""
           },
           {
             "value": "\"normal\""
           },
           {
             "value": "\"large\""
-          },
-          {
-            "value": "\"big\""
           },
           {
             "value": "\"huge\""
@@ -480,66 +439,6 @@
           },
           {
             "value": "\"cloud dark\""
-          },
-          {
-            "value": "\"facebook\""
-          },
-          {
-            "value": "\"twitter\""
-          },
-          {
-            "value": "\"youtube\""
-          },
-          {
-            "value": "\"instagram\""
-          },
-          {
-            "value": "\"pinterest\""
-          },
-          {
-            "value": "\"linkedin\""
-          },
-          {
-            "value": "\"google\""
-          },
-          {
-            "value": "\"google-plus\""
-          },
-          {
-            "value": "\"whatsapp\""
-          },
-          {
-            "value": "\"tumblr\""
-          },
-          {
-            "value": "\"apple\""
-          },
-          {
-            "value": "\"amazon\""
-          },
-          {
-            "value": "\"microsoft\""
-          },
-          {
-            "value": "\"vimeo\""
-          },
-          {
-            "value": "\"skype\""
-          },
-          {
-            "value": "\"android\""
-          },
-          {
-            "value": "\"dribble\""
-          },
-          {
-            "value": "\"slack\""
-          },
-          {
-            "value": "\"yahoo\""
-          },
-          {
-            "value": "\"telegram\""
           }
         ]
       }

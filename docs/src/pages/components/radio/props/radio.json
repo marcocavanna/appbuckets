@@ -1,21 +1,78 @@
 {
-  "filename": "packages/react-ui/src/Checkbox/Checkbox.tsx",
+  "filename": "packages/react-ui/src/Radio/Radio.tsx",
   "tags": {},
   "description": "",
-  "displayName": "Checkbox",
+  "displayName": "Radio",
   "props": {
-    "checked": {
+    "defaultValue": {
       "defaultValue": null,
-      "description": "Manual control checked state",
-      "name": "checked",
+      "description": "The default radio value",
+      "name": "defaultValue",
       "parent": {
-        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-        "name": "StrictCheckboxProps"
+        "fileName": "react-ui/src/Radio/Radio.types.ts",
+        "name": "StrictRadioProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-          "name": "StrictCheckboxProps"
+          "fileName": "react-ui/src/Radio/Radio.types.ts",
+          "name": "StrictRadioProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string | number"
+      }
+    },
+    "onChange": {
+      "defaultValue": null,
+      "description": "On Change Value event",
+      "name": "onChange",
+      "parent": {
+        "fileName": "react-ui/src/Radio/Radio.types.ts",
+        "name": "StrictRadioProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Radio/Radio.types.ts",
+          "name": "StrictRadioProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(e: MouseEvent<HTMLLabelElement, MouseEvent>, props: RadioProps) => void"
+      }
+    },
+    "options": {
+      "defaultValue": null,
+      "description": "Options shorthand collections",
+      "name": "options",
+      "parent": {
+        "fileName": "react-ui/src/Radio/Radio.types.ts",
+        "name": "StrictRadioProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Radio/Radio.types.ts",
+          "name": "StrictRadioProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ShorthandCollection<RadioOptionProps>"
+      }
+    },
+    "stacked": {
+      "defaultValue": null,
+      "description": "Display one option per line",
+      "name": "stacked",
+      "parent": {
+        "fileName": "react-ui/src/Radio/Radio.types.ts",
+        "name": "StrictRadioProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Radio/Radio.types.ts",
+          "name": "StrictRadioProps"
         }
       ],
       "required": false,
@@ -23,156 +80,70 @@
         "name": "boolean"
       }
     },
-    "defaultChecked": {
+    "value": {
       "defaultValue": null,
-      "description": "Set the default checked value",
-      "name": "defaultChecked",
+      "description": "Set value as controlled component",
+      "name": "value",
       "parent": {
-        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-        "name": "StrictCheckboxProps"
+        "fileName": "react-ui/src/Radio/Radio.types.ts",
+        "name": "StrictRadioProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-          "name": "StrictCheckboxProps"
+          "fileName": "react-ui/src/Radio/Radio.types.ts",
+          "name": "StrictRadioProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "boolean"
+        "name": "string | number"
       }
     },
-    "indeterminate": {
+    "actions": {
       "defaultValue": null,
-      "description": "Is indeterminate",
-      "name": "indeterminate",
+      "description": "A Button to Show",
+      "name": "actions",
       "parent": {
-        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-        "name": "StrictCheckboxProps"
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-          "name": "StrictCheckboxProps"
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "boolean"
+        "name": "ShorthandCollection<ButtonProps>"
       }
     },
-    "onChecked": {
+    "actionsPosition": {
       "defaultValue": null,
-      "description": "On Checked Event",
-      "name": "onChecked",
+      "description": "Set action button position, default to right",
+      "name": "actionsPosition",
       "parent": {
-        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-        "name": "StrictCheckboxProps"
+        "fileName": "react-ui/src/Field/Field.types.ts",
+        "name": "StrictFieldProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-          "name": "StrictCheckboxProps"
+          "fileName": "react-ui/src/Field/Field.types.ts",
+          "name": "StrictFieldProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "ClickHandler<HTMLLabelElement, CheckboxProps>"
-      }
-    },
-    "onClick": {
-      "defaultValue": null,
-      "description": "On Click Handler",
-      "name": "onClick",
-      "parent": {
-        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-        "name": "StrictCheckboxProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-          "name": "StrictCheckboxProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "ClickHandler<HTMLLabelElement, CheckboxProps>"
-      }
-    },
-    "onUnchecked": {
-      "defaultValue": null,
-      "description": "On Unchecked Event",
-      "name": "onUnchecked",
-      "parent": {
-        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-        "name": "StrictCheckboxProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-          "name": "StrictCheckboxProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "ClickHandler<HTMLLabelElement, CheckboxProps>"
-      }
-    },
-    "radio": {
-      "defaultValue": null,
-      "description": "Format the Checkbox as a Radio Button",
-      "name": "radio",
-      "parent": {
-        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-        "name": "StrictCheckboxProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-          "name": "StrictCheckboxProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "ref": {
-      "defaultValue": null,
-      "description": "Ref to Input element",
-      "name": "ref",
-      "parent": {
-        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-        "name": "StrictCheckboxProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-          "name": "StrictCheckboxProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "Ref<HTMLInputElement>"
-      }
-    },
-    "switch": {
-      "defaultValue": null,
-      "description": "Format the Checkbox as a Switch",
-      "name": "switch",
-      "parent": {
-        "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-        "name": "StrictCheckboxProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Checkbox/Checkbox.types.ts",
-          "name": "StrictCheckboxProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
+        "name": "enum",
+        "raw": "\"left\" | \"right\"",
+        "value": [
+          {
+            "value": "\"left\""
+          },
+          {
+            "value": "\"right\""
+          }
+        ]
       }
     },
     "clearable": {
@@ -230,25 +201,25 @@
       "required": false,
       "type": {
         "name": "enum",
-        "raw": "\"input\" | \"radio\" | \"switch\" | \"color\" | \"select input\" | \"checkbox\"",
+        "raw": "\"color\" | \"input\" | \"select input\" | \"checkbox\" | \"radio\" | \"switch\"",
         "value": [
           {
-            "value": "\"input\""
-          },
-          {
-            "value": "\"radio\""
-          },
-          {
-            "value": "\"switch\""
-          },
-          {
             "value": "\"color\""
+          },
+          {
+            "value": "\"input\""
           },
           {
             "value": "\"select input\""
           },
           {
             "value": "\"checkbox\""
+          },
+          {
+            "value": "\"radio\""
+          },
+          {
+            "value": "\"switch\""
           }
         ]
       }
@@ -777,29 +748,6 @@
         "name": "ShorthandContent"
       }
     },
-    "size": {
-      "defaultValue": null,
-      "description": "Change component size",
-      "name": "size",
-      "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
-        "name": "InputHTMLAttributes"
-      },
-      "declarations": [
-        {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
-          "name": "InputHTMLAttributes"
-        },
-        {
-          "fileName": "react-ui/src/generic.ts",
-          "name": "SharedAppBucketsComponentProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "never"
-      }
-    },
     "backgroundColor": {
       "defaultValue": null,
       "description": "Choose Main background Color",
@@ -934,6 +882,46 @@
           },
           {
             "value": "\"semi bold\""
+          }
+        ]
+      }
+    },
+    "size": {
+      "defaultValue": null,
+      "description": "Change component size",
+      "name": "size",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "SharedAppBucketsComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "SharedAppBucketsComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "ElementSize",
+        "value": [
+          {
+            "value": "\"big\""
+          },
+          {
+            "value": "\"small\""
+          },
+          {
+            "value": "\"extra small\""
+          },
+          {
+            "value": "\"normal\""
+          },
+          {
+            "value": "\"large\""
+          },
+          {
+            "value": "\"huge\""
           }
         ]
       }
