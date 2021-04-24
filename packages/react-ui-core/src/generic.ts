@@ -51,11 +51,14 @@ export interface ShorthandMethodOptions<P> {
   /** Auto Generate Key on Iteration */
   autoGenerateKey: boolean;
 
+  /** Get the Child Key */
+  childKey?: (props: P) => React.Key;
+
   /** Default Props to set */
-  defaultProps?: P;
+  defaultProps?: Partial<P>;
 
   /** Props that override computed ones */
-  overrideProps?: P | ((props: P) => P);
+  overrideProps?: Partial<P> | ((props: P) => Partial<P>);
 }
 
 

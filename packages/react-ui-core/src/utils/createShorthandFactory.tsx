@@ -16,10 +16,7 @@ import {
  * -------- */
 type ShorthandPropsMapper<P> = (value: ShorthandValue<P>) => Partial<P>;
 
-interface ShorthandComponentProps<P> extends AnyObject {
-  /** Child Key generator */
-  childKey?: React.Key | ((props: P) => React.Key)
-
+interface ShorthandComponentProps extends AnyObject {
   /** Main component content */
   children?: React.ReactNode | null;
 
@@ -44,12 +41,14 @@ interface ShorthandComponentProps<P> extends AnyObject {
  *
  * @param Component Component to Create
  * @param mapValueToProps Function to transform props
+ * @param getKey Function to get key from props
  * @param value Value to use
  * @param options Options to Apply
  */
-export function createShorthand<P extends ShorthandComponentProps<P> = {}>(
+export function createShorthand<P extends ShorthandComponentProps = {}>(
   Component: ShorthandedComponent<P>,
   mapValueToProps: ShorthandPropsMapper<P>,
+  getKey: ((props: P) => React.Key) | undefined,
   value: ShorthandValue<P>,
   options: ShorthandMethodOptions<P>
 ): React.ReactElement<P> | null {
@@ -129,13 +128,14 @@ export function createShorthand<P extends ShorthandComponentProps<P> = {}>(
 
   // Create the Key
   if (props.key == null) {
-    const { childKey } = props;
-    const { autoGenerateKey } = options;
+    const { autoGenerateKey, childKey } = options;
 
-    if (childKey != null) {
+    if (typeof getKey === 'function') {
+      props.key = getKey(props);
+    }
+    else if (childKey != null) {
       // Apply and Consume the Child Key props
       props.key = typeof childKey === 'function' ? childKey(props) : childKey;
-      delete props.childKey;
     }
     else if (autoGenerateKey && (valueIsString || valueIsNumber)) {
       props.key = (value as React.Key);
@@ -174,16 +174,18 @@ export function createShorthand<P extends ShorthandComponentProps<P> = {}>(
  *
  * @param Component The Component to Generate
  * @param mapValueToProps The function to map value to props
+ * @param getKey A function that will be used to get key
  */
 export function createShorthandFactory<P>(
   Component: ShorthandedComponent<P>,
-  mapValueToProps: ShorthandPropsMapper<P>
+  mapValueToProps: ShorthandPropsMapper<P>,
+  getKey?: (props: P) => React.Key
 ) {
   return function createFactoryElement(
     value: ShorthandValue<P>,
     options: ShorthandMethodOptions<P>
   ) {
-    return createShorthand(Component, mapValueToProps, value, options);
+    return createShorthand(Component, mapValueToProps, getKey, value, options);
   };
 }
 

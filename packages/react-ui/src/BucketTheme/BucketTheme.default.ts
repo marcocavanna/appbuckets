@@ -322,6 +322,13 @@ export const defaultBucketThemeConfig: ThemeOptions = {
 
 
   // ----
+  // Radio Component
+  // ----
+  radio      : {},
+  radioOption: {},
+
+
+  // ----
   // Row Component
   // ----
   row: {},

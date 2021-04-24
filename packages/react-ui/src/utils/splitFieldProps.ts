@@ -6,6 +6,7 @@ import { StrictFieldProps } from '../Field';
 const fieldPropsKey: ReadonlyArray<keyof StrictFieldProps> = [
   'actions',
   'actionsPosition',
+  'appearance',
   'clearable',
   'contentClassName',
   'contentType',

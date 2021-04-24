@@ -114,6 +114,9 @@ export * from './Panel';
 export { default as Popup } from './Popup';
 export * from './Popup';
 
+export { default as Radio } from './Radio';
+export * from './Radio';
+
 export { default as Row } from './Row';
 export * from './Row';
 

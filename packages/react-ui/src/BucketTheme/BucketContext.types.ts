@@ -41,6 +41,7 @@ import { MultiSelectProps } from '../MultiSelect';
 import { NumericInputProps } from '../NumericInput';
 import { PanelBodyProps, PanelFooterProps, PanelHeaderProps, PanelProps } from '../Panel';
 import { PopupProps } from '../Popup';
+import { RadioOptionProps, RadioProps } from '../Radio';
 import { RowProps } from '../Row';
 import { RxTableProps } from '../RxTable';
 import { SectionProps } from '../Section';
@@ -178,6 +179,10 @@ export interface ThemeOptions {
   panelHeader: ThemeComponentProps<PanelHeaderProps>;
 
   popup: ThemeComponentProps<PopupProps>;
+
+  radio: ThemeComponentProps<RadioProps>;
+
+  radioOption: ThemeComponentProps<RadioOptionProps>;
 
   row: ThemeComponentProps<RowProps>;
 
