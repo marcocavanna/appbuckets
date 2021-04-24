@@ -15,7 +15,7 @@ export type HookedMultiSelectProps<Option extends SelectOption = SelectDefaultOp
 /* --------
  * Component Definition
  * -------- */
-const HookedMultiSelectInner = createHookedField<MultiSelectProps<any>, any, HookedMultiSelectType>({
+const HookedMultiSelectInner = createHookedField<MultiSelectProps<any>, undefined, HookedMultiSelectType>({
 
   displayName: 'HookedMultiSelect',
 
@@ -40,8 +40,9 @@ const HookedMultiSelectInner = createHookedField<MultiSelectProps<any>, any, Hoo
 });
 
 function HookedMultiSelect<Option extends SelectOption = SelectDefaultOption>(props: HookedMultiSelectProps<Option>) {
+  const { ref, ...rest } = props;
   return (
-    <HookedMultiSelectInner {...props} />
+    <HookedMultiSelectInner {...rest} />
   );
 }
 

@@ -14,7 +14,7 @@ export type HookedSelectProps<Option extends SelectOption = SelectDefaultOption>
 /* --------
  * Component Definition
  * -------- */
-const HookedSelectInner = createHookedField<SelectProps<any>, null, HookeSelectValueType>({
+const HookedSelectInner = createHookedField<SelectProps<any>, undefined, HookeSelectValueType>({
 
   displayName: 'HookedSelect',
 
@@ -39,8 +39,9 @@ const HookedSelectInner = createHookedField<SelectProps<any>, null, HookeSelectV
 });
 
 function HookedSelect<Option extends SelectOption = SelectDefaultOption>(props: HookedSelectProps<Option>) {
+  const { ref, ...rest } = props;
   return (
-    <HookedSelectInner {...props} />
+    <HookedSelectInner {...rest} />
   );
 }
 
