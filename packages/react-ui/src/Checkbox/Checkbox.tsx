@@ -7,6 +7,7 @@ import {
   useAutoControlledValue,
   useForkRef
 } from '@appbuckets/react-ui-core';
+import { useField } from '../hooks/useField';
 
 import {
   useSharedClassName,
@@ -48,39 +49,43 @@ const Checkbox: React.VFC<CheckboxProps> = React.forwardRef<HTMLInputElement, Ch
       onUnchecked: handleUnchecked,
       switch     : asSwitch,
 
-      /** Overridden Checkbox Handlers */
-
-      /** Shared Checkbox/Field Props */
-      disabled,
-      required,
-      readOnly,
-
-      /** Strict Field Props */
-      contentClassName,
-      hint,
-      hintClassName,
-      icon,
-      iconPosition,
-      label,
-
       /** All other Checkbox props */
       ...rawRest
     }
   } = useSharedClassName(props);
 
-  const [ stateClassName, rest ] = useSplitStateClassName(rawRest);
+  const [ stateClassName ] = useSplitStateClassName(rawRest);
 
+  // ----
+  // Build field and Helpers
+  // ----
+  const {
+    fieldRef,
+    fieldProps: { label, ...fieldProps },
+    rest,
+    addClassesToField,
+    removeClassesFromField,
+    ...helpers
+  } = useField(rawRest);
+
+  const {
+    disabled,
+    readOnly,
+    required
+  } = fieldProps;
 
   /* --------
    * AutoControlled Checked State
    * -------- */
-  const [ checked, trySetChecked ] = useAutoControlledValue(false, { prop: checkedProp, defaultProp: defaultChecked });
+  const [ checked, trySetChecked ] = useAutoControlledValue(false, {
+    prop       : checkedProp,
+    defaultProp: defaultChecked
+  });
 
 
   /* --------
    * Internal Component Ref
    * -------- */
-  const fieldRef = React.useRef<HTMLDivElement>(null!);
   const inputRef = React.useRef<HTMLInputElement>(null);
   const handleRef = useForkRef(ref, inputRef);
 
@@ -90,18 +95,14 @@ const Checkbox: React.VFC<CheckboxProps> = React.forwardRef<HTMLInputElement, Ch
    * -------- */
   React.useEffect(
     () => {
-      if (!fieldRef.current) {
-        return;
-      }
-
       if (checked) {
-        fieldRef.current.classList.add('checked');
+        addClassesToField('checked');
       }
       else {
-        fieldRef.current.classList.remove('checked');
+        removeClassesFromField('checked');
       }
     },
-    [ checked, fieldRef ]
+    [ checked, addClassesToField, removeClassesFromField ]
   );
 
 
@@ -125,10 +126,7 @@ const Checkbox: React.VFC<CheckboxProps> = React.forwardRef<HTMLInputElement, Ch
   /* --------
    * Internal Checkbox Props
    * -------- */
-  const canToggle = React.useMemo(
-    () => !disabled && !readOnly && !(radio && checked),
-    [ disabled, readOnly, radio, checked ]
-  );
+  const canToggle = !disabled && !readOnly && !(radio && checked);
 
   const tabIndex = useTabIndex({
     disabled,
@@ -147,6 +145,10 @@ const Checkbox: React.VFC<CheckboxProps> = React.forwardRef<HTMLInputElement, Ch
     }
 
     e.stopPropagation();
+
+    /** Set field as touched and dirty */
+    helpers.setFieldClicked();
+    helpers.setFieldChanged();
 
     /** Build the Handler Params to be reused */
     const changeHandlerParams: [ React.MouseEvent<HTMLLabelElement>, CheckboxProps ] = [
@@ -195,8 +197,12 @@ const Checkbox: React.VFC<CheckboxProps> = React.forwardRef<HTMLInputElement, Ch
       htmlFor={rest.id}
       onClick={handleLabelClick}
     >
-      {checkboxIcon}
-      {label}
+      <div className={'checkbox-toggle'}>
+        {checkboxIcon}
+      </div>
+      {label && (
+        <span>{label}</span>
+      )}
     </label>
   );
 
@@ -207,21 +213,7 @@ const Checkbox: React.VFC<CheckboxProps> = React.forwardRef<HTMLInputElement, Ch
   return (
     <Field
       ref={fieldRef}
-      disabled={disabled}
-      required={required}
-      contentClassName={contentClassName}
-      hint={hint}
-      hintClassName={hintClassName}
-      icon={icon}
-      iconPosition={iconPosition}
-      readOnly={readOnly}
-      appearance={rawRest.appearance}
-      danger={rawRest.danger}
-      info={rawRest.info}
-      primary={rawRest.primary}
-      secondary={rawRest.secondary}
-      success={rawRest.success}
-      warning={rawRest.warning}
+      {...fieldProps}
       contentType={checkBoxType}
     >
       <input

@@ -133,8 +133,8 @@ $generate-button-ui-variation: true !default;
 /******
     Checkbox Style
 ******/
-$checkbox-size: 1.75em !default;
-$checkbox-label-padding: .75em !default;
+$checkbox-size: pixel-to-em(24) !default;
+$checkbox-label-padding: pixel-to-em(8) !default;
 $checkbox-border-radius: $border-radius-normal !default;
 $checkbox-background-color: $form-control-background-color !default;
 $checkbox-border-width: $form-control-border-width !default;
@@ -154,7 +154,6 @@ $switch-background-color: $checkbox-background-color !default;
 
 $toggle-bullet-size: 1.25em !default;
 
-$checkbox-label-distance: $checkbox-size + $checkbox-label-padding;
 $switch-label-distance: $switch-travel-distance + $checkbox-label-padding;
 $switch-computed-travel-distance: $switch-travel-distance - $switch-bullet-size - $switch-rail-expand-size;
 

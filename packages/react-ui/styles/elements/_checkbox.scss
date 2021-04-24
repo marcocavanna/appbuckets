@@ -30,10 +30,30 @@ input[type='radio'] {
 
 
 /******
+    Set Field Style for RadioGroup
+******/
+.radio-group {
+  &.field > .wrapper > .content {
+    margin: $columns-gutter * -1;
+    flex-wrap: wrap;
+
+    > .field {
+      padding: $columns-gutter;
+    }
+  }
+
+  &.stacked.field > .wrapper > .content {
+    flex-direction: column;
+  }
+}
+
+
+/******
     Set the Padding to the content
     to let the checkbox be visible
 ******/
 .checkbox .content,
+.radio .content,
 .switch .content {
   $__checkbox-field-padding: ($checkbox-size - 1em) / 1.5;
 
@@ -48,32 +68,39 @@ input[type='radio'] {
     Style the Label
 ******/
 .checkbox .content > label,
+.radio .content > label,
 .switch .content > label {
   // Heads Up! Cursor depends on disabled state
   cursor: default;
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   outline: none;
   font-weight: $checkbox-label-font-weight;
-  vertical-align: middle;
+  vertical-align: baseline;
 }
 
 
 /******
     Draw the Box of the Checkbox
 ******/
-.checkbox .content > label {
-  padding-left: $checkbox-label-distance;
+.checkbox .content > label,
+.radio .content > label {
+
+  // ----
+  //  Set Label Content Padding
+  // ----
+  > span {
+    padding-left: $checkbox-label-padding;
+  }
+
 
   // ----
   //  Draw the Box
   // ----
-  &:before {
-    position: absolute;
-    content: '';
-    top: 50%;
-    left: 1px;
-    transform: translateY(-50%);
+  > .checkbox-toggle {
+    position: relative;
 
     height: $checkbox-size;
     width: $checkbox-size;
@@ -87,35 +114,48 @@ input[type='radio'] {
     transition: background-color $transition-speed-fast $transition-ease,
     box-shadow $transition-speed-fast $transition-ease,
     opacity $transition-speed-fast $transition-ease;
+
+    // ----
+    //  Checkmark symbol
+    // ----
+    > svg.checkbox-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: auto;
+      margin: 0;
+
+      color: inherit;
+      opacity: 0;
+
+      will-change: opacity, color;
+      transition: opacity $transition-speed-fast $transition-ease,
+      color $transition-speed-fast $transition-ease;
+    }
   }
 
-  // ----
-  //  Checkmark symbol
-  // ----
-  > svg.checkbox-icon {
-    position: absolute;
-    top: 50%;
-    left: 1px;
-    transform: translate(2%, -48%);
-    width: $checkbox-size;
-    margin: 0;
-
-    text-align: center;
-    color: inherit;
-    opacity: 0;
-
-    will-change: opacity, color;
-    transition: opacity $transition-speed-fast $transition-ease,
-    color $transition-speed-fast $transition-ease;
-  }
 }
 
 
 /******
-    Fix the Padding for Unlabeled Checkbox
+    Draw the Radio
 ******/
-.checkbox .content > input.unlabeled + label {
-  padding-left: $checkbox-size;
+.radio .content > label {
+  // ----
+  //  Adjust the Box
+  // ----
+  > .checkbox-toggle {
+    border-radius: 50%;
+
+    // ----
+    //  Adjust the symbol
+    // ----
+    > svg.checkbox-icon {
+      transform: translate(-50%, -50%) scale(.75);
+      transform-origin: center center;
+    }
+  }
 }
 
 
@@ -123,17 +163,20 @@ input[type='radio'] {
     Draw the Switch
 ******/
 .switch .content > label {
-  padding-left: $switch-label-distance;
+
+  // ----
+  //  Set Label Content Padding
+  // ----
+  > span {
+    padding-left: $checkbox-label-padding;
+  }
+
 
   // ----
   //  Draw the Rail
   // ----
-  &:before {
-    position: absolute;
-    content: '';
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+  > .checkbox-toggle {
+    position: relative;
 
     height: $switch-bullet-size + ($switch-rail-expand-size * 2);
     width: $switch-travel-distance;
@@ -147,40 +190,39 @@ input[type='radio'] {
     transition: background-color $transition-speed-fast $transition-ease,
     box-shadow $transition-speed-fast $transition-ease,
     opacity $transition-speed-fast $transition-ease;
+
+    // ----
+    //  Draw the Bullet
+    // ----
+    &:after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: $switch-rail-expand-size;
+      transform: translateY(-50%);
+
+      height: $switch-bullet-size;
+      width: $switch-bullet-size;
+
+      border-radius: $border-radius-rounded;
+      background-color: $switch-bullet-background-color;
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+
+      will-change: left, box-shadow;
+      transition: left $transition-speed-fast $transition-ease,
+      box-shadow $transition-speed-fast $transition-ease;
+    }
   }
 
-  // ----
-  //  Draw the Bullet
-  // ----
-  &:after {
-    position: absolute;
-    content: '';
-    top: 50%;
-    left: $switch-rail-expand-size;
-    transform: translateY(-50%);
-
-    height: $switch-bullet-size;
-    width: $switch-bullet-size;
-
-    border-radius: $border-radius-rounded;
-    background-color: $switch-bullet-background-color;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-
-    will-change: left, box-shadow;
-    transition: left $transition-speed-fast $transition-ease,
-    box-shadow $transition-speed-fast $transition-ease;
-  }
 }
 
 
 /******
     Checked State
 ******/
-.checkbox.field .indeterminate.checkbox + label {
-  &:before {
-    background-color: $checkbox-checked-background-color;
-    opacity: $checkbox-indeterminate-background-opacity;
-  }
+.checkbox.field .indeterminate.checkbox + label > .checkbox-toggle {
+  background-color: $checkbox-checked-background-color;
+  opacity: $checkbox-indeterminate-background-opacity;
 
   > svg.checkbox-icon {
     color: $checkbox-checked-checkmark-color;
@@ -188,20 +230,14 @@ input[type='radio'] {
   }
 }
 
-.checkbox.field .checked.checkbox + label {
-  &:before {
-    background-color: $checkbox-checked-background-color;
-  }
+.checkbox.field .checked.checkbox + label > .checkbox-toggle,
+.radio.field .checked.radio + label > .checkbox-toggle,
+.switch.field .checked.switch + label > .checkbox-toggle {
+  background-color: $checkbox-checked-background-color;
 
   > svg.checkbox-icon {
     color: $checkbox-checked-checkmark-color;
     opacity: 1;
-  }
-}
-
-.switch.field .checked.switch + label {
-  &:before {
-    background-color: $checkbox-checked-background-color;
   }
 
   &:after {
@@ -209,33 +245,12 @@ input[type='radio'] {
   }
 }
 
+
 @each $label, $color in $react-bucket-color-map {
-  .checkbox.field.is-#{$label} .checked.checkbox + label:before {
+  .checkbox.field.is-#{$label} .checked.checkbox + label > .checkbox-toggle,
+  .radio.field.is-#{$label} .checked.radio + label > .checkbox-toggle,
+  .switch.field.is-#{$label} .checked.switch + label > .checkbox-toggle {
     background-color: $color;
-  }
-
-  .switch.field.is-#{$label} .switch {
-    &.checked {
-      + label:before {
-        background-color: $color;
-      }
-
-      &:not(.disabled) {
-        @include hover {
-          + label:hover:before {
-            background-color: transparentize($color, .15);
-          }
-        }
-      }
-    }
-
-    &:not(.checked):not(.disabled) + label {
-      @include hover {
-        &:hover:before {
-          background-color: transparentize($color, .85);
-        }
-      }
-    }
   }
 }
 
@@ -245,14 +260,15 @@ input[type='radio'] {
     and some additional style on disabled
     checkbox
 ******/
-.checkbox.field:not(.disabled) .checkbox {
+.checkbox.field:not(.disabled) .checkbox,
+.radio.field:not(.disabled) .radio {
   + label {
     cursor: pointer;
   }
 
   &:not(.checked) + label {
     @include hover {
-      &:hover > svg.checkbox-icon {
+      &:hover svg.checkbox-icon {
         opacity: .5;
       }
     }
@@ -260,37 +276,15 @@ input[type='radio'] {
 
   &.checked + label {
     @include hover {
-      &:hover:before {
+      &:hover .checkbox-toggle {
         opacity: .75;
       }
     }
   }
 }
 
-.switch.field:not(.disabled) .switch {
-  + label {
-    cursor: pointer;
-  }
-
-  &:not(.checked) + label {
-    @include hover {
-      &:hover {
-        &:before {
-          background-color: transparentize($checkbox-checked-background-color, .75);
-        }
-      }
-    }
-  }
-
-  &.checked + label {
-    @include hover {
-      &:hover {
-        &:before {
-          background-color: transparentize($checkbox-checked-background-color, .15);
-        }
-      }
-    }
-  }
+.switch.field:not(.disabled) .switch + label {
+  cursor: pointer;
 }
 
 
@@ -298,6 +292,7 @@ input[type='radio'] {
     Apply Disabled State
 ******/
 .disabled.checkbox.field .content,
+.disabled.radio.field .content,
 .disabled.switch.field .content {
   opacity: $disabled-element-opacity;
 }
@@ -307,6 +302,7 @@ input[type='radio'] {
     Fix Text Align
 ******/
 .has-text-center > .checkbox.field,
+.has-text-center > .radio.field,
 .has-text-center > .switch.field {
   text-align: center;
 
