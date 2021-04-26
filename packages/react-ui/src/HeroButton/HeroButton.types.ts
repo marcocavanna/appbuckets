@@ -3,16 +3,16 @@ import * as React from 'react';
 import { ShorthandItem } from '@appbuckets/react-ui-core';
 
 import {
-  AppBucketsComponentProps,
+  UIMutableComponentProps,
   AppBucketsIcon,
-  SharedComponentStateProps
+  AppearanceProps
 } from '../generic';
 
 import { HeaderContentProps, HeaderSubheaderProps } from '../Header';
 import { IconProps } from '../Icon';
 
 
-export interface HeroButtonProps extends AppBucketsComponentProps<StrictHeroButtonProps>, SharedComponentStateProps {
+export interface HeroButtonProps extends UIMutableComponentProps<StrictHeroButtonProps>, AppearanceProps {
 }
 
 export interface StrictHeroButtonProps {

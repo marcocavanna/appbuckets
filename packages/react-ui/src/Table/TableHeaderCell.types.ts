@@ -1,11 +1,9 @@
-import {
-  AppBucketsComponentProps
-} from '../generic';
+import { UIMutableComponentProps } from '../generic';
 
 import { StrictTableCellProps } from './TableCell.types';
 
 
-export interface TableHeaderCellProps extends AppBucketsComponentProps<StrictTableHeaderCellProps, 'th'> {
+export interface TableHeaderCellProps extends UIMutableComponentProps<StrictTableHeaderCellProps, 'th'> {
 }
 
 export interface StrictTableHeaderCellProps extends StrictTableCellProps {

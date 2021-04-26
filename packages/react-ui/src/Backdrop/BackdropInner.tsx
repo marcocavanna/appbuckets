@@ -1,10 +1,7 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
-import {
-  childrenUtils,
-  useElementType
-} from '@appbuckets/react-ui-core';
+import { childrenUtils } from '@appbuckets/react-ui-core';
 
 import Fade from '../Fade';
 
@@ -14,14 +11,9 @@ import { BackdropInnerProps } from './BackdropInner.types';
 
 
 /* --------
- * Component Declare
- * -------- */
-type BackdropInnerComponent = React.FunctionComponent<BackdropInnerProps>;
-
-/* --------
  * Component Render
  * -------- */
-const BackdropInner: BackdropInnerComponent = (receivedProps) => {
+const BackdropInner: React.FunctionComponent<BackdropInnerProps> = (receivedProps) => {
 
   const props = useWithDefaultProps('backdropInner', receivedProps);
 
@@ -45,9 +37,6 @@ const BackdropInner: BackdropInnerComponent = (receivedProps) => {
   // ----
   const containerRef = React.useRef<HTMLElement>(null);
   const contentRef = React.useRef<HTMLDivElement>(null);
-
-  /** Get the render element type */
-  const ElementType = useElementType(BackdropInner, receivedProps, props);
 
 
   // ----
@@ -104,13 +93,13 @@ const BackdropInner: BackdropInnerComponent = (receivedProps) => {
       visible={visible}
       timeout={timeout}
     >
-      <ElementType {...rest} className={classes} onClick={handleClick}>
+      <div {...rest} className={classes} onClick={handleClick} role={'region'}>
         {innerContent && (
           <div ref={contentRef} className={contentClasses}>
             {innerContent}
           </div>
         )}
-      </ElementType>
+      </div>
     </Fade>
   );
 };

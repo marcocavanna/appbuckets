@@ -5,7 +5,7 @@ import { PortalProps, ShorthandItem } from '@appbuckets/react-ui-core';
 import { Placement, Rect } from '@popperjs/core';
 import { Modifier, StrictModifierNames } from 'react-popper';
 
-import { AppBucketsComponentProps } from '../generic';
+import { UIMutableComponentProps } from '../generic';
 
 import { HeaderProps } from '../Header';
 
@@ -32,7 +32,7 @@ export type PopupPosition =
   | 'bottom center';
 
 
-export interface PopupProps extends AppBucketsComponentProps<StrictPopupProps> {
+export interface PopupProps extends UIMutableComponentProps<StrictPopupProps> {
 
 }
 

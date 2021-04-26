@@ -2,13 +2,14 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   childrenUtils,
   Ref,
   handleRef,
   createShorthandFactory,
   useAutoControlledValue
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIComponent } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -30,7 +31,7 @@ function nextFrame(callback: FrameRequestCallback): void {
 /* --------
  * Component Render
  * -------- */
-const Collapsable: CreatableFunctionComponent<CollapsableProps> = (
+const Collapsable: Creatable<UIComponent<CollapsableProps>> = (
   receivedProps
 ) => {
 

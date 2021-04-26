@@ -3,7 +3,7 @@ import * as React from 'react';
 import { useAutoControlledValue, useEnhancedEffect, useForkRef } from '@appbuckets/react-ui-core';
 import { formatNumber as defaultFormatNumber } from '@appbuckets/formatters';
 
-import { ChangeHandler, FocusHandler } from '../generic';
+import { ChangeHandler, FocusHandler, UIComponent } from '../generic';
 
 import { useWithDefaultProps } from '../BucketTheme';
 
@@ -18,9 +18,7 @@ import { NumericInputProps } from './NumericInput.types';
 /* --------
  * Component Render
  * -------- */
-type NumericInputComponent = React.VFC<NumericInputProps & React.RefAttributes<HTMLInputElement>>;
-
-const NumericInput: NumericInputComponent = React.forwardRef<HTMLInputElement, NumericInputProps>((
+const NumericInput: UIComponent<NumericInputProps> = React.forwardRef<HTMLInputElement, NumericInputProps>((
   receivedProps, ref
 ) => {
 

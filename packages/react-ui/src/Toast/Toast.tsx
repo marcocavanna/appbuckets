@@ -6,6 +6,8 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
+import { UIMutableComponent } from '../generic';
+
 import {
   useSharedClassName,
   useSplitStateClassName
@@ -22,7 +24,7 @@ import { ToastProps } from './Toast.types';
 /* --------
  * Component Render
  * -------- */
-const Toast: React.FunctionComponent<ToastProps> = (receivedProps) => {
+const Toast: UIMutableComponent<ToastProps> = (receivedProps) => {
 
   const props = useWithDefaultProps('toast', receivedProps);
 
@@ -117,7 +119,9 @@ const Toast: React.FunctionComponent<ToastProps> = (receivedProps) => {
   if (!childrenUtils.isNil(children)) {
     return (
       <ElementType {...rest} className={classes} onClick={handleClick}>
-        {typeof children === 'function' ? (children as (...args: any[]) => void)({ dismiss: handleDismiss }) : children}
+        {typeof children === 'function'
+          ? (children as unknown as (...args: any[]) => void)({ dismiss: handleDismiss })
+          : children}
       </ElementType>
     );
   }

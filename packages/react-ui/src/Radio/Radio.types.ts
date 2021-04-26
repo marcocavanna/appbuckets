@@ -1,8 +1,8 @@
 import * as React from 'react';
 
 import {
-  AppBucketsComponentProps,
-  SharedComponentStateProps,
+  UIMutableVoidComponentProps,
+  AppearanceProps,
   ShorthandCollection
 } from '../generic';
 
@@ -11,7 +11,7 @@ import { StrictFieldProps } from '../Field';
 import { RadioOptionProps } from './RadioOption.types';
 
 
-export interface RadioProps extends AppBucketsComponentProps<StrictRadioProps>, SharedComponentStateProps {
+export interface RadioProps extends UIMutableVoidComponentProps<StrictRadioProps>, AppearanceProps {
 
 }
 

@@ -1222,6 +1222,25 @@
         "name": "ReactNode"
       }
     },
+    "ref": {
+      "defaultValue": null,
+      "description": "Ref to select",
+      "name": "ref",
+      "parent": {
+        "fileName": "react-ui/src/Select/Select.types.ts",
+        "name": "StrictSelectProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Select/Select.types.ts",
+          "name": "StrictSelectProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "Ref<MutableReactSelect<Option>>"
+      }
+    },
     "screenReaderStatus": {
       "defaultValue": null,
       "description": "Status to relay to screen readers",
@@ -1496,7 +1515,7 @@
       ],
       "required": false,
       "type": {
-        "name": "ReactNode"
+        "name": "ShorthandContent"
       }
     },
     "hintClassName": {
@@ -1638,7 +1657,7 @@
       ],
       "required": false,
       "type": {
-        "name": "ReactNode"
+        "name": "ShorthandContent"
       }
     },
     "onClear": {
@@ -1704,12 +1723,12 @@
       "name": "appearance",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -1718,70 +1737,13 @@
         "raw": "AppBucketsColor",
         "value": [
           {
-            "value": "\"amazon\""
-          },
-          {
-            "value": "\"android\""
-          },
-          {
-            "value": "\"apple\""
-          },
-          {
-            "value": "\"facebook\""
-          },
-          {
-            "value": "\"google\""
-          },
-          {
-            "value": "\"google-plus\""
-          },
-          {
-            "value": "\"instagram\""
-          },
-          {
-            "value": "\"linkedin\""
-          },
-          {
-            "value": "\"microsoft\""
-          },
-          {
-            "value": "\"pinterest\""
-          },
-          {
-            "value": "\"skype\""
-          },
-          {
-            "value": "\"slack\""
-          },
-          {
-            "value": "\"telegram\""
-          },
-          {
-            "value": "\"tumblr\""
-          },
-          {
-            "value": "\"twitter\""
-          },
-          {
-            "value": "\"vimeo\""
-          },
-          {
-            "value": "\"whatsapp\""
-          },
-          {
-            "value": "\"yahoo\""
-          },
-          {
-            "value": "\"youtube\""
+            "value": "\"text\""
           },
           {
             "value": "\"cloud\""
           },
           {
             "value": "\"info\""
-          },
-          {
-            "value": "\"text\""
           },
           {
             "value": "\"primary\""
@@ -1836,9 +1798,6 @@
           },
           {
             "value": "\"cloud dark\""
-          },
-          {
-            "value": "\"dribble\""
           }
         ]
       }
@@ -1849,12 +1808,12 @@
       "name": "danger",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -1868,12 +1827,12 @@
       "name": "info",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -1887,12 +1846,12 @@
       "name": "primary",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -1906,12 +1865,12 @@
       "name": "secondary",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -1925,12 +1884,12 @@
       "name": "success",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -1944,12 +1903,12 @@
       "name": "warning",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,

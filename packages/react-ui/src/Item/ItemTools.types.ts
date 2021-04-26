@@ -1,11 +1,11 @@
 import { ShorthandCollection } from '@appbuckets/react-ui-core';
 
-import { AppBucketsComponentProps } from '../generic';
+import { UIMutableComponentProps } from '../generic';
 
 import { ButtonProps } from '../Button';
 
 
-export interface ItemToolsProps extends AppBucketsComponentProps<StrictItemToolsProps> {
+export interface ItemToolsProps extends UIMutableComponentProps<StrictItemToolsProps> {
 }
 
 export interface StrictItemToolsProps {

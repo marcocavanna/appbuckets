@@ -1,9 +1,9 @@
 import { ShorthandCollection, ShorthandItem } from '@appbuckets/react-ui-core';
 
 import {
-  AppBucketsComponentProps,
+  UIMutableComponentProps,
   AppBucketsIcon,
-  SharedComponentStateProps
+  AppearanceProps
 } from '../generic';
 
 import { HeaderSubheaderProps } from './HeaderSubheader.types';
@@ -13,7 +13,7 @@ import { ButtonProps } from '../Button';
 import { IconProps } from '../Icon';
 
 
-export interface HeaderProps extends AppBucketsComponentProps<StrictHeaderProps>, SharedComponentStateProps {
+export interface HeaderProps extends UIMutableComponentProps<StrictHeaderProps>, AppearanceProps {
 
 }
 

@@ -1,9 +1,7 @@
-import {
-  AppBucketsComponentProps
-} from '../generic';
+import { UIMutableComponentProps } from '../generic';
 
 
-export interface ModalContentProps extends AppBucketsComponentProps<StrictModalContentProps> {
+export interface ModalContentProps extends UIMutableComponentProps<StrictModalContentProps> {
 }
 
 export interface StrictModalContentProps {

@@ -4,9 +4,10 @@ import clsx from 'clsx';
 import {
   childrenUtils,
   createShorthandFactory,
-  CreatableFunctionComponent,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import {
   useSharedClassName,
@@ -25,7 +26,7 @@ import { AvatarProps } from './Avatar.types';
 /* --------
  * Component Render
  * -------- */
-const Avatar: CreatableFunctionComponent<AvatarProps> = (receivedProps) => {
+const Avatar: Creatable<UIMutableComponent<AvatarProps>> = (receivedProps) => {
 
   /** Get component props */
   const props = useWithDefaultProps('avatar', receivedProps);

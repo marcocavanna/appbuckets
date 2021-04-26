@@ -2,11 +2,13 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   createShorthandFactory,
   useAutoControlledValue,
   useForkRef
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIVoidComponent } from '../generic';
+
 import { useField } from '../hooks/useField';
 
 import {
@@ -27,7 +29,7 @@ import { CheckboxProps } from './Checkbox.types';
 /* --------
  * Component Render
  * -------- */
-const Checkbox: React.VFC<CheckboxProps> = React.forwardRef<HTMLInputElement, CheckboxProps>((
+const Checkbox: UIVoidComponent<CheckboxProps> = React.forwardRef<HTMLInputElement, CheckboxProps>((
   receivedProps, ref
 ) => {
 
@@ -233,8 +235,8 @@ const Checkbox: React.VFC<CheckboxProps> = React.forwardRef<HTMLInputElement, Ch
 
 Checkbox.displayName = 'Checkbox';
 
-(Checkbox as CreatableFunctionComponent<CheckboxProps>).create = createShorthandFactory(Checkbox, (label) => (
+(Checkbox as Creatable<UIVoidComponent<CheckboxProps>>).create = createShorthandFactory(Checkbox, (label) => (
   { label }
 ));
 
-export default Checkbox as CreatableFunctionComponent<CheckboxProps>;
+export default Checkbox as Creatable<UIVoidComponent<CheckboxProps>>;

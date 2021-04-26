@@ -1723,12 +1723,12 @@
       "name": "appearance",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -1808,12 +1808,12 @@
       "name": "danger",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -1827,12 +1827,12 @@
       "name": "info",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -1846,12 +1846,12 @@
       "name": "primary",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -1865,12 +1865,12 @@
       "name": "secondary",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -1884,12 +1884,12 @@
       "name": "success",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -1903,12 +1903,12 @@
       "name": "warning",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,

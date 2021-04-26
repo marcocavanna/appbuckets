@@ -2,12 +2,13 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   createShorthandFactory,
   childrenUtils,
   useAutoControlledValue,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import { useRipples } from '../hooks/useRipples';
 
@@ -38,7 +39,7 @@ import ('./Menu').then(({ default: menuComponent }) => {
 /* --------
  * Component Render
  * -------- */
-const MenuItem: CreatableFunctionComponent<MenuItemProps> = (receivedProps) => {
+const MenuItem: Creatable<UIMutableComponent<MenuItemProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('menuItem', receivedProps);
 

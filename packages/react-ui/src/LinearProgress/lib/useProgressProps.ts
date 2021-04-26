@@ -1,7 +1,7 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
-import { MinimalAppBucketsComponentProps, AppBucketsColor } from '../../generic';
+import { UIMutableComponentStrictProps, AppBucketsColor } from '../../generic';
 
 import { StrictSharedProgressProps } from '../Shared.types';
 
@@ -25,7 +25,7 @@ export interface ProgressProps<P> {
   rest: Omit<P, keyof StrictSharedProgressProps | 'className'>;
 }
 
-type ExtendedSharedProgressProps = MinimalAppBucketsComponentProps<StrictSharedProgressProps>;
+type ExtendedSharedProgressProps = UIMutableComponentStrictProps<StrictSharedProgressProps>;
 
 export default function useProgressProps<P extends ExtendedSharedProgressProps>(props: P): ProgressProps<P> {
 

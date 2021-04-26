@@ -1,11 +1,14 @@
 import * as React from 'react';
 
-import { FlexContentVerticalAlign, MinimalAppBucketsComponentProps } from '../generic';
+import {
+  FlexContentVerticalAlign,
+  UIComponentStrictProps
+} from '../generic';
 
 import { FadeProps } from '../Fade';
 
 
-export interface BackdropInnerProps extends MinimalAppBucketsComponentProps<StrictBackdropInnerProps> {
+export interface BackdropInnerProps extends UIComponentStrictProps<StrictBackdropInnerProps> {
 }
 
 export interface StrictBackdropInnerProps {

@@ -1,9 +1,9 @@
-import { AppBucketsComponentProps } from '../generic';
+import { UIMutableComponentProps } from '../generic';
 
 import { StrictHeaderProps } from '../Header';
 
 
-export interface PanelHeaderProps extends AppBucketsComponentProps<StrictPanelHeaderProps> {
+export interface PanelHeaderProps extends UIMutableComponentProps<StrictPanelHeaderProps> {
 
 }
 

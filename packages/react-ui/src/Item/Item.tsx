@@ -2,11 +2,12 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   createShorthandFactory,
   childrenUtils,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import {
   useSharedClassName,
@@ -37,7 +38,9 @@ export type ItemChildren = {
 /* --------
  * Component Render
  * -------- */
-const Item: CreatableFunctionComponent<ItemProps> & ItemChildren = (receivedProps) => {
+const Item: Creatable<UIMutableComponent<ItemProps>> & ItemChildren = (
+  receivedProps
+) => {
 
   const props = useWithDefaultProps('item', receivedProps);
 

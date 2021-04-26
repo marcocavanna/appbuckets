@@ -2,12 +2,13 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   ShorthandCollection,
   childrenUtils,
   createShorthandFactory,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -34,7 +35,7 @@ import('./Button').then(({ default: buttonComponent }) => {
 /* --------
  * Component Render
  * -------- */
-const ButtonGroup: CreatableFunctionComponent<ButtonGroupProps> = (receivedProps) => {
+const ButtonGroup: Creatable<UIMutableComponent<ButtonGroupProps>> = (receivedProps) => {
 
   /** Get component props */
   const props = useWithDefaultProps('buttonGroup', receivedProps);

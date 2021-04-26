@@ -1,7 +1,7 @@
-import { AppBucketsComponentProps } from '../generic';
+import { UIMutableComponentProps } from '../generic';
 
 
-export interface HeaderSubheaderProps extends AppBucketsComponentProps<StrictHeaderSubheaderProps, 'h4'> {
+export interface HeaderSubheaderProps extends UIMutableComponentProps<StrictHeaderSubheaderProps, 'h4'> {
 
 }
 

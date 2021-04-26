@@ -5,6 +5,8 @@ import { useAutoControlledValue } from '@appbuckets/react-ui-core';
 
 import { BlockPicker, CirclePicker, ColorChangeHandler, TwitterPicker } from 'react-color';
 
+import { UIVoidComponent } from '../generic';
+
 import Popup from '../Popup/Popup';
 
 import {
@@ -25,7 +27,7 @@ import { ColorPickerProps } from './ColorPicker.types';
 /* --------
  * Component Render
  * -------- */
-const ColorPicker: React.FunctionComponent<ColorPickerProps> = (receivedProps) => {
+const ColorPicker: UIVoidComponent<ColorPickerProps> = (receivedProps) => {
 
   /** Get component props */
   const props = useWithDefaultProps('colorPicker', receivedProps);

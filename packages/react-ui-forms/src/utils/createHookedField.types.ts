@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import type { SharedComponentStateProps } from '@appbuckets/react-ui/generic';
+import type { AppearanceProps } from '@appbuckets/react-ui/generic';
 
 import type {
   FormState,
@@ -47,7 +47,7 @@ export type HookedFieldComponent<Props, RefType, TValue> =
 
 export type HookedFieldProps<Props, TValue> =
   & StrictHookFieldProps<Props, TValue>
-  & SharedComponentStateProps
+  & AppearanceProps
   & Props;
 
 export type StrictHookFieldProps<Props, TValue> = {
@@ -169,7 +169,7 @@ export interface HookedFieldComponentProps<Props, RefType, TValue, TDisplayedVal
  * -------- */
 export interface FieldMeta extends ControllerFieldState {
   /** Set field appearance */
-  appearance: SharedComponentStateProps;
+  appearance: AppearanceProps;
 
   /** True while form is submitting */
   isSubmitting: boolean;

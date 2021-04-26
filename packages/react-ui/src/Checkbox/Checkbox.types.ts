@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-import { ClickHandler, AppBucketsComponentProps } from '../generic';
+import { ClickHandler, UIVoidComponentProps } from '../generic';
 
 import { StrictFieldProps } from '../Field';
 
 
-export interface CheckboxProps extends AppBucketsComponentProps<StrictCheckboxProps, 'input'> {
+export interface CheckboxProps extends UIVoidComponentProps<StrictCheckboxProps, 'input'> {
 
 }
 

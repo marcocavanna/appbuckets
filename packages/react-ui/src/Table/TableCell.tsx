@@ -2,11 +2,12 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   childrenUtils,
   createShorthandFactory,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import {
   useSharedClassName,
@@ -32,7 +33,7 @@ type TableCellChildren = {
 /* --------
  * Component Render
  * -------- */
-const TableCell: CreatableFunctionComponent<TableCellProps> & TableCellChildren = (
+const TableCell: Creatable<UIMutableComponent<TableCellProps>> & TableCellChildren = (
   receivedProps
 ) => {
 

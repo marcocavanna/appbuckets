@@ -3,16 +3,16 @@ import * as React from 'react';
 import { ShorthandItem } from '@appbuckets/react-ui-core';
 
 import {
-  AppBucketsComponentProps,
+  UIMutableComponentProps,
   AppBucketsIcon,
-  SharedComponentStateProps
+  AppearanceProps
 } from '../generic';
 
 import { HeaderContentProps, HeaderSubheaderProps } from '../Header';
 import { IconProps } from '../Icon';
 
 
-export interface MessageProps extends AppBucketsComponentProps<StrictMessageProps>, SharedComponentStateProps {
+export interface MessageProps extends UIMutableComponentProps<StrictMessageProps>, AppearanceProps {
 }
 
 export interface StrictMessageProps {

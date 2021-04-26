@@ -2,11 +2,12 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   childrenUtils,
   createShorthandFactory,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import {
   useSharedClassName,
@@ -36,7 +37,7 @@ type PanelChildren = {
 /* --------
  * Component Render
  * -------- */
-const Panel: CreatableFunctionComponent<PanelProps> & PanelChildren = (receivedProps) => {
+const Panel: Creatable<UIMutableComponent<PanelProps>> & PanelChildren = (receivedProps) => {
 
   const props = useWithDefaultProps('panel', receivedProps);
 

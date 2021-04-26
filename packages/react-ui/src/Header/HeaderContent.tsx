@@ -2,11 +2,12 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   createShorthandFactory,
   getElementType,
   childrenUtils
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import { getSharedClassNames } from '../utils';
 
@@ -18,7 +19,7 @@ import { HeaderContentProps } from './HeaderContent.types';
 /* --------
  * Component Render
  * -------- */
-const HeaderContent: CreatableFunctionComponent<HeaderContentProps> = (
+const HeaderContent: Creatable<UIMutableComponent<HeaderContentProps>> = (
   receivedProps
 ) => {
 

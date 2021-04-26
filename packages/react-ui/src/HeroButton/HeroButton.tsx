@@ -3,6 +3,8 @@ import clsx from 'clsx';
 
 import { useElementType } from '@appbuckets/react-ui-core';
 
+import { UIMutableComponent } from '../generic';
+
 import {
   useSharedClassName,
   useSplitStateClassName
@@ -19,7 +21,7 @@ import { HeroButtonProps } from './HeroButton.types';
 /* --------
  * Component Render
  * -------- */
-const HeroButton: React.FunctionComponent<HeroButtonProps> = (receivedProps) => {
+const HeroButton: UIMutableComponent<HeroButtonProps> = (receivedProps) => {
 
   const props = useWithDefaultProps('heroButton', receivedProps);
 

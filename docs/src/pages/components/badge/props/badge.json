@@ -4,125 +4,18 @@
   "description": "",
   "displayName": "Badge",
   "props": {
-    "icon": {
-      "defaultValue": null,
-      "description": "Icon shorthand",
-      "name": "icon",
-      "parent": {
-        "fileName": "react-ui/src/Badge/Badge.types.ts",
-        "name": "StrictBadgeProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Badge/Badge.types.ts",
-          "name": "StrictBadgeProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "AppBucketsIcon<IconProps>"
-      }
-    },
-    "as": {
-      "defaultValue": null,
-      "description": "An Element used to Render the Component",
-      "name": "as",
-      "parent": {
-        "fileName": "react-ui/src/generic.ts",
-        "name": "CoreAppBucketsComponentProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/generic.ts",
-          "name": "CoreAppBucketsComponentProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "ElementType<any>"
-      }
-    },
-    "children": {
-      "defaultValue": null,
-      "description": "Main Component Content",
-      "name": "children",
-      "parent": {
-        "fileName": "react-ui/src/generic.ts",
-        "name": "CoreAppBucketsComponentProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/generic.ts",
-          "name": "CoreAppBucketsComponentProps"
-        },
-        {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
-          "name": "DOMAttributes"
-        },
-        {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
-          "name": "TypeLiteral"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
-    "className": {
-      "defaultValue": null,
-      "description": "User Defined Class Names",
-      "name": "className",
-      "parent": {
-        "fileName": "react-ui/src/generic.ts",
-        "name": "CoreAppBucketsComponentProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/generic.ts",
-          "name": "CoreAppBucketsComponentProps"
-        },
-        {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
-          "name": "HTMLAttributes"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "content": {
-      "defaultValue": null,
-      "description": "Content Shorthand",
-      "name": "content",
-      "parent": {
-        "fileName": "react-ui/src/generic.ts",
-        "name": "CoreAppBucketsComponentProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/generic.ts",
-          "name": "CoreAppBucketsComponentProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
     "backgroundColor": {
       "defaultValue": null,
       "description": "Choose Main background Color",
       "name": "backgroundColor",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedAppBucketsComponentProps"
+        "name": "ComponentDisplayProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedAppBucketsComponentProps"
+          "name": "ComponentDisplayProps"
         }
       ],
       "required": false,
@@ -130,6 +23,9 @@
         "name": "enum",
         "raw": "AppBucketsColor",
         "value": [
+          {
+            "value": "\"text\""
+          },
           {
             "value": "\"danger\""
           },
@@ -144,69 +40,6 @@
           },
           {
             "value": "\"warning\""
-          },
-          {
-            "value": "\"amazon\""
-          },
-          {
-            "value": "\"android\""
-          },
-          {
-            "value": "\"apple\""
-          },
-          {
-            "value": "\"facebook\""
-          },
-          {
-            "value": "\"google\""
-          },
-          {
-            "value": "\"google-plus\""
-          },
-          {
-            "value": "\"instagram\""
-          },
-          {
-            "value": "\"linkedin\""
-          },
-          {
-            "value": "\"microsoft\""
-          },
-          {
-            "value": "\"pinterest\""
-          },
-          {
-            "value": "\"skype\""
-          },
-          {
-            "value": "\"slack\""
-          },
-          {
-            "value": "\"telegram\""
-          },
-          {
-            "value": "\"tumblr\""
-          },
-          {
-            "value": "\"twitter\""
-          },
-          {
-            "value": "\"vimeo\""
-          },
-          {
-            "value": "\"whatsapp\""
-          },
-          {
-            "value": "\"yahoo\""
-          },
-          {
-            "value": "\"youtube\""
-          },
-          {
-            "value": "\"cloud\""
-          },
-          {
-            "value": "\"text\""
           },
           {
             "value": "\"text secondary\""
@@ -248,10 +81,10 @@
             "value": "\"cloud light\""
           },
           {
-            "value": "\"cloud dark\""
+            "value": "\"cloud\""
           },
           {
-            "value": "\"dribble\""
+            "value": "\"cloud dark\""
           }
         ]
       }
@@ -262,12 +95,12 @@
       "name": "display",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedAppBucketsComponentProps"
+        "name": "ComponentDisplayProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedAppBucketsComponentProps"
+          "name": "ComponentDisplayProps"
         }
       ],
       "required": false,
@@ -281,12 +114,12 @@
       "name": "fontWeight",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedAppBucketsComponentProps"
+        "name": "ComponentDisplayProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedAppBucketsComponentProps"
+          "name": "ComponentDisplayProps"
         }
       ],
       "required": false,
@@ -295,9 +128,6 @@
         "raw": "FontWeight",
         "value": [
           {
-            "value": "\"bold\""
-          },
-          {
             "value": "\"light\""
           },
           {
@@ -305,6 +135,9 @@
           },
           {
             "value": "\"semi bold\""
+          },
+          {
+            "value": "\"bold\""
           }
         ]
       }
@@ -315,12 +148,12 @@
       "name": "size",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedAppBucketsComponentProps"
+        "name": "ComponentDisplayProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedAppBucketsComponentProps"
+          "name": "ComponentDisplayProps"
         }
       ],
       "required": false,
@@ -355,12 +188,12 @@
       "name": "textAlign",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedAppBucketsComponentProps"
+        "name": "ComponentDisplayProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedAppBucketsComponentProps"
+          "name": "ComponentDisplayProps"
         }
       ],
       "required": false,
@@ -386,12 +219,12 @@
       "name": "textColor",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedAppBucketsComponentProps"
+        "name": "ComponentDisplayProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedAppBucketsComponentProps"
+          "name": "ComponentDisplayProps"
         }
       ],
       "required": false,
@@ -399,6 +232,9 @@
         "name": "enum",
         "raw": "AppBucketsColor",
         "value": [
+          {
+            "value": "\"text\""
+          },
           {
             "value": "\"danger\""
           },
@@ -413,69 +249,6 @@
           },
           {
             "value": "\"warning\""
-          },
-          {
-            "value": "\"amazon\""
-          },
-          {
-            "value": "\"android\""
-          },
-          {
-            "value": "\"apple\""
-          },
-          {
-            "value": "\"facebook\""
-          },
-          {
-            "value": "\"google\""
-          },
-          {
-            "value": "\"google-plus\""
-          },
-          {
-            "value": "\"instagram\""
-          },
-          {
-            "value": "\"linkedin\""
-          },
-          {
-            "value": "\"microsoft\""
-          },
-          {
-            "value": "\"pinterest\""
-          },
-          {
-            "value": "\"skype\""
-          },
-          {
-            "value": "\"slack\""
-          },
-          {
-            "value": "\"telegram\""
-          },
-          {
-            "value": "\"tumblr\""
-          },
-          {
-            "value": "\"twitter\""
-          },
-          {
-            "value": "\"vimeo\""
-          },
-          {
-            "value": "\"whatsapp\""
-          },
-          {
-            "value": "\"yahoo\""
-          },
-          {
-            "value": "\"youtube\""
-          },
-          {
-            "value": "\"cloud\""
-          },
-          {
-            "value": "\"text\""
           },
           {
             "value": "\"text secondary\""
@@ -517,12 +290,115 @@
             "value": "\"cloud light\""
           },
           {
-            "value": "\"cloud dark\""
+            "value": "\"cloud\""
           },
           {
-            "value": "\"dribble\""
+            "value": "\"cloud dark\""
           }
         ]
+      }
+    },
+    "icon": {
+      "defaultValue": null,
+      "description": "Icon shorthand",
+      "name": "icon",
+      "parent": {
+        "fileName": "react-ui/src/Badge/Badge.types.ts",
+        "name": "StrictBadgeProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Badge/Badge.types.ts",
+          "name": "StrictBadgeProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "AppBucketsIcon<IconProps>"
+      }
+    },
+    "children": {
+      "defaultValue": null,
+      "description": "Main Component Content",
+      "name": "children",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreUIComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreUIComponentProps"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "DOMAttributes"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "TypeLiteral"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
+    "content": {
+      "defaultValue": null,
+      "description": "Content Shorthand",
+      "name": "content",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreUIComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreUIComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ShorthandContent"
+      }
+    },
+    "className": {
+      "defaultValue": null,
+      "description": "User Defined Class Names",
+      "name": "className",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreUIVoidComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreUIVoidComponentProps"
+        },
+        {
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "HTMLAttributes"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string"
+      }
+    },
+    "as": {
+      "defaultValue": null,
+      "description": "",
+      "name": "as",
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "TypeLiteral"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ElementType<any>"
       }
     },
     "appearance": {
@@ -531,12 +407,12 @@
       "name": "appearance",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -544,6 +420,9 @@
         "name": "enum",
         "raw": "AppBucketsColor",
         "value": [
+          {
+            "value": "\"text\""
+          },
           {
             "value": "\"danger\""
           },
@@ -558,69 +437,6 @@
           },
           {
             "value": "\"warning\""
-          },
-          {
-            "value": "\"amazon\""
-          },
-          {
-            "value": "\"android\""
-          },
-          {
-            "value": "\"apple\""
-          },
-          {
-            "value": "\"facebook\""
-          },
-          {
-            "value": "\"google\""
-          },
-          {
-            "value": "\"google-plus\""
-          },
-          {
-            "value": "\"instagram\""
-          },
-          {
-            "value": "\"linkedin\""
-          },
-          {
-            "value": "\"microsoft\""
-          },
-          {
-            "value": "\"pinterest\""
-          },
-          {
-            "value": "\"skype\""
-          },
-          {
-            "value": "\"slack\""
-          },
-          {
-            "value": "\"telegram\""
-          },
-          {
-            "value": "\"tumblr\""
-          },
-          {
-            "value": "\"twitter\""
-          },
-          {
-            "value": "\"vimeo\""
-          },
-          {
-            "value": "\"whatsapp\""
-          },
-          {
-            "value": "\"yahoo\""
-          },
-          {
-            "value": "\"youtube\""
-          },
-          {
-            "value": "\"cloud\""
-          },
-          {
-            "value": "\"text\""
           },
           {
             "value": "\"text secondary\""
@@ -662,10 +478,10 @@
             "value": "\"cloud light\""
           },
           {
-            "value": "\"cloud dark\""
+            "value": "\"cloud\""
           },
           {
-            "value": "\"dribble\""
+            "value": "\"cloud dark\""
           }
         ]
       }
@@ -676,12 +492,12 @@
       "name": "danger",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -695,12 +511,12 @@
       "name": "info",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -714,12 +530,12 @@
       "name": "primary",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -733,12 +549,12 @@
       "name": "secondary",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -752,12 +568,12 @@
       "name": "success",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -771,12 +587,12 @@
       "name": "warning",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,

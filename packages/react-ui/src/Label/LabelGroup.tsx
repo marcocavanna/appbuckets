@@ -6,6 +6,8 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
+import { UIMutableComponent } from '../generic';
+
 import { useSharedClassName } from '../utils';
 
 import { useWithDefaultProps } from '../BucketTheme';
@@ -27,15 +29,9 @@ import('./Label').then(({ default: labelComponent }) => {
 
 
 /* --------
- * Component Declare
- * -------- */
-type LabelGroupComponent = React.FunctionComponent<LabelGroupProps>;
-
-
-/* --------
  * Component Render
  * -------- */
-const LabelGroup: LabelGroupComponent = (receivedProps) => {
+const LabelGroup: UIMutableComponent<LabelGroupProps> = (receivedProps) => {
 
   const props = useWithDefaultProps('labelGroup', receivedProps);
 

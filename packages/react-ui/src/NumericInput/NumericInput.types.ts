@@ -3,14 +3,14 @@ import * as React from 'react';
 import { IFormatNumberConfig } from '@appbuckets/formatters';
 
 import {
-  AppBucketsComponentProps,
+  UIComponentProps,
   FocusHandler
 } from '../generic';
 
 import { StrictFieldProps } from '../Field';
 
 
-export interface NumericInputProps extends AppBucketsComponentProps<StrictNumericInputProps, 'input'> {
+export interface NumericInputProps extends UIComponentProps<StrictNumericInputProps, 'input'> {
 }
 
 export interface StrictNumericInputProps extends StrictFieldProps, IFormatNumberConfig {

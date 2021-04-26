@@ -1,10 +1,10 @@
-import { Merge } from '../generic';
+import { Merge, UIVoidComponentProps } from '../generic';
 
 import { StrictFieldProps } from '../Field';
-import { ItemProps } from '../Item';
+import { StrictItemProps } from '../Item';
 
 
-export interface ColorPickerProps extends Merge<ItemProps, StrictColorPickerProps> {
+export interface ColorPickerProps extends UIVoidComponentProps<Merge<StrictColorPickerProps, StrictItemProps>> {
 }
 
 export interface StrictColorPickerProps extends StrictFieldProps {

@@ -2,11 +2,12 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   childrenUtils,
   createShorthandFactory,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIComponent } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -18,7 +19,7 @@ import { ColumnProps } from './Column.types';
 /* --------
  * Component Render
  * -------- */
-const Column: CreatableFunctionComponent<ColumnProps> = (receivedProps) => {
+const Column: Creatable<UIComponent<ColumnProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('column', receivedProps);
 

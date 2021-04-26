@@ -5,6 +5,8 @@ import { Sticky as NativeSticky, StickyContainer } from 'react-sticky';
 
 import { childrenUtils, useElementType } from '@appbuckets/react-ui-core';
 
+import { UIMutableComponent } from '../generic';
+
 import { useSharedClassName } from '../utils';
 
 import { useWithDefaultProps } from '../BucketTheme';
@@ -15,7 +17,7 @@ import { StickyProps } from './Sticky.types';
 /* --------
  * Component Render
  * -------- */
-const Sticky: React.FunctionComponent<StickyProps> = (receivedProps) => {
+const Sticky: UIMutableComponent<StickyProps> = (receivedProps) => {
 
   const props = useWithDefaultProps('sticky', receivedProps);
 

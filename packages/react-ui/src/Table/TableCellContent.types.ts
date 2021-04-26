@@ -1,7 +1,7 @@
-import { AppBucketsComponentProps } from '../generic';
+import { UIMutableComponentProps } from '../generic';
 
 
-export interface TableCellContentProps extends AppBucketsComponentProps<StrictTableCellContentProps, 'p'> {
+export interface TableCellContentProps extends UIMutableComponentProps<StrictTableCellContentProps, 'p'> {
 }
 
 export interface StrictTableCellContentProps {

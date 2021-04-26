@@ -6,6 +6,8 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
+import { UIMutableComponent } from '../generic';
+
 import {
   useSplitStateClassName,
   useSharedClassName
@@ -22,7 +24,7 @@ import { MessageProps } from './Message.types';
 /* --------
  * Component Render
  * -------- */
-const Message: React.FunctionComponent<MessageProps> = (receivedProps) => {
+const Message: UIMutableComponent<MessageProps> = (receivedProps) => {
 
   const props = useWithDefaultProps('message', receivedProps);
 

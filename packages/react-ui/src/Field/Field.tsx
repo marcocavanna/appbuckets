@@ -2,10 +2,11 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   createShorthandFactory,
   childrenUtils
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIComponent } from '../generic';
 
 import {
   useSharedClassName,
@@ -212,8 +213,8 @@ const FieldRender: FieldRenderFunction = (
   );
 };
 
-const Field: CreatableFunctionComponent<FieldProps> = (
-  React.forwardRef(FieldRender) as unknown as CreatableFunctionComponent<FieldProps>
+const Field: Creatable<UIComponent<FieldProps>> = (
+  React.forwardRef(FieldRender) as unknown as Creatable<UIComponent<FieldProps>>
 );
 
 Field.defaultProps = {

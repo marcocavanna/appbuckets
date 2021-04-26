@@ -1,7 +1,7 @@
 import { ShorthandContent } from '@appbuckets/react-ui-core';
 
 import {
-  AppBucketsComponentProps,
+  UIMutableComponentProps,
   AppBucketsIcon
 } from '../generic';
 
@@ -10,7 +10,7 @@ import { IconProps } from '../Icon';
 
 export type SectionDirection = 'vertical' | 'horizontal';
 
-export interface SectionProps extends AppBucketsComponentProps<StrictSectionProps> {
+export interface SectionProps extends UIMutableComponentProps<StrictSectionProps> {
 }
 
 export interface StrictSectionProps {

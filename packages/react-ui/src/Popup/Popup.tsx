@@ -12,6 +12,8 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
+import { UIMutableComponent } from '../generic';
+
 import { useSharedClassName } from '../utils';
 
 import { useWithDefaultProps } from '../BucketTheme';
@@ -37,7 +39,7 @@ import('../Header/Header').then(({ default: importedHeader }) => {
 /* --------
  * Component Render
  * -------- */
-const Popup: React.FunctionComponent<PopupProps> = (receivedProps) => {
+const Popup: UIMutableComponent<PopupProps> = (receivedProps) => {
 
   const props = useWithDefaultProps('popup', receivedProps);
 

@@ -3,12 +3,12 @@ import * as React from 'react';
 import { Props as InputMaskProps } from 'react-input-mask';
 import { TextareaAutosizeProps } from 'react-textarea-autosize';
 
-import { ChangeHandler, ClickHandler, FocusHandler, AppBucketsComponentProps } from '../generic';
+import { ChangeHandler, ClickHandler, FocusHandler, UIVoidComponentProps } from '../generic';
 
 import { StrictFieldProps } from '../Field';
 
 
-export interface InputProps extends AppBucketsComponentProps<StrictInputProps, 'input'> {
+export interface InputProps extends UIVoidComponentProps<StrictInputProps, 'input'> {
 }
 
 export interface StrictInputProps extends StrictFieldProps {

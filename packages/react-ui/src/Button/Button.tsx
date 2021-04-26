@@ -2,11 +2,12 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   createShorthandFactory,
   childrenUtils,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import { useRipples } from '../hooks/useRipples';
 
@@ -35,7 +36,7 @@ type ButtonChildren = {
 /* --------
  * Component Render
  * -------- */
-const Button: CreatableFunctionComponent<ButtonProps> & ButtonChildren = (
+const Button: Creatable<UIMutableComponent<ButtonProps>> & ButtonChildren = (
   receivedProps
 ) => {
 

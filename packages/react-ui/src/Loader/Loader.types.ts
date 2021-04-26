@@ -1,10 +1,10 @@
-import { AppBucketsComponentProps, SharedComponentStateProps } from '../generic';
+import { UIMutableComponentProps, AppearanceProps } from '../generic';
 
 
 export type LoaderType = 'circular' | 'dots' | 'circular dots' | 'indeterminate bar';
 
 
-export interface LoaderProps extends AppBucketsComponentProps<StrictLoaderProps>, SharedComponentStateProps {
+export interface LoaderProps extends UIMutableComponentProps<StrictLoaderProps>, AppearanceProps {
 }
 
 export interface StrictLoaderProps {

@@ -3,9 +3,9 @@ import * as React from 'react';
 import { ShorthandContent, ShorthandItem } from '@appbuckets/react-ui-core';
 
 import {
-  AppBucketsComponentProps,
+  UIMutableComponentProps,
   AppBucketsIcon,
-  SharedComponentStateProps
+  AppearanceProps
 } from '../generic';
 
 import { BadgeProps } from '../Badge';
@@ -13,7 +13,7 @@ import { BadgeProps } from '../Badge';
 import { IconProps } from '../Icon';
 
 
-export interface AvatarProps extends AppBucketsComponentProps<StrictAvatarProps>, SharedComponentStateProps {
+export interface AvatarProps extends UIMutableComponentProps<StrictAvatarProps>, AppearanceProps {
 }
 
 export interface StrictAvatarProps {

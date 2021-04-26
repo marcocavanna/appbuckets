@@ -2,11 +2,12 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   createShorthandFactory,
   childrenUtils,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import {
   useSharedClassName,
@@ -23,7 +24,7 @@ import { BadgeProps } from './Badge.types';
 /* --------
  * Component Render
  * -------- */
-const Badge: CreatableFunctionComponent<BadgeProps> = (receivedProps) => {
+const Badge: Creatable<UIMutableComponent<BadgeProps>> = (receivedProps) => {
 
   /** Get component props */
   const props = useWithDefaultProps('badge', receivedProps);

@@ -2,11 +2,12 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   childrenUtils,
   createShorthandFactory,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -20,7 +21,7 @@ import { SectionProps } from './Section.types';
 /* --------
  * Component Render
  * -------- */
-const Section: CreatableFunctionComponent<SectionProps> = (receivedProps) => {
+const Section: Creatable<UIMutableComponent<SectionProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('section', receivedProps);
 

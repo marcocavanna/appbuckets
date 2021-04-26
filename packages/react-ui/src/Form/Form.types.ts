@@ -1,11 +1,9 @@
 import * as React from 'react';
 
-import {
-  AppBucketsComponentProps
-} from '../generic';
+import { UIComponentProps } from '../generic';
 
 
-export interface FormProps extends AppBucketsComponentProps<StrictFormProps, 'form'> {
+export interface FormProps extends UIComponentProps<StrictFormProps, 'form'> {
 }
 
 export interface StrictFormProps {

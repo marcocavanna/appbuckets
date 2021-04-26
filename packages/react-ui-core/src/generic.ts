@@ -67,9 +67,14 @@ export interface ShorthandMethodOptions<P> {
  * to describe React component who has 'create'
  * shorthand method
  */
+export type CreateFunction<P> = (
+  value: ShorthandValue<P>,
+  options: ShorthandMethodOptions<P>
+) => React.ReactElement<P> | null;
+
 export type CreatableFunctionComponent<P> =
   & React.FunctionComponent<P>
-  & { create: (value: ShorthandValue<P>, options: ShorthandMethodOptions<P>) => React.ReactElement<P> | null };
+  & { create: CreateFunction<P> };
 
 
 /**

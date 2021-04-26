@@ -17,6 +17,5 @@ export default {
  * -------- */
 const Template: Story<AvatarProps> = (props) => (<Avatar {...props} />);
 
-
 export const Overview = Template.bind({});
 Overview.args = { content: 'A' };

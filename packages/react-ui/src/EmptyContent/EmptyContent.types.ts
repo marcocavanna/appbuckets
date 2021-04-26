@@ -1,12 +1,12 @@
 import { ShorthandItem, ShorthandContent } from '@appbuckets/react-ui-core';
 
-import { AppBucketsComponentProps, AppBucketsIcon } from '../generic';
+import { UIMutableComponentProps, AppBucketsIcon } from '../generic';
 
 import { ButtonProps } from '../Button';
 import { IconProps } from '../Icon';
 
 
-export interface EmptyContentProps extends AppBucketsComponentProps<StrictEmptyContentProps> {
+export interface EmptyContentProps extends UIMutableComponentProps<StrictEmptyContentProps> {
 
 }
 

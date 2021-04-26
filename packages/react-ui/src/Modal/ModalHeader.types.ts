@@ -1,13 +1,11 @@
 import { ShorthandContent } from '@appbuckets/react-ui-core';
 
-import { AppBucketsComponentProps } from '../generic';
+import { UIMutableComponentProps } from '../generic';
 
-import {
-  StrictHeaderProps
-} from '../Header';
+import { StrictHeaderProps } from '../Header';
 
 
-export interface ModalHeaderProps extends AppBucketsComponentProps<StrictModalHeaderProps> {
+export interface ModalHeaderProps extends UIMutableComponentProps<StrictModalHeaderProps> {
 }
 
 export interface StrictModalHeaderProps extends StrictHeaderProps {

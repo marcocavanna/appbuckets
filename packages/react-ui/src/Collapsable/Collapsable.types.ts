@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { AppBucketsComponentProps } from '../generic';
+import { UIComponentProps } from '../generic';
 
 
 export interface CollapsableState {
@@ -9,7 +9,7 @@ export interface CollapsableState {
   style: React.CSSProperties
 }
 
-export interface CollapsableProps extends AppBucketsComponentProps<StrictCollapsableProps> {
+export interface CollapsableProps extends UIComponentProps<StrictCollapsableProps> {
 }
 
 export interface StrictCollapsableProps {

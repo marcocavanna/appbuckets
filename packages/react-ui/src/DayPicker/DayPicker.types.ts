@@ -4,7 +4,7 @@ import { ShorthandItem } from '@appbuckets/react-ui-core';
 
 import { DayPickerProps as ReactDayPickerProps } from 'react-day-picker';
 
-import { AppBucketsComponentProps } from '../generic';
+import { UIVoidComponentProps } from '../generic';
 
 import { ButtonProps } from '../Button';
 import { FieldProps } from '../Field';
@@ -14,7 +14,7 @@ import { InputProps } from '../Input';
 export type ParsableDate = null | string | number | Date;
 
 export interface DayPickerProps<DateType extends ParsableDate = ParsableDate>
-  extends AppBucketsComponentProps<StrictDayPickerProps<DateType>> {
+  extends UIVoidComponentProps<StrictDayPickerProps<DateType>> {
 }
 
 export interface StrictDayPickerProps<DateType> extends ReactDayPickerProps, FieldProps {

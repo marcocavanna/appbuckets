@@ -4,7 +4,7 @@ import { ShorthandItem } from '@appbuckets/react-ui-core';
 
 import {
   ContentAlign,
-  AppBucketsComponentProps,
+  UIMutableVoidComponentStrictProps,
   AnyObject
 } from '../generic';
 
@@ -21,7 +21,7 @@ import { UseRxTableFactoryConfig } from './RxTable.factory';
 /* --------
  * RxTable Component
  * -------- */
-export interface RxTableProps<Data> extends AppBucketsComponentProps<StrictRxTableProps<Data>, 'table'> {
+export interface RxTableProps<Data> extends UIMutableVoidComponentStrictProps<StrictRxTableProps<Data>, 'table'> {
 }
 
 export interface StrictRxTableProps<Data> extends Omit<UseRxTableFactoryConfig<Data>, 'width'> {

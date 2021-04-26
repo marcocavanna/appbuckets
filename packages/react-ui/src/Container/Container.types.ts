@@ -1,9 +1,9 @@
-import { AppBucketsComponentProps } from '../generic';
+import { UIMutableComponentProps } from '../generic';
 
 
 export type ContainerWidth = 'phone' | 'tablet' | 'desktop' | 'large-desktop';
 
-export interface ContainerProps extends AppBucketsComponentProps<StrictContainerProps> {
+export interface ContainerProps extends UIMutableComponentProps<StrictContainerProps> {
 }
 
 export interface StrictContainerProps {

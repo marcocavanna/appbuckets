@@ -1,7 +1,7 @@
-import { AppBucketsComponentProps } from '../generic';
+import { UIMutableComponentProps } from '../generic';
 
 
-export interface PanelFooterProps extends AppBucketsComponentProps<StrictPanelFooterProps> {
+export interface PanelFooterProps extends UIMutableComponentProps<StrictPanelFooterProps> {
 }
 
 export interface StrictPanelFooterProps {

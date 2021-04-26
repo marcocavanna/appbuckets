@@ -3,7 +3,7 @@ import * as React from 'react';
 import { ShorthandItem } from '@appbuckets/react-ui-core';
 
 import {
-  AppBucketsComponentProps,
+  UIMutableComponentProps,
   ResponsiveContentWidth
 } from '../generic';
 
@@ -15,7 +15,7 @@ import { TabPanelProps } from './TabPanel.types';
 export type TabPanelsShorthand = { trigger: ShorthandItem<MenuItemProps>, panel: ShorthandItem<TabPanelProps> };
 
 
-export interface TabsProps extends AppBucketsComponentProps<StrictTabsProps> {
+export interface TabsProps extends UIMutableComponentProps<StrictTabsProps> {
 }
 
 export interface StrictTabsProps {

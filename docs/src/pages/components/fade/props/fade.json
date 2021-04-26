@@ -104,12 +104,12 @@
       "description": "Set transition timing function",
       "name": "easing",
       "parent": {
-        "fileName": "react-ui/node_modules/@appbuckets/react-ui-styles/transitions.d.ts",
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui-styles/src/transitions.ts",
         "name": "TransitionUtilsProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/node_modules/@appbuckets/react-ui-styles/transitions.d.ts",
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui-styles/src/transitions.ts",
           "name": "TransitionUtilsProps"
         }
       ],
@@ -123,12 +123,12 @@
       "description": "CSS Style",
       "name": "style",
       "parent": {
-        "fileName": "react-ui/node_modules/@appbuckets/react-ui-styles/transitions.d.ts",
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui-styles/src/transitions.ts",
         "name": "TransitionUtilsProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/node_modules/@appbuckets/react-ui-styles/transitions.d.ts",
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui-styles/src/transitions.ts",
           "name": "TransitionUtilsProps"
         }
       ],
@@ -142,12 +142,12 @@
       "description": "Set transition duration",
       "name": "timeout",
       "parent": {
-        "fileName": "react-ui/node_modules/@appbuckets/react-ui-styles/transitions.d.ts",
+        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui-styles/src/transitions.ts",
         "name": "TransitionUtilsProps"
       },
       "declarations": [
         {
-          "fileName": "react-ui/node_modules/@appbuckets/react-ui-styles/transitions.d.ts",
+          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui-styles/src/transitions.ts",
           "name": "TransitionUtilsProps"
         }
       ],

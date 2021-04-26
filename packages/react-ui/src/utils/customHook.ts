@@ -7,7 +7,7 @@ import getSharedClassNames, {
 
 import splitStateClassName, { SplitStateClassName } from './splitStateClassName';
 
-import { SharedComponentStateProps } from '../generic';
+import { AppearanceProps } from '../generic';
 
 
 /**
@@ -75,7 +75,7 @@ export function useSharedClassName<P>(props: P): Readonly<SharedClassNamesAndPro
  * Export a function to split the state className
  * from component Props
  */
-export function useSplitStateClassName<P extends SharedComponentStateProps>(props: P): Readonly<SplitStateClassName<P>> {
+export function useSplitStateClassName<P extends AppearanceProps>(props: P): Readonly<SplitStateClassName<P>> {
 
   const {
     appearance,

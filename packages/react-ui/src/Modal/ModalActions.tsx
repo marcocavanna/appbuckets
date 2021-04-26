@@ -2,12 +2,13 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   ShorthandCollection,
   childrenUtils,
   createShorthandFactory,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import {
   useSharedClassName
@@ -24,7 +25,7 @@ import type { ButtonProps } from '../Button';
 /* --------
  * Component Render
  * -------- */
-const ModalActions: CreatableFunctionComponent<ModalActionsProps> = (receivedProps) => {
+const ModalActions: Creatable<UIMutableComponent<ModalActionsProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('modalActions', receivedProps);
 

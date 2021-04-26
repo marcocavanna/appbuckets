@@ -1,7 +1,12 @@
-import { FlexboxContent, Spacer, ShadowElevation } from '../generic';
+import {
+  FlexboxContentProps,
+  Spacer,
+  ShadowElevation,
+  UIMutableComponentProps
+} from '../generic';
 
 
-export interface BoxProps extends FlexboxContent<StrictBoxProps> {
+export interface BoxProps extends UIMutableComponentProps<StrictBoxProps>, FlexboxContentProps {
 
 }
 

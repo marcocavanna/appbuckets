@@ -73,15 +73,17 @@
 import {
   ReactNode,
   ElementType,
+  FunctionComponent,
+  VoidFunctionComponent,
   ChangeEvent,
   FocusEvent,
-  MouseEvent
+  MouseEvent, ComponentProps, JSXElementConstructor
 } from 'react';
 
 import {
   ShorthandContent,
   ShorthandItem,
-  ShorthandCollection
+  ShorthandCollection, CreateFunction
 } from '@appbuckets/react-ui-core';
 
 import { IconName } from '@fortawesome/fontawesome-svg-core';
@@ -112,6 +114,12 @@ export type Subtract<P extends {}, T extends {}> = {
   [K in keyof P]: K extends keyof T ? never : P[K]
 };
 
+export type Extensible<P extends {}> = P & AnyObject;
+
+export type PropsWithAs<P extends {}> = P & {
+  as?: ElementType
+};
+
 
 /* --------
  * Icon
@@ -120,63 +128,97 @@ export type AppBucketsIcon<T> = IconName | T;
 
 
 /* --------
- * Component Props Type
+ * Creatable Component
  * -------- */
-/**
- * Generate a complex AppBuckets Component
- * Props, that could be extended with any key
- */
-export type AppBucketsComponentProps<P, E extends keyof JSX.IntrinsicElements = 'div'> =
-  MinimalAppBucketsComponentProps<P, E>
-  & SharedAppBucketsComponentProps
-  & AnyObject;
+export type Creatable<C extends keyof JSX.IntrinsicElements | JSXElementConstructor<any>> =
+  & C
+  & { create: CreateFunction<ComponentProps<C>> };
 
-/**
- * Generate a minimal AppBuckets Component
- * including only structural props
- */
-export type MinimalAppBucketsComponentProps<P, E extends keyof JSX.IntrinsicElements = 'div'> =
-  P
-  & Omit<CoreAppBucketsComponentProps, keyof P>
-  & Omit<JSX.IntrinsicElements[E], keyof P>
-  & AnyObject;
 
-/**
- * Generate a Type Dedicated to Flexbox Container
- */
-export type FlexboxContainer<P, E extends keyof JSX.IntrinsicElements = 'div'> =
-  AppBucketsComponentProps<P, E>
-  & SharedFlexboxContainerProps;
+/* --------
+ * Component Type
+ * -------- */
+export type UIMutableComponent<P extends {}, E extends keyof JSX.IntrinsicElements = 'div'> =
+  FunctionComponent<UIMutableComponentProps<P, E>>;
 
-/**
- * Generate a Type dedicated to Flexbox Content Element
- */
-export type FlexboxContent<P, E extends keyof JSX.IntrinsicElements = 'div'> =
-  AppBucketsComponentProps<P, E>
-  & SharedFlexboxContentProps;
+export type UIMutableVoidComponent<P extends {}, E extends keyof JSX.IntrinsicElements = 'div'> =
+  VoidFunctionComponent<UIMutableVoidComponentProps<P, E>>;
 
-/**
- * An interface with Structural AppBuckets Props
- */
-export interface CoreAppBucketsComponentProps {
-  /** An Element used to Render the Component */
-  as?: ElementType;
+export type UIComponent<P extends {}, E extends keyof JSX.IntrinsicElements = 'div'> =
+  FunctionComponent<UIComponentProps<P, E>>;
 
+export type UIVoidComponent<P extends {}, E extends keyof JSX.IntrinsicElements = 'div'> =
+  VoidFunctionComponent<UIComponentProps<P, E>>;
+
+
+/* --------
+ * Mutable Component Props
+ * -------- */
+export type UIMutableComponentProps<P extends {}, E extends keyof JSX.IntrinsicElements = 'div'> =
+  PropsWithAs<UIComponentProps<P, E>>;
+
+export type UIMutableVoidComponentProps<P extends {}, E extends keyof JSX.IntrinsicElements = 'div'> =
+  PropsWithAs<UIMutableComponentProps<P, E>>;
+
+
+/* --------
+ * Immutable Component Props
+ * -------- */
+export type UIComponentProps<P extends {}, E extends keyof JSX.IntrinsicElements = 'div'> =
+  & ComponentDisplayProps
+  & Extensible<UIComponentStrictProps<P, E>>;
+
+export type UIVoidComponentProps<P extends {}, E extends keyof JSX.IntrinsicElements = 'div'> =
+  & ComponentDisplayProps
+  & Extensible<UIVoidComponentStrictProps<P, E>>;
+
+
+/* --------
+ * Strict Component Props
+ * -------- */
+export type UIMutableComponentStrictProps<P extends {}, E extends keyof JSX.IntrinsicElements = 'div'> =
+  PropsWithAs<UIComponentStrictProps<P, E>>;
+
+export type UIMutableVoidComponentStrictProps<P extends {}, E extends keyof JSX.IntrinsicElements = 'div'> =
+  PropsWithAs<UIMutableVoidComponentProps<P, E>>;
+
+export type UIComponentStrictProps<P extends {}, E extends keyof JSX.IntrinsicElements = 'div'> =
+  & P
+  & Omit<CoreUIComponentProps, keyof P>
+  & Omit<JSX.IntrinsicElements[E], keyof P>;
+
+export type UIVoidComponentStrictProps<P extends {}, E extends keyof JSX.IntrinsicElements = 'div'> =
+  & P
+  & Omit<CoreUIVoidComponentProps, keyof P>
+  & Omit<JSX.IntrinsicElements[E], keyof P>;
+
+
+/* --------
+ * Core AppBuckets Component Props Definition
+ * -------- */
+
+/** An interface with Structural AppBuckets Props */
+export interface CoreUIComponentProps extends CoreUIVoidComponentProps {
   /** Main Component Content */
   children?: ReactNode;
-
-  /** User Defined Class Names */
-  className?: string;
 
   /** Content Shorthand */
   content?: ShorthandContent;
 }
 
+/** Component Props without children */
+export interface CoreUIVoidComponentProps {
+  /** User Defined Class Names */
+  className?: string;
+}
 
-/**
- * Shared Component props to define style
- */
-export interface SharedAppBucketsComponentProps {
+
+/* --------
+ * Shared Props to Change Component Appearance or Display
+ * -------- */
+
+/** Shared props to change component display style */
+export interface ComponentDisplayProps {
   /** Choose Main background Color */
   backgroundColor?: AppBucketsColor;
 
@@ -196,12 +238,8 @@ export interface SharedAppBucketsComponentProps {
   textColor?: AppBucketsColor;
 }
 
-
-/**
- * Define an interface with the state
- * element color
- */
-export interface SharedComponentStateProps {
+/** Shared props to change component appearance */
+export interface AppearanceProps {
   /** Manually set the Element appearance by Color Pool */
   appearance?: AppBucketsColor;
 
@@ -225,11 +263,14 @@ export interface SharedComponentStateProps {
 }
 
 
+/* --------
+ * Flexbox Dedicated Props
+ * -------- */
 /**
  * Generate a Type to extends Component Props
  * with useful Flexbox container props
  */
-export interface SharedFlexboxContainerProps {
+export interface FlexboxContainerProps {
   /** Set content horizontal disposition */
   columnsAlign?: ResponsiveProps<FlexContentHorizontalAlign>;
 
@@ -245,7 +286,7 @@ export interface SharedFlexboxContainerProps {
  * Generate a Type to extends Component Props
  * with useful Flexbox content props
  */
-export interface SharedFlexboxContentProps {
+export interface FlexboxContentProps {
   /** Set the base Content Width */
   width?: ResponsiveContentWidth;
 
@@ -279,7 +320,7 @@ export type VerticalAlign = 'on top' | 'on bottom' | 'center';
  * Size Types
  * -------- */
 export type ElementDisplay =
-  'block'
+  | 'block'
   | 'grid'
   | 'inline block'
   | 'inline flex'
@@ -297,7 +338,7 @@ export type ElementDisplay =
 export type ElementSize = 'extra small' | 'small' | 'normal' | 'large' | 'big' | 'huge';
 export type Spacer = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8';
 export type ShadowElevation =
-  0
+  | 0
   | 1
   | 2
   | 3
@@ -331,7 +372,7 @@ export type ShadowElevation =
 export type FlexContentVerticalAlign = VerticalAlign | 'stretched';
 export type FlexContentHorizontalAlign = 'on start' | 'centered' | 'on end' | 'spaced between' | 'spaced around';
 export type FlexContentOffset =
-  1
+  | 1
   | 2
   | 3
   | 4

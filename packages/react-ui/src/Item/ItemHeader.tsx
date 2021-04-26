@@ -2,11 +2,15 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   createShorthandFactory,
   childrenUtils,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import {
+  Creatable,
+  UIMutableComponent
+} from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -18,7 +22,7 @@ import { ItemHeaderProps } from './ItemHeader.types';
 /* --------
  * Component Render
  * -------- */
-const ItemHeader: CreatableFunctionComponent<ItemHeaderProps> = (receivedProps) => {
+const ItemHeader: Creatable<UIMutableComponent<ItemHeaderProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('itemHeader', receivedProps);
 

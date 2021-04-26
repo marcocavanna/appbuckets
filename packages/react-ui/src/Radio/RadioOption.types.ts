@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-import { AppBucketsComponentProps } from '../generic';
+import { UIVoidComponentProps } from '../generic';
 
 import { StrictCheckboxProps } from '../Checkbox';
 
 
-export interface RadioOptionProps extends AppBucketsComponentProps<StrictRadioOptionProps, 'input'> {
+export interface RadioOptionProps extends UIVoidComponentProps<StrictRadioOptionProps, 'input'> {
 
 }
 

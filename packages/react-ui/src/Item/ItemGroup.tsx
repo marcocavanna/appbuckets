@@ -7,6 +7,8 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
+import { UIMutableComponent } from '../generic';
+
 import { useSharedClassName } from '../utils';
 
 import { useWithDefaultProps } from '../BucketTheme';
@@ -29,15 +31,9 @@ import('./Item').then(({ default: itemComponent }) => {
 
 
 /* --------
- * Component Declare
- * -------- */
-type ItemGroupComponent = React.FunctionComponent<ItemGroupProps>;
-
-
-/* --------
  * Component Render
  * -------- */
-const ItemGroup: ItemGroupComponent = (receivedProps) => {
+const ItemGroup: UIMutableComponent<ItemGroupProps> = (receivedProps) => {
 
   const props = useWithDefaultProps('itemGroup', receivedProps);
 

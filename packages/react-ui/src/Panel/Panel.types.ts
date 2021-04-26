@@ -1,13 +1,13 @@
 import { ShorthandItem } from '@appbuckets/react-ui-core';
 
-import { AppBucketsComponentProps, SharedComponentStateProps } from '../generic';
+import { UIMutableComponentProps, AppearanceProps } from '../generic';
 
 import { PanelHeaderProps } from './PanelHeader.types';
 import { PanelFooterProps } from './PanelFooter.types';
 import { PanelBodyProps } from './PanelBody.types';
 
 
-export interface PanelProps extends AppBucketsComponentProps<StrictPanelProps>, SharedComponentStateProps {
+export interface PanelProps extends UIMutableComponentProps<StrictPanelProps>, AppearanceProps {
 
 }
 

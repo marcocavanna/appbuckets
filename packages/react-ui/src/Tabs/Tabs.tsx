@@ -2,13 +2,14 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   ShorthandCollection,
   ShorthandItem,
   createShorthandFactory,
   useElementType,
   useAutoControlledValue
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -36,7 +37,7 @@ type TabsChildren = {
 /* --------
  * Component Render
  * -------- */
-const Tabs: CreatableFunctionComponent<TabsProps> & TabsChildren = (receivedProps) => {
+const Tabs: Creatable<UIMutableComponent<TabsProps>> & TabsChildren = (receivedProps) => {
 
   const props = useWithDefaultProps('tabs', receivedProps);
 

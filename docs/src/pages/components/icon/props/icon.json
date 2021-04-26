@@ -4,6 +4,300 @@
   "description": "",
   "displayName": "Icon",
   "props": {
+    "backgroundColor": {
+      "defaultValue": null,
+      "description": "Choose Main background Color",
+      "name": "backgroundColor",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "ComponentDisplayProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "ComponentDisplayProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "AppBucketsColor",
+        "value": [
+          {
+            "value": "\"text\""
+          },
+          {
+            "value": "\"danger\""
+          },
+          {
+            "value": "\"info\""
+          },
+          {
+            "value": "\"primary\""
+          },
+          {
+            "value": "\"success\""
+          },
+          {
+            "value": "\"warning\""
+          },
+          {
+            "value": "\"text secondary\""
+          },
+          {
+            "value": "\"black\""
+          },
+          {
+            "value": "\"white\""
+          },
+          {
+            "value": "\"white shade\""
+          },
+          {
+            "value": "\"blue\""
+          },
+          {
+            "value": "\"teal\""
+          },
+          {
+            "value": "\"green\""
+          },
+          {
+            "value": "\"yellow\""
+          },
+          {
+            "value": "\"orange\""
+          },
+          {
+            "value": "\"red\""
+          },
+          {
+            "value": "\"pink\""
+          },
+          {
+            "value": "\"purple\""
+          },
+          {
+            "value": "\"cloud light\""
+          },
+          {
+            "value": "\"cloud\""
+          },
+          {
+            "value": "\"cloud dark\""
+          }
+        ]
+      }
+    },
+    "display": {
+      "defaultValue": null,
+      "description": "Set element display",
+      "name": "display",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "ComponentDisplayProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "ComponentDisplayProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ResponsiveProps<ElementDisplay>"
+      }
+    },
+    "fontWeight": {
+      "defaultValue": null,
+      "description": "Define the main Font Weight",
+      "name": "fontWeight",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "ComponentDisplayProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "ComponentDisplayProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "FontWeight",
+        "value": [
+          {
+            "value": "\"light\""
+          },
+          {
+            "value": "\"regular\""
+          },
+          {
+            "value": "\"semi bold\""
+          },
+          {
+            "value": "\"bold\""
+          }
+        ]
+      }
+    },
+    "size": {
+      "defaultValue": null,
+      "description": "Change component size",
+      "name": "size",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "ComponentDisplayProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "ComponentDisplayProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "ElementSize",
+        "value": [
+          {
+            "value": "\"big\""
+          },
+          {
+            "value": "\"small\""
+          },
+          {
+            "value": "\"extra small\""
+          },
+          {
+            "value": "\"normal\""
+          },
+          {
+            "value": "\"large\""
+          },
+          {
+            "value": "\"huge\""
+          }
+        ]
+      }
+    },
+    "textAlign": {
+      "defaultValue": null,
+      "description": "Define Text Align",
+      "name": "textAlign",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "ComponentDisplayProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "ComponentDisplayProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "ContentAlign",
+        "value": [
+          {
+            "value": "\"left\""
+          },
+          {
+            "value": "\"center\""
+          },
+          {
+            "value": "\"right\""
+          }
+        ]
+      }
+    },
+    "textColor": {
+      "defaultValue": null,
+      "description": "Choose main text color",
+      "name": "textColor",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "ComponentDisplayProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "ComponentDisplayProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "AppBucketsColor",
+        "value": [
+          {
+            "value": "\"text\""
+          },
+          {
+            "value": "\"danger\""
+          },
+          {
+            "value": "\"info\""
+          },
+          {
+            "value": "\"primary\""
+          },
+          {
+            "value": "\"success\""
+          },
+          {
+            "value": "\"warning\""
+          },
+          {
+            "value": "\"text secondary\""
+          },
+          {
+            "value": "\"black\""
+          },
+          {
+            "value": "\"white\""
+          },
+          {
+            "value": "\"white shade\""
+          },
+          {
+            "value": "\"blue\""
+          },
+          {
+            "value": "\"teal\""
+          },
+          {
+            "value": "\"green\""
+          },
+          {
+            "value": "\"yellow\""
+          },
+          {
+            "value": "\"orange\""
+          },
+          {
+            "value": "\"red\""
+          },
+          {
+            "value": "\"pink\""
+          },
+          {
+            "value": "\"purple\""
+          },
+          {
+            "value": "\"cloud light\""
+          },
+          {
+            "value": "\"cloud\""
+          },
+          {
+            "value": "\"cloud dark\""
+          }
+        ]
+      }
+    },
     "bordered": {
       "defaultValue": null,
       "description": "Apply border to icon",
@@ -209,13 +503,70 @@
             "value": "\"function\""
           },
           {
+            "value": "\"code\""
+          },
+          {
+            "value": "\"h1\""
+          },
+          {
+            "value": "\"h2\""
+          },
+          {
+            "value": "\"h3\""
+          },
+          {
+            "value": "\"h4\""
+          },
+          {
+            "value": "\"link\""
+          },
+          {
+            "value": "\"map\""
+          },
+          {
+            "value": "\"table\""
+          },
+          {
+            "value": "\"th\""
+          },
+          {
+            "value": "\"video\""
+          },
+          {
+            "value": "\"circle\""
+          },
+          {
+            "value": "\"filter\""
+          },
+          {
+            "value": "\"image\""
+          },
+          {
+            "value": "\"line\""
+          },
+          {
+            "value": "\"marker\""
+          },
+          {
             "value": "\"mask\""
+          },
+          {
+            "value": "\"stop\""
+          },
+          {
+            "value": "\"text\""
           },
           {
             "value": "\"key\""
           },
           {
             "value": "\"info\""
+          },
+          {
+            "value": "\"cloud\""
+          },
+          {
+            "value": "\"bold\""
           },
           {
             "value": "\"500px\""
@@ -933,9 +1284,6 @@
           },
           {
             "value": "\"less\""
-          },
-          {
-            "value": "\"line\""
           },
           {
             "value": "\"linkedin\""
@@ -2108,9 +2456,6 @@
             "value": "\"blog\""
           },
           {
-            "value": "\"bold\""
-          },
-          {
             "value": "\"bolt\""
           },
           {
@@ -2702,9 +3047,6 @@
             "value": "\"church\""
           },
           {
-            "value": "\"circle\""
-          },
-          {
             "value": "\"circle-notch\""
           },
           {
@@ -2745,9 +3087,6 @@
           },
           {
             "value": "\"closed-captioning\""
-          },
-          {
-            "value": "\"cloud\""
           },
           {
             "value": "\"cloud-download\""
@@ -2820,9 +3159,6 @@
           },
           {
             "value": "\"cocktail\""
-          },
-          {
-            "value": "\"code\""
           },
           {
             "value": "\"code-branch\""
@@ -3584,9 +3920,6 @@
             "value": "\"film-canister\""
           },
           {
-            "value": "\"filter\""
-          },
-          {
             "value": "\"fingerprint\""
           },
           {
@@ -3927,18 +4260,6 @@
           },
           {
             "value": "\"h-square\""
-          },
-          {
-            "value": "\"h1\""
-          },
-          {
-            "value": "\"h2\""
-          },
-          {
-            "value": "\"h3\""
-          },
-          {
-            "value": "\"h4\""
           },
           {
             "value": "\"hamburger\""
@@ -4307,9 +4628,6 @@
             "value": "\"igloo\""
           },
           {
-            "value": "\"image\""
-          },
-          {
             "value": "\"image-polaroid\""
           },
           {
@@ -4550,9 +4868,6 @@
             "value": "\"line-height\""
           },
           {
-            "value": "\"link\""
-          },
-          {
             "value": "\"lips\""
           },
           {
@@ -4661,9 +4976,6 @@
             "value": "\"mandolin\""
           },
           {
-            "value": "\"map\""
-          },
-          {
             "value": "\"map-marked\""
           },
           {
@@ -4710,9 +5022,6 @@
           },
           {
             "value": "\"map-signs\""
-          },
-          {
-            "value": "\"marker\""
           },
           {
             "value": "\"mars\""
@@ -6131,9 +6440,6 @@
             "value": "\"stomach\""
           },
           {
-            "value": "\"stop\""
-          },
-          {
             "value": "\"stop-circle\""
           },
           {
@@ -6243,9 +6549,6 @@
           },
           {
             "value": "\"syringe\""
-          },
-          {
-            "value": "\"table\""
           },
           {
             "value": "\"table-tennis\""
@@ -6368,9 +6671,6 @@
             "value": "\"terminal\""
           },
           {
-            "value": "\"text\""
-          },
-          {
             "value": "\"text-height\""
           },
           {
@@ -6378,9 +6678,6 @@
           },
           {
             "value": "\"text-width\""
-          },
-          {
-            "value": "\"th\""
           },
           {
             "value": "\"th-large\""
@@ -6912,9 +7209,6 @@
           },
           {
             "value": "\"vials\""
-          },
-          {
-            "value": "\"video\""
           },
           {
             "value": "\"video-plus\""
@@ -7161,13 +7455,70 @@
             "value": "\"function\""
           },
           {
+            "value": "\"code\""
+          },
+          {
+            "value": "\"h1\""
+          },
+          {
+            "value": "\"h2\""
+          },
+          {
+            "value": "\"h3\""
+          },
+          {
+            "value": "\"h4\""
+          },
+          {
+            "value": "\"link\""
+          },
+          {
+            "value": "\"map\""
+          },
+          {
+            "value": "\"table\""
+          },
+          {
+            "value": "\"th\""
+          },
+          {
+            "value": "\"video\""
+          },
+          {
+            "value": "\"circle\""
+          },
+          {
+            "value": "\"filter\""
+          },
+          {
+            "value": "\"image\""
+          },
+          {
+            "value": "\"line\""
+          },
+          {
+            "value": "\"marker\""
+          },
+          {
             "value": "\"mask\""
+          },
+          {
+            "value": "\"stop\""
+          },
+          {
+            "value": "\"text\""
           },
           {
             "value": "\"key\""
           },
           {
             "value": "\"info\""
+          },
+          {
+            "value": "\"cloud\""
+          },
+          {
+            "value": "\"bold\""
           },
           {
             "value": "\"500px\""
@@ -7885,9 +8236,6 @@
           },
           {
             "value": "\"less\""
-          },
-          {
-            "value": "\"line\""
           },
           {
             "value": "\"linkedin\""
@@ -9060,9 +9408,6 @@
             "value": "\"blog\""
           },
           {
-            "value": "\"bold\""
-          },
-          {
             "value": "\"bolt\""
           },
           {
@@ -9654,9 +9999,6 @@
             "value": "\"church\""
           },
           {
-            "value": "\"circle\""
-          },
-          {
             "value": "\"circle-notch\""
           },
           {
@@ -9697,9 +10039,6 @@
           },
           {
             "value": "\"closed-captioning\""
-          },
-          {
-            "value": "\"cloud\""
           },
           {
             "value": "\"cloud-download\""
@@ -9772,9 +10111,6 @@
           },
           {
             "value": "\"cocktail\""
-          },
-          {
-            "value": "\"code\""
           },
           {
             "value": "\"code-branch\""
@@ -10536,9 +10872,6 @@
             "value": "\"film-canister\""
           },
           {
-            "value": "\"filter\""
-          },
-          {
             "value": "\"fingerprint\""
           },
           {
@@ -10879,18 +11212,6 @@
           },
           {
             "value": "\"h-square\""
-          },
-          {
-            "value": "\"h1\""
-          },
-          {
-            "value": "\"h2\""
-          },
-          {
-            "value": "\"h3\""
-          },
-          {
-            "value": "\"h4\""
           },
           {
             "value": "\"hamburger\""
@@ -11259,9 +11580,6 @@
             "value": "\"igloo\""
           },
           {
-            "value": "\"image\""
-          },
-          {
             "value": "\"image-polaroid\""
           },
           {
@@ -11502,9 +11820,6 @@
             "value": "\"line-height\""
           },
           {
-            "value": "\"link\""
-          },
-          {
             "value": "\"lips\""
           },
           {
@@ -11613,9 +11928,6 @@
             "value": "\"mandolin\""
           },
           {
-            "value": "\"map\""
-          },
-          {
             "value": "\"map-marked\""
           },
           {
@@ -11662,9 +11974,6 @@
           },
           {
             "value": "\"map-signs\""
-          },
-          {
-            "value": "\"marker\""
           },
           {
             "value": "\"mars\""
@@ -13083,9 +13392,6 @@
             "value": "\"stomach\""
           },
           {
-            "value": "\"stop\""
-          },
-          {
             "value": "\"stop-circle\""
           },
           {
@@ -13195,9 +13501,6 @@
           },
           {
             "value": "\"syringe\""
-          },
-          {
-            "value": "\"table\""
           },
           {
             "value": "\"table-tennis\""
@@ -13320,9 +13623,6 @@
             "value": "\"terminal\""
           },
           {
-            "value": "\"text\""
-          },
-          {
             "value": "\"text-height\""
           },
           {
@@ -13330,9 +13630,6 @@
           },
           {
             "value": "\"text-width\""
-          },
-          {
-            "value": "\"th\""
           },
           {
             "value": "\"th-large\""
@@ -13864,9 +14161,6 @@
           },
           {
             "value": "\"vials\""
-          },
-          {
-            "value": "\"video\""
           },
           {
             "value": "\"video-plus\""
@@ -14237,37 +14531,18 @@
         "name": "boolean"
       }
     },
-    "as": {
-      "defaultValue": null,
-      "description": "An Element used to Render the Component",
-      "name": "as",
-      "parent": {
-        "fileName": "react-ui/src/generic.ts",
-        "name": "CoreAppBucketsComponentProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/generic.ts",
-          "name": "CoreAppBucketsComponentProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "ElementType<any>"
-      }
-    },
     "children": {
       "defaultValue": null,
       "description": "Main Component Content",
       "name": "children",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "CoreAppBucketsComponentProps"
+        "name": "CoreUIComponentProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "CoreAppBucketsComponentProps"
+          "name": "CoreUIComponentProps"
         },
         {
           "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
@@ -14283,18 +14558,37 @@
         "name": "ReactNode"
       }
     },
+    "content": {
+      "defaultValue": null,
+      "description": "Content Shorthand",
+      "name": "content",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreUIComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreUIComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ShorthandContent"
+      }
+    },
     "className": {
       "defaultValue": null,
       "description": "User Defined Class Names",
       "name": "className",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "CoreAppBucketsComponentProps"
+        "name": "CoreUIVoidComponentProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "CoreAppBucketsComponentProps"
+          "name": "CoreUIVoidComponentProps"
         },
         {
           "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
@@ -14306,437 +14600,19 @@
         "name": "string"
       }
     },
-    "content": {
+    "as": {
       "defaultValue": null,
-      "description": "Content Shorthand",
-      "name": "content",
-      "parent": {
-        "fileName": "react-ui/src/generic.ts",
-        "name": "CoreAppBucketsComponentProps"
-      },
+      "description": "",
+      "name": "as",
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "CoreAppBucketsComponentProps"
+          "name": "TypeLiteral"
         }
       ],
       "required": false,
       "type": {
-        "name": "ReactNode"
-      }
-    },
-    "backgroundColor": {
-      "defaultValue": null,
-      "description": "Choose Main background Color",
-      "name": "backgroundColor",
-      "parent": {
-        "fileName": "react-ui/src/generic.ts",
-        "name": "SharedAppBucketsComponentProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/generic.ts",
-          "name": "SharedAppBucketsComponentProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "enum",
-        "raw": "AppBucketsColor",
-        "value": [
-          {
-            "value": "\"danger\""
-          },
-          {
-            "value": "\"info\""
-          },
-          {
-            "value": "\"primary\""
-          },
-          {
-            "value": "\"success\""
-          },
-          {
-            "value": "\"warning\""
-          },
-          {
-            "value": "\"amazon\""
-          },
-          {
-            "value": "\"android\""
-          },
-          {
-            "value": "\"apple\""
-          },
-          {
-            "value": "\"facebook\""
-          },
-          {
-            "value": "\"google\""
-          },
-          {
-            "value": "\"google-plus\""
-          },
-          {
-            "value": "\"instagram\""
-          },
-          {
-            "value": "\"linkedin\""
-          },
-          {
-            "value": "\"microsoft\""
-          },
-          {
-            "value": "\"pinterest\""
-          },
-          {
-            "value": "\"skype\""
-          },
-          {
-            "value": "\"slack\""
-          },
-          {
-            "value": "\"telegram\""
-          },
-          {
-            "value": "\"tumblr\""
-          },
-          {
-            "value": "\"twitter\""
-          },
-          {
-            "value": "\"vimeo\""
-          },
-          {
-            "value": "\"whatsapp\""
-          },
-          {
-            "value": "\"yahoo\""
-          },
-          {
-            "value": "\"youtube\""
-          },
-          {
-            "value": "\"cloud\""
-          },
-          {
-            "value": "\"text\""
-          },
-          {
-            "value": "\"text secondary\""
-          },
-          {
-            "value": "\"black\""
-          },
-          {
-            "value": "\"white\""
-          },
-          {
-            "value": "\"white shade\""
-          },
-          {
-            "value": "\"blue\""
-          },
-          {
-            "value": "\"teal\""
-          },
-          {
-            "value": "\"green\""
-          },
-          {
-            "value": "\"yellow\""
-          },
-          {
-            "value": "\"orange\""
-          },
-          {
-            "value": "\"red\""
-          },
-          {
-            "value": "\"pink\""
-          },
-          {
-            "value": "\"purple\""
-          },
-          {
-            "value": "\"cloud light\""
-          },
-          {
-            "value": "\"cloud dark\""
-          },
-          {
-            "value": "\"dribble\""
-          }
-        ]
-      }
-    },
-    "display": {
-      "defaultValue": null,
-      "description": "Set element display",
-      "name": "display",
-      "parent": {
-        "fileName": "react-ui/src/generic.ts",
-        "name": "SharedAppBucketsComponentProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/generic.ts",
-          "name": "SharedAppBucketsComponentProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "ResponsiveProps<ElementDisplay>"
-      }
-    },
-    "fontWeight": {
-      "defaultValue": null,
-      "description": "Define the main Font Weight",
-      "name": "fontWeight",
-      "parent": {
-        "fileName": "react-ui/src/generic.ts",
-        "name": "SharedAppBucketsComponentProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/generic.ts",
-          "name": "SharedAppBucketsComponentProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "enum",
-        "raw": "FontWeight",
-        "value": [
-          {
-            "value": "\"bold\""
-          },
-          {
-            "value": "\"light\""
-          },
-          {
-            "value": "\"regular\""
-          },
-          {
-            "value": "\"semi bold\""
-          }
-        ]
-      }
-    },
-    "size": {
-      "defaultValue": null,
-      "description": "Change component size",
-      "name": "size",
-      "parent": {
-        "fileName": "react-ui/src/generic.ts",
-        "name": "SharedAppBucketsComponentProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/generic.ts",
-          "name": "SharedAppBucketsComponentProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "enum",
-        "raw": "ElementSize",
-        "value": [
-          {
-            "value": "\"big\""
-          },
-          {
-            "value": "\"small\""
-          },
-          {
-            "value": "\"extra small\""
-          },
-          {
-            "value": "\"normal\""
-          },
-          {
-            "value": "\"large\""
-          },
-          {
-            "value": "\"huge\""
-          }
-        ]
-      }
-    },
-    "textAlign": {
-      "defaultValue": null,
-      "description": "Define Text Align",
-      "name": "textAlign",
-      "parent": {
-        "fileName": "react-ui/src/generic.ts",
-        "name": "SharedAppBucketsComponentProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/generic.ts",
-          "name": "SharedAppBucketsComponentProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "enum",
-        "raw": "ContentAlign",
-        "value": [
-          {
-            "value": "\"left\""
-          },
-          {
-            "value": "\"center\""
-          },
-          {
-            "value": "\"right\""
-          }
-        ]
-      }
-    },
-    "textColor": {
-      "defaultValue": null,
-      "description": "Choose main text color",
-      "name": "textColor",
-      "parent": {
-        "fileName": "react-ui/src/generic.ts",
-        "name": "SharedAppBucketsComponentProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/generic.ts",
-          "name": "SharedAppBucketsComponentProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "enum",
-        "raw": "AppBucketsColor",
-        "value": [
-          {
-            "value": "\"danger\""
-          },
-          {
-            "value": "\"info\""
-          },
-          {
-            "value": "\"primary\""
-          },
-          {
-            "value": "\"success\""
-          },
-          {
-            "value": "\"warning\""
-          },
-          {
-            "value": "\"amazon\""
-          },
-          {
-            "value": "\"android\""
-          },
-          {
-            "value": "\"apple\""
-          },
-          {
-            "value": "\"facebook\""
-          },
-          {
-            "value": "\"google\""
-          },
-          {
-            "value": "\"google-plus\""
-          },
-          {
-            "value": "\"instagram\""
-          },
-          {
-            "value": "\"linkedin\""
-          },
-          {
-            "value": "\"microsoft\""
-          },
-          {
-            "value": "\"pinterest\""
-          },
-          {
-            "value": "\"skype\""
-          },
-          {
-            "value": "\"slack\""
-          },
-          {
-            "value": "\"telegram\""
-          },
-          {
-            "value": "\"tumblr\""
-          },
-          {
-            "value": "\"twitter\""
-          },
-          {
-            "value": "\"vimeo\""
-          },
-          {
-            "value": "\"whatsapp\""
-          },
-          {
-            "value": "\"yahoo\""
-          },
-          {
-            "value": "\"youtube\""
-          },
-          {
-            "value": "\"cloud\""
-          },
-          {
-            "value": "\"text\""
-          },
-          {
-            "value": "\"text secondary\""
-          },
-          {
-            "value": "\"black\""
-          },
-          {
-            "value": "\"white\""
-          },
-          {
-            "value": "\"white shade\""
-          },
-          {
-            "value": "\"blue\""
-          },
-          {
-            "value": "\"teal\""
-          },
-          {
-            "value": "\"green\""
-          },
-          {
-            "value": "\"yellow\""
-          },
-          {
-            "value": "\"orange\""
-          },
-          {
-            "value": "\"red\""
-          },
-          {
-            "value": "\"pink\""
-          },
-          {
-            "value": "\"purple\""
-          },
-          {
-            "value": "\"cloud light\""
-          },
-          {
-            "value": "\"cloud dark\""
-          },
-          {
-            "value": "\"dribble\""
-          }
-        ]
+        "name": "ElementType<any>"
       }
     },
     "appearance": {
@@ -14745,12 +14621,12 @@
       "name": "appearance",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -14758,6 +14634,9 @@
         "name": "enum",
         "raw": "AppBucketsColor",
         "value": [
+          {
+            "value": "\"text\""
+          },
           {
             "value": "\"danger\""
           },
@@ -14772,69 +14651,6 @@
           },
           {
             "value": "\"warning\""
-          },
-          {
-            "value": "\"amazon\""
-          },
-          {
-            "value": "\"android\""
-          },
-          {
-            "value": "\"apple\""
-          },
-          {
-            "value": "\"facebook\""
-          },
-          {
-            "value": "\"google\""
-          },
-          {
-            "value": "\"google-plus\""
-          },
-          {
-            "value": "\"instagram\""
-          },
-          {
-            "value": "\"linkedin\""
-          },
-          {
-            "value": "\"microsoft\""
-          },
-          {
-            "value": "\"pinterest\""
-          },
-          {
-            "value": "\"skype\""
-          },
-          {
-            "value": "\"slack\""
-          },
-          {
-            "value": "\"telegram\""
-          },
-          {
-            "value": "\"tumblr\""
-          },
-          {
-            "value": "\"twitter\""
-          },
-          {
-            "value": "\"vimeo\""
-          },
-          {
-            "value": "\"whatsapp\""
-          },
-          {
-            "value": "\"yahoo\""
-          },
-          {
-            "value": "\"youtube\""
-          },
-          {
-            "value": "\"cloud\""
-          },
-          {
-            "value": "\"text\""
           },
           {
             "value": "\"text secondary\""
@@ -14876,10 +14692,10 @@
             "value": "\"cloud light\""
           },
           {
-            "value": "\"cloud dark\""
+            "value": "\"cloud\""
           },
           {
-            "value": "\"dribble\""
+            "value": "\"cloud dark\""
           }
         ]
       }
@@ -14890,12 +14706,12 @@
       "name": "danger",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -14909,12 +14725,12 @@
       "name": "info",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -14928,12 +14744,12 @@
       "name": "primary",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -14947,12 +14763,12 @@
       "name": "secondary",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -14966,12 +14782,12 @@
       "name": "success",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,
@@ -14985,12 +14801,12 @@
       "name": "warning",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "SharedComponentStateProps"
+        "name": "AppearanceProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "SharedComponentStateProps"
+          "name": "AppearanceProps"
         }
       ],
       "required": false,

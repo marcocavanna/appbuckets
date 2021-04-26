@@ -1,16 +1,16 @@
 import clsx from 'clsx';
 
 import {
-  SharedComponentStateProps
+  AppearanceProps
 } from '../generic';
 
 
 export type SplitStateClassName<P> = [
   string,
   {
-    [K in keyof P]: K extends keyof SharedComponentStateProps ? never : P[K]
+    [K in keyof P]: K extends keyof AppearanceProps ? never : P[K]
   },
-  SharedComponentStateProps
+  AppearanceProps
 ];
 
 
@@ -23,7 +23,7 @@ function classByPattern(value: any, pattern: string, replacer: string = '%value%
 }
 
 
-export default function splitStateClassName<P extends SharedComponentStateProps>(props: P): SplitStateClassName<P> {
+export default function splitStateClassName<P extends AppearanceProps>(props: P): SplitStateClassName<P> {
 
   const {
     appearance,
@@ -34,7 +34,7 @@ export default function splitStateClassName<P extends SharedComponentStateProps>
     success,
     warning,
     ...rest
-  } = props as P & SharedComponentStateProps;
+  } = props as P & AppearanceProps;
 
   const classes = clsx(
     {

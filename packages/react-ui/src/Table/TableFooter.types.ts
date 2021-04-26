@@ -1,7 +1,7 @@
-import { MinimalAppBucketsComponentProps } from '../generic';
+import { UIMutableComponentStrictProps } from '../generic';
 
 
-export interface TableFooterProps extends MinimalAppBucketsComponentProps<StrictTableFooterProps, 'tfoot'> {
+export interface TableFooterProps extends UIMutableComponentStrictProps<StrictTableFooterProps, 'tfoot'> {
 }
 
 export interface StrictTableFooterProps {

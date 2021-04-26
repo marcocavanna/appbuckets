@@ -2,11 +2,12 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   childrenUtils,
   createShorthandFactory,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable } from '../generic';
 
 import { useWithDefaultProps } from '../BucketTheme';
 
@@ -19,7 +20,7 @@ import useProgressIndicator from './lib/useProgressIndicator';
 /* --------
  * Component Render
  * -------- */
-const LinearProgress: CreatableFunctionComponent<LinearProgressProps> = (
+const LinearProgress: Creatable<React.FunctionComponent<LinearProgressProps>> = (
   receivedProps
 ) => {
 

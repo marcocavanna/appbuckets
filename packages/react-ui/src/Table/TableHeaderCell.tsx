@@ -1,11 +1,11 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
-import { CreatableFunctionComponent, createShorthandFactory } from '@appbuckets/react-ui-core';
+import { createShorthandFactory } from '@appbuckets/react-ui-core';
 
-import {
-  useSharedClassName
-} from '../utils';
+import { Creatable, UIMutableComponent } from '../generic';
+
+import { useSharedClassName } from '../utils';
 
 import { useWithDefaultProps } from '../BucketTheme';
 
@@ -16,7 +16,7 @@ import TableCell from './TableCell';
 /* --------
  * Component Render
  * -------- */
-const TableHeaderCell: CreatableFunctionComponent<TableHeaderCellProps> = (receivedProps) => {
+const TableHeaderCell: Creatable<UIMutableComponent<TableHeaderCellProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('tableHeaderCell', receivedProps);
 

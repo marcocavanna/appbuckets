@@ -2,12 +2,13 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   ShorthandCollection,
   ShorthandItem,
   createShorthandFactory,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -22,7 +23,7 @@ import { ItemToolsProps } from './ItemTools.types';
 /* --------
  * Component Render
  * -------- */
-const ItemTools: CreatableFunctionComponent<ItemToolsProps> = (receivedProps) => {
+const ItemTools: Creatable<UIMutableComponent<ItemToolsProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('itemTools', receivedProps);
 

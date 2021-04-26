@@ -2,11 +2,12 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   childrenUtils,
   createShorthandFactory,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import {
   useSharedClassName,
@@ -21,7 +22,7 @@ import { LoaderProps } from './Loader.types';
 /* --------
  * Component Render
  * -------- */
-const Loader: CreatableFunctionComponent<LoaderProps> = (receivedProps) => {
+const Loader: Creatable<UIMutableComponent<LoaderProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('loader', receivedProps);
 

@@ -19,6 +19,29 @@ const sourcePath = path.resolve(process.cwd(), 'src');
 
 
 /* --------
+ * Extends Types Described by DocGen
+ * -------- */
+const customComponentTypes = [
+  /** Add missing React.VFC */
+  'VoidFunctionComponent',
+
+  /** Import types from generic */
+  'Creatable',
+  'UIMutableComponent',
+  'UIMutableVoidComponent',
+  'UIComponent',
+  'UIVoidComponent',
+
+  /** Import types from react-ui-core */
+  'CreatableFunctionComponent',
+
+  /** Add extra components */
+  'DropzoneComponent',
+  '__type'
+];
+
+
+/* --------
  * Assert Cache Exists
  * -------- */
 if (!fse.existsSync(cacheFilePath)) {
@@ -149,7 +172,7 @@ async function run() {
     /** Parse the component */
     const parsed = docgen.parse(path.join(sourcePath, componentPath), {
       /** Add custom component types */
-      customComponentTypes: [ 'VoidFunctionComponent', 'CreatableFunctionComponent', 'DropzoneComponent', '__type' ],
+      customComponentTypes,
       /** Remove all HTML Props */
       propFilter: (prop) => {
         if (prop.declarations !== undefined && prop.declarations.length > 0) {

@@ -3,20 +3,20 @@ import { ShorthandItem } from '@appbuckets/react-ui-core';
 import { IconProps } from '../Icon';
 
 import {
-  AppBucketsComponentProps,
-  SharedComponentStateProps,
-  SharedFlexboxContentProps,
+  UIMutableComponentProps,
+  AppearanceProps,
+  FlexboxContentProps,
   AppBucketsIcon
 } from '../generic';
 
 import { TableCellContentProps } from './TableCellContent.types';
 
 
-export interface TableCellProps extends AppBucketsComponentProps<StrictTableCellProps, 'td'> {
+export interface TableCellProps extends UIMutableComponentProps<StrictTableCellProps, 'td'> {
 }
 
-export interface StrictTableCellProps extends SharedComponentStateProps,
-  Pick<SharedFlexboxContentProps, 'width'> {
+export interface StrictTableCellProps extends AppearanceProps,
+  Pick<FlexboxContentProps, 'width'> {
   /** Render the Cell as Active */
   active?: boolean;
 

@@ -1,18 +1,20 @@
 import clsx from 'clsx';
 
 import {
-  SharedAppBucketsComponentProps,
-  SharedFlexboxContainerProps,
-  SharedFlexboxContentProps,
-  ResponsiveProps
+  ComponentDisplayProps,
+  CoreUIComponentProps,
+  FlexboxContainerProps,
+  FlexboxContentProps,
+  ResponsiveProps,
+  PropsWithAs
 } from '../generic';
 
 
 export type SharedProps =
-  SharedAppBucketsComponentProps
-  & SharedFlexboxContentProps
-  & SharedFlexboxContainerProps
-  & { as?: any, className?: string };
+  ComponentDisplayProps
+  & FlexboxContentProps
+  & FlexboxContainerProps
+  & PropsWithAs<CoreUIComponentProps>;
 
 export type SharedClassNamesAndProps<P> = {
   /** Computed Class Names */

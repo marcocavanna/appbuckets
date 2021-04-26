@@ -1,9 +1,7 @@
-import {
-  AppBucketsComponentProps
-} from '../generic';
+import { UIMutableComponentProps } from '../generic';
 
 
-export interface ItemMetaProps extends AppBucketsComponentProps<StrictItemMetaProps> {
+export interface ItemMetaProps extends UIMutableComponentProps<StrictItemMetaProps> {
 }
 
 export interface StrictItemMetaProps {

@@ -3,8 +3,8 @@ import * as React from 'react';
 import { ShorthandCollection } from '@appbuckets/react-ui-core';
 
 import {
-  AppBucketsComponentProps,
-  SharedComponentStateProps
+  UIMutableComponentStrictProps,
+  AppearanceProps
 } from '../generic';
 
 import { TableCellProps } from './TableCell.types';
@@ -12,10 +12,10 @@ import { TableHeaderCellProps } from './TableHeaderCell.types';
 
 
 export interface TableRowProps<Cell = TableCellProps & TableHeaderCellProps>
-  extends AppBucketsComponentProps<StrictTableRowProps<Cell>, 'tr'> {
+  extends UIMutableComponentStrictProps<StrictTableRowProps<Cell>, 'tr'> {
 }
 
-export interface StrictTableRowProps<Cell> extends SharedComponentStateProps {
+export interface StrictTableRowProps<Cell> extends AppearanceProps {
 
   /** Set the Row as Active */
   active?: boolean;

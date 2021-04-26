@@ -13,6 +13,8 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 
+import { Creatable, UIMutableComponent } from '../generic';
+
 import {
   useSharedClassName,
   useSplitStateClassName
@@ -29,7 +31,7 @@ library.add(fas, fab, far);
 /* --------
  * Component Render
  * -------- */
-const Icon: CreatableFunctionComponent<IconProps> = React.memo<IconProps>((
+const Icon: Creatable<UIMutableComponent<IconProps>> = React.memo<IconProps>((
   receivedProps
 ) => {
 

@@ -2,11 +2,12 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   childrenUtils,
   createShorthandFactory,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -20,7 +21,7 @@ import Header from '../Header';
 /* --------
  * Component Render
  * -------- */
-const ModalHeader: CreatableFunctionComponent<ModalHeaderProps> = (receivedProps) => {
+const ModalHeader: Creatable<UIMutableComponent<ModalHeaderProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('modalHeader', receivedProps);
 

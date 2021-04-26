@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { ShorthandValue, ShorthandCollection } from '@appbuckets/react-ui-core';
 
-import { MinimalAppBucketsComponentProps } from '../generic';
+import { UIMutableComponentProps } from '../generic';
 
 import { ButtonProps } from '../Button';
 import { PopupOpenEvent, PopupPosition } from '../Popup';
@@ -10,7 +10,7 @@ import { PopupOpenEvent, PopupPosition } from '../Popup';
 import { MenuItemProps } from '../Menu/MenuItem.types';
 
 
-export interface DropdownMenuProps extends MinimalAppBucketsComponentProps<StrictDropdownMenuProps> {
+export interface DropdownMenuProps extends UIMutableComponentProps<StrictDropdownMenuProps> {
 }
 
 export interface StrictDropdownMenuProps {

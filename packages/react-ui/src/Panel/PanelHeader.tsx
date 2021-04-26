@@ -2,11 +2,12 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   childrenUtils,
   createShorthandFactory,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -20,7 +21,7 @@ import { PanelHeaderProps } from './PanelHeader.types';
 /* --------
  * Component Render
  * -------- */
-const PanelHeader: CreatableFunctionComponent<PanelHeaderProps> = (receivedProps) => {
+const PanelHeader: Creatable<UIMutableComponent<PanelHeaderProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('panelHeader', receivedProps);
 

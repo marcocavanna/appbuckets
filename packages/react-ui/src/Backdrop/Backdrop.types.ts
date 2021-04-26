@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { PortalProps } from '@appbuckets/react-ui-core';
 
-import { MinimalAppBucketsComponentProps } from '../generic';
+import { UIComponentStrictProps } from '../generic';
 
 import { LoaderProps } from '../Loader';
 
@@ -17,7 +17,7 @@ export type BackdropPortalProps =
   | 'trigger'
   | 'triggerRef';
 
-export interface BackdropProps extends MinimalAppBucketsComponentProps<StrictBackdropProps> {
+export interface BackdropProps extends UIComponentStrictProps<StrictBackdropProps> {
 }
 
 export interface StrictBackdropProps extends Pick<PortalProps, BackdropPortalProps>, StrictBackdropInnerProps {

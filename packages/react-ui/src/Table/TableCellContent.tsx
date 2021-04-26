@@ -2,11 +2,12 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   childrenUtils,
   createShorthandFactory,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -18,7 +19,7 @@ import { TableCellContentProps } from './TableCellContent.types';
 /* --------
  * Component Render
  * -------- */
-const TableCellContent: CreatableFunctionComponent<TableCellContentProps> = (receivedProps) => {
+const TableCellContent: Creatable<UIMutableComponent<TableCellContentProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('tableCellContent', receivedProps);
   const {

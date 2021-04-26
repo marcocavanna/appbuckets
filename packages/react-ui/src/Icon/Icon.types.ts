@@ -9,13 +9,13 @@ import type {
 } from '@fortawesome/fontawesome-svg-core';
 
 import {
-  AppBucketsComponentProps,
-  SharedComponentStateProps
+  UIMutableComponentProps,
+  AppearanceProps
 } from '../generic';
 
 
-export interface IconProps extends AppBucketsComponentProps<StrictIconProps>,
-  SharedComponentStateProps {
+export interface IconProps extends UIMutableComponentProps<StrictIconProps>,
+  AppearanceProps {
 }
 
 export interface StrictIconProps {

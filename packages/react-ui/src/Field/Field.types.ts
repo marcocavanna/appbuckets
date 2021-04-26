@@ -3,19 +3,19 @@ import * as React from 'react';
 import { ShorthandCollection, ShorthandContent } from '@appbuckets/react-ui-core';
 
 import {
-  AppBucketsComponentProps,
+  UIComponentProps,
   AppBucketsIcon,
-  SharedComponentStateProps
+  AppearanceProps
 } from '../generic';
 
 import { ButtonProps } from '../Button';
 import { IconProps } from '../Icon';
 
 
-export interface FieldProps extends AppBucketsComponentProps<StrictFieldProps> {
+export interface FieldProps extends UIComponentProps<StrictFieldProps> {
 }
 
-export interface StrictFieldProps extends SharedComponentStateProps {
+export interface StrictFieldProps extends AppearanceProps {
   /** A Button to Show */
   actions?: ShorthandCollection<ButtonProps>;
 

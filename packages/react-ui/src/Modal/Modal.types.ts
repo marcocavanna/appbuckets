@@ -3,7 +3,7 @@ import * as React from 'react';
 import { ShorthandContent, ShorthandCollection, ShorthandItem } from '@appbuckets/react-ui-core';
 
 import {
-  AppBucketsComponentProps,
+  UIMutableComponentProps,
   AppBucketsIcon,
   ElementSize
 } from '../generic';
@@ -17,7 +17,7 @@ import { ModalHeaderProps } from './ModalHeader.types';
 import { ModalContentProps } from './ModalContent.types';
 
 
-export interface ModalProps extends AppBucketsComponentProps<StrictModalProps> {
+export interface ModalProps extends UIMutableComponentProps<StrictModalProps> {
 }
 
 export interface StrictModalProps {

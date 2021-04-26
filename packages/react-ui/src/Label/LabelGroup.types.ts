@@ -1,11 +1,11 @@
 import { ShorthandCollection } from '@appbuckets/react-ui-core';
 
-import { AppBucketsComponentProps } from '../generic';
+import { UIMutableComponentProps } from '../generic';
 
 import { LabelProps } from './Label.types';
 
 
-export interface LabelGroupProps extends AppBucketsComponentProps<StrictLabelGroupProps> {
+export interface LabelGroupProps extends UIMutableComponentProps<StrictLabelGroupProps> {
 }
 
 export interface StrictLabelGroupProps {

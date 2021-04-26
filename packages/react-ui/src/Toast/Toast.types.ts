@@ -3,16 +3,16 @@ import * as React from 'react';
 import { ShorthandItem, ShorthandContent } from '@appbuckets/react-ui-core';
 
 import {
-  AppBucketsComponentProps,
+  UIMutableComponentProps,
   AppBucketsIcon,
-  SharedComponentStateProps
+  AppearanceProps
 } from '../generic';
 
 import { HeaderContentProps, HeaderSubheaderProps } from '../Header';
 import { IconProps } from '../Icon';
 
 
-export interface ToastProps extends AppBucketsComponentProps<StrictToastProps>, SharedComponentStateProps {
+export interface ToastProps extends UIMutableComponentProps<StrictToastProps>, AppearanceProps {
 }
 
 export interface StrictToastProps {

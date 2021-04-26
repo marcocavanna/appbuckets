@@ -1,7 +1,7 @@
 import { ShorthandItem } from '@appbuckets/react-ui-core';
 
 import {
-  AppBucketsComponentProps,
+  UIMutableVoidComponentProps,
   AppBucketsIcon
 } from '../generic';
 
@@ -15,7 +15,7 @@ export interface AccordionSection extends Omit<CollapsableProps, 'trigger'> {
   trigger?: ShorthandItem<HeaderProps>;
 }
 
-export interface AccordionsProps extends AppBucketsComponentProps<StrictAccordionsProps> {
+export interface AccordionsProps extends UIMutableVoidComponentProps<StrictAccordionsProps> {
 }
 
 export interface StrictAccordionsProps {
@@ -24,9 +24,6 @@ export interface StrictAccordionsProps {
 
   /** Allow Multiple Opening */
   allowMultiple?: boolean;
-
-  /** Avoid declared children */
-  children?: never;
 
   /** Set the default active index */
   defaultActiveIndexes?: number[];

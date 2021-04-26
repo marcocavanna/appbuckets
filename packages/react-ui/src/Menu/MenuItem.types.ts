@@ -3,9 +3,9 @@ import * as React from 'react';
 import { ShorthandItem } from '@appbuckets/react-ui-core';
 
 import {
+  UIMutableComponentProps,
   AppBucketsIcon,
-  AppBucketsComponentProps,
-  SharedComponentStateProps
+  AppearanceProps
 } from '../generic';
 
 import { IconProps } from '../Icon';
@@ -13,7 +13,7 @@ import { IconProps } from '../Icon';
 import type { MenuProps } from './Menu.types';
 
 
-export interface MenuItemProps extends AppBucketsComponentProps<StrictMenuItemProps>, SharedComponentStateProps {
+export interface MenuItemProps extends UIMutableComponentProps<StrictMenuItemProps>, AppearanceProps {
 
 }
 

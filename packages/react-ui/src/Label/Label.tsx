@@ -2,11 +2,12 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   childrenUtils,
   createShorthandFactory,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import {
   useSharedClassName,
@@ -33,7 +34,7 @@ export type LabelChildren = {
 /* --------
  * Component Render
  * -------- */
-const Label: CreatableFunctionComponent<LabelProps> & LabelChildren = (
+const Label: Creatable<UIMutableComponent<LabelProps>> & LabelChildren = (
   receivedProps
 ) => {
 

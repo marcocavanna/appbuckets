@@ -6,6 +6,8 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
+import { UIComponent } from '../generic';
+
 import {
   useSharedClassName,
   useSplitStateClassName
@@ -19,7 +21,7 @@ import { DividerProps } from './Divider.types';
 /* --------
  * Component Render
  * -------- */
-const Divider: React.FunctionComponent<DividerProps> = (receivedProps) => {
+const Divider: UIComponent<DividerProps> = (receivedProps) => {
 
   /** Get component props */
   const props = useWithDefaultProps('divider', receivedProps);

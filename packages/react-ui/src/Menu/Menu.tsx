@@ -2,13 +2,14 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   ShorthandCollection,
   createShorthandFactory,
   childrenUtils,
   useAutoControlledValue,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -31,7 +32,7 @@ export type MenuChildren = {
 /* --------
  * Component Declare
  * -------- */
-const Menu: CreatableFunctionComponent<MenuProps> & MenuChildren = (receivedProps) => {
+const Menu: Creatable<UIMutableComponent<MenuProps>> & MenuChildren = (receivedProps) => {
 
   const props = useWithDefaultProps('menu', receivedProps);
 

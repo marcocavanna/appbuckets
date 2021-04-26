@@ -1,11 +1,11 @@
 import { ShorthandCollection } from '@appbuckets/react-ui-core';
 
-import { FlexboxContainer } from '../generic';
+import { FlexboxContainerProps, UIMutableComponentProps } from '../generic';
 
 import { ButtonProps } from './Button.types';
 
 
-export interface ButtonGroupProps extends FlexboxContainer<StrictButtonGroupProps> {
+export interface ButtonGroupProps extends UIMutableComponentProps<StrictButtonGroupProps>, FlexboxContainerProps {
 }
 
 export interface StrictButtonGroupProps {

@@ -2,11 +2,12 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   childrenUtils,
   createShorthandFactory,
   getElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import { getSharedClassNames, useSplitStateClassName } from '../utils';
 
@@ -33,7 +34,7 @@ export type HeaderChildren = {
 /* --------
  * Component Render
  * -------- */
-const Header: CreatableFunctionComponent<HeaderProps> & HeaderChildren = (
+const Header: Creatable<UIMutableComponent<HeaderProps>> & HeaderChildren = (
   receivedProps
 ) => {
 

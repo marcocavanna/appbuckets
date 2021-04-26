@@ -2,11 +2,12 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   createShorthandFactory,
   childrenUtils,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -18,7 +19,7 @@ import { ItemMetaProps } from './ItemMeta.types';
 /* --------
  * Component Render
  * -------- */
-const ItemMeta: CreatableFunctionComponent<ItemMetaProps> = (receivedProps) => {
+const ItemMeta: Creatable<UIMutableComponent<ItemMetaProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('itemMeta', receivedProps);
 

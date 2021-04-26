@@ -1,13 +1,13 @@
 import {
-  AppBucketsComponentProps,
+  UIMutableComponentProps,
   AppBucketsIcon,
-  SharedComponentStateProps
+  AppearanceProps
 } from '../generic';
 
 import { IconProps } from '../Icon';
 
 
-export interface BadgeProps extends AppBucketsComponentProps<StrictBadgeProps>, SharedComponentStateProps {
+export interface BadgeProps extends UIMutableComponentProps<StrictBadgeProps>, AppearanceProps {
 }
 
 export interface StrictBadgeProps {

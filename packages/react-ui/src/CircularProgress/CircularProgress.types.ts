@@ -1,9 +1,9 @@
-import { MinimalAppBucketsComponentProps } from '../generic';
+import { UIVoidComponentStrictProps, PropsWithAs } from '../generic';
 
 import { ProgressIndicator, StrictSharedProgressProps } from '../LinearProgress/Shared.types';
 
 
-export interface CircularProgressProps extends MinimalAppBucketsComponentProps<StrictCircularProgressProps> {
+export interface CircularProgressProps extends UIVoidComponentStrictProps<PropsWithAs<StrictCircularProgressProps>> {
 }
 
 export interface StrictCircularProgressProps extends StrictSharedProgressProps {

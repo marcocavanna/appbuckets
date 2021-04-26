@@ -2,11 +2,12 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   createShorthandFactory,
   childrenUtils,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -18,7 +19,7 @@ import { ItemTextProps } from './ItemText.types';
 /* --------
  * Component Render
  * -------- */
-const ItemText: CreatableFunctionComponent<ItemTextProps> = (receivedProps) => {
+const ItemText: Creatable<UIMutableComponent<ItemTextProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('itemText', receivedProps);
 

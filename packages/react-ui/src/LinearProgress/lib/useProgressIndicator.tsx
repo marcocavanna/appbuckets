@@ -6,7 +6,7 @@ import { ProgressDescriptor } from './useProgressProps';
 
 
 export default function useProgressIndicator(
-  indicator: ProgressIndicator, progress: ProgressDescriptor
+  indicator: ProgressIndicator | undefined, progress: ProgressDescriptor
 ) {
   const indicatorValue = indicator && (
     typeof indicator === 'string' || indicator === true

@@ -16,10 +16,6 @@
         {
           "fileName": "react-ui/src/CircularProgress/CircularProgress.types.ts",
           "name": "StrictCircularProgressProps"
-        },
-        {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
-          "name": "TypeLiteral"
         }
       ],
       "required": false,
@@ -123,6 +119,9 @@
         "raw": "AppBucketsColor",
         "value": [
           {
+            "value": "\"text\""
+          },
+          {
             "value": "\"primary\""
           },
           {
@@ -136,9 +135,6 @@
           },
           {
             "value": "\"info\""
-          },
-          {
-            "value": "\"text\""
           },
           {
             "value": "\"text secondary\""
@@ -184,66 +180,6 @@
           },
           {
             "value": "\"cloud dark\""
-          },
-          {
-            "value": "\"facebook\""
-          },
-          {
-            "value": "\"twitter\""
-          },
-          {
-            "value": "\"youtube\""
-          },
-          {
-            "value": "\"instagram\""
-          },
-          {
-            "value": "\"pinterest\""
-          },
-          {
-            "value": "\"linkedin\""
-          },
-          {
-            "value": "\"google\""
-          },
-          {
-            "value": "\"google-plus\""
-          },
-          {
-            "value": "\"whatsapp\""
-          },
-          {
-            "value": "\"tumblr\""
-          },
-          {
-            "value": "\"apple\""
-          },
-          {
-            "value": "\"amazon\""
-          },
-          {
-            "value": "\"microsoft\""
-          },
-          {
-            "value": "\"vimeo\""
-          },
-          {
-            "value": "\"skype\""
-          },
-          {
-            "value": "\"android\""
-          },
-          {
-            "value": "\"dribble\""
-          },
-          {
-            "value": "\"slack\""
-          },
-          {
-            "value": "\"yahoo\""
-          },
-          {
-            "value": "\"telegram\""
           }
         ]
       }
@@ -363,19 +299,19 @@
         "raw": "ElementSize",
         "value": [
           {
-            "value": "\"extra small\""
+            "value": "\"big\""
           },
           {
             "value": "\"small\""
+          },
+          {
+            "value": "\"extra small\""
           },
           {
             "value": "\"normal\""
           },
           {
             "value": "\"large\""
-          },
-          {
-            "value": "\"big\""
           },
           {
             "value": "\"huge\""
@@ -404,16 +340,12 @@
     },
     "as": {
       "defaultValue": null,
-      "description": "An Element used to Render the Component",
+      "description": "",
       "name": "as",
-      "parent": {
-        "fileName": "react-ui/src/generic.ts",
-        "name": "CoreAppBucketsComponentProps"
-      },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "CoreAppBucketsComponentProps"
+          "name": "TypeLiteral"
         }
       ],
       "required": false,
@@ -427,12 +359,12 @@
       "name": "className",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "CoreAppBucketsComponentProps"
+        "name": "CoreUIVoidComponentProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "CoreAppBucketsComponentProps"
+          "name": "CoreUIVoidComponentProps"
         },
         {
           "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",

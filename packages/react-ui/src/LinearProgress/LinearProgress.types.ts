@@ -1,11 +1,11 @@
 import { ShorthandContent } from '@appbuckets/react-ui-core';
 
-import { MinimalAppBucketsComponentProps } from '../generic';
+import { PropsWithAs, UIComponentStrictProps } from '../generic';
 
 import { ProgressIndicator, StrictSharedProgressProps } from './Shared.types';
 
 
-export interface LinearProgressProps extends MinimalAppBucketsComponentProps<StrictLinearProgressProps> {
+export interface LinearProgressProps extends UIComponentStrictProps<PropsWithAs<StrictLinearProgressProps>> {
 
 }
 

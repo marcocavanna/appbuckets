@@ -8,9 +8,9 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import {
-  useSharedClassName
-} from '../utils';
+import { UIMutableComponent } from '../generic';
+
+import { useSharedClassName } from '../utils';
 
 import { useWithDefaultProps } from '../BucketTheme';
 
@@ -40,7 +40,7 @@ type ModalChildren = {
 /* --------
  * Component Render
  * -------- */
-const Modal: React.FunctionComponent<ModalProps> & ModalChildren = (
+const Modal: UIMutableComponent<ModalProps> & ModalChildren = (
   receivedProps
 ) => {
 
@@ -240,11 +240,7 @@ const Modal: React.FunctionComponent<ModalProps> & ModalChildren = (
             {ModalContent.create(content, { autoGenerateKey: false })}
             {modalActionsElement}
           </React.Fragment>
-        ) : (
-          typeof children === 'function'
-            ? (children as (...args: any[]) => void)({ closeModal: handleModalClose })
-            : children
-        )}
+        ) : children}
       </ElementType>
     </ModalProvider>
   );

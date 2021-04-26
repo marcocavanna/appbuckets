@@ -1,13 +1,13 @@
 import { ShorthandCollection } from '@appbuckets/react-ui-core';
 
-import { MinimalAppBucketsComponentProps } from '../generic';
+import { UIMutableComponentStrictProps } from '../generic';
 
 import { TableCellProps } from './TableCell.types';
 import { TableRowProps } from './TableRow.types';
 import { TableHeaderCellProps } from './TableHeaderCell.types';
 
 
-export interface TableProps<Data = any> extends MinimalAppBucketsComponentProps<StrictTableProps<Data>> {
+export interface TableProps<Data = any> extends UIMutableComponentStrictProps<StrictTableProps<Data>> {
 }
 
 export interface StrictTableProps<Data> {

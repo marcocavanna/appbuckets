@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import { AppBucketsComponentProps } from '../generic';
+import { UIMutableComponentProps } from '../generic';
 
 
-export interface StickyProps extends AppBucketsComponentProps<StrictStickyProps> {
+export interface StickyProps extends UIMutableComponentProps<StrictStickyProps> {
 
 }
 

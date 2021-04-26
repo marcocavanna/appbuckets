@@ -1,9 +1,7 @@
-import {
-  AppBucketsComponentProps
-} from '../generic';
+import { UIMutableComponentProps } from '../generic';
 
 
-export interface ItemTextProps extends AppBucketsComponentProps<StrictItemTextProps> {
+export interface ItemTextProps extends UIMutableComponentProps<StrictItemTextProps> {
 }
 
 export interface StrictItemTextProps {

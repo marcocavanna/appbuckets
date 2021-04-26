@@ -1,10 +1,10 @@
 import {
-  AppBucketsComponentProps,
-  SharedComponentStateProps
+  UIMutableComponentProps,
+  AppearanceProps
 } from '../generic';
 
 
-export interface DividerProps extends AppBucketsComponentProps<StrictDividerProps>, SharedComponentStateProps {
+export interface DividerProps extends UIMutableComponentProps<StrictDividerProps>, AppearanceProps {
 }
 
 export interface StrictDividerProps {

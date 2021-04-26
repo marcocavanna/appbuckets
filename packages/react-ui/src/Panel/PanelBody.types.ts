@@ -1,10 +1,10 @@
 import { ShorthandCollection } from '@appbuckets/react-ui-core';
 
-import { AppBucketsComponentProps } from '../generic';
+import { UIMutableComponentProps } from '../generic';
 import { ButtonProps } from '../Button';
 
 
-export interface PanelBodyProps extends AppBucketsComponentProps<StrictPanelBodyProps> {
+export interface PanelBodyProps extends UIMutableComponentProps<StrictPanelBodyProps> {
 }
 
 export interface StrictPanelBodyProps {

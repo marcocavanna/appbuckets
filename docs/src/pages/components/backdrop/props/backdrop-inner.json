@@ -152,37 +152,18 @@
         "name": "boolean"
       }
     },
-    "as": {
-      "defaultValue": null,
-      "description": "An Element used to Render the Component",
-      "name": "as",
-      "parent": {
-        "fileName": "react-ui/src/generic.ts",
-        "name": "CoreAppBucketsComponentProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/generic.ts",
-          "name": "CoreAppBucketsComponentProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "ElementType<any>"
-      }
-    },
     "children": {
       "defaultValue": null,
       "description": "Main Component Content",
       "name": "children",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "CoreAppBucketsComponentProps"
+        "name": "CoreUIComponentProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "CoreAppBucketsComponentProps"
+          "name": "CoreUIComponentProps"
         },
         {
           "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
@@ -198,18 +179,37 @@
         "name": "ReactNode"
       }
     },
+    "content": {
+      "defaultValue": null,
+      "description": "Content Shorthand",
+      "name": "content",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreUIComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreUIComponentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ShorthandContent"
+      }
+    },
     "className": {
       "defaultValue": null,
       "description": "User Defined Class Names",
       "name": "className",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
-        "name": "CoreAppBucketsComponentProps"
+        "name": "CoreUIVoidComponentProps"
       },
       "declarations": [
         {
           "fileName": "react-ui/src/generic.ts",
-          "name": "CoreAppBucketsComponentProps"
+          "name": "CoreUIVoidComponentProps"
         },
         {
           "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
@@ -219,25 +219,6 @@
       "required": false,
       "type": {
         "name": "string"
-      }
-    },
-    "content": {
-      "defaultValue": null,
-      "description": "Content Shorthand",
-      "name": "content",
-      "parent": {
-        "fileName": "react-ui/src/generic.ts",
-        "name": "CoreAppBucketsComponentProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/generic.ts",
-          "name": "CoreAppBucketsComponentProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "ShorthandContent"
       }
     }
   }

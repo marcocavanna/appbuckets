@@ -1,9 +1,8 @@
 import * as React from 'react';
 
-import {
-  CreatableFunctionComponent,
-  createShorthandFactory
-} from '@appbuckets/react-ui-core';
+import { createShorthandFactory } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIVoidComponent } from '../generic';
 
 import { useWithDefaultProps } from '../BucketTheme';
 
@@ -16,7 +15,7 @@ import { useRadioContext } from './Radio.context';
 /* --------
  * Component Definition
  * -------- */
-const RadioOption: React.VFC<RadioOptionProps> = React.forwardRef<HTMLInputElement, RadioOptionProps>((
+const RadioOption: UIVoidComponent<RadioOptionProps> = React.forwardRef<HTMLInputElement, RadioOptionProps>((
   receivedProps, ref
 ) => {
 
@@ -67,10 +66,10 @@ const RadioOption: React.VFC<RadioOptionProps> = React.forwardRef<HTMLInputEleme
 
 RadioOption.displayName = 'RadioOption';
 
-(RadioOption as CreatableFunctionComponent<RadioOptionProps>).create = createShorthandFactory(
+(RadioOption as Creatable<UIVoidComponent<RadioOptionProps>>).create = createShorthandFactory(
   RadioOption,
   (value) => ({ value: value as string | number }),
   (props) => props.value
 );
 
-export default RadioOption as CreatableFunctionComponent<RadioOptionProps>;
+export default RadioOption as Creatable<UIVoidComponent<RadioOptionProps>>;

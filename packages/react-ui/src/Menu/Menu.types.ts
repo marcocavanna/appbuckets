@@ -1,12 +1,12 @@
 import * as React from 'react';
 
 import { ShorthandItem, ShorthandCollection } from '@appbuckets/react-ui-core';
-import { AppBucketsComponentProps } from '../generic';
+import { UIMutableComponentProps } from '../generic';
 
 import { MenuItemProps } from './MenuItem.types';
 
 
-export interface MenuProps extends AppBucketsComponentProps<StrictMenuProps> {
+export interface MenuProps extends UIMutableComponentProps<StrictMenuProps> {
 }
 
 export interface StrictMenuProps {

@@ -1,9 +1,7 @@
-import {
-  AppBucketsComponentProps
-} from '../generic';
+import { UIMutableComponentProps } from '../generic';
 
 
-export interface TabPanelProps extends AppBucketsComponentProps<StrictTabPanelProps> {
+export interface TabPanelProps extends UIMutableComponentProps<StrictTabPanelProps> {
 }
 
 export interface StrictTabPanelProps {

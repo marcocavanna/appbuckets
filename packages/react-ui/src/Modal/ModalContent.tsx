@@ -2,11 +2,12 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   childrenUtils,
   createShorthandFactory,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable, UIMutableComponent } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -18,7 +19,7 @@ import { ModalContentProps } from './ModalContent.types';
 /* --------
  * Component Render
  * -------- */
-const ModalContent: CreatableFunctionComponent<ModalContentProps> = (receivedProps) => {
+const ModalContent: Creatable<UIMutableComponent<ModalContentProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('modalContent', receivedProps);
 

@@ -3,15 +3,15 @@ import * as React from 'react';
 import { ShorthandContent } from '@appbuckets/react-ui-core';
 
 import {
-  AppBucketsComponentProps,
+  UIMutableComponentProps,
   AppBucketsIcon,
-  SharedComponentStateProps
+  AppearanceProps
 } from '../generic';
 
 import { IconProps } from '../Icon';
 
 
-export interface ButtonProps extends AppBucketsComponentProps<StrictButtonProps, 'button'>, SharedComponentStateProps {
+export interface ButtonProps extends UIMutableComponentProps<StrictButtonProps, 'button'>, AppearanceProps {
 }
 
 export interface StrictButtonProps {

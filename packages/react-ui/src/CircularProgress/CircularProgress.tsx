@@ -2,10 +2,11 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  CreatableFunctionComponent,
   createShorthandFactory,
   useElementType
 } from '@appbuckets/react-ui-core';
+
+import { Creatable } from '../generic';
 
 import { useWithDefaultProps } from '../BucketTheme';
 
@@ -17,7 +18,7 @@ import useProgressIndicator from '../LinearProgress/lib/useProgressIndicator';
 /* --------
  * Component Render
  * -------- */
-const CircularProgress: CreatableFunctionComponent<CircularProgressProps> = (
+const CircularProgress: Creatable<React.VFC<CircularProgressProps>> = (
   receivedProps
 ) => {
 
@@ -53,6 +54,10 @@ const CircularProgress: CreatableFunctionComponent<CircularProgressProps> = (
   // ----
   const circle = React.useMemo<{ radius: number, stroke: number }>(
     () => {
+
+      if (typeof strokeWidth !== 'number' || typeof radius !== 'number') {
+        return { radius: 0, stroke: 0 };
+      }
 
       const startingStrokeWidth = indicatorElement ? strokeWidth - 2 : strokeWidth;
       const startingRadius = indicatorElement ? radius + 1 : radius;

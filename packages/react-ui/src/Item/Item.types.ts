@@ -3,8 +3,8 @@ import * as React from 'react';
 import { ShorthandItem, ShorthandCollection } from '@appbuckets/react-ui-core';
 
 import {
-  AppBucketsComponentProps,
-  SharedComponentStateProps
+  UIMutableComponentProps,
+  AppearanceProps
 } from '../generic';
 
 import { AvatarProps } from '../Avatar';
@@ -13,7 +13,7 @@ import { ButtonProps } from '../Button';
 import { StrictItemContentProps } from './ItemContent.types';
 
 
-export interface ItemProps extends AppBucketsComponentProps<StrictItemProps>, SharedComponentStateProps {
+export interface ItemProps extends UIMutableComponentProps<StrictItemProps>, AppearanceProps {
 }
 
 export interface StrictItemProps extends StrictItemContentProps {

@@ -6,6 +6,8 @@ import {
   childrenUtils
 } from '@appbuckets/react-ui-core';
 
+import { UIMutableComponent } from '../generic';
+
 import {
   useSharedClassName
 } from '../utils';
@@ -26,7 +28,7 @@ const appendValueToClass = (
 /* --------
  * Component Render
  * -------- */
-const Box: React.FunctionComponent<BoxProps> = (receivedProps) => {
+const Box: UIMutableComponent<BoxProps> = (receivedProps) => {
 
   /** Get component props */
   const props = useWithDefaultProps('box', receivedProps);

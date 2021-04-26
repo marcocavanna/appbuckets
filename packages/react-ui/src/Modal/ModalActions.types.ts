@@ -2,12 +2,12 @@ import * as React from 'react';
 
 import { ShorthandCollection } from '@appbuckets/react-ui-core';
 
-import { AppBucketsComponentProps } from '../generic';
+import { UIMutableComponentProps } from '../generic';
 
 import { ButtonProps } from '../Button';
 
 
-export interface ModalActionsProps extends AppBucketsComponentProps<StrictModalActionsProps> {
+export interface ModalActionsProps extends UIMutableComponentProps<StrictModalActionsProps> {
 }
 
 export interface StrictModalActionsProps {
