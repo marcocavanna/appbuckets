@@ -200,7 +200,7 @@
 /******
     Header Color Variation
 ******/
-@each $label, $color in $react-bucket-color-map {
+@each $label, $color in $ui-color-map {
   .header.is-#{$label} {
     &:not(.inverted) {
       color: $color;

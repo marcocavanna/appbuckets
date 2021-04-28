@@ -22,12 +22,12 @@
 
   // Append Brand Colors to variation
   @if $use-brands == true {
-    $colors-variations: map-merge($colors-variations, $react-bucket-brand-colors-map);
+    $colors-variations: map-merge($colors-variations, $ui-brand-colors-map);
   }
 
   // Append UI Colors to variation
   @if $use-ui == true {
-    $colors-variations: map-merge($colors-variations, $react-bucket-ui-colors-map);
+    $colors-variations: map-merge($colors-variations, $ui-colors-map);
   }
 
   // Build the base element style

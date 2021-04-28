@@ -134,7 +134,7 @@
     }
 
     /// Set color variation
-    @each $label, $color in $react-bucket-color-map {
+    @each $label, $color in $ui-color-map {
       &.is-#{$label} {
         background-color: transparentize($color, .8);
         color: $color;

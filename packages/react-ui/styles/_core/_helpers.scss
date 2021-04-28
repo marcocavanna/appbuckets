@@ -54,7 +54,7 @@
 
 /// Generate Text Color Helpers Class
 @if $generate-text-color-helpers-class == true {
-  @each $label, $color in $react-bucket-color-map {
+  @each $label, $color in $ui-color-map {
     @include selectors-for-each-breakpoint('has-text-#{$label}', $selectors-with-breakpoint: $generate-text-color-responsive-helpers-class) {
       color: $color !important;
     }
@@ -63,7 +63,7 @@
 
 /// Generate Background Color Helpers Class
 @if $generate-background-color-helpers-class == true {
-  @each $label, $color in $react-bucket-color-map {
+  @each $label, $color in $ui-color-map {
     @include selectors-for-each-breakpoint('has-background-#{$label}', $selectors-with-breakpoint: $generate-background-color-responsive-helpers-class) {
       @include variation-style(
         $properties-list: background-color,

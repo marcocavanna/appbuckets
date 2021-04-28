@@ -119,7 +119,7 @@
   > .menu-item.active {
     color: $menu-base-item-active-color;
 
-    @each $label, $color in $react-bucket-color-map {
+    @each $label, $color in $ui-color-map {
       &.is-#{$label} {
         color: $color;
       }
@@ -162,7 +162,7 @@
       &.active {
         border-bottom-color: $menu-base-item-active-border-color;
 
-        @each $label, $color in $react-bucket-color-map {
+        @each $label, $color in $ui-color-map {
           &.is-#{$label} {
             border-bottom-color: $color;
           }
@@ -193,7 +193,7 @@
       &.active {
         border-right-color: $menu-base-item-active-border-color;
 
-        @each $label, $color in $react-bucket-color-map {
+        @each $label, $color in $ui-color-map {
           &.is-#{$label} {
             border-right-color: $color;
           }
@@ -225,7 +225,7 @@
       box-shadow: $menu-tab-item-active-shadow;
       text-shadow: $menu-tab-item-active-text-shadow;
 
-      @each $label, $color in $react-bucket-color-map {
+      @each $label, $color in $ui-color-map {
         &.is-#{$label} {
           background-color: $color;
           color: choose-contrast-color($color, $menu-tab-item-active-color, $menu-tab-item-active-contrast-color);

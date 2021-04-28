@@ -44,7 +44,7 @@
     margin-right: 0;
   }
 
-  @each $label, $color in $react-bucket-color-map {
+  @each $label, $color in $ui-color-map {
     &.colored.is-#{$label}:before {
       background-color: color-tint($color, 4) !important;
     }

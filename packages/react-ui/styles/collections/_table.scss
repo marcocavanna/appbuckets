@@ -221,7 +221,7 @@ table > .head,
     Color Variation
 ******/
 .table .row > .cell {
-  @each $label, $color in $react-bucket-color-map {
+  @each $label, $color in $ui-color-map {
     &.is-#{$label} {
       background-color: transparentize($color, $table-color-variation-transparency);
       color: $color;

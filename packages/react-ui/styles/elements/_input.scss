@@ -80,7 +80,7 @@ textarea.text {
   // ----
   //  Colored Styles
   // ----
-  @each $label, $color in $react-bucket-color-map {
+  @each $label, $color in $ui-color-map {
     &.is-#{$label} {
       @if $label == 'danger' or $label == 'info' or $label == 'primary' or $label == 'secondary' or $label == 'success' or $label == 'warning' {
         box-shadow: inset 0 0 0 $input-border-width $color;

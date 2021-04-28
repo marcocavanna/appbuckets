@@ -246,7 +246,7 @@ input[type='radio'] {
 }
 
 
-@each $label, $color in $react-bucket-color-map {
+@each $label, $color in $ui-color-map {
   .checkbox.field.is-#{$label} .checked.checkbox + label > .checkbox-toggle,
   .radio.field.is-#{$label} .checked.radio + label > .checkbox-toggle,
   .switch.field.is-#{$label} .checked.switch + label > .checkbox-toggle {

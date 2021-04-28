@@ -203,7 +203,7 @@
   }
 }
 
-@each $label, $color in $react-bucket-color-map {
+@each $label, $color in $ui-color-map {
   .hero-button.is-#{$label} {
     @include __hero-button-variation($color);
   }

@@ -245,7 +245,7 @@
   // ----
   //  Appearance Color
   // ----
-  @each $label, $color in $react-bucket-color-map {
+  @each $label, $color in $ui-color-map {
     &.is-#{$label} {
       &.linear > .bar > .value {
         background-color: $color;

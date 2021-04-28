@@ -81,7 +81,7 @@ $success-tint: color-tint($success) !default;
 /******
     Color Mapping
 ******/
-$react-bucket-ui-colors-map: (
+$ui-colors-map: (
   'hidden': $transparent,
   'text' : $text,
   'text-secondary' : $text-secondary,
@@ -102,7 +102,7 @@ $react-bucket-ui-colors-map: (
   'cloud-dark' : $cloud-dark
 );
 
-$react-bucket-brand-colors-map: (
+$ui-brand-colors-map: (
   'primary' : $primary,
   'warning' : $warning,
   'info' : $info,
@@ -110,4 +110,4 @@ $react-bucket-brand-colors-map: (
   'danger' : $danger
 );
 
-$react-bucket-color-map: map-merge($react-bucket-ui-colors-map, $react-bucket-brand-colors-map);
+$ui-color-map: map-merge($ui-colors-map, $ui-brand-colors-map);

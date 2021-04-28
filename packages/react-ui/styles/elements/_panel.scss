@@ -183,7 +183,7 @@
     box-shadow: none !important;
   }
 
-  @each $label, $color in $react-bucket-color-map {
+  @each $label, $color in $ui-color-map {
     &.is-#{$label} {
       $shadow: inset 0 $panel-appearance-border-consistence 0 (-$panel-appearance-border-consistence + $panel-appearance-border-width) $color;
 
