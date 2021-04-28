@@ -360,6 +360,16 @@ export const defaultBucketThemeConfig: ThemeOptions = {
 
 
   // ----
+  // Slider Component
+  // ----
+  slider: {
+    min : 0,
+    max : 100,
+    step: 1
+  },
+
+
+  // ----
   // Sticky Component
   // ----
   sticky: {},

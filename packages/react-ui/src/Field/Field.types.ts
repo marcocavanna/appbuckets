@@ -29,7 +29,7 @@ export interface StrictFieldProps extends AppearanceProps {
   contentClassName?: string;
 
   /** Set field content type */
-  contentType?: 'input' | 'select input' | 'checkbox' | 'radio' | 'switch' | 'color';
+  contentType?: 'input' | 'select input' | 'checkbox' | 'radio' | 'switch' | 'color' | 'slider';
 
   /** Set the field as Disabled */
   disabled?: boolean;

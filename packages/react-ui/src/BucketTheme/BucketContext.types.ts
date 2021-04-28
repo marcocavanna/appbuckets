@@ -46,6 +46,7 @@ import { RowProps } from '../Row';
 import { RxTableProps } from '../RxTable';
 import { SectionProps } from '../Section';
 import { SelectProps } from '../Select';
+import { SliderProps } from '../Slider';
 import { StickyProps } from '../Sticky';
 import {
   TableBodyProps,
@@ -193,6 +194,8 @@ export interface ThemeOptions {
   select: ThemeComponentProps<SelectProps<any, any, any>>;
 
   selectMulti: ThemeComponentProps<MultiSelectProps<any, any>>;
+
+  slider: ThemeComponentProps<SliderProps>;
 
   sticky: ThemeComponentProps<StickyProps>;
 

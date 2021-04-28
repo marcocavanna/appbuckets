@@ -616,6 +616,32 @@ $select-multi-value-label-padding: .75em !default;
 
 
 /******
+    Slider
+******/
+$slider-rail-height: pixel-to-em(6) !default;
+$slider-rail-border-radius: $slider-rail-height / 2 !default;
+$slider-rail-background: $cloud-light !default;
+
+$slider-track-base-background: $primary !default;
+
+$slider-handle-size: $slider-rail-height * 3 !default;
+$slider-handle-border-radius: 100% !default;
+$slider-handle-border-style: solid !default;
+$slider-handle-border-width: .25em !default;
+$slider-handle-border-color: $slider-track-base-background !default;
+$slider-handle-background: $white !default;
+
+$slider-step-size: $slider-handle-size / 2 !default;
+$slider-step-border-width: $slider-handle-border-width / 1.5 !default;
+$slider-inactive-dot-border-color: $slider-rail-background !default;
+
+$slider-mark-font-size: $field-label-font-size !default;
+$slider-mark-color: $field-label-color !default;
+$slider-mark-font-weight: $field-label-font-weight !default;
+$slider-active-mark-color: $slider-track-base-background !default;
+
+
+/******
     Table Layout
 ******/
 $table-columns-gutter: $columns-gutter * 2 !default;
