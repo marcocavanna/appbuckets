@@ -378,7 +378,7 @@
       "required": false,
       "type": {
         "name": "enum",
-        "raw": "\"input\" | \"radio\" | \"switch\" | \"color\" | \"select input\" | \"checkbox\"",
+        "raw": "\"input\" | \"radio\" | \"switch\" | \"color\" | \"select input\" | \"checkbox\" | \"slider\"",
         "value": [
           {
             "value": "\"input\""
@@ -397,6 +397,9 @@
           },
           {
             "value": "\"checkbox\""
+          },
+          {
+            "value": "\"slider\""
           }
         ]
       }

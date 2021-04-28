@@ -1701,7 +1701,7 @@
       "required": false,
       "type": {
         "name": "enum",
-        "raw": "\"color\" | \"input\" | \"select input\" | \"checkbox\" | \"radio\" | \"switch\"",
+        "raw": "\"color\" | \"input\" | \"select input\" | \"checkbox\" | \"radio\" | \"switch\" | \"slider\"",
         "value": [
           {
             "value": "\"color\""
@@ -1720,6 +1720,9 @@
           },
           {
             "value": "\"switch\""
+          },
+          {
+            "value": "\"slider\""
           }
         ]
       }

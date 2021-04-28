@@ -495,7 +495,7 @@
       "required": false,
       "type": {
         "name": "enum",
-        "raw": "\"input\" | \"switch\" | \"color\" | \"radio\" | \"select input\" | \"checkbox\"",
+        "raw": "\"input\" | \"switch\" | \"color\" | \"radio\" | \"select input\" | \"checkbox\" | \"slider\"",
         "value": [
           {
             "value": "\"input\""
@@ -514,6 +514,9 @@
           },
           {
             "value": "\"checkbox\""
+          },
+          {
+            "value": "\"slider\""
           }
         ]
       }
