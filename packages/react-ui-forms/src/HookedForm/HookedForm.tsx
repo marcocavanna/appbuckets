@@ -27,6 +27,7 @@ const HookedForm = React.forwardRef<HTMLFormElement, HookedFormProps>((
     breakOnFirstError,
     context,
     defaultValues,
+    resolver,
     reValidateOn,
     validateOn,
 
@@ -61,7 +62,8 @@ const HookedForm = React.forwardRef<HTMLFormElement, HookedFormProps>((
     defaultValues,
     context,
     shouldFocusError: autoFocusFirstError,
-    criteriaMode    : breakOnFirstError ? 'firstError' : 'all'
+    criteriaMode    : breakOnFirstError ? 'firstError' : 'all',
+    resolver
   });
 
 

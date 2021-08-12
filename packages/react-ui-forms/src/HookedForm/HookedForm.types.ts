@@ -97,6 +97,9 @@ export interface StrictHookedFormProps<Values extends FieldValues, SubmitReturn,
   /** Reset entire form on cancel button click */
   resetOnCancel?: boolean;
 
+  /** Validation Resolver */
+  resolver?: UseFormProps<Values, Ctx>['resolver'];
+
   /** Set the event on revalidation will trigger */
   reValidateOn?: UseFormProps<Values, Ctx>['reValidateMode'];
 
