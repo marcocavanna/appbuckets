@@ -1,6 +1,13 @@
 export * from './context';
 
 /* --------
+ * Re Export from react-hook-form
+ * -------- */
+export { useFormContext } from 'react-hook-form';
+export type { FieldValues, UseFormReturn } from 'react-hook-form';
+
+
+/* --------
  * Main Hooked Form Component
  * -------- */
 export { default as HookedForm } from './HookedForm';
