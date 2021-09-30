@@ -88,29 +88,29 @@ const DataFilterElement: React.FunctionComponent<DataFilterElementProps> = (prop
 
 
   // ----
-  // Current Filter Value
-  // ----
-  const filterValue = filters[columnKey];
-
-
-  // ----
   // Handlers
   // ----
   const handleFilterChange = React.useCallback(
-    (e: any, filterProps?: InputProps | SelectEventProps<any> | MultiSelectEventProps<any> | CheckboxProps) => {
+    (e: any, filterProps: InputProps | SelectEventProps<any> | MultiSelectEventProps<any> | CheckboxProps) => {
       if (filter) {
         if (filter.type === 'input') {
-          setFilter(columnKey, filterProps!.value);
+          setFilter(columnKey, (filterProps as InputProps).value);
         }
         else if (filter.type === 'checkbox') {
-          setFilter(columnKey, !filterValue);
+          setFilter(columnKey, (filterProps as CheckboxProps).checked);
+        }
+        else if (filter.type === 'select') {
+          setFilter(columnKey, (filterProps as SelectEventProps<any>).value);
+        }
+        else if (filter.type === 'multi-select') {
+          const values = (filterProps as MultiSelectProps<any>).value;
+          setFilter(columnKey, Array.isArray(values) ? values : []);
         }
       }
     },
     [
       columnKey,
       filter,
-      filterValue,
       setFilter
     ]
   );
@@ -143,7 +143,7 @@ const DataFilterElement: React.FunctionComponent<DataFilterElementProps> = (prop
       <Checkbox
         {...filter.props}
         checked={!!filters[columnKey]}
-        onChange={handleFilterChange}
+        onClick={handleFilterChange}
       />
     );
   }
