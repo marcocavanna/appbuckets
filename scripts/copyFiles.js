@@ -155,7 +155,8 @@ async function run() {
       packageDate.name === '@appbuckets/react-ui' ? '../../README.md' : './README.md',
       '../../CHANGELOG.md',
       '../../LICENSE',
-      './styles'
+      './styles',
+      './types'
     ].map((file) => includeFileInBuild(file)));
 
     /** Remove invalid d.ts files */
