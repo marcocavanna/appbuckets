@@ -1,0 +1,24 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "outDir": "build",
+    "rootDir": "./src"
+  },
+  "include": [
+    "./src/**/*.ts*",
+    "./types/**/*.ts"
+  ],
+  "exclude": [
+    "src/**/*.spec.ts*",
+    "src/**/*.test.ts*"
+  ],
+  "references": [
+    {
+      "path": "../react-ui/tsconfig.declaration.json"
+    }
+  ]
+}

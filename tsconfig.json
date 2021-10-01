@@ -158,6 +158,18 @@
       "@appbuckets/react-ui-styles/*": [
         "./packages/react-ui-styles/src/*"
       ],
+      "@appbuckets/react-ui-forms":[
+        "./packages/react-ui-forms/src"
+      ],
+      "@appbuckets/react-ui-forms/*":[
+        "./packages/react-ui-forms/src/*"
+      ],
+      "@appbuckets/react-ui-smart-components":[
+        "./packages/react-ui-smart-components/src"
+      ],
+      "@appbuckets/react-ui-smart-components/*":[
+        "./packages/react-ui-smart-components/src/*"
+      ],
       "@appbuckets/utils": [
         "./packages/utils/src"
       ],
