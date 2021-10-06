@@ -24,7 +24,9 @@ const BackdropInner: React.FunctionComponent<BackdropInnerProps> = (receivedProp
     onClick,
     onClickOutside,
     onExited,
+    onExiting,
     onEntered,
+    onEntering,
     timeout,
     verticalAlign,
     visible,
@@ -88,8 +90,10 @@ const BackdropInner: React.FunctionComponent<BackdropInnerProps> = (receivedProp
   return (
     <Fade
       ref={containerRef}
+      onExiting={onExiting}
       onExited={onExited}
       onEntered={onEntered}
+      onEntering={onEntering}
       visible={visible}
       timeout={timeout}
     >

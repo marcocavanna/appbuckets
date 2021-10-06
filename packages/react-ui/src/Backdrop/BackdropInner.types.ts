@@ -21,8 +21,14 @@ export interface StrictBackdropInnerProps {
   /** Callback used once the BackdropInner has completed the fade in animation */
   onEntered?: FadeProps['onEntered'];
 
+  /** Callback used once the BackdropInner is appearing */
+  onEntering?: FadeProps['onEntering'];
+
   /** Callback used once the BackdropInner has has completed the fade out animation */
   onExited?: FadeProps['onExited'];
+
+  /** Callback used once the BackdropInner is disappearing */
+  onExiting?: FadeProps['onExiting'];
 
   /** Set transition timeout */
   timeout?: FadeProps['timeout'];

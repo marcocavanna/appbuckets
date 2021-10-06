@@ -43,6 +43,8 @@ const Backdrop: CreatableFunctionComponent<BackdropProps> & BackdropChildren = (
     content,
     loading,
     loaderProps,
+    onEntered: userDefinedOnEntered,
+    onExited : userDefinedOnExited,
     page,
     visible,
 
@@ -133,12 +135,20 @@ const Backdrop: CreatableFunctionComponent<BackdropProps> & BackdropChildren = (
     }
   };
 
-  const handleBackdropInnerExited = () => {
+  const handleBackdropInnerExited = (element: HTMLElement) => {
     setBackdropInnerVisible(false);
+
+    if (typeof userDefinedOnExited === 'function') {
+      userDefinedOnExited(element);
+    }
   };
 
-  const handleBackdropInnerEntered = () => {
+  const handleBackdropInnerEntered = (element: HTMLElement) => {
     setBackdropInnerVisible(true);
+
+    if (typeof userDefinedOnEntered === 'function') {
+      userDefinedOnEntered(element, false);
+    }
   };
 
 
