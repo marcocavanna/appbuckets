@@ -47,3 +47,5 @@ export { default as useDOMElementEvent } from './useDOMElementEvent';
 export { default as useEnhancedEffect } from './useEnhancedEffect';
 
 export { default as useForkRef } from './useForkRef';
+
+export { default as useMountedState } from './useMountedState';
