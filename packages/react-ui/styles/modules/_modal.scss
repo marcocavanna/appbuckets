@@ -18,7 +18,7 @@
   display: block;
   position: relative;
   text-align: left;
-  margin: $modal-top-offset auto;
+  margin: $modal-top-offset auto $modal-bottom-offset;
 
   background-color: $modal-background-color;
   color: $modal-color;
