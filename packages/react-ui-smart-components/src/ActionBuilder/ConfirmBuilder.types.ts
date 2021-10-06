@@ -25,16 +25,17 @@ export interface ConfirmActionHelpers extends BaseActionHelpers {
 /* --------
  * Action Types
  * -------- */
-export type ConfirmActionCancelHandler<Props extends {}> = BaseActionCancelHandler<ConfirmActionHelpers, Props>;
+export type ConfirmActionCancelHandler<Props extends {}> =
+  BaseActionCancelHandler<ConfirmActionHelpers, ConfirmComponentProps<Props, any>>;
 
 export type ConfirmActionCompletedHandler<Props extends {}, Result> =
-  BaseActionCompletedHandler<Result, void, false, ConfirmActionHelpers, Props>;
+  BaseActionCompletedHandler<Result, void, false, ConfirmActionHelpers, ConfirmComponentProps<Props, Result>>;
 
 export type ConfirmActionSubmitHandler<Props extends {}, Result> =
-  BaseActionSubmitHandler<Result, void, false, ConfirmActionHelpers, Props>;
+  BaseActionSubmitHandler<Result, void, false, ConfirmActionHelpers, ConfirmComponentProps<Props, Result>>;
 
 export type ConfirmActionSubmitErrorHandler<Props extends {}> =
-  BaseActionSubmitErrorHandler<void, false, ConfirmActionHelpers, Props>;
+  BaseActionSubmitErrorHandler<void, false, ConfirmActionHelpers, ConfirmComponentProps<Props, any>>;
 
 // eslint-disable-next-line max-len
 export type ConfirmActions<Props extends {}, Result> = BaseActionBuilderActions<ConfirmActionCancelHandler<Props>, ConfirmActionCompletedHandler<Props, Result>, ConfirmActionSubmitHandler<Props, Result>, ConfirmActionSubmitErrorHandler<Props>>;
