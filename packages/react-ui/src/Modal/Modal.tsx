@@ -100,6 +100,8 @@ const Modal: UIMutableComponent<ModalProps> & ModalChildren = (
     false,
     { prop: openProp, defaultProp: defaultOpen }
   );
+  /** Init a state to define if inner modal component must be visible */
+  const [ innerModalVisible, setInnerModalVisible ] = React.useState<boolean>(open);
   /** Get the component element type */
   const ElementType = useElementType(Modal, receivedProps, props);
   /** Check if in this render modal has children */
@@ -109,6 +111,20 @@ const Modal: UIMutableComponent<ModalProps> & ModalChildren = (
   // ----
   // Define Modal Handlers
   // ----
+  const handleModalEntering = React.useCallback(
+    () => {
+      setInnerModalVisible(true);
+    },
+    []
+  );
+
+  const handleModalExited = React.useCallback(
+    () => {
+      setInnerModalVisible(false);
+    },
+    []
+  );
+
   const handleModalClose = (e: React.MouseEvent<HTMLElement>) => {
     /** Call User Handler if Exists */
     if (onClose) {
@@ -180,19 +196,19 @@ const Modal: UIMutableComponent<ModalProps> & ModalChildren = (
   const modalHeaderElement = React.useMemo(
     () => {
       /** Set empty component if is closed */
-      if (!open || !header) {
+      if (!innerModalVisible || !header) {
         return null;
       }
       /** Create a new Modal Header using Shorthand Factory */
       return ModalHeader.create(header, { autoGenerateKey: false });
     },
-    [ open, header ]
+    [ innerModalVisible, header ]
   );
 
   const modalActionsElement = React.useMemo(
     () => {
       /** Set empty component if is closed */
-      if (hasChildren || !open || !actions) {
+      if (hasChildren || !innerModalVisible || !actions) {
         return null;
       }
       /** Create modal action element using Shorthand Factory */
@@ -212,7 +228,7 @@ const Modal: UIMutableComponent<ModalProps> & ModalChildren = (
         })
       });
     },
-    [ hasChildren, open, actions, onActionClick ]
+    [ hasChildren, innerModalVisible, actions, onActionClick ]
   );
 
 
@@ -268,6 +284,8 @@ const Modal: UIMutableComponent<ModalProps> & ModalChildren = (
       timeout={timeout}
       onClose={handleModalClose}
       onOpen={handleModalOpen}
+      onEntering={handleModalEntering}
+      onExited={handleModalExited}
     >
       {renderModalContent()}
     </Backdrop>
