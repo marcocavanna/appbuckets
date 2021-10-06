@@ -36,10 +36,10 @@ interface BaseUseActionBuilderResult {
   ) => boolean;
 
   /** Handle modal close, changing open state */
-  handleModalClose: (e: React.MouseEvent<HTMLElement>, modalProps: ModalProps) => void;
+  handleModalClose: (e: React.MouseEvent<HTMLElement> | null, modalProps: ModalProps) => void;
 
   /** Handle modal open, changing open state */
-  handleModalOpen: (e: React.MouseEvent<HTMLElement>, modalProps: ModalProps) => void;
+  handleModalOpen: (e: React.MouseEvent<HTMLElement> | null, modalProps: ModalProps) => void;
 
   /** Current modal state */
   open: boolean;
@@ -158,7 +158,7 @@ export default function useActionBuilder<Content extends React.ComponentType<any
   // Handlers
   // ----
   const handleModalOpen = React.useCallback(
-    (e: React.MouseEvent<HTMLElement>, modalProps: ModalProps) => {
+    (e: React.MouseEvent<HTMLElement> | null, modalProps: ModalProps) => {
       /** Try to set the auto controlled open state value */
       trySetModalOpen(true);
       /** Check if a user defined handler exists */
@@ -170,7 +170,7 @@ export default function useActionBuilder<Content extends React.ComponentType<any
   );
 
   const handleModalClose = React.useCallback(
-    (e: React.MouseEvent<HTMLElement>, modalProps: ModalProps) => {
+    (e: React.MouseEvent<HTMLElement> | null, modalProps: ModalProps) => {
       /** Try to set the auto controlled open state value */
       trySetModalOpen(false);
       /** Check if a user defined handler exists */

@@ -158,10 +158,10 @@ interface BaseActionBuilderStrictProps {
   modalProps?: Partial<Omit<ModalProps, 'defaultOpen' | 'onClose' | 'onOpen' | 'open' | 'trigger'>>;
 
   /** On Modal Close Handler */
-  onModalClose?: (e: React.MouseEvent<HTMLElement>, props: ModalProps) => void;
+  onModalClose?: (e: React.MouseEvent<HTMLElement> | null, props: ModalProps) => void;
 
   /** On Modal Open Handler */
-  onModalOpen?: (e: React.MouseEvent<HTMLElement>, props: ModalProps) => void;
+  onModalOpen?: (e: React.MouseEvent<HTMLElement> | null, props: ModalProps) => void;
 
   /** Manually control open modal state */
   open?: boolean;
