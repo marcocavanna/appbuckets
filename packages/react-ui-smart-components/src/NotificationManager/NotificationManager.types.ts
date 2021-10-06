@@ -8,28 +8,30 @@ type StrictNotificationContent = string | ToastProps | ClientRequestError;
 
 export type NotificationContent = StrictNotificationContent | StrictNotificationContent[] | ValidationError;
 
+export type NotificationRaiser = (content: NotificationContent, options?: RaiseParam) => void;
+
 export interface INotificationManager {
   /** Show a custom style notification */
   custom(content: NotificationContent, options?: RaiseParam, props?: Partial<ToastProps>): void;
 
   /** Show a default style notification */
-  default(content: NotificationContent, options?: RaiseParam): void;
+  default: NotificationRaiser;
 
   /** Show an error notification */
-  error(content: NotificationContent, options?: RaiseParam): void;
+  error: NotificationRaiser;
 
   /** Show an info notification */
-  info(content: NotificationContent, options?: RaiseParam): void;
+  info: NotificationRaiser;
 
   /** Show a primary notification */
-  primary(content: NotificationContent, options?: RaiseParam): void;
+  primary: NotificationRaiser;
 
   /** Show a secondary notification */
-  secondary(content: NotificationContent, options?: RaiseParam): void;
+  secondary: NotificationRaiser;
 
   /** Show a success notification */
-  success(content: NotificationContent, options?: RaiseParam): void;
+  success: NotificationRaiser;
 
   /** Show a warning notification */
-  warning(content: NotificationContent, options?: RaiseParam): void;
+  warning: NotificationRaiser;
 }

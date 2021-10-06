@@ -1,3 +1,3 @@
 export { default } from './NotificationManager';
 
-export type { NotificationContent } from './NotificationManager.types';
+export type { NotificationContent, NotificationRaiser } from './NotificationManager.types';
