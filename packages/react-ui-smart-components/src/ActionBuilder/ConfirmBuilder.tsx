@@ -20,11 +20,7 @@ import type {
 import useActionBuilder from './lib/useActionBuilder';
 import useActionNotification from './lib/useActionNotifications';
 
-
-/* --------
- * Weak Map to test DisplayName
- * -------- */
-const createdConfirmComponent = new Set<string>();
+import assertUniqueActionBuiltName from './utils/assertUniqueActionBuiltName';
 
 
 /* --------
@@ -60,15 +56,7 @@ export default function buildConfirmAction<Props extends {}, Result = any>(
   // ----
   // Check multiple displayName in development mode only
   // ----
-  if (process.env.NODE_ENV === 'development') {
-    if (createdConfirmComponent.has(defaultDefinedDisplayName)) {
-      global.console.warn(
-        `[ @appbuckets/react-ui-smart-components ] : a confirm element has been created with name ${defaultDefinedDisplayName}.`
-        + ' This displayName has been already assigned to another ConfirmComponent.'
-      );
-    }
-    createdConfirmComponent.add(defaultDefinedDisplayName);
-  }
+  assertUniqueActionBuiltName(defaultDefinedDisplayName, 'confirm');
 
 
   // ----
