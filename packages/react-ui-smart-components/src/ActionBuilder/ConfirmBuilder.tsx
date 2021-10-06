@@ -141,6 +141,20 @@ export default function buildConfirmAction<Props extends {}, Result = any>(
 
 
     // ----
+    // Assertion
+    // ----
+    React.useEffect(
+      () => {
+        /** Assert isPerformingAction is falsy on open */
+        if (renderAsModal && open) {
+          setIsPerformingAction(false);
+        }
+      },
+      [ renderAsModal, open, setIsPerformingAction ]
+    );
+
+
+    // ----
     // Handlers
     // ----
     const handleSubmitClick = async (event: React.MouseEvent<HTMLElement>) => {
@@ -163,15 +177,15 @@ export default function buildConfirmAction<Props extends {}, Result = any>(
           await onCompleted(result as Result, actionHelpers, props);
         }
 
-        /** Restore State */
-        setIsPerformingAction(false);
-
         /** Raise the Submitted Notification */
         notify.raiseOnSubmitted();
 
         /** If has been rendered as modal, close it */
         if (renderAsModal) {
           handleModalClose(event, { ...userDefinedModalProps });
+        }
+        else {
+          setIsPerformingAction(false);
         }
       }
       catch (error) {
@@ -211,12 +225,13 @@ export default function buildConfirmAction<Props extends {}, Result = any>(
           setIsPerformingAction(true);
           /** Fire the onCancel Handler */
           await onCancel(actionHelpers, props);
-          /** Remove the Internal State */
-          setIsPerformingAction(false);
         }
         /** Close the Modal is Confirm is rendered as it */
         if (renderAsModal) {
           handleModalClose(event, { ...userDefinedModalProps });
+        }
+        else {
+          setIsPerformingAction(false);
         }
       }
       catch (error) {
@@ -253,6 +268,7 @@ export default function buildConfirmAction<Props extends {}, Result = any>(
           autoGenerateKey: false,
           overrideProps  : (subComponentProps) => ({
             disabled: isPerformingAction,
+            loading : isPerformingAction,
             onClick : async (event, buttonProps) => {
               /** Check if a user defined onClick handler exists */
               if (typeof subComponentProps.onClick === 'function') {
@@ -277,8 +293,14 @@ export default function buildConfirmAction<Props extends {}, Result = any>(
         userDefinedSubmitButton || defaultDefinedSubmitButton,
         {
           autoGenerateKey: false,
+          defaultProps   : {
+            primary  : true,
+            autoFocus: true,
+            type     : 'submit'
+          },
           overrideProps  : (subComponentProps) => ({
             disabled: isPerformingAction,
+            loading : isPerformingAction,
             onClick : async (event, buttonProps) => {
               /** Check if a user defined onClick handler exists */
               if (typeof subComponentProps.onClick === 'function') {
