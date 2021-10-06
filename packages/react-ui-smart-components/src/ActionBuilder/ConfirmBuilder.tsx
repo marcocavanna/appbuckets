@@ -221,6 +221,8 @@ export default function buildConfirmAction<Props extends {}, Result = any>(
         else {
           setIsPerformingAction(false);
         }
+        /** Raise the onCanceled Notification */
+        notify.raiseOnCanceled();
       }
       catch (error) {
         /** Remove the Internal State */
@@ -232,10 +234,6 @@ export default function buildConfirmAction<Props extends {}, Result = any>(
             error
           );
         }
-      }
-      finally {
-        /** Raise the onCanceled Notification */
-        notify.raiseOnCanceled();
       }
     };
 
