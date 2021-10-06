@@ -93,7 +93,6 @@ export default function useActionBuilder<Content extends React.ComponentType<any
     onSubmitError: userDefinedSubmitErrorHandler,
 
     // Modal Props
-    modal       : renderAsModal,
     defaultOpen : userDefinedModalDefaultOpen,
     onModalClose: userDefinedModalCloseHandler,
     onModalOpen : userDefinedModalOpenHandler,
@@ -138,11 +137,6 @@ export default function useActionBuilder<Content extends React.ComponentType<any
   // ----
   const couldRenderActionButton = React.useCallback(
     (userDefinedButton?: ShorthandItem<ButtonProps>, defaultDefinedButton?: ShorthandItem<ButtonProps>): boolean => {
-      /** No button on closed modal */
-      if (renderAsModal && !open) {
-        return false;
-      }
-
       /** If user defined button is explicit set to null, hide button */
       if (userDefinedButton === null) {
         return false;
@@ -156,7 +150,7 @@ export default function useActionBuilder<Content extends React.ComponentType<any
       /** Fallback to true */
       return true;
     },
-    [ open, renderAsModal ]
+    []
   );
 
 
@@ -207,7 +201,7 @@ export default function useActionBuilder<Content extends React.ComponentType<any
     handleModalClose,
 
     // Modals
-    trigger: defaultDefinedModalTrigger ?? userDefinedModalTrigger,
+    trigger: userDefinedModalTrigger ?? defaultDefinedModalTrigger,
 
     // Actions
     ...({
