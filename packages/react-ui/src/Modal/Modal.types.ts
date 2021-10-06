@@ -74,4 +74,10 @@ export interface StrictModalProps {
 
   /** Set transition timeout */
   timeout?: StrictBackdropProps['timeout'];
+
+  /** The element to be rendered in-place where the portal is defined */
+  trigger?: React.ReactElement;
+
+  /** Called with a ref to the trigger node */
+  triggerRef?: React.Ref<HTMLElement>;
 }
