@@ -322,6 +322,8 @@ export default function buildConfirmAction<Props extends {}, Result = any>(
       <Modal
         {...userDefinedModalProps}
         closeIcon={null}
+        closeOnBackdropClick={false}
+        closeOnEscape={false}
         open={open}
         onOpen={handleModalOpen}
         onClose={handleModalClose}
