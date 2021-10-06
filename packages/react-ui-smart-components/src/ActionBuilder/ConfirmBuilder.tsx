@@ -170,7 +170,7 @@ export default function buildConfirmAction<Props extends {}, Result = any>(
 
         /** If has been rendered as modal, close it */
         if (renderAsModal) {
-          handleModalClose(event, { ...userDefinedModalProps });
+          handleModalClose(event, userDefinedModalProps || {});
         }
         else {
           setIsPerformingAction(false);
@@ -216,7 +216,7 @@ export default function buildConfirmAction<Props extends {}, Result = any>(
         }
         /** Close the Modal is Confirm is rendered as it */
         if (renderAsModal) {
-          handleModalClose(event, { ...userDefinedModalProps });
+          handleModalClose(event, userDefinedModalProps || {});
         }
         else {
           setIsPerformingAction(false);
