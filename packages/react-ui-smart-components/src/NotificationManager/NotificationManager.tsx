@@ -14,21 +14,31 @@ import type { NotificationContent, INotificationManager } from './NotificationMa
 
 export default class NotificationManager implements INotificationManager {
 
+  namespace: string;
+
+  Component: React.ComponentType<ToastProps>;
+
+  defaultProps: Partial<ToastProps> | undefined;
+
+
   /* --------
    * Constructor Function
    * -------- */
   constructor(
-    private readonly namespace: string,
-    private readonly Component: React.ComponentType<ToastProps>,
-    private readonly defaultProps?: Partial<ToastProps>
+    namespace: string,
+    Component: React.ComponentType<ToastProps>,
+    defaultProps?: Partial<ToastProps>
   ) {
+    this.namespace = namespace;
+    this.Component = Component;
+    this.defaultProps = defaultProps;
   }
 
 
   /* --------
    * Main Show Function
    * -------- */
-  private show(content?: NotificationContent, options?: RaiseParam, overrideProps?: Partial<ToastProps>) {
+  private show = (content?: NotificationContent, options?: RaiseParam, overrideProps?: Partial<ToastProps>) => {
     /** Cycle through the array */
     if (Array.isArray(content)) {
       content.forEach((singleContent) => (
@@ -65,7 +75,7 @@ export default class NotificationManager implements INotificationManager {
 
     ButterToast.raise({
       namespace: this.namespace,
-      timeout: 6000,
+      timeout  : 6000,
       ...options,
       content: (props) => {
 
@@ -96,39 +106,39 @@ export default class NotificationManager implements INotificationManager {
         );
       }
     });
-  }
+  };
 
 
-  public custom(content: NotificationContent, options?: RaiseParam, props?: Partial<ToastProps>) {
+  public custom = (content: NotificationContent, options?: RaiseParam, props?: Partial<ToastProps>) => {
     return this.show(content, options, props);
-  }
+  };
 
-  default(props: NotificationContent, options?: RaiseParam): void {
+  default = (props: NotificationContent, options?: RaiseParam) => {
     return this.show(props, options);
-  }
+  };
 
-  error(props: NotificationContent, options?: RaiseParam): void {
+  error = (props: NotificationContent, options?: RaiseParam) => {
     return this.show(props, options, { danger: true, icon: 'times-circle' });
-  }
+  };
 
-  info(props: NotificationContent, options?: RaiseParam): void {
+  info = (props: NotificationContent, options?: RaiseParam) => {
     return this.show(props, options, { info: true, icon: 'info-circle' });
-  }
+  };
 
-  primary(props: NotificationContent, options?: RaiseParam): void {
+  primary = (props: NotificationContent, options?: RaiseParam) => {
     return this.show(props, options, { primary: true });
-  }
+  };
 
-  secondary(props: NotificationContent, options?: RaiseParam): void {
+  secondary = (props: NotificationContent, options?: RaiseParam) => {
     return this.show(props, options, { secondary: true });
-  }
+  };
 
-  success(props: NotificationContent, options?: RaiseParam): void {
+  success = (props: NotificationContent, options?: RaiseParam) => {
     return this.show(props, options, { success: true, icon: 'check-circle' });
-  }
+  };
 
-  warning(props: NotificationContent, options?: RaiseParam): void {
+  warning = (props: NotificationContent, options?: RaiseParam) => {
     return this.show(props, options, { warning: true, icon: 'exclamation-circle' });
-  }
+  };
 
 }
