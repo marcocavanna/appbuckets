@@ -33,6 +33,9 @@ export interface StrictModalProps {
   /** Set close icon */
   closeIcon?: AppBucketsIcon<IconProps> | null | false;
 
+  /** Close modal using escape */
+  closeOnEscape?: boolean;
+
   /** Close modal on Backdrop Click */
   closeOnBackdropClick?: boolean;
 
@@ -68,6 +71,15 @@ export interface StrictModalProps {
 
   /** Control if Modal is Open or Not */
   open?: boolean;
+
+  /** Open modal on Trigger click */
+  openOnTriggerClick?: boolean;
+
+  /** Open modal on Trigger focus */
+  openOnTriggerFocus?: boolean;
+
+  /** Open modal on Trigger mouse enter */
+  openOnTriggerMouseEnter?: boolean;
 
   /** Set modal Size */
   size?: Exclude<ElementSize, 'extra small' | 'normal'> | 'auto';
