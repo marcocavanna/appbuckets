@@ -20,7 +20,7 @@ import type {
 import useActionBuilder from './lib/useActionBuilder';
 import useActionNotification from './lib/useActionNotifications';
 
-import assertUniqueActionBuiltName from './utils/assertUniqueActionBuiltName';
+import assertUniqueComponentName from '../utils/assertUniqueComponentName';
 
 
 /* --------
@@ -56,7 +56,7 @@ export default function buildConfirmAction<Props extends {}, Result = any>(
   // ----
   // Check multiple displayName in development mode only
   // ----
-  assertUniqueActionBuiltName(defaultDefinedDisplayName, 'confirm');
+  assertUniqueComponentName(defaultDefinedDisplayName, 'confirm');
 
 
   // ----

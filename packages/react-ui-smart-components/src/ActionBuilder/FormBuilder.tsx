@@ -30,7 +30,7 @@ import type {
 import useActionBuilder from './lib/useActionBuilder';
 import useActionNotification from './lib/useActionNotifications';
 
-import assertUniqueActionBuiltName from './utils/assertUniqueActionBuiltName';
+import assertUniqueComponentName from '../utils/assertUniqueComponentName';
 import defaultValuesFromYupSchema from './utils/defaultValuesFromYupSchema';
 
 
@@ -79,7 +79,7 @@ export default function buildFormAction<Dto extends AnyObject, Props extends {},
   // ----
   // Check multiple displayName in development mode only
   // ----
-  assertUniqueActionBuiltName(defaultDefinedDisplayName, 'form');
+  assertUniqueComponentName(defaultDefinedDisplayName, 'form');
 
 
   // ----

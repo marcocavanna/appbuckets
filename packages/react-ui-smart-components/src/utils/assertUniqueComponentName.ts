@@ -2,7 +2,7 @@ type Actions = 'confirm' | 'form';
 
 const actionBuilt = new Map<string, Actions>();
 
-export default function assertUniqueActionBuiltName(displayName: string, type: Actions) {
+export default function assertUniqueComponentName(displayName: string, type: Actions) {
   /** Check components in development mode only */
   if (process.env.NODE_ENV === 'development') {
     /** Get value */
