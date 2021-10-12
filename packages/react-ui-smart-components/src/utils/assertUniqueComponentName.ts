@@ -1,4 +1,4 @@
-type Actions = 'confirm' | 'form';
+type Actions = 'confirm' | 'form' | 'selector';
 
 const actionBuilt = new Map<string, Actions>();
 

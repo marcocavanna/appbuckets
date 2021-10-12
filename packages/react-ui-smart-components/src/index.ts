@@ -12,5 +12,7 @@ export * from './QuerySuspendedComponent';
 export { default as QuerySuspenseError } from './QuerySuspenseError';
 export * from './QuerySuspenseError';
 
+export * from './SelectBuilder';
+
 export { default as SmartComponentsProvider } from './SmartComponentsProvider';
 export * from './SmartComponentsProvider';
