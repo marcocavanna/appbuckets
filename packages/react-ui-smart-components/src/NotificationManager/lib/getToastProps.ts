@@ -1,7 +1,7 @@
 import type { ToastProps } from '@appbuckets/react-ui/Toast';
 import type { ClientRequestError } from '@appbuckets/react-app-client';
 
-import { isObject } from './isObject';
+import isObject from '../../utils/isObject';
 
 import type { NotificationContent } from '../NotificationManager.types';
 
@@ -24,7 +24,7 @@ export function getToastProps(content?: NotificationContent): ToastProps | undef
 
     if (typeof maybeClientError?.statusCode === 'number' && typeof maybeClientError?.error === 'string') {
       return {
-        header: maybeClientError.error,
+        header : maybeClientError.error,
         content: Array.isArray(maybeClientError.message)
           ? maybeClientError.message.join('\n')
           : maybeClientError.message
