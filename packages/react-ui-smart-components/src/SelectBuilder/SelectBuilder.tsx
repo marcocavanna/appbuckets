@@ -1,384 +1,243 @@
-import { useClientRequest } from '@appbuckets/react-app-client';
-import type { UseClientRequestConfig, UseClientRequestState } from '@appbuckets/react-app-client';
-
-import type { SelectOption, SelectProps, SelectEventProps } from '@appbuckets/react-ui/Select';
-
-import arraySort from 'array-sort';
 import * as React from 'react';
 
-import assertUniqueComponentName from '../utils/assertUniqueComponentName';
-import isObject from '../utils/isObject';
+import arraySort from 'array-sort';
+
+import { SelectProps, SelectOption } from '@appbuckets/react-ui/Select';
+
+import { useClientRequest } from '@appbuckets/react-app-client';
+
+import type { UseClientRequestState } from '@appbuckets/react-app-client';
 
 import type {
-  PlainOrBuilder,
-  SelectBuilderConfig,
   SelectorComponent,
   SelectorOptions,
-  SelectorProps
+  SelectorProps,
+  BuildSelectorConfiguration
 } from './SelectBuilder.types';
 
 
-/* --------
- * Builder Function Definition
- * -------- */
-export default function buildSelector<OptionType extends SelectOption,
-  ValueType = OptionType,
-  Props = {},
-  HookResult = undefined>(
-  config: SelectBuilderConfig<OptionType, ValueType, Props, HookResult>
+// eslint-disable-next-line max-len
+export default function buildSelector<OptionType extends SelectOption, ValueType = OptionType, Props = {}, HookResult = undefined>(
+  config: BuildSelectorConfiguration<OptionType, ValueType, Props, HookResult>
 ) {
 
-  // ----
-  // Deconstruct base configuration object
-  // ----
   const {
-    // Strict
-    // Component Options
-    displayName: defaultDefinedDisplayName,
-    Selector   : SelectComponent,
 
-    // Local
-    // Props Builder
+    /** Component Options */
+    displayName,
+    Selector      : DefaultDefinedSelector,
+    getOptionValue: defaultGetOptionValue,
+    getOptionLabel: defaultGetOptionLabel,
+
+    /** Props Builder */
     defaultProps : defaultPropsBuilder,
     overrideProps: overridePropsBuilder,
 
-    // Options
-    options             : defaultDefinedOptions,
-    request             : defaultOptionsRequestConfiguration,
+    /** Client Request Configuration */
     reloadDataOnMenuOpen: defaultReloadDataOnMenuOpen,
+    request,
+    useHook,
 
-    // Data Management
-    filter          : defaultDataFilterFn,
-    getOptionLabel  : defaultGetOptionLabel,
-    getOptionValue  : defaultGetOptionValue,
-    noOptionsMessage: defaultNoOptionsMessage,
-    placeholder     : defaultPlaceholder,
-    sort            : defaultSortDataByKey,
+    /** Data Manipulation */
+    filter : defaultDefinedFilter,
+    options: defaultDefinedOptions,
+    sort   : defaultDefinedSort,
 
-    // Hook Function
-    useHook: useCustomHook,
+    /** Text Options */
+    placeholder     : defaultPlaceholder = 'Select',
+    noOptionsMessage: defaultNoOptionsMessage = () => 'No Options'
 
-    ...defaultDefinedSelectProps
   } = config;
 
 
-  // ----
-  // Check multiple display name in development mode only
-  // ----
-  assertUniqueComponentName(defaultDefinedDisplayName, 'selector');
+  /** Define the SelectorWrapper */
+  const SelectorWrapper: SelectorComponent<OptionType, ValueType, Props, HookResult> = (
+    props
+  ) => {
 
+    const {
+      Selector: UserDefinedSelector,
+      ...restProps
+    } = props;
 
-  // ----
-  // Define the Build Component
-  // ----
-  const Selector: SelectorComponent<OptionType, ValueType, Props, HookResult> = (userDefinedProps) => {
+    /* --------
+     * Build the Component Props
+     * using defined default props
+     * builder and override props
+     * -------- */
 
-
-    // ----
-    // Custom Hook Usage and Result
-    // ----
-    const [ hasCustomHook ] = React.useState(() => typeof useCustomHook === 'function');
-    const customHookResult = hasCustomHook && typeof useCustomHook === 'function'
-      ? useCustomHook!()
-      : undefined;
-
-
-    // ----
-    // Build Component Props
-    // ----
-
-    /** Compute default props */
+    /** Compute Default Props */
     const defaultProps = typeof defaultPropsBuilder === 'function'
-      ? defaultPropsBuilder(userDefinedProps, customHookResult as HookResult)
+      ? defaultPropsBuilder(restProps)
       : defaultPropsBuilder;
 
-    /** Compute override props */
+    /** Compute override Props */
     const overrideProps = typeof overridePropsBuilder === 'function'
-      ? overridePropsBuilder({ ...defaultProps, ...userDefinedProps }, customHookResult as HookResult)
+      ? overridePropsBuilder({ ...defaultProps, ...props })
       : overridePropsBuilder;
 
-    /** Merge all props into a single props object */
-    const props: SelectorProps<OptionType, ValueType, Props, HookResult> = {
+    /** Merge all props */
+    const componentProps: SelectorProps<OptionType, ValueType, Props, HookResult> = {
       ...defaultProps,
-      ...userDefinedProps,
+      ...props,
       ...overrideProps
     };
 
-
-    // ----
-    // Deconstruct Props
-    // ----
+    /** Get Selector Props */
     const {
-      filter              : userDefinedDataFilterFn,
-      noOptionsMessage    : userDefinedNoOptionsMessage,
+      filter              : userDefinedFilter,
       options             : userDefinedOptions,
-      placeholder         : userDefinedPlaceholder,
+      requestConfig       : userDefinedRequestConfig,
       reloadDataOnMenuOpen: userDefinedReloadDataOnMenuOpen,
-      request             : userDefinedOptionsRequestConfiguration,
-      sort                : userDefinedSortDataByKey,
-      ...userDefinedSelectProps
-    } = props;
+      sort                : userDefinedSort,
+      Selector            : OverrideSelector,
+      ...restSelectProps
+    } = componentProps;
 
 
-    // ----
-    // Memoized Helpers
-    // ----
-    const getRequestConfig = (
-      builder: PlainOrBuilder<UseClientRequestConfig, OptionType, ValueType, Props, HookResult> | undefined
-    ): UseClientRequestConfig | null => {
-      /** Undefined builder will return null object */
-      if (builder === undefined) {
-        return null;
-      }
-
-      /** Build config using function */
-      if (typeof builder === 'function') {
-        return builder(props, customHookResult as HookResult);
-      }
-
-      /** Return the plain object */
-      return builder;
-    };
-
-    const getFilteredOptions = React.useCallback(
-      (data: OptionType[]): OptionType[] => {
-        if (typeof userDefinedDataFilterFn === 'function') {
-          return data.filter(userDefinedDataFilterFn);
-        }
-
-        if (typeof defaultDataFilterFn === 'function') {
-          return data.filter(defaultDataFilterFn);
-        }
-
-        return data;
-      },
-      [ userDefinedDataFilterFn ]
-    );
-
-    const getSortedData = React.useCallback(
-      (data: OptionType[]): OptionType[] => {
-        if (Array.isArray(userDefinedSortDataByKey)) {
-          return arraySort(data, userDefinedSortDataByKey as string[]);
-        }
-
-        if (Array.isArray(defaultSortDataByKey)) {
-          return arraySort(data, defaultSortDataByKey as string[]);
-        }
-
-        return data;
-      },
-      [ userDefinedSortDataByKey ]
-    );
-
-    const getNoOptionsMessage = React.useCallback(
-      (data: { inputValue: string }): string | null => {
-        if (userDefinedNoOptionsMessage) {
-          return typeof userDefinedNoOptionsMessage === 'function'
-            ? userDefinedNoOptionsMessage(data)
-            : userDefinedNoOptionsMessage;
-        }
-
-        if (defaultNoOptionsMessage) {
-          return typeof defaultNoOptionsMessage === 'function'
-            ? defaultNoOptionsMessage(data)
-            : defaultNoOptionsMessage;
-        }
-
-        return null;
-      },
-      [ userDefinedNoOptionsMessage ]
-    );
-
+    /* --------
+     * Rebuild Options using Sorter and Filter
+     * -------- */
+    const [ hasHook ] = React.useState(() => typeof useHook === 'function');
+    const hookResult = hasHook ? useHook!() : undefined;
     const getOptionsList = (optionsList: SelectorOptions<OptionType, ValueType, Props, HookResult>) => {
-      /** Build initial data */
-      const initialData = typeof optionsList === 'function'
-        ? optionsList(props, customHookResult as HookResult)
+      /** Build Data */
+      const data = typeof optionsList === 'function'
+        ? optionsList(props, hookResult as HookResult)
         : optionsList;
 
-      /** Filter data */
-      const filteredData = getFilteredOptions(initialData);
+      /** Filter Data */
+      const filter = defaultDefinedFilter ?? userDefinedFilter;
 
-      /** Return Sorted options */
-      return getSortedData(filteredData);
+      const filteredData = typeof filter === 'function'
+        ? data.filter(filter)
+        : data;
+
+      /** Get Sorter */
+      const sort = defaultDefinedSort ?? userDefinedSort;
+
+      return Array.isArray(sort)
+        ? arraySort(filteredData, sort as string[])
+        : filteredData;
     };
 
 
-    // ----
-    // Merged Data
-    // ----
-    const selectProps: Omit<SelectProps<OptionType, ValueType, ValueType extends [] ? [] : null>, 'options'> = {
-      ...defaultDefinedSelectProps,
-      ...userDefinedSelectProps
-    };
+    /**
+     * In this special case, useClientRequest hook will
+     * be called conditionally.
+     * It means that once a selector has been initialized using
+     * an API request it could not change to plain data selector
+     * without showing a React Warning.
+     * To prevent any accidentally change of this behaviour
+     * isAPISelector will be saved as a state variable to never
+     * change on component using
+     */
+    const [ isAPISelector ] = React.useState(
+      (typeof request === 'object' && request !== null) || typeof request === 'function'
+    );
 
-    const requestConfig: UseClientRequestConfig | undefined = (
-      () => {
-        const defaultDefinedConfig = getRequestConfig(defaultOptionsRequestConfiguration);
-        const userDefinedConfig = getRequestConfig(userDefinedOptionsRequestConfiguration);
+    let clientRequest: UseClientRequestState<OptionType[]> | null = null;
 
-        if (!defaultDefinedConfig && !userDefinedConfig) {
-          return undefined;
+    if (isAPISelector) {
+      const {
+        url,
+        method,
+        ...restRequestConfig
+      } = typeof request === 'function'
+        ? request(componentProps)
+        : request!;
+
+      // eslint-disable-next-line
+      clientRequest = useClientRequest<OptionType[]>({
+        url    : url as string,
+        method,
+        request: {
+          ...restRequestConfig,
+          ...userDefinedRequestConfig
         }
-
-        return {
-          ...defaultDefinedConfig,
-          ...userDefinedConfig,
-          request: {
-            ...(defaultDefinedConfig?.request || {}),
-            ...(userDefinedConfig?.request || {})
-          }
-        } as UseClientRequestConfig;
-      }
-    )();
+      });
+    }
 
 
-    // ----
-    // Data Loader
-    //
-    // In this special case, useClientRequest hook will
-    // be called conditionally
-    // It means that once a selector has been initialized using
-    // an API request it could not change to plain data selector
-    // without showing a React Warning.
-    // To prevent any accidentally change of this behaviour
-    // isAPISelector will be saved as a state variable to never
-    // change on component using
-    // ----
-    const [ isAPISelector ] = React.useState(() => isObject(requestConfig) || typeof requestConfig === 'function');
+    /* --------
+     * Hooks and State Definition
+     * -------- */
     const [ options, setOptions ] = React.useState<OptionType[]>(
-      () => getOptionsList(userDefinedOptions || defaultDefinedOptions || [])
+      () => getOptionsList(defaultDefinedOptions || userDefinedOptions || [])
     );
-    const [ isInitiallyLoading, setInitiallyLoading ] = React.useState<boolean>(isAPISelector);
-
-    const clientRequestState: UseClientRequestState<OptionType[]> | null = (
-      isAPISelector && isObject(requestConfig)
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        ? useClientRequest<OptionType[]>(requestConfig)
-        : null
-    );
+    const [ isInitiallyLoading, setInitiallyLoading ] = React.useState(isAPISelector);
 
 
-    // ----
-    // Data Reloading
-    // ----
-    const {
-      isLoading: isLoadingRequest,
-      error    : requestError,
-      response : requestResponse,
-      reload   : reloadRequest
-    } = clientRequestState || {};
-
-    React.useEffect(
-      () => {
-        /** If is an API Selector, options change won't change options state */
-        if (isAPISelector) {
-          /** Abort if client request is invalid atm */
-          if (isLoadingRequest || !!requestError) {
+    /* --------
+     * Data Reloading Hook
+     * -------- */
+    if (isAPISelector && clientRequest) {
+      // eslint-disable-next-line
+      React.useEffect(
+        () => {
+          if (!clientRequest || clientRequest.isLoading) {
             return;
           }
-          /** Set new options based on response */
-          setOptions(getOptionsList(requestResponse as OptionType[]));
+
+          if (clientRequest.error) {
+            return;
+          }
+
+          setOptions(getOptionsList(clientRequest.response));
+
           setInitiallyLoading(false);
-          return;
-        }
-
-        setOptions(getOptionsList(userDefinedOptions || defaultDefinedOptions || []));
-      },
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      [
-        isAPISelector,
-        isLoadingRequest,
-        requestError,
-        requestResponse,
-        userDefinedOptions
-      ]
-    );
+        },
+        // eslint-disable-next-line
+        [
+          clientRequest,
+          clientRequest.isLoading,
+          clientRequest.response
+        ]
+      );
+    }
 
 
-    // ----
-    // Handlers
-    // ----
-    const {
-      onMenuOpen: userDefinedOnMenuOpenHandler
-    } = selectProps;
+    /* --------
+     * Handlers
+     * -------- */
     const handleMenuOpen = React.useCallback(
-      (
-        nothing: null,
-        selectComponentProps: SelectEventProps<OptionType, ValueType, ValueType extends [] ? [] : null>
-      ) => {
-        /** Check if must reload data on menu open */
-        const mustReloadData = userDefinedReloadDataOnMenuOpen ?? defaultReloadDataOnMenuOpen;
+      (nothing: null, selectProps: SelectProps<any, any, any>) => {
+        const mustReload = defaultReloadDataOnMenuOpen ?? userDefinedReloadDataOnMenuOpen;
 
-        if (mustReloadData) {
-          /** If is an API Selector, launch reload request */
-          if (isAPISelector && typeof reloadRequest === 'function') {
-            reloadRequest();
-          }
-          else {
-            setOptions(getOptionsList(userDefinedOptions || defaultDefinedOptions || []));
-          }
+        if (clientRequest && mustReload) {
+          clientRequest.reload();
         }
 
-        /** Call user defined onMenuOpen handler if exists */
-        if (typeof userDefinedOnMenuOpenHandler === 'function') {
-          userDefinedOnMenuOpenHandler(nothing, selectComponentProps);
+        if (restSelectProps.onMenuOpen) {
+          restSelectProps.onMenuOpen(nothing, selectProps as any);
         }
       },
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      [
-        userDefinedReloadDataOnMenuOpen,
-        isAPISelector,
-        reloadRequest,
-        userDefinedOptions,
-        userDefinedOnMenuOpenHandler
-      ]
+
+      [ clientRequest, restSelectProps, userDefinedReloadDataOnMenuOpen ]
     );
 
 
-    // ----
-    // Get Option Value and Label function
-    // ----
-    const getOptionValue = React.useCallback(
-      (option: OptionType) => (
-        typeof defaultGetOptionValue === 'function'
-          ? defaultGetOptionValue(option)
-          : option[defaultGetOptionValue as keyof OptionType]
-      ),
-      []
-    );
+    // @ts-ignore
+    const Selector: SelectorComponent<OptionType, ValueType, Props> = OverrideSelector
+      ?? UserDefinedSelector
+      ?? DefaultDefinedSelector;
 
-    const getOptionLabel = React.useCallback(
-      (option: OptionType) => (
-        typeof defaultGetOptionLabel === 'function'
-          ? defaultGetOptionLabel(option)
-          : option[defaultGetOptionLabel as keyof OptionType]
-      ),
-      []
-    );
+    const isLoading = isInitiallyLoading || !!(clientRequest?.isLoading);
+    const isDisabled = restSelectProps.disabled || !!(clientRequest?.error);
 
-
-    // ----
-    // Internal Computed Props
-    // ----
-    const isLoading = isInitiallyLoading || !!(clientRequestState?.isLoading);
-    const isDisabled = selectProps.disabled || !!(clientRequestState?.error);
-
-
-    // ----
-    // Render the Component
-    // ----
+    /** Return the Selector Component */
     return (
-      <SelectComponent
+      // @ts-ignore
+      <Selector
         isClearable
-        isSearchable
-        {...selectProps}
-        defaultValue={selectProps.defaultValue!}
-        getOptionValue={getOptionValue}
-        getOptionLabel={getOptionLabel}
-        noOptionsMessage={getNoOptionsMessage}
-        placeholder={selectProps.placeholder || userDefinedPlaceholder || defaultPlaceholder}
-        name={selectProps.name || 'unnamed-selector'}
-        danger={selectProps.danger || !!(clientRequestState?.error)}
+        getOptionValue={defaultGetOptionValue}
+        getOptionLabel={defaultGetOptionLabel}
+        {...restSelectProps}
+        defaultValue={restSelectProps.defaultValue!}
+        noOptionsMessage={restSelectProps.noOptionsMessage ?? defaultNoOptionsMessage}
+        placeholder={restSelectProps.placeholder ?? defaultPlaceholder}
+        name={restSelectProps.name ?? 'unnamed-selector'}
+        danger={restSelectProps.danger || !!(clientRequest?.error)}
         disabled={isLoading || isDisabled}
         loading={isLoading}
         options={options}
@@ -388,16 +247,10 @@ export default function buildSelector<OptionType extends SelectOption,
 
   };
 
+  /** Set the Display Name */
+  SelectorWrapper.displayName = displayName;
 
-  // ----
-  // Set the Display Name
-  // ----
-  Selector.displayName = defaultDefinedDisplayName;
-
-
-  // ----
-  // Return the Component
-  // ----
-  return Selector;
+  /** Return the Wrapped Component */
+  return SelectorWrapper;
 
 }
