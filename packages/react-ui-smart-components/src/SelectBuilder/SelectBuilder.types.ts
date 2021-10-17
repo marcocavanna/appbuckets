@@ -23,13 +23,13 @@ type DemandedProps =
 
 type PlainOrBuilder<T, OptionType, ValueType, Props, HookResult> =
   T
-  | ((props: Omit<BuildSelectorConfiguration<OptionType, ValueType, Props, HookResult>, DemandedProps>) => T);
+  | ((props: Omit<SelectBuilderConfig<OptionType, ValueType, Props, HookResult>, DemandedProps>) => T);
 
 
 /* --------
  * Public Configuration for withSelector HOC
  * -------- */
-export interface BuildSelectorConfiguration<OptionType extends SelectOption, ValueType, Props, HookResult>
+export interface SelectBuilderConfig<OptionType extends SelectOption, ValueType, Props, HookResult>
   extends StrictSelectorProps<OptionType, ValueType, Props, HookResult> {
   /** Selector Default Props */
   // eslint-disable-next-line max-len

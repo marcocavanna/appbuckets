@@ -12,13 +12,13 @@ import type {
   SelectorComponent,
   SelectorOptions,
   SelectorProps,
-  BuildSelectorConfiguration
+  SelectBuilderConfig
 } from './SelectBuilder.types';
 
 
 // eslint-disable-next-line max-len
 export default function buildSelector<OptionType extends SelectOption, ValueType = OptionType, Props = {}, HookResult = undefined>(
-  config: BuildSelectorConfiguration<OptionType, ValueType, Props, HookResult>
+  config: SelectBuilderConfig<OptionType, ValueType, Props, HookResult>
 ) {
 
   const {
