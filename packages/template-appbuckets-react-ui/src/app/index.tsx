@@ -1,14 +1,12 @@
 import * as React from 'react';
 
-import '@appbuckets/react-ui/styles/index.scss';
-
 import Box from '@appbuckets/react-ui/Box';
 import Button from '@appbuckets/react-ui/Button';
 import Container from '@appbuckets/react-ui/Container';
 import Divider from '@appbuckets/react-ui/Divider';
 import Header from '@appbuckets/react-ui/Header';
 
-import logo from '../assets/logo.svg';
+import logo from '../assets/svg/logo.svg';
 
 
 const App: React.VFC = () => (

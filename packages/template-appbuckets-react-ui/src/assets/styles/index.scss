@@ -1,0 +1,25 @@
+// ----
+//  Override React Bucket Styles Variables
+// ----
+@import 'override';
+
+// ----
+//  Import React Bucket Style
+// ----
+@import '~@appbuckets/react-ui/styles/index';
+
+// ----
+//  App Style Configurator
+// ----
+@import 'config';
+
+// ----
+//  Style Fixing, successively exported into ReactBucket
+// ----
+@import 'fix';
+
+// ----
+//  Main App Style
+// ----
+@import 'base-layout';
+@import 'generic';
