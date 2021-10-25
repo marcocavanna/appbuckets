@@ -19,6 +19,9 @@
   "references": [
     {
       "path": "../react-ui/tsconfig.declaration.json"
+    },
+    {
+      "path": "../react-ui-forms/tsconfig.declaration.json"
     }
   ]
 }
