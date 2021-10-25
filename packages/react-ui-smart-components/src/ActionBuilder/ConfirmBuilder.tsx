@@ -180,27 +180,31 @@ export default function buildConfirmAction<Props extends {}, Result = any>(
         /** Raise the onError notification */
         notify.raiseOnError(error);
 
+        /** If there is no function set to catch the error, purge the loading state */
+        if (typeof onSubmitError !== 'function') {
+          setIsPerformingAction(false);
+          return;
+        }
+
         /** Check if a catch error function has been defined */
-        if (typeof onSubmitError === 'function') {
-          try {
-            /** Await catch error function */
-            await onSubmitError(error, actionHelpers, props);
-            /** Restore State */
-            setIsPerformingAction(false);
+        try {
+          /** Await catch error function */
+          await onSubmitError(error, actionHelpers, props);
+          /** Restore State */
+          setIsPerformingAction(false);
+        }
+        catch (catchFunctionError) {
+          /** Log error in development mode only */
+          if (process.env.NODE_ENV === 'development') {
+            global.console.warn(
+              '[ @appbuckets/react-ui-smart-components ] : an error occurred on onSubmitError handler.',
+              catchFunctionError
+            );
           }
-          catch (catchFunctionError) {
-            /** Log error in development mode only */
-            if (process.env.NODE_ENV === 'development') {
-              global.console.warn(
-                '[ @appbuckets/react-ui-smart-components ] : an error occurred on onSubmitError handler.',
-                catchFunctionError
-              );
-            }
-          }
-          finally {
-            /** Restore State */
-            setIsPerformingAction(false);
-          }
+        }
+        finally {
+          /** Restore State */
+          setIsPerformingAction(false);
         }
       }
     };
