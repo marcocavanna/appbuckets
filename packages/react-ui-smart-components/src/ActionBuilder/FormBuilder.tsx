@@ -373,7 +373,12 @@ export default function buildFormAction<Dto extends AnyObject, Props extends {},
         resolver={yupResolver(schema)}
       >
         {actionHelpers.error && <QuerySuspenseError {...actionHelpers.error} />}
-        {FormContent && <FormContent {...props} />}
+        {FormContent && (
+          <FormContent
+            {...props}
+            isEditing={isEditing}
+          />
+        )}
       </HookedForm>
     );
 
