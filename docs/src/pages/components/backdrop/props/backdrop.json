@@ -346,10 +346,48 @@
         "name": "(node: HTMLElement, isAppearing: boolean) => void"
       }
     },
+    "onEntering": {
+      "defaultValue": null,
+      "description": "Callback used once the BackdropInner is appearing",
+      "name": "onEntering",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+        "name": "StrictBackdropInnerProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+          "name": "StrictBackdropInnerProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(node: HTMLElement, isAppearing: boolean) => void"
+      }
+    },
     "onExited": {
       "defaultValue": null,
       "description": "Callback used once the BackdropInner has has completed the fade out animation",
       "name": "onExited",
+      "parent": {
+        "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+        "name": "StrictBackdropInnerProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
+          "name": "StrictBackdropInnerProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(node: HTMLElement) => void"
+      }
+    },
+    "onExiting": {
+      "defaultValue": null,
+      "description": "Callback used once the BackdropInner is disappearing",
+      "name": "onExiting",
       "parent": {
         "fileName": "react-ui/src/Backdrop/BackdropInner.types.ts",
         "name": "StrictBackdropInnerProps"

@@ -380,6 +380,25 @@
         "name": "false | AppBucketsIcon<IconProps>"
       }
     },
+    "closeOnEscape": {
+      "defaultValue": null,
+      "description": "Close modal using escape",
+      "name": "closeOnEscape",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
     "closeOnBackdropClick": {
       "defaultValue": null,
       "description": "Close modal on Backdrop Click",
@@ -608,6 +627,63 @@
         "name": "boolean"
       }
     },
+    "openOnTriggerClick": {
+      "defaultValue": null,
+      "description": "Open modal on Trigger click",
+      "name": "openOnTriggerClick",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "openOnTriggerFocus": {
+      "defaultValue": null,
+      "description": "Open modal on Trigger focus",
+      "name": "openOnTriggerFocus",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "openOnTriggerMouseEnter": {
+      "defaultValue": null,
+      "description": "Open modal on Trigger mouse enter",
+      "name": "openOnTriggerMouseEnter",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
     "timeout": {
       "defaultValue": null,
       "description": "Set transition timeout",
@@ -625,6 +701,44 @@
       "required": false,
       "type": {
         "name": "TransitionModeDependantType<number>"
+      }
+    },
+    "trigger": {
+      "defaultValue": null,
+      "description": "The element to be rendered in-place where the portal is defined",
+      "name": "trigger",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactElement<any, string | JSXElementConstructor<any>>"
+      }
+    },
+    "triggerRef": {
+      "defaultValue": null,
+      "description": "Called with a ref to the trigger node",
+      "name": "triggerRef",
+      "parent": {
+        "fileName": "react-ui/src/Modal/Modal.types.ts",
+        "name": "StrictModalProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Modal/Modal.types.ts",
+          "name": "StrictModalProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "Ref<HTMLElement>"
       }
     },
     "className": {
