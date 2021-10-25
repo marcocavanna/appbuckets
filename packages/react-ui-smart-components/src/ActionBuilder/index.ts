@@ -1,5 +1,7 @@
 export { default as buildConfirmAction } from './ConfirmBuilder';
 
+export { default as buildFormAction } from './FormBuilder';
+
 export type {
   ConfirmActionHelpers,
   ConfirmActionCancelHandler,
@@ -12,3 +14,16 @@ export type {
   ConfirmComponent,
   ConfirmBuilderConfig
 } from './ConfirmBuilder.types';
+
+export type {
+  FormActionHelpers,
+  FormActionCancelHandler,
+  FormActionCompletedHandler,
+  FormActionSubmitHandler,
+  FormActionSubmitErrorHandler,
+  FormActions,
+  FormBuilderNotifications,
+  FormComponentProps,
+  FormComponent,
+  FormBuilderConfig
+} from './FormBuilder.types';
