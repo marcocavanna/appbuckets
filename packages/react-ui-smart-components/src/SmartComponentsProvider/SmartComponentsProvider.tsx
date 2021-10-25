@@ -29,6 +29,6 @@ const SmartComponentsProvider: React.FunctionComponent<UseSmartComponentsResult>
 
 SmartComponentsProvider.displayName = 'SmartComponentsProvider';
 
-export default SmartComponentsProvider;
+export { SmartComponentsProvider };
 
 export { useSmartComponents };

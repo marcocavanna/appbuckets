@@ -14,5 +14,4 @@ export * from './QuerySuspenseError';
 
 export * from './SelectBuilder';
 
-export { default as SmartComponentsProvider } from './SmartComponentsProvider';
 export * from './SmartComponentsProvider';
