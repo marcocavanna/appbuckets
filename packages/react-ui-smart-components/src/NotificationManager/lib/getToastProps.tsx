@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 import type { ToastProps } from '@appbuckets/react-ui/Toast';
 import type { ClientRequestError } from '@appbuckets/react-app-client';
 
@@ -23,6 +25,33 @@ export function getToastProps(content?: NotificationContent): ToastProps | undef
     const maybeClientError = content as ClientRequestError;
 
     if (typeof maybeClientError?.statusCode === 'number' && typeof maybeClientError?.error === 'string') {
+      /** Check if is AspNet Core validation error object */
+      if (/validation errors/.test(maybeClientError.error) && maybeClientError.statusCode === 400) {
+        /** Build the message list */
+        const messageList: string[] = [];
+
+        if (isObject(maybeClientError.response?.errors)) {
+          Object.keys(maybeClientError.response!.errors).forEach((key) => {
+            const errors = maybeClientError.response!.errors[key] as string[];
+            messageList.push(...errors);
+          });
+        }
+
+        return {
+          header : 'Errori nei dati inviati',
+          content: !!messageList.length && (
+            <div className={'mt-2'}>
+              <ul>
+                {messageList.map((message) => (
+                  <li key={message}>{message}</li>
+                ))}
+              </ul>
+            </div>
+          )
+        };
+      }
+
+      /** Return Json Problem Details */
       return {
         header : maybeClientError.error,
         content: Array.isArray(maybeClientError.message)
