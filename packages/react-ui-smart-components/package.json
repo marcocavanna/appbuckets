@@ -1,6 +1,6 @@
 {
   "name": "@appbuckets/react-ui-smart-components",
-  "version": "0.1.0-alpha.4",
+  "version": "0.1.0-alpha.5",
   "description": "UI Extended Components that work with @appbuckets/react-client and @appbuckets/react-ui",
   "keywords": [
     "react",
