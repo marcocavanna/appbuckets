@@ -353,8 +353,9 @@ export default function buildFormAction<Dto extends AnyObject, Props extends {},
     // ----
     // Build the Form Element
     // ----
-    const formElement = (
+    const formElement = (!renderAsModal || (renderAsModal && open)) && (
       <HookedForm
+        resetOnCancel
         actionsWrapper={renderAsModal ? Modal.Actions : 'div'}
         contentWrapper={renderAsModal ? Modal.Content : 'div'}
         submitButton={(
@@ -387,7 +388,7 @@ export default function buildFormAction<Dto extends AnyObject, Props extends {},
     // Render Component as plain element
     // ----
     if (!renderAsModal) {
-      return formElement;
+      return formElement || null;
     }
 
 
