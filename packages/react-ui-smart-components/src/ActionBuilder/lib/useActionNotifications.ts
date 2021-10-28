@@ -78,7 +78,7 @@ export default function useActionNotification(
         raiseNotification(error, thrownError);
       }
       else if (typeof onError === 'function') {
-        raiseNotification(error, onError(error));
+        raiseNotification(error, onError(thrownError));
       }
       else {
         raiseNotification(error, onError);
