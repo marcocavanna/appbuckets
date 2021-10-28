@@ -32,6 +32,9 @@ export interface FormActionHelpers<Dto extends AnyObject> extends BaseActionHelp
   form: UseFormReturn<Dto>;
 }
 
+export type FormBuilderSchema<Dto extends AnyObject, Props extends {}, Result> =
+  PlainOrBuilder<SchemaOf<Dto>, Dto, Props, Result>;
+
 
 /* --------
  * Actions
@@ -102,7 +105,7 @@ export interface FormBuilderConfig<Dto extends AnyObject, Props extends {}, Resu
   parseData?: (data: any, props: ExtendedFormComponentProps<Dto, Props, Result>) => Dto;
 
   /** The schema to use to validate data */
-  schema: PlainOrBuilder<SchemaOf<Dto>, Dto, Props, Result>;
+  schema: FormBuilderSchema<Dto, Props, Result>;
 
   /** Strip unknown data from defaultValues */
   stripUnknown?: boolean;
