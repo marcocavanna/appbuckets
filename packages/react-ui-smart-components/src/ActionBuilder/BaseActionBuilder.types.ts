@@ -100,7 +100,7 @@ export interface BaseActionBuilderNotifications {
   onCanceled?: NotificationContent;
 
   /** On Error Message */
-  onError?: 'thrown' | NotificationContent;
+  onError?: 'thrown' | ((error: any) => NotificationContent) | NotificationContent;
 
   /** On Success Message */
   onSubmitted?: NotificationContent;
