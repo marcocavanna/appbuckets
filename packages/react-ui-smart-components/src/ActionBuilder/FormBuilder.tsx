@@ -33,6 +33,8 @@ import useActionNotification from './lib/useActionNotifications';
 import assertUniqueComponentName from '../utils/assertUniqueComponentName';
 import defaultValuesFromYupSchema from './utils/defaultValuesFromYupSchema';
 
+import { FormBuiltProvider } from './FormBuiltProvider';
+
 
 /* --------
  * Create a data cloner
@@ -353,34 +355,36 @@ export default function buildFormAction<Dto extends AnyObject, Props extends {},
     // ----
     // Build the Form Element
     // ----
-    const formElement = (!renderAsModal || (renderAsModal && open)) && (
-      <HookedForm
-        resetOnCancel
-        actionsWrapper={renderAsModal ? Modal.Actions : 'div'}
-        contentWrapper={renderAsModal ? Modal.Content : 'div'}
-        submitButton={(
-          couldRenderActionButton(userDefinedSubmitButton, defaultDefinedSubmitButton)
-            ? (userDefinedSubmitButton || defaultDefinedSubmitButton)
-            : null
-        )}
-        cancelButton={(
-          couldRenderActionButton(userDefinedCancelButton, defaultDefinedCancelButton)
-            ? (userDefinedCancelButton || defaultDefinedCancelButton)
-            : null
-        )}
-        defaultValues={defaultValues}
-        onSubmit={handleSubmit as any}
-        onCancel={handleCancel as any}
-        resolver={yupResolver(schema)}
-      >
-        {actionHelpers.error && <QuerySuspenseError {...actionHelpers.error} />}
-        {FormContent && (
-          <FormContent
-            {...props}
-            isEditing={isEditing}
-          />
-        )}
-      </HookedForm>
+    const formElement = (
+      <FormBuiltProvider value={{ isEditing }}>
+        <HookedForm
+          resetOnCancel
+          actionsWrapper={renderAsModal ? Modal.Actions : 'div'}
+          contentWrapper={renderAsModal ? Modal.Content : 'div'}
+          submitButton={(
+            couldRenderActionButton(userDefinedSubmitButton, defaultDefinedSubmitButton)
+              ? (userDefinedSubmitButton || defaultDefinedSubmitButton)
+              : null
+          )}
+          cancelButton={(
+            couldRenderActionButton(userDefinedCancelButton, defaultDefinedCancelButton)
+              ? (userDefinedCancelButton || defaultDefinedCancelButton)
+              : null
+          )}
+          defaultValues={defaultValues}
+          onSubmit={handleSubmit as any}
+          onCancel={handleCancel as any}
+          resolver={yupResolver(schema)}
+        >
+          {actionHelpers.error && <QuerySuspenseError {...actionHelpers.error} />}
+          {FormContent && (
+            <FormContent
+              {...props}
+              isEditing={isEditing}
+            />
+          )}
+        </HookedForm>
+      </FormBuiltProvider>
     );
 
 
