@@ -356,26 +356,26 @@ export default function buildFormAction<Dto extends AnyObject, Props extends {},
     // Build the Form Element
     // ----
     const formElement = (
-      <FormBuiltProvider value={{ isEditing }}>
-        <HookedForm
-          resetOnCancel
-          actionsWrapper={renderAsModal ? Modal.Actions : 'div'}
-          contentWrapper={renderAsModal ? Modal.Content : 'div'}
-          submitButton={(
-            couldRenderActionButton(userDefinedSubmitButton, defaultDefinedSubmitButton)
-              ? (userDefinedSubmitButton || defaultDefinedSubmitButton)
-              : null
-          )}
-          cancelButton={(
-            couldRenderActionButton(userDefinedCancelButton, defaultDefinedCancelButton)
-              ? (userDefinedCancelButton || defaultDefinedCancelButton)
-              : null
-          )}
-          defaultValues={defaultValues}
-          onSubmit={handleSubmit as any}
-          onCancel={handleCancel as any}
-          resolver={yupResolver(schema)}
-        >
+      <HookedForm
+        resetOnCancel
+        actionsWrapper={renderAsModal ? Modal.Actions : 'div'}
+        contentWrapper={renderAsModal ? Modal.Content : 'div'}
+        submitButton={(
+          couldRenderActionButton(userDefinedSubmitButton, defaultDefinedSubmitButton)
+            ? (userDefinedSubmitButton || defaultDefinedSubmitButton)
+            : null
+        )}
+        cancelButton={(
+          couldRenderActionButton(userDefinedCancelButton, defaultDefinedCancelButton)
+            ? (userDefinedCancelButton || defaultDefinedCancelButton)
+            : null
+        )}
+        defaultValues={defaultValues}
+        onSubmit={handleSubmit as any}
+        onCancel={handleCancel as any}
+        resolver={yupResolver(schema)}
+      >
+        <FormBuiltProvider value={{ isEditing }}>
           {actionHelpers.error && <QuerySuspenseError {...actionHelpers.error} />}
           {FormContent && (
             <FormContent
@@ -383,8 +383,8 @@ export default function buildFormAction<Dto extends AnyObject, Props extends {},
               isEditing={isEditing}
             />
           )}
-        </HookedForm>
-      </FormBuiltProvider>
+        </FormBuiltProvider>
+      </HookedForm>
     );
 
 
