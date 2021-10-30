@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import type { AnyObject } from '@appbuckets/react-ui-core';
 
-import { useFormContext } from '@appbuckets/react-ui-forms';
-import type { UseFormReturn } from '@appbuckets/react-ui-forms';
+import { useHookedFormContext } from '@appbuckets/react-ui-forms';
+import { HookedFormContext } from '@appbuckets/react-ui-forms/context';
 
 
 /* --------
@@ -16,7 +16,7 @@ interface UseFormBuiltContextValue {
 
 export type UseFormBuiltResult<Dto extends AnyObject> =
   & UseFormBuiltContextValue
-  & UseFormReturn<Dto>;
+  & HookedFormContext<Dto>;
 
 
 /* --------
@@ -43,7 +43,7 @@ export function useFormBuilt<Dto extends AnyObject>(): UseFormBuiltResult<Dto> {
   }
 
   /** Get main React Hook Form data from its context */
-  const useFormReturn = useFormContext<Dto>();
+  const useFormReturn = useHookedFormContext<Dto>();
 
   /** Return context value */
   return {
