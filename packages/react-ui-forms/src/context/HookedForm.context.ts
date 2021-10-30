@@ -1,6 +1,6 @@
 import { contextBuilder } from '@appbuckets/react-ui-core';
 
-import { FieldValues, UseFormReturn } from 'react-hook-form';
+import { FieldValues, UseFormReturn, SetValueConfig } from 'react-hook-form';
 
 import type { FieldPath, UnpackNestedValue, FieldPathValue } from 'react-hook-form';
 
@@ -23,6 +23,12 @@ export type TriggerFieldChanged<Values, FieldName extends FieldPath<Values> = Fi
   field: FieldName,
   value: UnpackNestedValue<FieldPathValue<Values, FieldName>>
 ) => void;
+
+export type UseFieldValue<Values, FieldName extends FieldPath<Values> = FieldPath<Values>> =
+  (field: FieldName) => [
+    UnpackNestedValue<FieldPathValue<Values, FieldName>>,
+    (value: UnpackNestedValue<FieldPathValue<Values, FieldName>>, options?: SetValueConfig) => void
+  ];
 
 
 /* --------
@@ -56,6 +62,12 @@ export interface HookedFormContext<Values extends FieldValues = FieldValues>
 
   /** Trigger field changed */
   triggerFieldChanged: TriggerFieldChanged<Values>;
+
+  /** Shorthand to use current field values */
+  useFieldValue: <FieldName extends FieldPath<Values> = FieldPath<Values>>(field: FieldName) => [
+    UnpackNestedValue<FieldPathValue<Values, FieldName>>,
+    (value: UnpackNestedValue<FieldPathValue<Values, FieldName>>, options?: SetValueConfig) => void
+  ];
 }
 
 

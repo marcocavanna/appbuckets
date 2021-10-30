@@ -1,7 +1,7 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
-import { useForm, SubmitHandler, SubmitErrorHandler } from 'react-hook-form';
+import { useForm, SubmitHandler, SubmitErrorHandler, SetValueConfig } from 'react-hook-form';
 
 import Form from '@appbuckets/react-ui/Form';
 
@@ -10,7 +10,8 @@ import type {
   FieldChangeHandler,
   FieldChangedHandlerCallback,
   HookedFormContext,
-  TriggerFieldChanged
+  TriggerFieldChanged,
+  UseFieldValue
 } from '../context/HookedForm.context';
 
 import type { HookedFormProps } from './HookedForm.types';
@@ -76,7 +77,7 @@ const HookedForm = React.forwardRef<HTMLFormElement, HookedFormProps>((
   // ----
   // Build Classes
   // ----
-  const { formState: state } = hookFormCtx;
+  const { formState: state, getValues, setValue } = hookFormCtx;
   const classes = clsx(
     {
       disabled,
@@ -198,6 +199,36 @@ const HookedForm = React.forwardRef<HTMLFormElement, HookedFormProps>((
 
 
   // ----
+  // Field Values Watched
+  // ----
+  const [ fieldValues, setFieldValues ] = React.useState<Record<string, any>>({});
+
+  const useFieldValue = React.useCallback<UseFieldValue<any>>(
+    (field) => {
+      /** Register a new handler */
+      registerChangeHandler(field, (newValue) => {
+        setFieldValues({
+          ...fieldValues,
+          [field]: newValue
+        });
+      });
+
+      /** Create a nested function to set the new value */
+      const setNewFieldValue = (newValue: any, options?: SetValueConfig) => {
+        setValue(field, newValue, options);
+      };
+
+      /** Return data */
+      return [
+        field in fieldValues ? fieldValues[field] : getValues(field),
+        setNewFieldValue
+      ];
+    },
+    [ registerChangeHandler, fieldValues, getValues, setValue ]
+  );
+
+
+  // ----
   // Context Value Builder
   // ----
   const ctxValue: HookedFormContext = {
@@ -211,7 +242,8 @@ const HookedForm = React.forwardRef<HTMLFormElement, HookedFormProps>((
     handleCancel: handleFormCancel,
     registerChangeHandler,
     submitButton,
-    triggerFieldChanged
+    triggerFieldChanged,
+    useFieldValue
   };
 
 
