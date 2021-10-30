@@ -1,7 +1,28 @@
 import { contextBuilder } from '@appbuckets/react-ui-core';
 
 import { FieldValues, UseFormReturn } from 'react-hook-form';
+
+import type { FieldPath, UnpackNestedValue, FieldPathValue } from 'react-hook-form';
+
 import { StrictHookedFormProps } from '../HookedForm/HookedForm.types';
+
+
+/* --------
+ * Form Field Change Handler Types
+ * -------- */
+export type FieldChangedHandlerCallback<Value> = (value: Value) => void;
+
+type UnregisterChangeHandler = () => void;
+
+export type FieldChangeHandler<Values, FieldName extends FieldPath<Values> = FieldPath<Values>> = (
+  field: FieldName,
+  handler: FieldChangedHandlerCallback<UnpackNestedValue<FieldPathValue<Values, FieldName>>>
+) => UnregisterChangeHandler;
+
+export type TriggerFieldChanged<Values, FieldName extends FieldPath<Values> = FieldPath<Values>> = (
+  field: FieldName,
+  value: UnpackNestedValue<FieldPathValue<Values, FieldName>>
+) => void;
 
 
 /* --------
@@ -27,8 +48,14 @@ export interface HookedFormContext<Values extends FieldValues = FieldValues>
   /** Handle form Cancel */
   handleCancel: () => void;
 
+  /** Handle form value change */
+  registerChangeHandler: FieldChangeHandler<Values>;
+
   /** The submit button */
   submitButton: StrictHookedFormProps<Values, any, any>['submitButton'];
+
+  /** Trigger field changed */
+  triggerFieldChanged: TriggerFieldChanged<Values>;
 }
 
 

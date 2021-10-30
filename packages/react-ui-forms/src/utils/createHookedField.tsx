@@ -63,7 +63,7 @@ export function createHookedField<Props, RefType, TValue, TDisplayedValue = TVal
       // ----
       // Get Controller
       // ----
-      const { control, defaultValues } = useHookedFormContext<any>();
+      const { control, defaultValues, triggerFieldChanged } = useHookedFormContext<any>();
       const {
         field: {
           ref     : fieldRef,
@@ -176,6 +176,17 @@ export function createHookedField<Props, RefType, TValue, TDisplayedValue = TVal
       const formattedValue = typeof formatValue === 'function'
         ? formatValue(value, props)
         : value;
+
+
+      // ----
+      // Register an effect to trigger field change every time formatted value changed
+      // ----
+      React.useEffect(
+        () => {
+          triggerFieldChanged(name, formattedValue);
+        },
+        [ formattedValue, name, triggerFieldChanged ]
+      );
 
 
       // ----

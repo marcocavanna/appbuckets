@@ -5,11 +5,17 @@ import { useForm, SubmitHandler, SubmitErrorHandler } from 'react-hook-form';
 
 import Form from '@appbuckets/react-ui/Form';
 
-import { HookedFormContext, HookedFormProvider } from '../context/HookedForm.context';
+import { HookedFormProvider } from '../context/HookedForm.context';
+import type {
+  FieldChangeHandler,
+  FieldChangedHandlerCallback,
+  HookedFormContext,
+  TriggerFieldChanged
+} from '../context/HookedForm.context';
 
-import { HookedFormProps } from './HookedForm.types';
+import type { HookedFormProps } from './HookedForm.types';
+
 import HookedFormActions from './HookedFormActions';
-
 import HookedFormContent from './HookedFormContent';
 
 
@@ -147,6 +153,51 @@ const HookedForm = React.forwardRef<HTMLFormElement, HookedFormProps>((
 
 
   // ----
+  // Field Changed Handlers
+  // ----
+  const changeHandlers = React.useRef<Record<string, FieldChangedHandlerCallback<any>[]>>({});
+
+  const registerChangeHandler = React.useCallback<FieldChangeHandler<any>>(
+    (field, handler) => {
+      /** Get current ref value */
+      const { current: currentHandlers } = changeHandlers;
+
+      /** Create the handler array container if doesn't exists */
+      if (!Array.isArray(currentHandlers[field])) {
+        currentHandlers[field] = [];
+      }
+
+      /** Add the new handler to handlers container */
+      currentHandlers[field].push(handler);
+
+      /** Return a function to unregister field handler */
+      return () => {
+        /** Assert current is not changed */
+        if (Array.isArray(currentHandlers[field])) {
+          /** Remove the handler */
+          currentHandlers[field] = currentHandlers[field].filter((changeHandler) => changeHandler !== handler);
+        }
+      };
+    },
+    []
+  );
+
+  const triggerFieldChanged = React.useCallback<TriggerFieldChanged<any>>(
+    (field, value) => {
+      /** Get current handlers */
+      const { current: currentHandlers } = changeHandlers;
+
+      /** Check if there are some registered handlers for field change */
+      if (currentHandlers[field] && Array.isArray(currentHandlers[field])) {
+        /** Fire all change event handlers */
+        currentHandlers[field].forEach((handler) => handler(value));
+      }
+    },
+    []
+  );
+
+
+  // ----
   // Context Value Builder
   // ----
   const ctxValue: HookedFormContext = {
@@ -158,7 +209,9 @@ const HookedForm = React.forwardRef<HTMLFormElement, HookedFormProps>((
     defaultValues,
     disabled    : !!disabled,
     handleCancel: handleFormCancel,
-    submitButton
+    registerChangeHandler,
+    submitButton,
+    triggerFieldChanged
   };
 
 
