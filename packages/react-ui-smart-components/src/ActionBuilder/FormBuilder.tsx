@@ -195,27 +195,34 @@ export default function buildFormAction<Dto extends AnyObject, Props extends {},
     ));
 
     /** Default values are computed once only */
-    const [ defaultValues ] = React.useState<Dto>(() => {
-      /** Editing mode will clone default values to loose object reference while editing data */
-      if ((isEditing && couldBeEditing) || couldBeEditing) {
-        /** Clone data */
-        const clonedData = dataCloner(userDefinedDefaultValues);
-        /** Use the parse function if exists */
-        const parsedData = (
-          typeof parseDataFn === 'function'
-            ? parseDataFn(clonedData, { ...props, isEditing })
-            : clonedData
-        );
-        /** Return casted data using yup schema */
-        return (
-          stripUnknown
-            ? schema.noUnknown().cast(parsedData)
-            : schema.cast(parsedData)
-        );
-      }
-      /** Else, if form is not in editing mode, build a default object starting from yup schema */
-      return defaultValuesFromYupSchema<Dto>(schema);
-    });
+    const defaultValues = React.useMemo<Dto>(
+      () => {
+        /** Editing mode will clone default values to loose object reference while editing data */
+        if ((isEditing && couldBeEditing) || couldBeEditing) {
+          /** Clone data */
+          const clonedData = dataCloner(userDefinedDefaultValues);
+          /** Use the parse function if exists */
+          const parsedData = (
+            typeof parseDataFn === 'function'
+              ? parseDataFn(clonedData, { ...props, isEditing })
+              : clonedData
+          );
+          /** Return casted data using yup schema */
+          return (
+            stripUnknown
+              ? schema.noUnknown().cast(parsedData)
+              : schema.cast(parsedData)
+          );
+        }
+        /** Else, if form is not in editing mode, build a default object starting from yup schema */
+        return defaultValuesFromYupSchema<Dto>(schema);
+      },
+      // Heads Up
+      // Props always change, then, default values can't change every render
+      // component props are stripped from useMemo dependencies
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      [ couldBeEditing, isEditing, schema, userDefinedDefaultValues ]
+    );
 
 
     // ----
@@ -371,6 +378,7 @@ export default function buildFormAction<Dto extends AnyObject, Props extends {},
             : null
         )}
         defaultValues={defaultValues}
+        restoreDefaultValuesIfChanged={renderAsModal ? open : false}
         onSubmit={handleSubmit as any}
         onCancel={handleCancel as any}
         resolver={yupResolver(schema)}
