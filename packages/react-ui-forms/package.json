@@ -1,6 +1,6 @@
 {
   "name": "@appbuckets/react-ui-forms",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "An utilities package to manage and create Form using AppBuckets ReactUI",
   "keywords": [
     "react",
