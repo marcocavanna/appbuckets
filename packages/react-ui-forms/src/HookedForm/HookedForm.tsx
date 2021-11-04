@@ -46,6 +46,7 @@ const HookedForm = React.forwardRef<HTMLFormElement, HookedFormProps>((
     contentWrapper,
     disabled,
     resetOnCancel,
+    restoreDefaultValuesIfChanged,
     submitButton,
 
     /** UserDefined Handlers */
@@ -89,6 +90,21 @@ const HookedForm = React.forwardRef<HTMLFormElement, HookedFormProps>((
     },
     'hooked-form',
     className
+  );
+
+
+  // ----
+  // Default Values Restore
+  // ----
+  const { reset: resetForm } = hookFormCtx;
+  React.useEffect(
+    () => {
+      /** Check if must reset form state */
+      if (restoreDefaultValuesIfChanged) {
+        resetForm(defaultValues);
+      }
+    },
+    [ resetForm, defaultValues, restoreDefaultValuesIfChanged ]
   );
 
 

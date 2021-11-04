@@ -100,6 +100,9 @@ export interface StrictHookedFormProps<Values extends FieldValues, SubmitReturn,
   /** Validation Resolver */
   resolver?: UseFormProps<Values, Ctx>['resolver'];
 
+  /** Restore values if defaultValues object change */
+  restoreDefaultValuesIfChanged?: boolean;
+
   /** Set the event on revalidation will trigger */
   reValidateOn?: UseFormProps<Values, Ctx>['reValidateMode'];
 
