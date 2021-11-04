@@ -378,7 +378,7 @@ export default function buildFormAction<Dto extends AnyObject, Props extends {},
             : null
         )}
         defaultValues={defaultValues}
-        restoreDefaultValuesIfChanged={renderAsModal ? open : false}
+        restoreDefaultValuesIfChanged={renderAsModal ? !open : false}
         onSubmit={handleSubmit as any}
         onCancel={handleCancel as any}
         resolver={yupResolver(schema)}
