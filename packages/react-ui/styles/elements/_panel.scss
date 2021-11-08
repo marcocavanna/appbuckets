@@ -142,6 +142,7 @@
     FAB Buttons
 ******/
 .panel > .body.with-fab {
+  margin-bottom: $panel-fab-size + $panel-bottom-spacer;
   padding-bottom: $panel-vertical-padding + ($panel-fab-size * .75);
 
   // ----
