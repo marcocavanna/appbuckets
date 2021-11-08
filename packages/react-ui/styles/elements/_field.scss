@@ -157,3 +157,12 @@
 .field .addon .button {
   min-width: auto;
 }
+
+
+/******
+    Item Content in field must have fixed height
+******/
+.field .item .content {
+  height: $computed-input-height;
+  min-height: $computed-input-height;
+}
