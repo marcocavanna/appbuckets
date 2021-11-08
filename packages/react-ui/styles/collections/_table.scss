@@ -356,6 +356,21 @@ table > .head,
 
 
 /******
+    On built table, filter row z-index must be set
+    to prevent Select component to place the menu content
+    under the table body
+******/
+.table .head > .filter.row {
+  position: relative;
+  z-index: 2;
+
+  > .filter.cell {
+    overflow: visible;
+  }
+}
+
+
+/******
     On Virtualized Table, remove and reset display declaration
 ******/
 .virtualized.table {
@@ -368,10 +383,6 @@ table > .head,
   &.virtualized-head {
     z-index: 2;
     position: relative;
-  }
-
-  .head > .filter.row > .filter.cell {
-    overflow: visible;
   }
 
   > .body > .row {
