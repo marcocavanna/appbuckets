@@ -539,6 +539,25 @@
       "type": {
         "name": "ButtonProps"
       }
+    },
+    "withoutUploadController": {
+      "defaultValue": null,
+      "description": "Remove upload controller, rendering the Dropzone as a file container only",
+      "name": "withoutUploadController",
+      "parent": {
+        "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+        "name": "StrictDropzoneProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Dropzone/Dropzone.types.ts",
+          "name": "StrictDropzoneProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
     }
   }
 }
