@@ -42,6 +42,19 @@ $without-touch-html-hover-class: 'no-touch' !default;
     Core Variables
 ******/
 
+/// Inject a Custom Font
+/// Decide to avoid to inject one of the default provided fonts
+/// and to provide custom fonts
+/// This will check at compile time that all of necessary font family props
+$inject-custom-font: false !default;
+
+/// Custom fonts data
+$custom-font-name: '' !default;
+$custom-font-light-weight: 0 !default;
+$custom-font-regular-weight: 0 !default;
+$custom-font-semi-bold-weight: 0 !default;
+$custom-font-bold-weight: 0 !default;
+
 /// Set the base spacer and absolute spacer
 $absolute-spacer: 1rem !default;
 $spacer: 1em !default;

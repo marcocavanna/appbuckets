@@ -18,4 +18,10 @@
 /// Import the Font
 $__sans_serif_url: str-replace($font-sans-serif, ' ', '+');
 $__monospace_url: str-replace($font-monospace, ' ', '+');
-@import url('https://fonts.googleapis.com/css?family=#{unquote($__sans_serif_url)}:#{$light},#{$regular},#{$semi-bold},#{$bold}|#{unquote($__monospace_url)}:#{map-get($google-fonts-weight-map, $font-monospace)}&display=swap');
+
+/// When injecting custom font, take from google only monospace
+@if $inject-custom-font == true {
+  @import url('https://fonts.googleapis.com/css?family=#{unquote($__monospace_url)}:#{map-get($google-fonts-weight-map, $font-monospace)}&display=swap');
+} @else {
+  @import url('https://fonts.googleapis.com/css?family=#{unquote($__sans_serif_url)}:#{$light},#{$regular},#{$semi-bold},#{$bold}|#{unquote($__monospace_url)}:#{map-get($google-fonts-weight-map, $font-monospace)}&display=swap');
+}
