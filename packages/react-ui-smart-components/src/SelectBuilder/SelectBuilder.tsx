@@ -44,8 +44,8 @@ export default function buildSelector<OptionType extends SelectOption, ValueType
     sort   : defaultDefinedSort,
 
     /** Text Options */
-    placeholder     : defaultPlaceholder = 'Select',
-    noOptionsMessage: defaultNoOptionsMessage = () => 'No Options'
+    placeholder     : defaultPlaceholder,
+    noOptionsMessage: defaultNoOptionsMessage
 
   } = config;
 
