@@ -136,7 +136,7 @@ export function createHookedField<Props, RefType, TValue, TDisplayedValue = TVal
           warning   : !hasError && props.warning
         },
         isSubmitting: !!formState.isSubmitting,
-        message     : hasError ? fieldState.error?.message : (props as any).message
+        message     : hasError ? fieldState.error?.message : (props as any).message || (props as any).hint
       };
 
 
