@@ -97,6 +97,9 @@ export interface StrictDropzoneProps {
 
   /** Upload Button */
   uploadButton?: ButtonProps;
+
+  /** Remove upload controller, rendering the Dropzone as a file container only */
+  withoutUploadController?: boolean;
 }
 
 export interface DropzoneHelpers {

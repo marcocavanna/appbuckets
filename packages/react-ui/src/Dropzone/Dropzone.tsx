@@ -308,7 +308,8 @@ class Dropzone extends React.Component<DropzoneProps, DropzoneState> {
       multiple,
       on,
       showPreview,
-      style
+      style,
+      withoutUploadController
     } = this.props;
 
     /** Build classes */
@@ -354,7 +355,9 @@ class Dropzone extends React.Component<DropzoneProps, DropzoneState> {
           <DropzoneInput />
           <DropzoneHint />
           <DropzoneFiles />
-          <DropzoneController />
+          {!withoutUploadController && (
+            <DropzoneController />
+          )}
         </div>
       </DropzoneProvider>
     );
