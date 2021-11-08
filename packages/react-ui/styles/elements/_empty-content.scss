@@ -36,6 +36,12 @@
       }
     }
 
+    /// Remove spacer from header icon and content
+    &.with-icon.has-text-center > .header-icon,
+    &.with-actions.has-text-center > .header-icon {
+      margin-bottom: 0;
+    }
+
     /// Button will have Margin from Header
     + .button {
       margin-top: $empty-content-button-spacer;
