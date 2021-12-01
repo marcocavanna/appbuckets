@@ -1,4 +1,6 @@
-$shade-step: 100% / 13;
+@use 'sass:math';
+
+$shade-step: math.div(100%, 13);
 
 /// Get Tinted Color
 /// @author Marco Cavanna
@@ -51,7 +53,7 @@ $shade-step: 100% / 13;
     }
   } @else if $exp < 0 {
     @for $i from 1 through -$exp {
-      $value: $value / $number
+      $value: math.div($value, $number)
     }
   }
 
@@ -64,12 +66,12 @@ $shade-step: 100% / 13;
 
   @each $name, $value in $color-rgb {
     $adjusted: 0;
-    $value: $value / 255;
+    $value: math.div($value, 255);
 
     @if $value < 0.03928 {
-      $value: $value / 12.92;
+      $value: math.div($value, 12.92);
     } @else {
-      $value: ($value + .055) / 1.055;
+      $value: math.div(($value + .055), 1.055);
       $value: power-number($value, 2);
     }
     $color-rgb: map-merge($color-rgb, ($name: $value));

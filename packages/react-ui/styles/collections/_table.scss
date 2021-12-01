@@ -10,6 +10,8 @@
  * Tables Style
  *
  */
+@use 'sass:math';
+
 
 table,
 .table {
@@ -33,7 +35,7 @@ table,
         border-collapse: collapse;
         text-align: left;
         outline: none;
-        padding: ($table-rows-gutter / 2) ($table-columns-gutter / 2);
+        padding: math.div($table-rows-gutter, 2) math.div($table-columns-gutter, 2);
 
         &:first-child {
           padding-left: $table-columns-gutter;
@@ -248,10 +250,10 @@ table > .head,
   //  Adjust Padding
   // ----
   .row > .cell.with-icon {
-    padding-left: calc(#{$table-columns-gutter / 2} + #{$icon-width});
+    padding-left: calc(#{math.div($table-columns-gutter, 2)} + #{$icon-width});
 
     > svg.icon {
-      left: $table-columns-gutter / 2;
+      left: math.div($table-columns-gutter, 2);
     }
 
     &:first-child {
@@ -264,10 +266,10 @@ table > .head,
   }
 
   &.compressed .row > .cell.with-icon {
-    padding-left: calc(#{$table-compressed-columns-gutter / 2} + #{$icon-width});
+    padding-left: calc(#{math.div($table-compressed-columns-gutter, 2)} + #{$icon-width});
 
     > svg.icon {
-      left: $table-compressed-columns-gutter / 2;
+      left: math.div($table-compressed-columns-gutter, 2);
     }
 
     &:first-child {
@@ -327,7 +329,7 @@ table > .head,
     Compressed Table Has half cell / row gutter
 ******/
 .compressed.table .row > .cell {
-  padding: ($table-compressed-rows-gutter / 2) ($table-compressed-columns-gutter / 2);
+  padding: math.div($table-compressed-rows-gutter, 2) math.div($table-compressed-columns-gutter, 2);
 
   &:first-child {
     padding-left: $table-compressed-columns-gutter;

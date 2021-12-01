@@ -10,6 +10,8 @@
  *
  *
  */
+@use 'sass:math';
+
 
 /******
     Item Base Style
@@ -59,8 +61,8 @@
     opacity: $item-meta-opacity;
     font-weight: $item-meta-font-weight;
     font-size: $item-meta-font-size;
-    margin-top: $item-content-spacer / 1.5;
-    padding-top: $item-content-spacer / 1.5;
+    margin-top: math.div($item-content-spacer, 1.5);
+    padding-top: math.div($item-content-spacer, 1.5);
     border-top: solid 1px $item-meta-divider-color;
   }
 
@@ -211,8 +213,8 @@
     border-bottom: solid 1px $items-divider-color;
 
     &:not(.clickable) {
-      padding-bottom: $items-group-spacer / 2;
-      margin-bottom: $items-group-spacer / 2;
+      padding-bottom: math.div($items-group-spacer, 2);
+      margin-bottom: math.div($items-group-spacer, 2);
     }
   }
 
@@ -222,8 +224,8 @@
     }
 
     &.divided > .item:not(:last-child):not(.clickable) {
-      padding-bottom: ($items-group-spacer * 1.5) / 2;
-      margin-bottom: ($items-group-spacer * 1.5) / 2;
+      padding-bottom: math.div(($items-group-spacer * 1.5), 2);
+      margin-bottom: math.div(($items-group-spacer * 1.5), 2);
     }
 
     > .item.clickable {

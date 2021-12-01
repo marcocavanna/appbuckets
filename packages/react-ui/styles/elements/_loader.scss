@@ -10,6 +10,8 @@
  * Loader Component Style
  *
  */
+@use 'sass:math';
+
 
 /******
     Base Loader
@@ -116,7 +118,7 @@
     display: block;
     width: 100%;
     background-color: transparentize($text, .75);
-    border-radius: $loader-stroke-size / 2;
+    border-radius: math.div($loader-stroke-size, 2);
     background-clip: padding-box;
     overflow: hidden;
 
@@ -132,7 +134,7 @@
         left: 0;
         bottom: 0;
         will-change: left, right;
-        border-radius: $loader-stroke-size / 2;
+        border-radius: math.div($loader-stroke-size, 2);
       }
 
       &:before {
@@ -348,7 +350,7 @@
         &:before {
           width: $size;
           height: $size;
-          margin: 0 0 0 ($size / 2 * -1);
+          margin: 0 0 0 (math.div($size, 2) * -1);
         }
       }
 

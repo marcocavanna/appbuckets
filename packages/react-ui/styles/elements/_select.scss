@@ -10,6 +10,8 @@
  *
  *
  */
+@use 'sass:math';
+
 
 /******
     Internal Mixin
@@ -88,7 +90,7 @@
 
     /// Set multi value style
     > div.__multi-value {
-      margin: ($select-multi-value-spacer / 2) $select-multi-value-spacer ($select-multi-value-spacer / 2) 0;
+      margin: math.div($select-multi-value-spacer, 2) $select-multi-value-spacer math.div($select-multi-value-spacer, 2) 0;
       background-color: $select-multi-value-background;
       border-radius: $select-multi-value-border-radius;
 

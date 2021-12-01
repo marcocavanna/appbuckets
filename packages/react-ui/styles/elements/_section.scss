@@ -10,6 +10,7 @@
  *
  *
  */
+@use 'sass:math';
 
 
 /******
@@ -106,8 +107,8 @@
   //  Divided Section has a Bottom Border
   // ----
   &.divided {
-    margin-bottom: $section-spacer / 2;
-    padding-bottom: $section-spacer / 2;
+    margin-bottom: math.div($section-spacer, 2);
+    padding-bottom: math.div($section-spacer, 2);
     border-bottom-width: $section-divided-border-width;
     border-bottom-style: $section-divided-border-style;
     border-bottom-color: $section-divided-border-color;

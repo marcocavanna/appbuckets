@@ -10,6 +10,7 @@
  *
  *
  */
+@use 'sass:math';
 
 /******
     Hide the Checkbox
@@ -55,7 +56,7 @@ input[type='radio'] {
 .checkbox .content,
 .radio .content,
 .switch .content {
-  $__checkbox-field-padding: ($checkbox-size - 1em) / 1.5;
+  $__checkbox-field-padding: math.div(($checkbox-size - 1em), 1.5);
 
   @if strip-unit($__checkbox-field-padding) > 0 {
     padding-top: $__checkbox-field-padding;

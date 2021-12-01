@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @mixin overlay-loader(
   $text-color: transparent,
   $container-opacity: 1,
@@ -19,7 +21,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: ($loader-size / -2) 0 0 ($loader-size / -2);
+    margin: math.div($loader-size, -2) 0 0 math.div($loader-size, -2);
     width: $loader-size;
     height: $loader-size;
     border-radius: 500rem;

@@ -10,18 +10,20 @@
  *
  *
  */
+@use 'sass:math';
+
 
 /******
     Badge Element
 ******/
 .badge {
   display: inline-block;
-  padding: $badge-base-size / 2;
+  padding: math.div($badge-base-size, 2);
   border-radius: $border-radius-rounded;
 
   &.with-content {
-    padding-top: $badge-base-size / 4;
-    padding-bottom: $badge-base-size / 4;
+    padding-top: math.div($badge-base-size, 4);
+    padding-bottom: math.div($badge-base-size, 4);
 
     > .content {
       font-size: $badge-font-size;

@@ -10,6 +10,8 @@
  * Input Styles
  *
  */
+@use 'sass:math';
+
 
 /******
     Restore Input Style
@@ -118,8 +120,8 @@ textarea.text {
       will-change: color;
 
       &:after {
-        left: calc(50% + #{$input-horizontal-padding / 2});
-        top: calc(50% + #{$input-vertical-padding / 2});
+        left: calc(50% + #{math.div($input-horizontal-padding, 2)});
+        top: calc(50% + #{math.div($input-vertical-padding, 2)});
       }
     }
 
@@ -175,7 +177,7 @@ textarea.text {
 
   &.icon-on-right {
     > .clear.icon {
-      right: $icon-width + ($input-horizontal-padding / 2);
+      right: $icon-width + math.div($input-horizontal-padding, 2);
     }
 
     > input,

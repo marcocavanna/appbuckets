@@ -1,8 +1,10 @@
+@use 'sass:math';
+
 .rc-slider {
   display: block;
   position: relative;
   height: $slider-handle-size;
-  padding: ($slider-handle-size - $slider-rail-height) / 2 0;
+  padding: math.div(($slider-handle-size - $slider-rail-height), 2) 0;
   width: 100%;
   box-sizing: border-box;
   touch-action: none;

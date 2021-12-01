@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @function pixel-to-em($px, $context: $font-size) {
   @if (unitless($number: $px)) {
     $px: $px * 1px;
@@ -7,7 +9,7 @@
     $context: $context * 1px;
   }
 
-  @return $px / $context * 1em;
+  @return math.div($px, $context) * 1em;
 }
 
 @function pixel-to-rem($px, $context: $font-size) {
@@ -19,7 +21,7 @@
     $context: $context * 1px;
   }
 
-  @return $px / $context * 1rem;
+  @return math.div($px, $context) * 1rem;
 }
 
 @function get-spacer($sp) {
@@ -27,7 +29,7 @@
     @return 0;
   }
 
-  @return ceil((0.4375 - (0.1577381 * $sp) + (0.07440476 * $sp * $sp)) * 10) / 10;
+  @return math.div(ceil((0.4375 - (0.1577381 * $sp) + (0.07440476 * $sp * $sp)) * 10), 10);
 }
 
 @function get-em-spacer($sp: 1) {
@@ -43,7 +45,7 @@
 /// @return {Number} - Unitless number
 @function strip-unit($number) {
   @if type-of($number) == 'number' and not unitless($number) {
-    @return $number / ($number * 0 + 1);
+    @return math.div($number, ($number * 0 + 1));
   }
 
   @return $number;

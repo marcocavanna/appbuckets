@@ -10,6 +10,8 @@
  *
  *
  */
+@use 'sass:math';
+
 
 /******
     Modal Base Style
@@ -40,7 +42,7 @@
     Modal Icon
 ******/
 .modal.with-icon {
-  padding-top: $modal-icon-size + ($modal-vertical-padding / 2);
+  padding-top: $modal-icon-size + math.div($modal-vertical-padding, 2);
 
   > .icon {
     position: absolute;

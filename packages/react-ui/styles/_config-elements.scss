@@ -11,6 +11,8 @@
  *
  */
 
+@use 'sass:math';
+
 
 /******
     Shared Variables
@@ -620,7 +622,7 @@ $select-multi-value-label-padding: .75em !default;
     Slider
 ******/
 $slider-rail-height: pixel-to-em(6) !default;
-$slider-rail-border-radius: $slider-rail-height / 2 !default;
+$slider-rail-border-radius: math.div($slider-rail-height, 2) !default;
 $slider-rail-background: $cloud-light !default;
 
 $slider-track-base-background: $primary !default;
@@ -632,8 +634,8 @@ $slider-handle-border-width: .25em !default;
 $slider-handle-border-color: $slider-track-base-background !default;
 $slider-handle-background: $white !default;
 
-$slider-step-size: $slider-handle-size / 2 !default;
-$slider-step-border-width: $slider-handle-border-width / 1.5 !default;
+$slider-step-size: math.div($slider-handle-size, 2) !default;
+$slider-step-border-width: math.div($slider-handle-border-width, 1.5) !default;
 $slider-inactive-dot-border-color: $slider-rail-background !default;
 
 $slider-mark-font-size: $field-label-font-size !default;
