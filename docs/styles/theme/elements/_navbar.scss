@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 /******
     Base Navbar Style
 ******/
@@ -72,7 +74,7 @@
   position: relative;
   height: $navbar-link-height;
   line-height: $navbar-link-height;
-  padding: 0 $navbar-link-spacer / 2;
+  padding: 0 math.div($navbar-link-spacer, 2);
   color: $navbar-link-color;
   font-weight: $semi-bold;
 

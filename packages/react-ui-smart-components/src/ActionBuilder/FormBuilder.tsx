@@ -245,7 +245,8 @@ export default function buildFormAction<Dto extends AnyObject, Props extends {},
           /** Set error on form */
           helpers.setError(
             errorPath as any,
-            { message: errorMessage, shouldFocus: true }
+            { message: errorMessage },
+            { shouldFocus: true }
           );
           /** Return form is invalid */
           return false;

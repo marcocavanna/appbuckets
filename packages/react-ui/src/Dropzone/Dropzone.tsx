@@ -102,7 +102,7 @@ class Dropzone extends React.Component<DropzoneProps, DropzoneState> {
     try {
       readFiles = await Promise.all(readingPromises);
     }
-    catch (error) {
+    catch (error: any) {
       if (onFilesReadError) {
         onFilesReadError(error);
       }

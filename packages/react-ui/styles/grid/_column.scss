@@ -13,7 +13,7 @@
 @use 'sass:math';
 
 
-$base-column-width: percentage(math.div(1 / $columns-count));
+$base-column-width: percentage(math.div(1, $columns-count));
 
 /******
     Set the Base Column Style

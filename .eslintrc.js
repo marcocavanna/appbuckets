@@ -45,17 +45,18 @@ module.exports = {
     'jsx-a11y/click-events-have-key-events'          : [ 'off' ],
 
     // Strict React file Rules
-    'react/destructuring-assignment'   : [ 'off' ],
-    'react/jsx-boolean-value'          : [ 'off' ],
-    'react/jsx-curly-brace-presence'   : [ 'error', { props: 'always', children: 'never' } ],
-    'react/jsx-fragments'              : [ 'error', 'element' ],
-    'react/jsx-one-expression-per-line': [ 'off' ],
-    'react/jsx-props-no-spreading'     : [ 'off' ],
-    'react/no-array-index-key'         : [ 'off' ],
-    'react/no-unused-prop-types'       : [ 'off' ],
-    'react/prop-types'                 : [ 'off' ],
-    'react/require-default-props'      : [ 'off' ],
-    'react/state-in-constructor'       : [ 'error', 'never' ],
-    'react/static-property-placement'  : [ 'off' ]
+    'react/default-props-match-prop-types': [ 'off' ],
+    'react/destructuring-assignment'      : [ 'off' ],
+    'react/jsx-boolean-value'             : [ 'off' ],
+    'react/jsx-curly-brace-presence'      : [ 'error', { props: 'always', children: 'never' } ],
+    'react/jsx-fragments'                 : [ 'error', 'element' ],
+    'react/jsx-one-expression-per-line'   : [ 'off' ],
+    'react/jsx-props-no-spreading'        : [ 'off' ],
+    'react/no-array-index-key'            : [ 'off' ],
+    'react/no-unused-prop-types'          : [ 'off' ],
+    'react/prop-types'                    : [ 'off' ],
+    'react/require-default-props'         : [ 'off' ],
+    'react/state-in-constructor'          : [ 'error', 'never' ],
+    'react/static-property-placement'     : [ 'off' ]
   }
 };

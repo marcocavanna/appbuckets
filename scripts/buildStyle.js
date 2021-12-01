@@ -8,7 +8,7 @@ const { writeFileSync, existsSync } = require('fs');
 /* --------
  * Import Compiler Utilities
  * -------- */
-const sass = require('node-sass');
+const sass = require('sass');
 const packageImporter = require('node-sass-package-importer');
 
 const postcss = require('postcss');

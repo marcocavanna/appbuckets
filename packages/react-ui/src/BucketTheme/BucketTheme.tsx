@@ -21,7 +21,7 @@ const BucketTheme: React.FunctionComponent<{ theme?: PartialThemeOptions }> = (
   } = props;
 
   /** Merge theme with default theme configuration */
-  const theme: ThemeOptions = deepExtend(defaultBucketThemeConfig, userDefinedTheme);
+  const theme: ThemeOptions = deepExtend(defaultBucketThemeConfig, userDefinedTheme as ThemeOptions);
 
   /** Create the Context Provider element and render with children */
   return (

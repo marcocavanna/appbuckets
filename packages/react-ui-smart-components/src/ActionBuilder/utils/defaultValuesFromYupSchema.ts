@@ -35,7 +35,7 @@ export default function defaultValuesFromYupSchema<Dto extends AnyObject = AnyOb
     }
 
     /** Get the default value from field spec */
-    const { default: defaultValue } = field.spec;
+    const { default: defaultValue } = (field as any).spec;
 
     /** Set the right default based on field type */
     switch (field.type) {

@@ -124,7 +124,6 @@ export function createHookedField<Props, RefType, TValue, TDisplayedValue = TVal
         invalid     : fieldState.invalid,
         isTouched   : fieldState.isTouched,
         isDirty     : fieldState.isDirty,
-        isValidating: fieldState.isValidating,
         error       : fieldState.error,
         appearance  : {
           appearance: !hasError ? props.appearance : undefined,
