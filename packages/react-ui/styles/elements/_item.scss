@@ -23,14 +23,31 @@
   &.centered {
     align-items: center;
   }
-}
 
+  // ----
+  //  Set Base Content Direction
+  // ----
+  &,
+  &.has-text-left {
+    flex-direction: row;
 
-/******
-    Item Avatar Style
-******/
-.item > .avatar {
+    > .avatar + .content {
+      margin-left: $item-content-spacer;
+    }
+  }
 
+  // ----
+  //  Change Flex direction on Text Right item
+  // ----
+  .item.has-text-right,
+  .has-text-right > .item {
+    flex-direction: row-reverse;
+
+    > .avatar + .content {
+      margin-left: 0;
+      margin-right: $item-content-spacer;
+    }
+  }
 }
 
 
@@ -69,10 +86,6 @@
   > .item-header + .loader {
     margin-top: $item-progress-spacer;
   }
-}
-
-.item > .avatar + .content {
-  margin-left: $item-content-spacer;
 }
 
 
