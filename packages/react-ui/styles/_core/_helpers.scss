@@ -87,11 +87,19 @@
 
     // Divide margin and padding
     @each $property, $prefix in (margin: 'm', padding: 'p') {
-      // Generate Master Class
-      @each $selector, $spacers in (#{$prefix}: #{$_spacer}em, #{$prefix}x: 0 #{$_spacer}em, #{$prefix}y: #{$_spacer}em 0) {
-        @include selectors-for-each-breakpoint('#{$selector}-#{$sp}', $selectors-with-breakpoint: $generate-margin-padding-responsive-helpers-class) {
-          #{$property}: $spacers !important;
-        }
+      // Generate Masters Classes
+      @include selectors-for-each-breakpoint('#{$prefix}-#{$sp}', $selectors-with-breakpoint: $generate-margin-padding-responsive-helpers-class) {
+        #{$property}: #{$_spacer}em !important;
+      }
+
+      @include selectors-for-each-breakpoint('#{$prefix}x-#{$sp}', $selectors-with-breakpoint: $generate-margin-padding-responsive-helpers-class) {
+        #{$property}-left: #{$_spacer}em !important;
+        #{$property}-right: #{$_spacer}em !important;
+      }
+
+      @include selectors-for-each-breakpoint('#{$prefix}y-#{$sp}', $selectors-with-breakpoint: $generate-margin-padding-responsive-helpers-class) {
+        #{$property}-top: #{$_spacer}em !important;
+        #{$property}-bottom: #{$_spacer}em !important;
       }
 
       // Generate direction helpers (like pt-4)
