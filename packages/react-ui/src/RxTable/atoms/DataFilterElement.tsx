@@ -35,6 +35,7 @@ type InputDataFilter<Data> = {
 type RegExpDataFilter<Data> = {
   initialValue?: string,
   type: 'regexp',
+  flags?: string,
   props?: InputProps,
   show: (value: RegExp, data: Data, index: number, array: Data[]) => boolean;
 };

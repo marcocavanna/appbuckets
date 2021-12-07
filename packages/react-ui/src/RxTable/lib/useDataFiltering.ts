@@ -110,9 +110,12 @@ export default function useDataFiltering<Data>(
           }
 
           /** If value is valid, save the regexp into pool */
-          regExpPool[column.key] = new RegExp(value
-            .replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
-            .replace(/-/g, '\\x2d'));
+          regExpPool[column.key] = new RegExp(
+            value
+              .replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
+              .replace(/-/g, '\\x2d'),
+            column.filter.flags || 'ig'
+          );
 
           return true;
         }
