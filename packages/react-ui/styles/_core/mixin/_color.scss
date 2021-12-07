@@ -89,7 +89,8 @@
   $interactive-class: null,
   $apply-shadow-to: box,
   $shadow-strength: 10px,
-  $shadow-transparency: .6
+  $shadow-transparency: .6,
+  $apply-as-important: false
 ) {
 
   // Choose the Contrast Color
@@ -97,13 +98,21 @@
 
   // Set the Color
   @each $prop in $properties-list {
-    #{$prop}: $color;
+    @if $apply-as-important == true {
+      #{$prop}: $color !important;
+    } @else {
+      #{$prop}: $color;
+    }
   }
 
   // If any Prop is background-color
   // then add the color property too
   @if index($properties-list, background-color) != null {
-    color: $contrast-color;
+    @if $apply-as-important == true {
+      color: $contrast-color !important;
+    } @else {
+      color: $contrast-color;
+    }
   }
 
   @if $is-interactive == true {
@@ -176,15 +185,18 @@
         @if $with-hover == true {
           @include hover {
             #{$interactive-selector}:hover {
+              // Set the Color
+              @each $prop in $properties-list {
+                @if $apply-as-important == true {
+                  #{$prop}: $hover-color !important;
+                } @else {
+                  #{$prop}: $hover-color;
+                }
+              }
+
+              // Set if shadow must be applied
               @if $hover-will-drop-shadow == true {
-                @each $prop in $properties-list {
-                  #{$prop}: $hover-color;
-                }
                 #{$apply-shadow-to}-shadow: 0 1px $shadow-strength transparentize(color-shade($color), $shadow-transparency);
-              } @else {
-                @each $prop in $properties-list {
-                  #{$prop}: $hover-color;
-                }
               }
             }
           }
@@ -195,7 +207,11 @@
           #{$interactive-selector}:active,
           #{$interactive-selector}.is-active {
             @each $prop in $properties-list {
-              #{$prop}: $active-color;
+              @if $apply-as-important == true {
+                #{$prop}: $active-color !important;
+              } @else {
+                #{$prop}: $active-color;
+              }
             }
           }
         }
@@ -206,7 +222,11 @@
           #{$interactive-selector}.is-focused {
             box-shadow: 0 0 1px 2px color-shade($color, 1.5) inset;
             @each $prop in $properties-list {
-              #{$prop}: $focus-color;
+              @if $apply-as-important == true {
+                #{$prop}: $focus-color !important;
+              } @else {
+                #{$prop}: $focus-color;
+              }
             }
           }
         }

@@ -67,7 +67,8 @@
     @include selectors-for-each-breakpoint('has-background-#{$label}', $selectors-with-breakpoint: $generate-background-color-responsive-helpers-class) {
       @include variation-style(
         $properties-list: background-color,
-        $color: $color
+        $color: $color,
+        $apply-as-important: true
       )
     }
   }
