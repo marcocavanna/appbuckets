@@ -81,13 +81,13 @@ export type HookedFieldValidation<TValue> = {
   max?: ValidationRule<number | string>;
 
   /** The maximum length of the value to accept for this input. */
-  maxLength?: ValidationRule<number | string>;
+  maxLength?: ValidationRule<number>;
 
   /** The minimum value to accept for this input. */
   min?: ValidationRule<number | string>;
 
   /** The minimum length of the value to accept for this input. */
-  minLength?: ValidationRule<number | string>;
+  minLength?: ValidationRule<number>;
 
   /** The regex pattern for the input. */
   pattern?: ValidationRule<RegExp>;
