@@ -11,7 +11,7 @@ export interface UseDataFiltering<Data> {
   columns: RxTableColumnProps<Data>[];
 
   /** The filter logic to apply */
-  filterLogic?: 'and' | 'or'
+  filterLogic?: 'and' | 'or';
 }
 
 type UseDataFilteringAndData<Data> = UseDataFiltering<Data> & {
@@ -97,6 +97,10 @@ export default function useDataFiltering<Data>(
           return typeof filters[column.key] === 'string' && !!filters[column.key].length;
         }
 
+        if (column.filter.type === 'regexp') {
+          return !!filters[column.key] && filters[column.key] instanceof RegExp;
+        }
+
         if (column.filter.type === 'checkbox') {
           return typeof filters[column.key] === 'boolean' && !!filters[column.key];
         }
@@ -122,8 +126,8 @@ export default function useDataFiltering<Data>(
         return filterColumns.reduce(
           (show: boolean, next: RxTableColumnProps<Data>) => (
             filterLogic === 'and'
-              ? show && next.filter!.show(filters[next.key] as (string & number), row, index, array)
-              : show || next.filter!.show(filters[next.key] as (string & number), row, index, array)
+              ? show && next.filter!.show(filters[next.key] as (string & number & RegExp), row, index, array)
+              : show || next.filter!.show(filters[next.key] as (string & number & RegExp), row, index, array)
           ),
           filterLogic === 'and'
         );

@@ -32,6 +32,13 @@ type InputDataFilter<Data> = {
   show: (value: string, data: Data, index: number, array: Data[]) => boolean;
 };
 
+type RegExpDataFilter<Data> = {
+  initialValue?: string,
+  type: 'regexp',
+  props?: InputProps,
+  show: (value: RegExp, data: Data, index: number, array: Data[]) => boolean;
+};
+
 type MultiSelectDataFilter<Data, Option, Value> = {
   initialValue?: Value[],
   type: 'multi-select',
@@ -49,6 +56,7 @@ type SelectDataFilter<Data, Option, Value> = {
 export type RxTableDataFilter<Data, Option = any, Value = any> =
   | CheckboxDataFilter<Data>
   | InputDataFilter<Data>
+  | RegExpDataFilter<Data>
   | MultiSelectDataFilter<Data, Option, Value>
   | SelectDataFilter<Data, Option, Value>;
 
@@ -96,6 +104,20 @@ const DataFilterElement: React.FunctionComponent<DataFilterElementProps> = (prop
         if (filter.type === 'input') {
           setFilter(columnKey, (filterProps as InputProps).value);
         }
+        else if (filter.type === 'regexp') {
+          const { value } = filterProps as InputProps;
+
+          if (typeof value !== 'string' || !value.length) {
+            setFilter(columnKey, null);
+          }
+          else {
+            setFilter(columnKey, new RegExp(
+              value
+                .replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
+                .replace(/-/g, '\\x2d')
+            ));
+          }
+        }
         else if (filter.type === 'checkbox') {
           setFilter(columnKey, (filterProps as CheckboxProps).checked);
         }
@@ -127,7 +149,7 @@ const DataFilterElement: React.FunctionComponent<DataFilterElementProps> = (prop
   // ----
   // Return the right Filter Component
   // ----
-  if (filter.type === 'input') {
+  if (filter.type === 'input' || filter.type === 'regexp') {
     return (
       <Input
         icon={'filter'}
