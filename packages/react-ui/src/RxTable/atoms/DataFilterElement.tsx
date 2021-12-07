@@ -101,22 +101,8 @@ const DataFilterElement: React.FunctionComponent<DataFilterElementProps> = (prop
   const handleFilterChange = React.useCallback(
     (e: any, filterProps: InputProps | SelectEventProps<any> | MultiSelectEventProps<any> | CheckboxProps) => {
       if (filter) {
-        if (filter.type === 'input') {
+        if (filter.type === 'input' || filter.type === 'regexp') {
           setFilter(columnKey, (filterProps as InputProps).value);
-        }
-        else if (filter.type === 'regexp') {
-          const { value } = filterProps as InputProps;
-
-          if (typeof value !== 'string' || !value.length) {
-            setFilter(columnKey, null);
-          }
-          else {
-            setFilter(columnKey, new RegExp(
-              value
-                .replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
-                .replace(/-/g, '\\x2d')
-            ));
-          }
         }
         else if (filter.type === 'checkbox') {
           setFilter(columnKey, (filterProps as CheckboxProps).checked);

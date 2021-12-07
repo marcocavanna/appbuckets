@@ -87,6 +87,9 @@ export default function useDataFiltering<Data>(
         return data;
       }
 
+      /** Init a regexp pool to save regexp once per time */
+      const regExpPool: Record<string, RegExp> = {};
+
       /** Get only filter columns */
       const filterColumns = columns.filter((column) => {
         if (!column.filter) {
@@ -98,7 +101,20 @@ export default function useDataFiltering<Data>(
         }
 
         if (column.filter.type === 'regexp') {
-          return !!filters[column.key] && filters[column.key] instanceof RegExp;
+          /** Get current value */
+          const value = filters[column.key];
+
+          /** If is invalid, abort */
+          if (typeof value !== 'string' || !value.length) {
+            return false;
+          }
+
+          /** If value is valid, save the regexp into pool */
+          regExpPool[column.key] = new RegExp(value
+            .replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
+            .replace(/-/g, '\\x2d'));
+
+          return true;
         }
 
         if (column.filter.type === 'checkbox') {
@@ -124,11 +140,22 @@ export default function useDataFiltering<Data>(
       /** Filter data using columns */
       return data.filter((row, index, array) => {
         return filterColumns.reduce(
-          (show: boolean, next: RxTableColumnProps<Data>) => (
-            filterLogic === 'and'
-              ? show && next.filter!.show(filters[next.key] as (string & number & RegExp), row, index, array)
-              : show || next.filter!.show(filters[next.key] as (string & number & RegExp), row, index, array)
-          ),
+          (show: boolean, next: RxTableColumnProps<Data>) => {
+            /** Assert filter realy exists */
+            if (!next.filter) {
+              return show;
+            }
+
+            /** Get the filter show value */
+            const couldShowNext = next.filter.type === 'regexp'
+              ? !!regExpPool[next.key] ? next.filter.show(regExpPool[next.key], row, index, array) : true
+              : next.filter.show(filters[next.key] as (string & number), row, index, array);
+
+            /** Concatenate result */
+            return filterLogic === 'and'
+              ? show && couldShowNext
+              : show || couldShowNext;
+          },
           filterLogic === 'and'
         );
       });
