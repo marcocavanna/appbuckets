@@ -126,10 +126,9 @@
 /// Generate Display Helpers
 @if $generate-display-helpers-class == true {
   @each $display in (block, grid, inline-block, inline-flex, inline, flex, table, table-column-group, table-header-group, table-footer-group, table-row-group, table-cell, table-column, table-row, none) {
-    @include selectors-for-each-breakpoint(
-        'is-#{$display}',
-      $selectors-with-breakpoint: $generate-display-responsive-helpers-class
-    )
+    @include selectors-for-each-breakpoint('is-#{$display}', $selectors-with-breakpoint: $generate-display-responsive-helpers-class) {
+      display: $display !important;
+    }
   }
 }
 
