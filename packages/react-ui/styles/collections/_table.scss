@@ -354,6 +354,12 @@ table > .head,
 ******/
 .table .clickable.row {
   cursor: pointer;
+
+  @include hover {
+    &:hover {
+      background-color: $table-clickable-row-hover-color;
+    }
+  }
 }
 
 

@@ -667,7 +667,7 @@ $table-header-border-style: solid !default;
 $table-header-border-color: $cloud-light !default;
 $table-header-border-width: 2px !default;
 
-$table-clickable-row-hover-color: $white-shade-2 !default;
+$table-clickable-row-hover-color: transparentize($white-shade, .5) !default;
 
 $table-sortable-header-hover-color: $text !default;
 $table-sortable-header-active-color: $primary !default;
