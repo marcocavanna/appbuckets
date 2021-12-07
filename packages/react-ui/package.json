@@ -74,8 +74,8 @@
     "react-transition-group": "^4.4.1",
     "react-window": "^1.8.6",
     "rfdc": "^1.3.0",
-    "tiny-invariant": "^1.1.0",
-    "tslib": "^2.2.0"
+    "tiny-invariant": "^1.2.0",
+    "tslib": "^2.3.1"
   },
   "gitHead": "f31ff2333f026cb3fc25fbf6429f2f0e4d90f230"
 }
