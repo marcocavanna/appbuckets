@@ -1,6 +1,6 @@
 {
   "name": "@appbuckets/react-ui-docs",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@appbuckets/postcss-appbuckets-react-ui": "0.1.6",
-    "@appbuckets/react-ui": "1.8.0",
+    "@appbuckets/react-ui": "1.8.1",
     "@appbuckets/react-ui-core": "0.3.0",
     "@appbuckets/utils": "0.1.0",
     "array-sort": "^1.0.0",
