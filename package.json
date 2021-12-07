@@ -2,6 +2,7 @@
   "name": "appbuckets",
   "private": true,
   "scripts": {
+    "release:eslint": "lerna run --stream --scope \"@appbuckets/*\" --scope \"cra-template-appbuckets-react-ui\" eslint",
     "release:version": "lerna version --exact",
     "release:build": "lerna run --stream --scope \"@appbuckets/*\" --scope \"cra-template-appbuckets-react-ui\" build",
     "release:publish": "lerna publish from-package --contents build"
@@ -27,11 +28,11 @@
     "@types/react-transition-group": "^4.4.1",
     "@types/react-window": "^1.8.2",
     "@types/rfdc": "^1.2.0",
-    "@typescript-eslint/eslint-plugin": "^4.21.0",
-    "@typescript-eslint/parser": "^4.21.0",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
     "del-cli": "^3.0.1",
-    "eslint": "^7.24.0",
-    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb-typescript": "^16.1.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.23.2",

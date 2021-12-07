@@ -76,8 +76,10 @@ import {
   FunctionComponent,
   VoidFunctionComponent,
   ChangeEvent,
-  FocusEvent,
-  MouseEvent, ComponentProps, JSXElementConstructor
+  FocusEvent as ReactFocusEvent,
+  MouseEvent as ReactMouseEvent,
+  ComponentProps,
+  JSXElementConstructor
 } from 'react';
 
 import {
@@ -303,9 +305,9 @@ export interface FlexboxContentProps {
  * -------- */
 export type ChangeHandler<H, P> = (e: ChangeEvent<H>, props: P) => void;
 
-export type FocusHandler<H, P> = (e: FocusEvent<H>, props: P) => void;
+export type FocusHandler<H, P> = (e: ReactFocusEvent<H>, props: P) => void;
 
-export type ClickHandler<H, P> = (e: MouseEvent<H>, props: P) => void;
+export type ClickHandler<H, P> = (e: ReactMouseEvent<H>, props: P) => void;
 
 
 /* --------

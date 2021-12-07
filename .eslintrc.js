@@ -6,6 +6,8 @@ module.exports = {
     project    : [ './tsconfig.json' ]
   },
   plugins      : [
+    'eslint-plugin-import',
+    'eslint-plugin-react',
     'eslint-plugin-react-hooks',
     '@typescript-eslint/eslint-plugin'
   ],
@@ -13,6 +15,11 @@ module.exports = {
     'airbnb-typescript',
     'plugin:react-hooks/recommended'
   ],
+  settings     : {
+    react: {
+      version: 'detect'
+    }
+  },
   rules        : {
     // Base Rules
     'array-bracket-spacing'            : [ 'error', 'always' ],
