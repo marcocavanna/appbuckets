@@ -2,9 +2,9 @@
   "name": "appbuckets",
   "private": true,
   "scripts": {
-    "release:eslint": "lerna run --stream --scope \"@appbuckets/*\" --scope \"cra-template-appbuckets-react-ui\" eslint",
+    "release:eslint": "lerna run --npm-client=npm --stream --scope \"@appbuckets/*\" --scope \"cra-template-appbuckets-react-ui\" eslint",
     "release:version": "lerna version --exact",
-    "release:build": "lerna run --stream --scope \"@appbuckets/*\" --scope \"cra-template-appbuckets-react-ui\" build",
+    "release:build": "lerna run --npm-client=npm --stream --scope \"@appbuckets/*\" --scope \"cra-template-appbuckets-react-ui\" build",
     "release:publish": "lerna publish from-package --contents build"
   },
   "devDependencies": {
