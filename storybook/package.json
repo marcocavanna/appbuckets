@@ -1,12 +1,12 @@
 {
   "name": "@appbuckets/react-ui-storybook",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "private": true,
   "scripts": {
     "start": "start-storybook -p 57000 --no-manager-cache"
   },
   "dependencies": {
-    "@appbuckets/react-ui": "1.9.1",
+    "@appbuckets/react-ui": "1.9.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
