@@ -124,6 +124,13 @@
   &.square > img {
     border-radius: $avatar-square-border-radius;
   }
+
+  // ----
+  //  Set Cursor on Clickable Avatar
+  // ----
+  &.clickable {
+    cursor: pointer;
+  }
 }
 
 
