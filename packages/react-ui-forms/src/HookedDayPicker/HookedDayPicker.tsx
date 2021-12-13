@@ -6,7 +6,7 @@ import { createHookedField } from '../utils/createHookedField';
 import type { HookedFieldProps } from '../utils/createHookedField.types';
 
 
-type HookedDayPickerValueType = number | null;
+type HookedDayPickerValueType = Date | null;
 export type HookedDayPickerProps = HookedFieldProps<DayPickerProps, HookedDayPickerValueType>;
 
 
@@ -57,7 +57,13 @@ const HookedDayPicker = createHookedField<DayPickerProps, null, HookedDayPickerV
     );
   },
 
-  parseValue: ({ props }) => props?.timestamp || null
+  parseValue: ({ props }) => {
+    if (props?.date && props.date instanceof Date) {
+      return props.date;
+    }
+
+    return null;
+  }
 
 });
 
