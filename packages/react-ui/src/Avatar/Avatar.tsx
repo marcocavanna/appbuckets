@@ -2,7 +2,7 @@ import * as React from 'react';
 import clsx from 'clsx';
 
 import {
-  childrenUtils,
+  childrenUtils, createHTMLImage,
   createShorthandFactory,
   useElementType
 } from '@appbuckets/react-ui-core';
@@ -39,6 +39,7 @@ const Avatar: Creatable<UIMutableComponent<AvatarProps>> = (receivedProps) => {
       children,
       disabled,
       flat,
+      image,
       icon,
       onClick,
       tooltip,
@@ -59,7 +60,8 @@ const Avatar: Creatable<UIMutableComponent<AvatarProps>> = (receivedProps) => {
       badged   : badge,
       disabled,
       clickable: onClick,
-      flat
+      flat,
+      image
     },
     type,
     'avatar',
@@ -86,7 +88,7 @@ const Avatar: Creatable<UIMutableComponent<AvatarProps>> = (receivedProps) => {
   // ----
   const avatarContentElement = React.useMemo(
     () => {
-      if (hasChildren) {
+      if (hasChildren || image) {
         return null;
       }
 
@@ -96,7 +98,17 @@ const Avatar: Creatable<UIMutableComponent<AvatarProps>> = (receivedProps) => {
 
       return content;
     },
-    [ icon, content, hasChildren ]
+    [ image, icon, content, hasChildren ]
+  );
+
+  const imageContentElement = React.useMemo(
+    () => image && createHTMLImage(image, {
+      autoGenerateKey: false,
+      defaultProps   : {
+        alt: 'avatar-image'
+      }
+    }),
+    [ image ]
   );
 
   const badgeElement = React.useMemo(
@@ -114,9 +126,12 @@ const Avatar: Creatable<UIMutableComponent<AvatarProps>> = (receivedProps) => {
   // ----
   const avatarElement = (
     <ElementType {...rest} onClick={handleClick} className={classes}>
-      <div className={'content'}>
-        {hasChildren ? children : avatarContentElement}
-      </div>
+      {!image && (
+        <div className={'content'}>
+          {hasChildren ? children : avatarContentElement}
+        </div>
+      )}
+      {imageContentElement}
       {badgeElement}
     </ElementType>
   );

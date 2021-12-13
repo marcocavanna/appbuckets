@@ -26,6 +26,9 @@ export interface StrictAvatarProps {
   /** Remove Background Color */
   flat?: boolean;
 
+  /** Use an image instead content */
+  image?: ShorthandItem<JSX.IntrinsicElements['img']>;
+
   /** Set avatar icon */
   icon?: AppBucketsIcon<IconProps>;
 

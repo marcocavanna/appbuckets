@@ -25,9 +25,27 @@
   // ----
   //  Avatar Shadow
   // ----
-  box-shadow: $avatar-inner-shadow;
-  will-change: box-shadow;
-  transition: box-shadow $transition-speed-fast $transition-ease;
+  &:not(.image) {
+    box-shadow: $avatar-inner-shadow;
+    will-change: box-shadow;
+    transition: box-shadow $transition-speed-fast $transition-ease;
+
+    // ----
+    //  Avatar Variation
+    // ----
+    @include color-property-variation(
+      $base-color: $avatar-base-background-color,
+      $properties-list: background-color,
+      $use-brands: $generate-button-brands-variation,
+      $use-ui: $generate-button-ui-variation,
+      $is-interactive: true,
+      $interactive-class: 'clickable',
+      $hover-will-drop-shadow: false,
+      $with-hover: true,
+      $with-focus: true,
+      $with-active: true
+    )
+  }
 
   // ----
   //  Content Disposition
@@ -78,22 +96,34 @@
       font-size: $avatar-icon-font-size;
     }
   }
+}
+
+
+/******
+    Avatar Image
+******/
+.image.avatar {
+  // ----
+  //  Positioning the Image
+  // ----
+  > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
   // ----
-  //  Avatar Variation
+  //  Round Corner
   // ----
-  @include color-property-variation(
-    $base-color: $avatar-base-background-color,
-    $properties-list: background-color,
-    $use-brands: $generate-button-brands-variation,
-    $use-ui: $generate-button-ui-variation,
-    $is-interactive: true,
-    $interactive-class: 'clickable',
-    $hover-will-drop-shadow: false,
-    $with-hover: true,
-    $with-focus: true,
-    $with-active: true
-  )
+  &.round > img {
+    border-radius: $avatar-round-border-radius;
+  }
+
+  &.square > img {
+    border-radius: $avatar-square-border-radius;
+  }
 }
 
 
