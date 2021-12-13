@@ -193,6 +193,10 @@ export const createHTMLLabel = createShorthandFactory<JSX.IntrinsicElements['lab
   children: val
 }));
 
+export const createHTMLImage = createShorthandFactory<JSX.IntrinsicElements['img']>('img', (val) => ({
+  src: val as string
+}));
+
 export const createHTMLInput = createShorthandFactory<JSX.IntrinsicElements['input']>('input', (val) => ({
   type: val as string
 }));
