@@ -114,7 +114,7 @@ export default function useDataFiltering<Data>(
             value
               .replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
               .replace(/-/g, '\\x2d'),
-            column.filter.flags || 'ig'
+            column.filter.flags || 'i'
           );
 
           return true;
