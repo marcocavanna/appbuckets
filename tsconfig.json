@@ -170,12 +170,6 @@
       "@appbuckets/react-ui-smart-components/*":[
         "./packages/react-ui-smart-components/src/*"
       ],
-      "@appbuckets/utils": [
-        "./packages/utils/src"
-      ],
-      "@appbuckets/utils/*": [
-        "./packages/utils/src/*"
-      ],
       "@appbuckets/postcss-appbuckets-react-ui": [
         "./packages/postcss-appbuckets-react-ui"
       ]
