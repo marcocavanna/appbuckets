@@ -203,7 +203,7 @@ __metadata:
     "@semantic-ui-react/event-stack": ^3.1.2
     array-sort: ^1.0.0
     clsx: ^1.1.1
-    deep-extend: ^0.6.0
+    deepmerge: ^4.2.2
     kind-of: ^6.0.3
     p-limit: ^3.1.0
     pretty-bytes: ^5.6.0
@@ -5627,10 +5627,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/deep-extend@npm:^0.4.31":
-  version: 0.4.32
-  resolution: "@types/deep-extend@npm:0.4.32"
-  checksum: 81865a51bc302d11a18ba0ddce3537d30cb9ecdf8b212b0bdf75f1156b2d01af5f7762f74bc3be24092ec1664b27ae4b07deb19c263f6472d83fffc7381d2c79
+"@types/deepmerge@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@types/deepmerge@npm:2.2.0"
+  dependencies:
+    deepmerge: "*"
+  checksum: f68385937c649b39bcbf6be701f91293be46efb17885d4eb5b376753f661b0f90747abec5a8c2472abf8f7b8881ec15cfe5c9867bca43df6768ec3a7e835e0f0
   languageName: node
   linkType: hard
 
@@ -7008,7 +7010,7 @@ __metadata:
     "@optimize-lodash/rollup-plugin": ^2.1.0
     "@rollup/plugin-commonjs": ^21.0.1
     "@types/array-sort": ^1.0.0
-    "@types/deep-extend": ^0.4.31
+    "@types/deepmerge": ^2.2.0
     "@types/fs-extra": ^9.0.10
     "@types/get-value": ^3.0.1
     "@types/kind-of": ^6.0.0
@@ -10276,13 +10278,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deep-extend@npm:^0.6.0":
-  version: 0.6.0
-  resolution: "deep-extend@npm:0.6.0"
-  checksum: 7be7e5a8d468d6b10e6a67c3de828f55001b6eb515d014f7aeb9066ce36bd5717161eb47d6a0f7bed8a9083935b465bc163ee2581c8b128d29bf61092fdf57a7
-  languageName: node
-  linkType: hard
-
 "deep-is@npm:^0.1.3, deep-is@npm:~0.1.3":
   version: 0.1.4
   resolution: "deep-is@npm:0.1.4"
@@ -10297,7 +10292,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deepmerge@npm:^4.2.2":
+"deepmerge@npm:*, deepmerge@npm:^4.2.2":
   version: 4.2.2
   resolution: "deepmerge@npm:4.2.2"
   checksum: a8c43a1ed8d6d1ed2b5bf569fa4c8eb9f0924034baf75d5d406e47e157a451075c4db353efea7b6bcc56ec48116a8ce72fccf867b6e078e7c561904b5897530b

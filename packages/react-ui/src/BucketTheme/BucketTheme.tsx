@@ -1,5 +1,5 @@
 import * as React from 'react';
-import deepExtend from 'deep-extend';
+import merge from 'deepmerge';
 
 import { defaultBucketThemeConfig } from './BucketTheme.default';
 
@@ -21,7 +21,7 @@ const BucketTheme: React.FunctionComponent<{ theme?: PartialThemeOptions }> = (
   } = props;
 
   /** Merge theme with default theme configuration */
-  const theme: ThemeOptions = deepExtend(defaultBucketThemeConfig, userDefinedTheme as ThemeOptions);
+  const theme: ThemeOptions = merge(defaultBucketThemeConfig, userDefinedTheme as ThemeOptions);
 
   /** Create the Context Provider element and render with children */
   return (
