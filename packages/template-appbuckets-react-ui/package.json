@@ -1,6 +1,6 @@
 {
   "name": "cra-template-appbuckets-react-ui",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "Starter template for CreateReactApp with Typescript, AppBuckets ReactUI and SCSS",
   "keywords": [
     "react",
@@ -29,13 +29,13 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@appbuckets/react-ui": "1.9.5",
+    "@appbuckets/react-ui": "1.9.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
-    "@appbuckets/postcss-appbuckets-react-ui": "0.1.6",
+    "@appbuckets/postcss-appbuckets-react-ui": "0.1.7",
     "@craco/craco": "^6.1.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",

@@ -1,6 +1,6 @@
 {
   "name": "@appbuckets/react-ui-smart-components",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "description": "UI Extended Components that work with @appbuckets/react-client and @appbuckets/react-ui",
   "keywords": [
     "react",
@@ -47,9 +47,9 @@
     "yup": "^0.32.9"
   },
   "dependencies": {
-    "@appbuckets/react-ui": "1.9.5",
+    "@appbuckets/react-ui": "1.9.6",
     "@appbuckets/react-ui-core": "0.4.2",
-    "@appbuckets/react-ui-forms": "0.5.5",
+    "@appbuckets/react-ui-forms": "0.5.6",
     "@hookform/resolvers": "^2.8.4",
     "array-sort": "^1.0.0",
     "butter-toast": "^3.3.5",
