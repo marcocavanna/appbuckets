@@ -9,9 +9,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "peerDependencies": {
-    "postcss": ">=6 <8"
-  },
   "scripts": {
     "build": "cpy '*' build",
     "prebuild": "rimraf build"

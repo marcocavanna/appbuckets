@@ -6,6 +6,7 @@ module.exports = {
     postcss: {
       mode   : 'extends',
       plugins: getPostCSSPlugins({
+        asObject            : true,
         cssDeclarationSorter: 'smacss'
       })
     }
