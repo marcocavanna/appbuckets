@@ -15,7 +15,6 @@ const templatePath = path.resolve(buildPath, './template');
 /* --------
  * Get PackageJSON
  * -------- */
-const rootPackageJson = JSON.parse(fse.readFileSync(path.resolve(rootPath, 'package.json'), 'utf-8'));
 const packageJson = JSON.parse(fse.readFileSync(path.resolve(packagePath, 'package.json'), 'utf-8'));
 
 
@@ -51,14 +50,18 @@ function run() {
   // ----
   // Build JSON template file
   // ----
-  const {
-    devDependencies: rootDevDependencies
-  } = rootPackageJson;
-
-  /** Extract eslint devDependencies from root */
-  const eslintPackages = Object.keys(rootDevDependencies).filter((pkg) => /eslint/.test(pkg));
-  eslintPackages.forEach((eslintPkg) => {
-    devDependencies[eslintPkg] = rootDevDependencies[eslintPkg];
+  /** Fix Eslint Dependencies */
+  [
+    [ '@typescript-eslint/eslint-plugin', '4.33.0' ],
+    [ '@typescript-eslint/parser', '4.33.0' ],
+    [ 'eslint', '^7.11.0' ],
+    [ 'eslint-config-airbnb-typescript', '16.1.0' ],
+    [ 'eslint-plugin-import', '2.25.4' ],
+    [ 'eslint-plugin-jsx-a11y', '6.5.1' ],
+    [ 'eslint-plugin-react', '7.28.0' ],
+    [ 'eslint-plugin-react-hooks', '4.3.0' ]
+  ].forEach(([ pkgName, version ]) => {
+    devDependencies[pkgName] = version;
   });
 
   fse.writeFileSync(
@@ -122,7 +125,14 @@ function run() {
     );
   });
 
-  [ '.dockerignore', 'craco.config.js', 'default.conf', 'Dockerfile', 'gitignore' ].forEach((file) => {
+  [
+    '.dockerignore',
+    'craco.config.js',
+    'default.conf',
+    'Dockerfile',
+    'gitignore',
+    'postcss.config.js'
+  ].forEach((file) => {
     fse.copySync(
       path.resolve(packagePath, file),
       path.resolve(templatePath, file)
