@@ -1,6 +1,6 @@
 {
   "name": "cra-template-appbuckets-react-ui",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "description": "Starter template for CreateReactApp with Typescript, AppBuckets ReactUI and SCSS",
   "keywords": [
     "react",
