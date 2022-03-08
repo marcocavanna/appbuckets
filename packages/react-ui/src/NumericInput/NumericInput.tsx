@@ -151,7 +151,8 @@ const NumericInput: UIComponent<NumericInputProps> = React.forwardRef<HTMLInputE
         'ArrowDown',
         'Backspace',
         'Delete',
-        'Enter'
+        'Enter',
+        'Tab'
       ];
 
       /** If negative number are allowed, append minus symbol */
