@@ -94,8 +94,8 @@ const QuerySuspenseError: React.VoidFunctionComponent<QuerySuspenseErrorProps> =
   return (
     <Message appearance={'danger'}>
       <Header
-        content={message || 'Error'}
-        subheader={error || 'server-error'}
+        content={error || 'Error'}
+        subheader={message || 'server-error'}
       />
       {extraContent}
     </Message>
