@@ -1,6 +1,7 @@
 {
   "filename": "packages/react-ui/src/Select/Select.tsx",
   "tags": {},
+  "filePath": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui/src/Select/Select.tsx",
   "description": "",
   "displayName": "Select",
   "props": {
@@ -405,7 +406,7 @@
     },
     "getNewOptionData": {
       "defaultValue": null,
-      "description": "Returns the data for the new option when it is created. Used to display the\nvalue, and is passed to `onChange`.",
+      "description": "Used to create the new Option starting from inputValue string",
       "name": "getNewOptionData",
       "parent": {
         "fileName": "react-ui/src/Select/Select.types.ts",
@@ -419,7 +420,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(inputValue: string, optionLabel: ReactNode) => Option"
+        "name": "(inputValue: string) => Option"
       }
     },
     "getOptionLabel": {
@@ -953,7 +954,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: FocusEvent<HTMLElement>, props: SelectEventProps<Option, string | number, null>) => void"
+        "name": "(e: FocusEvent<HTMLElement, Element>, props: SelectEventProps<Option, string | number, null>) => void"
       }
     },
     "onChange": {
@@ -1010,7 +1011,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: FocusEvent<HTMLElement>, props: SelectEventProps<Option, string | number, null>) => void"
+        "name": "(e: FocusEvent<HTMLElement, Element>, props: SelectEventProps<Option, string | number, null>) => void"
       }
     },
     "onInputChange": {
@@ -1457,7 +1458,7 @@
       "required": false,
       "type": {
         "name": "enum",
-        "raw": "\"input\" | \"select input\" | \"checkbox\" | \"radio\" | \"switch\" | \"color\"",
+        "raw": "\"input\" | \"select input\" | \"checkbox\" | \"radio\" | \"switch\" | \"color\" | \"slider\"",
         "value": [
           {
             "value": "\"input\""
@@ -1476,6 +1477,9 @@
           },
           {
             "value": "\"color\""
+          },
+          {
+            "value": "\"slider\""
           }
         ]
       }
