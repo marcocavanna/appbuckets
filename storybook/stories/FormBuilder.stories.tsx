@@ -27,7 +27,7 @@ interface FormDataDto {
 
   selectedType: string;
 
-  otherSelection: string;
+  otherSelection: string[];
 }
 
 
@@ -77,7 +77,12 @@ const TestSelector = createSelectors<SelectDefaultOption>({
   options,
 
   getOptionValue: o => o.value,
-  getOptionLabel: o => o.label
+  getOptionLabel: o => o.label,
+
+  defaultProps: {
+    creatable       : true,
+    getNewOptionData: (inputValue) => ({ value: inputValue, label: inputValue })
+  }
 
 });
 
@@ -125,7 +130,7 @@ const TestDialog = buildFormAction<FormDataDto, {}, any>({
   schema: Yup.object({
     name          : Yup.string().required(),
     selectedType  : Yup.string().required(),
-    otherSelection: Yup.string().required()
+    otherSelection: Yup.array(Yup.string().required()).required()
   }),
 
   submitButton: 'Confirm',
@@ -154,7 +159,7 @@ const TestDialog = buildFormAction<FormDataDto, {}, any>({
 
   onCancel: () => console.log('Canceled Default'),
 
-  onCompleted: () => console.log('Completed Default'),
+  onCompleted: (result, data) => console.log('Completed Default', data),
 
   onSubmit: awaitFn(() => console.log('Submit Default'), 1500),
 

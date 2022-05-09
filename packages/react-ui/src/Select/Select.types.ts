@@ -142,9 +142,10 @@ export interface StrictSelectProps<Option extends SelectOption, Value = string |
     labelMeta: FormatOptionLabelMeta<Option, FallbackValue extends Array<any> ? true : false>
   ) => React.ReactNode;
 
-  /** Returns the data for the new option when it is created. Used to display the
-   value, and is passed to `onChange`. */
-  getNewOptionData?: (inputValue: string, optionLabel: React.ReactNode) => Option;
+  /**
+   * Used to create the new Option starting from inputValue string
+   */
+  getNewOptionData?: (inputValue: string) => Option;
 
   /** Resolves option data to a string to be displayed as the label by components */
   getOptionLabel?: (option: Option) => string;

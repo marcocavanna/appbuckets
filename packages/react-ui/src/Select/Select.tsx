@@ -50,7 +50,9 @@ const SelectRender: React.ForwardRefRenderFunction<MutableReactSelect<SelectDefa
         /** Strict Select Component Props */
         creatable,
         getOptionValue: userDefinedGetOptionValue,
+        getNewOptionData,
         loading,
+        options : userDefinedOptions,
         tabIndex: userDefinedTabIndex,
 
         /** Select Event Handler */
@@ -69,7 +71,7 @@ const SelectRender: React.ForwardRefRenderFunction<MutableReactSelect<SelectDefa
         value            : userDefinedValue,
         defaultValue     : userDefinedDefaultValue,
 
-        /** All other props */
+        /** All others prop */
         ...rawRest
       }
     } = useSharedClassName(props);
@@ -95,9 +97,20 @@ const SelectRender: React.ForwardRefRenderFunction<MutableReactSelect<SelectDefa
       defaultProp: userDefinedDefaultValue
     });
 
+    const [ createdOptions, setCreatedOptions ] = React.useState<Option[]>([]);
+
     const fieldRef = React.useRef<HTMLDivElement>(null);
     const selectRef = React.useRef<MutableReactSelect<Option>>(null);
     const handleRef = useForkRef(ref, selectRef);
+
+
+    // ----
+    // Merge UserDefined Options and newly created Options
+    // ----
+    const options = React.useMemo<Option[]>(
+      () => ([ ...userDefinedOptions, ...createdOptions ]),
+      [ userDefinedOptions, createdOptions ]
+    );
 
 
     // ----
@@ -170,27 +183,48 @@ const SelectRender: React.ForwardRefRenderFunction<MutableReactSelect<SelectDefa
       [ getOptionValue ]
     );
 
+    const createNewOption = React.useCallback(
+      (newOptionInputValue: string) => {
+        /** Assert the getNewOptionData function exists */
+        if (typeof getNewOptionData !== 'function') {
+          throw new Error('Creatable Select must have the getNewOptionData function');
+        }
+
+        /** Transform newOptionInputValue into a valid select option */
+        const newOption = getNewOptionData(newOptionInputValue);
+
+        /** Get the new option value */
+        const newOptionValue = getOptionValue(newOption);
+
+        /** Add the option to new option array only if value could not be found */
+        if (!createdOptions.find(option => getOptionValue(option) === newOptionValue)) {
+          setCreatedOptions([ ...createdOptions, newOption ]);
+        }
+      },
+      [ getNewOptionData, createdOptions, getOptionValue ]
+    );
+
     const selectedOption = React.useMemo(
       (): Option | Option[] | null => {
         /** Return default with no Options */
-        if (!rest.options || !Array.isArray(rest.options)) {
+        if (!options || !Array.isArray(options)) {
           return rest.isMulti ? [] : null;
         }
 
         /** On single select, find the Option */
         if (!rest.isMulti as boolean) {
-          return (rest.options as Option[]).find((option) => getOptionValue(option) === value) ?? null;
+          return options.find((option) => getOptionValue(option) === value) ?? null;
         }
 
         /** Return filtered options */
         if (Array.isArray(value)) {
-          return (rest.options as Option[]).filter((option) => value.includes(getOptionValue(option)));
+          return options.filter((option) => value.includes(getOptionValue(option)));
         }
 
         /** Fallback to Empty Array */
         return [];
       },
-      [ value, rest.options, getOptionValue, rest.isMulti ]
+      [ value, options, getOptionValue, rest.isMulti ]
     );
 
     const getSelectedValueFromSelectRef = (): (string | number) | (string | number)[] | null => {
@@ -237,6 +271,11 @@ const SelectRender: React.ForwardRefRenderFunction<MutableReactSelect<SelectDefa
     const handleSelectChange = (selected: ValueType<Option, false>, action: ActionMeta<Option>) => {
       /** Set field as Dirty */
       fieldRef.current?.classList.add('dirty');
+
+      /** If a new option has been created, append to created options array */
+      if (action.action === 'create-option') {
+        createNewOption(inputValue);
+      }
 
       const selectedValue = props.isMulti
         ? Array.isArray(selected) ? selected.map((option) => getOptionValue(option)) : []
@@ -359,6 +398,7 @@ const SelectRender: React.ForwardRefRenderFunction<MutableReactSelect<SelectDefa
           isLoading={loading}
           tabIndex={tabIndex}
           inputValue={inputValue}
+          options={options}
           value={selectedOption}
           onBlur={handleSelectBlur}
           onChange={handleSelectChange}
