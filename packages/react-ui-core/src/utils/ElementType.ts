@@ -24,13 +24,13 @@ export function getElementType<P extends {} = {}>(
   userDefinedProps: PropsWithAs<P>,
   themedProps?: PropsWithAs<P>,
   getDefault?: (props: PropsWithAs<P>) => React.ElementType | undefined
-): React.ElementType {
+): React.FunctionComponent<P> {
   // Get Component defaultProps
   const { defaultProps } = Component;
 
   // Return user defined ElementType
   if (userDefinedProps.as && userDefinedProps.as !== defaultProps?.as) {
-    return userDefinedProps.as;
+    return userDefinedProps.as as React.FunctionComponent;
   }
 
   // Use the getDefault function to calculate the element
@@ -38,17 +38,17 @@ export function getElementType<P extends {} = {}>(
     const elementType = getDefault(themedProps ?? userDefinedProps);
 
     if (elementType) {
-      return elementType;
+      return elementType as React.FunctionComponent;
     }
   }
 
   // If props include href property, return an anchor element
   if (userDefinedProps.href) {
-    return 'a';
+    return 'a' as unknown as React.FunctionComponent;
   }
 
   // Return the defaultProps, or fallback to div element
-  return defaultProps?.as || themedProps?.as || 'div';
+  return (defaultProps?.as || themedProps?.as || 'div') as React.FunctionComponent;
 }
 
 

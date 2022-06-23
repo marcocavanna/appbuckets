@@ -54,7 +54,7 @@ export interface ConfirmBuilderNotifications extends BaseActionBuilderNotificati
 export type ConfirmComponentProps<Props extends {}, Result> =
   BaseActionBuilderProps<Props, ConfirmActions<Props, Result>>;
 
-export type ConfirmComponent<Props extends {}, Result> = React.ComponentType<ConfirmComponentProps<Props, Result>>;
+export type ConfirmComponent<Props extends {}, Result> = React.FunctionComponent<ConfirmComponentProps<Props, Result>>;
 
 export type ExtensibleConfirmComponent<Props extends {}, Result> =
   & ConfirmComponent<Props, Result>

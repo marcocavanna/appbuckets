@@ -83,7 +83,7 @@ export type FormComponentProps<Dto extends AnyObject, Props extends {}, Result> 
   & BaseActionBuilderProps<Props, FormActions<Dto, Props, Result>>;
 
 export type FormComponent<Dto extends AnyObject, Props extends {}, Result> =
-  React.ComponentType<FormComponentProps<Dto, Props, Result>>;
+  React.FunctionComponent<FormComponentProps<Dto, Props, Result>>;
 
 type ExtendedFormComponentProps<Dto extends AnyObject, Props extends {}, Result> =
   & FormComponentProps<Dto, Props, Result>
