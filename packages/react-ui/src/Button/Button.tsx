@@ -84,17 +84,17 @@ const Button: Creatable<UIMutableComponent<ButtonProps>> & ButtonChildren = (
    * Compute the correct
    * button aria role based on button type
    */
-  const ariaRole = React.useMemo<string | null>(() => {
+  const ariaRole = React.useMemo<React.AriaRole | undefined>(() => {
     /** If role is defined, return it */
     if (role != null) {
       return role;
     }
     /** If element is a button, return button */
-    if (ElementType === 'button') {
+    if ((ElementType as any) === 'button') {
       return 'button';
     }
     /** Else, return null */
-    return null;
+    return undefined;
   }, [ role, ElementType ]);
 
 
@@ -103,7 +103,7 @@ const Button: Creatable<UIMutableComponent<ButtonProps>> & ButtonChildren = (
    * the disabled prop and/or the original
    * tabIndex property defined by user
    */
-  const tabIndex = React.useMemo<number | null>(() => {
+  const tabIndex = React.useMemo<number | undefined>(() => {
     /** If tabIndex has been defined by user return it */
     if (userDefinedTabIndex != null) {
       return userDefinedTabIndex;
@@ -113,11 +113,11 @@ const Button: Creatable<UIMutableComponent<ButtonProps>> & ButtonChildren = (
       return -1;
     }
     /** If the element has been rendered as a 'div' element, return 0 */
-    if (ElementType === 'div') {
+    if (ElementType as any === 'div') {
       return 0;
     }
     /** Fallback to null */
-    return null;
+    return undefined;
   }, [ userDefinedTabIndex, disabled, ElementType ]);
 
 
@@ -168,7 +168,7 @@ const Button: Creatable<UIMutableComponent<ButtonProps>> & ButtonChildren = (
     type,
     tabIndex,
     className: classes,
-    disabled : (disabled && ElementType === 'button') || undefined,
+    disabled : (disabled && ElementType as any === 'button') || undefined,
     role     : ariaRole,
     onClick  : handleClick
   } as ButtonProps;
@@ -194,7 +194,7 @@ const Button: Creatable<UIMutableComponent<ButtonProps>> & ButtonChildren = (
     <ElementType
       {...rest}
       className={classes}
-      disabled={(disabled && ElementType === 'button') || undefined}
+      disabled={(disabled && ElementType as any === 'button') || undefined}
       role={ariaRole}
       type={type}
       tabIndex={tabIndex}

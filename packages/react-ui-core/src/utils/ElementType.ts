@@ -24,7 +24,7 @@ export function getElementType<P extends {} = {}>(
   userDefinedProps: PropsWithAs<P>,
   themedProps?: PropsWithAs<P>,
   getDefault?: (props: PropsWithAs<P>) => React.ElementType | undefined
-): React.FunctionComponent<P> {
+): React.FunctionComponent<any> {
   // Get Component defaultProps
   const { defaultProps } = Component;
 
@@ -76,7 +76,7 @@ export function useElementType<P extends {} = {}>(
   userDefinedProps: PropsWithAs<P>,
   themedProps?: PropsWithAs<P>,
   getDefault?: (props: PropsWithAs<P>) => React.ElementType | undefined
-): React.ElementType {
+): React.FunctionComponent<any> {
   /** Deconstruct data */
   const { as: userDefinedAs, href: userDefinedHref } = userDefinedProps;
   const { as: defaultDefinedAs, href: defaultDefinedHref } = themedProps || { href: undefined };
