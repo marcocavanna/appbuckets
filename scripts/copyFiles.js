@@ -26,7 +26,7 @@ async function includeFileInBuild(file) {
 
   /** Check file exists */
   if (!fse.existsSync(sourcePath)) {
-    console.warn(`Skipping file ${sourcePath}. Doesn't exists`);
+    console.warn(`Skipping file ${sourcePath}. Doesn't exist`);
     return;
   }
 
@@ -44,7 +44,7 @@ async function createModulePackages({ from, to }) {
   /** Get all main directories */
   const directoryPackages = glob.sync('*/index.{js,ts,tsx}', { cwd: from }).map(path.dirname);
 
-  /** Loop each directories */
+  /** Loop each directory */
   await Promise.all(
     directoryPackages.map(async (dirName) => {
       /**
@@ -54,7 +54,7 @@ async function createModulePackages({ from, to }) {
        * without doing any other code, rollup won't transpile it.
        * To solve the submodule package entries must check if the index.js
        * file compiled exists.
-       * If file doesn't exists, check an entry with same name as parent dir.
+       * If file doesn't exist, check an entry with same name as parent dir.
        * The typings file must have the same name, but with .d.ts extension as well
        */
       const mainFileName = fse.existsSync(path.join(to, dirName, 'index.js'))

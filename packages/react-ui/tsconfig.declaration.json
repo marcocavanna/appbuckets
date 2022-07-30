@@ -18,9 +18,6 @@
   "references": [
     {
       "path": "../react-ui-core/tsconfig.declaration.json"
-    },
-    {
-      "path": "../react-ui-styles/tsconfig.declaration.json"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "@appbuckets/react-ui",
-  "version": "1.9.10",
+  "version": "2.0.0-alpha.1",
   "description": "Just Another React UI Framework",
   "keywords": [
     "react",
@@ -29,53 +29,17 @@
   "license": "MIT",
   "scripts": {
     "build": "rollup --config ../../rollup.config.js --input src/index.ts",
-    "build:styles": "node ../../scripts/buildStyle.js",
     "build:types": "tsc -p tsconfig.declaration.json",
-    "build:copy-files": "node ../../scripts/copyFiles.js",
-    "build:describe-components": "node ../../scripts/describeComponents.js",
-    "build:dry-run": "rimraf build tsconfig.declaration.tsbuildinfo && yarn eslint && rollup --config ../../rollup.config.js --input src/index.ts && yarn build:types && yarn build:copy-files",
-    "prebuild": "rimraf build tsconfig.declaration.tsbuildinfo && yarn eslint && yarn build:describe-components",
-    "postbuild": "yarn build:types && yarn build:styles && yarn build:copy-files && yarn prettier",
-    "release": "yarn eslint && yarn build && npm publish build",
+    "prebuild": "rimraf build tsconfig.declaration.tsbuildinfo && yarn eslint",
+    "postbuild": "yarn build:types && yarn prettier",
     "eslint": "eslint ./src",
     "prettier": "prettier --config ../../.prettierrc --write \"build/**/*{.js,.ts}\""
   },
   "peerDependencies": {
-    "@types/react": "^17.0.0",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@appbuckets/formatters": "^0.2.0",
-    "@appbuckets/react-ui-core": "0.4.4",
-    "@appbuckets/react-ui-styles": "0.1.4",
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-brands-svg-icons": "^5.15.4",
-    "@fortawesome/free-regular-svg-icons": "^5.15.4",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/react-fontawesome": "^0.1.16",
-    "@popperjs/core": "^2.11.0",
-    "@semantic-ui-react/event-stack": "^3.1.2",
-    "array-sort": "^1.0.0",
-    "clsx": "^1.1.1",
-    "deepmerge": "^4.2.2",
-    "kind-of": "^6.0.3",
-    "p-limit": "^3.1.0",
-    "pretty-bytes": "^5.6.0",
-    "rc-slider": "^9.7.5",
-    "react-color": "^2.19.3",
-    "react-day-picker": "^7.4.10",
-    "react-dropzone": "^11.4.2",
-    "react-input-mask": "^2.0.4",
-    "react-popper": "^2.2.5",
-    "react-select": "^4.3.0",
-    "react-sticky": "^6.0.3",
-    "react-textarea-autosize": "^8.3.3",
-    "react-transition-group": "^4.4.2",
-    "react-window": "^1.8.6",
-    "rfdc": "^1.3.0",
-    "tiny-invariant": "^1.2.0",
-    "tslib": "^2.3.1"
-  },
-  "gitHead": "0e1adf23d12b2915000667ed4503fabf9c709574"
+    "@appbuckets/react-ui-core": "1.0.0-alpha.1"
+  }
 }

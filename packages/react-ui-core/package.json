@@ -1,6 +1,6 @@
 {
   "name": "@appbuckets/react-ui-core",
-  "version": "0.4.4",
+  "version": "1.0.0-alpha.1",
   "description": "Core utilities built for AppBuckets React UI Framework",
   "keywords": [
     "react",
@@ -30,25 +30,14 @@
   "scripts": {
     "build": "rollup --config ../../rollup.config.js --input src/index.ts",
     "build:types": "tsc -p tsconfig.declaration.json",
-    "build:copy-files": "node ../../scripts/copyFiles.js",
     "prebuild": "rimraf build tsconfig.declaration.tsbuildinfo && yarn eslint",
-    "postbuild": "yarn build:types && yarn build:copy-files && yarn prettier",
-    "release": "yarn build && npm publish build",
+    "postbuild": "yarn build:types && yarn prettier",
     "eslint": "eslint ./src",
     "prettier": "prettier --config ../../.prettierrc --write \"build/**/*{.js,.ts}\""
   },
   "peerDependencies": {
-    "@types/react": "^17.0.0",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
-  "dependencies": {
-    "clsx": "^1.1.1",
-    "kind-of": "^6.0.3",
-    "lodash": "^4.17.21",
-    "react-is": "^17.0.2",
-    "tiny-invariant": "^1.2.0",
-    "tslib": "^2.3.1"
-  },
-  "gitHead": "0e1adf23d12b2915000667ed4503fabf9c709574"
+  "dependencies": {}
 }
