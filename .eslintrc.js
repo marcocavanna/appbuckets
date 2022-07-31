@@ -18,7 +18,8 @@ module.exports = {
   ],
   extends      : [
     'airbnb-typescript',
-    'plugin:react-hooks/recommended'
+    'plugin:react-hooks/recommended',
+    'plugin:storybook/recommended'
   ],
   rules        : {
     // Base Rules

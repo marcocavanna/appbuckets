@@ -49,7 +49,7 @@
 
     // The strict flag enables a wide range of type checking behavior that results
     // in stronger guarantees of program correctness.
-    // Turning this on is equivalent to enabling all of the strict mode family options.
+    // Turning this on is equivalent to enabling all the strict mode family options.
     // You can then turn off individual strict mode family checks as needed.
     // https://www.typescriptlang.org/tsconfig#strict
     "strict": true,
@@ -87,10 +87,6 @@
     // https://www.typescriptlang.org/tsconfig#noImplicitReturns
     "noImplicitReturns": true,
 
-    // Report errors on unused local variables.
-    // https://www.typescriptlang.org/tsconfig#noUnusedLocals
-    "noUnusedLocals": true,
-
     // TypeScript will issue an error if a program tries
     // to include a file by a casing different from the casing on disk
     // https://www.typescriptlang.org/tsconfig#forceConsistentCasingInFileNames
@@ -115,7 +111,7 @@
     // spreading arrays or objects, and async operations.
     // By default, these helpers are inserted into files which use them.
     // This can result in code duplication
-    // if the same helper is used in many different modules.
+    // if the same helper is used in many modules.
     // https://www.typescriptlang.org/tsconfig#importHelpers
     "importHelpers": true,
 
@@ -126,7 +122,7 @@
     // https://www.typescriptlang.org/tsconfig#downlevelIteration
     "downlevelIteration": true,
 
-    // By default all visible ”@types” packages are included in your compilation.
+    // By default, all visible ”@types” packages are included in your compilation.
     // Packages in node_modules/@types of any enclosing folder are considered visible.
     // For example, that means packages within ./node_modules/@types/,
     // ../node_modules/@types/, ../../node_modules/@types/, and so on.
