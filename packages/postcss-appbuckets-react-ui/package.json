@@ -29,7 +29,7 @@
   },
   "gitHead": "534c098394455d5dae88c7178047b353480db65b",
   "devDependencies": {
-    "cpy-cli": "^3.1.1",
+    "cpy-cli": "^4.1.0",
     "rimraf": "^3.0.2"
   }
 }

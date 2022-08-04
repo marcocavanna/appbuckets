@@ -1,6 +1,7 @@
 {
   "filename": "packages/react-ui/src/Slider/Slider.tsx",
   "tags": {},
+  "filePath": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui/src/Slider/Slider.tsx",
   "description": "",
   "displayName": "Slider",
   "props": {
@@ -352,7 +353,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: FocusEvent<HTMLDivElement>, props: SliderProps) => void"
+        "name": "(e: FocusEvent<HTMLDivElement, Element>, props: SliderProps) => void"
       }
     },
     "onChange": {
@@ -390,7 +391,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: FocusEvent<HTMLDivElement>, props: SliderProps) => void"
+        "name": "(e: FocusEvent<HTMLDivElement, Element>, props: SliderProps) => void"
       }
     },
     "tooltip": {
@@ -981,13 +982,13 @@
       "description": "",
       "name": "className",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/interface.d.ts",
-        "name": "GenericSliderProps"
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "name": "SliderProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/interface.d.ts",
-          "name": "GenericSliderProps"
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "name": "SliderProps"
         }
       ],
       "required": false,
@@ -995,36 +996,93 @@
         "name": "string"
       }
     },
-    "value": {
+    "prefixCls": {
       "defaultValue": null,
       "description": "",
-      "name": "value",
+      "name": "prefixCls",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
         "name": "SliderProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
           "name": "SliderProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "number"
+        "name": "string"
       }
     },
-    "defaultValue": {
+    "style": {
       "defaultValue": null,
       "description": "",
-      "name": "defaultValue",
+      "name": "style",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
         "name": "SliderProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "name": "SliderProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "CSSProperties"
+      }
+    },
+    "autoFocus": {
+      "defaultValue": null,
+      "description": "",
+      "name": "autoFocus",
+      "parent": {
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "name": "SliderProps"
+      },
+      "declarations": [
+        {
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "name": "SliderProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "range": {
+      "defaultValue": null,
+      "description": "",
+      "name": "range",
+      "parent": {
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "name": "SliderProps"
+      },
+      "declarations": [
+        {
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "name": "SliderProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "count": {
+      "defaultValue": null,
+      "description": "",
+      "name": "count",
+      "parent": {
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "name": "SliderProps"
+      },
+      "declarations": [
+        {
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
           "name": "SliderProps"
         }
       ],
@@ -1038,12 +1096,12 @@
       "description": "",
       "name": "min",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
         "name": "SliderProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
           "name": "SliderProps"
         }
       ],
@@ -1057,12 +1115,12 @@
       "description": "",
       "name": "max",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
         "name": "SliderProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
           "name": "SliderProps"
         }
       ],
@@ -1076,12 +1134,12 @@
       "description": "",
       "name": "step",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
         "name": "SliderProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
           "name": "SliderProps"
         }
       ],
@@ -1090,36 +1148,55 @@
         "name": "number"
       }
     },
-    "prefixCls": {
+    "value": {
       "defaultValue": null,
       "description": "",
-      "name": "prefixCls",
+      "name": "value",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
         "name": "SliderProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
           "name": "SliderProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "string"
+        "name": "number"
       }
     },
-    "vertical": {
+    "defaultValue": {
       "defaultValue": null,
       "description": "",
-      "name": "vertical",
+      "name": "defaultValue",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
         "name": "SliderProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "name": "SliderProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "number"
+      }
+    },
+    "allowCross": {
+      "defaultValue": null,
+      "description": "",
+      "name": "allowCross",
+      "parent": {
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "name": "SliderProps"
+      },
+      "declarations": [
+        {
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
           "name": "SliderProps"
         }
       ],
@@ -1128,17 +1205,36 @@
         "name": "boolean"
       }
     },
-    "included": {
+    "pushable": {
       "defaultValue": null,
       "description": "",
-      "name": "included",
+      "name": "pushable",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
         "name": "SliderProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "name": "SliderProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "number | boolean"
+      }
+    },
+    "draggableTrack": {
+      "defaultValue": null,
+      "description": "range only",
+      "name": "draggableTrack",
+      "parent": {
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "name": "SliderProps"
+      },
+      "declarations": [
+        {
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
           "name": "SliderProps"
         }
       ],
@@ -1152,12 +1248,12 @@
       "description": "",
       "name": "reverse",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
         "name": "SliderProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
           "name": "SliderProps"
         }
       ],
@@ -1166,137 +1262,42 @@
         "name": "boolean"
       }
     },
-    "minimumTrackStyle": {
+    "vertical": {
       "defaultValue": null,
       "description": "",
-      "name": "minimumTrackStyle",
+      "name": "vertical",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
         "name": "SliderProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
           "name": "SliderProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "any"
+        "name": "boolean"
       }
     },
-    "trackStyle": {
+    "included": {
       "defaultValue": null,
       "description": "",
-      "name": "trackStyle",
+      "name": "included",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
         "name": "SliderProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
           "name": "SliderProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "any"
-      }
-    },
-    "handleStyle": {
-      "defaultValue": null,
-      "description": "",
-      "name": "handleStyle",
-      "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
-        "name": "SliderProps"
-      },
-      "declarations": [
-        {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
-          "name": "SliderProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "any"
-      }
-    },
-    "tabIndex": {
-      "defaultValue": null,
-      "description": "",
-      "name": "tabIndex",
-      "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
-        "name": "SliderProps"
-      },
-      "declarations": [
-        {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
-          "name": "SliderProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "number"
-      }
-    },
-    "ariaLabelForHandle": {
-      "defaultValue": null,
-      "description": "",
-      "name": "ariaLabelForHandle",
-      "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
-        "name": "SliderProps"
-      },
-      "declarations": [
-        {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
-          "name": "SliderProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "ariaLabelledByForHandle": {
-      "defaultValue": null,
-      "description": "",
-      "name": "ariaLabelledByForHandle",
-      "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
-        "name": "SliderProps"
-      },
-      "declarations": [
-        {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
-          "name": "SliderProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "ariaValueTextFormatterForHandle": {
-      "defaultValue": null,
-      "description": "",
-      "name": "ariaValueTextFormatterForHandle",
-      "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
-        "name": "SliderProps"
-      },
-      "declarations": [
-        {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
-          "name": "SliderProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "string"
+        "name": "boolean"
       }
     },
     "startPoint": {
@@ -1304,12 +1305,12 @@
       "description": "",
       "name": "startPoint",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
         "name": "SliderProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
           "name": "SliderProps"
         }
       ],
@@ -1318,118 +1319,42 @@
         "name": "number"
       }
     },
-    "handle": {
+    "trackStyle": {
       "defaultValue": null,
       "description": "",
-      "name": "handle",
+      "name": "trackStyle",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
         "name": "SliderProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
           "name": "SliderProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "(props: { className: string; prefixCls?: string; vertical?: boolean; offset: number; value: number; dragging?: boolean; disabled?: boolean; min?: number; max?: number; reverse?: boolean; index: number; tabIndex?: number; ... 4 more ...; ref?: any; }) => any"
+        "name": "CSSProperties | CSSProperties[]"
       }
     },
-    "autoFocus": {
+    "handleStyle": {
       "defaultValue": null,
       "description": "",
-      "name": "autoFocus",
+      "name": "handleStyle",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/interface.d.ts",
-        "name": "GenericSliderProps"
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "name": "SliderProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/interface.d.ts",
-          "name": "GenericSliderProps"
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "name": "SliderProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "boolean"
-      }
-    },
-    "marks": {
-      "defaultValue": null,
-      "description": "",
-      "name": "marks",
-      "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/interface.d.ts",
-        "name": "GenericSliderProps"
-      },
-      "declarations": [
-        {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/interface.d.ts",
-          "name": "GenericSliderProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "Record<number, ReactNode | { style?: CSSProperties; label?: string; }>"
-      }
-    },
-    "dots": {
-      "defaultValue": null,
-      "description": "",
-      "name": "dots",
-      "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/interface.d.ts",
-        "name": "GenericSliderProps"
-      },
-      "declarations": [
-        {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/interface.d.ts",
-          "name": "GenericSliderProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "maximumTrackStyle": {
-      "defaultValue": null,
-      "description": "",
-      "name": "maximumTrackStyle",
-      "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/interface.d.ts",
-        "name": "GenericSliderProps"
-      },
-      "declarations": [
-        {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/interface.d.ts",
-          "name": "GenericSliderProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "CSSProperties"
-      }
-    },
-    "style": {
-      "defaultValue": null,
-      "description": "",
-      "name": "style",
-      "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/interface.d.ts",
-        "name": "GenericSliderProps"
-      },
-      "declarations": [
-        {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/interface.d.ts",
-          "name": "GenericSliderProps"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "CSSProperties"
+        "name": "CSSProperties | CSSProperties[]"
       }
     },
     "railStyle": {
@@ -1437,13 +1362,13 @@
       "description": "",
       "name": "railStyle",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/interface.d.ts",
-        "name": "GenericSliderProps"
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "name": "SliderProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/interface.d.ts",
-          "name": "GenericSliderProps"
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "name": "SliderProps"
         }
       ],
       "required": false,
@@ -1456,18 +1381,18 @@
       "description": "",
       "name": "dotStyle",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/interface.d.ts",
-        "name": "GenericSliderProps"
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "name": "SliderProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/interface.d.ts",
-          "name": "GenericSliderProps"
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "name": "SliderProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "CSSProperties"
+        "name": "CSSProperties | ((dotValue: number) => CSSProperties)"
       }
     },
     "activeDotStyle": {
@@ -1475,37 +1400,151 @@
       "description": "",
       "name": "activeDotStyle",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/interface.d.ts",
-        "name": "GenericSliderProps"
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "name": "SliderProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/interface.d.ts",
-          "name": "GenericSliderProps"
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "name": "SliderProps"
         }
       ],
       "required": false,
       "type": {
-        "name": "CSSProperties"
+        "name": "CSSProperties | ((dotValue: number) => CSSProperties)"
       }
     },
-    "draggableTrack": {
+    "marks": {
       "defaultValue": null,
       "description": "",
-      "name": "draggableTrack",
+      "name": "marks",
       "parent": {
-        "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/interface.d.ts",
-        "name": "GenericSliderProps"
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "name": "SliderProps"
       },
       "declarations": [
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/rc-slider/lib/interface.d.ts",
-          "name": "GenericSliderProps"
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "name": "SliderProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "Record<string | number, ReactNode | MarkObj>"
+      }
+    },
+    "dots": {
+      "defaultValue": null,
+      "description": "",
+      "name": "dots",
+      "parent": {
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "name": "SliderProps"
+      },
+      "declarations": [
+        {
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "name": "SliderProps"
         }
       ],
       "required": false,
       "type": {
         "name": "boolean"
+      }
+    },
+    "handleRender": {
+      "defaultValue": null,
+      "description": "",
+      "name": "handleRender",
+      "parent": {
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "name": "SliderProps"
+      },
+      "declarations": [
+        {
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "name": "SliderProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "(origin: ReactElement<HandleProps, string | JSXElementConstructor<any>>, props: RenderProps) => ReactElement<any, string | JSXElementConstructor<...>>"
+      }
+    },
+    "tabIndex": {
+      "defaultValue": null,
+      "description": "",
+      "name": "tabIndex",
+      "parent": {
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "name": "SliderProps"
+      },
+      "declarations": [
+        {
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "name": "SliderProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "number | number[]"
+      }
+    },
+    "ariaLabelForHandle": {
+      "defaultValue": null,
+      "description": "",
+      "name": "ariaLabelForHandle",
+      "parent": {
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "name": "SliderProps"
+      },
+      "declarations": [
+        {
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "name": "SliderProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string | string[]"
+      }
+    },
+    "ariaLabelledByForHandle": {
+      "defaultValue": null,
+      "description": "",
+      "name": "ariaLabelledByForHandle",
+      "parent": {
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "name": "SliderProps"
+      },
+      "declarations": [
+        {
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "name": "SliderProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "string | string[]"
+      }
+    },
+    "ariaValueTextFormatterForHandle": {
+      "defaultValue": null,
+      "description": "",
+      "name": "ariaValueTextFormatterForHandle",
+      "parent": {
+        "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+        "name": "SliderProps"
+      },
+      "declarations": [
+        {
+          "fileName": "appbuckets/node_modules/rc-slider/lib/Slider.d.ts",
+          "name": "SliderProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "AriaValueFormat | AriaValueFormat[]"
       }
     }
   }

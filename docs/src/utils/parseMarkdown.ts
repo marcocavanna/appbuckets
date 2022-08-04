@@ -1,4 +1,4 @@
-import marked from 'marked';
+import { marked } from 'marked';
 
 import prism from 'prismjs';
 import 'prismjs/components/prism-bash';
@@ -108,14 +108,6 @@ export function highlightCode(code: string, language: string) {
     case 'js':
     case 'sh':
       prismGrammar = prism.languages.jsx;
-      break;
-
-    case 'diff':
-      prismGrammar = { ...prism.languages.diff };
-      // original `/^[-<].*$/m` matches lines starting with `<` which matches
-      // <SomeComponent />
-      // we will only use `-` as the deleted marker
-      prismGrammar.deleted = /^[-].*$/m;
       break;
 
     default:

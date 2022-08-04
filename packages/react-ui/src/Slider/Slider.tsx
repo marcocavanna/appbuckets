@@ -1,7 +1,7 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
-import RCSlider, { Handle } from 'rc-slider';
+import RCSlider from 'rc-slider';
 
 import { useAutoControlledValue } from '@appbuckets/react-ui-core';
 
@@ -16,8 +16,6 @@ import {
 } from '../utils';
 
 import { useWithDefaultProps } from '../BucketTheme';
-
-import { useTabIndex } from '../hooks/useTabIndex';
 
 import Field from '../Field';
 
@@ -113,12 +111,6 @@ const Slider: UIVoidComponent<SliderProps> = (receivedProps) => {
   // ----
   const canSlide = !disabled && !readOnly;
 
-  const tabIndex = useTabIndex({
-    disabled,
-    readOnly,
-    prop: userDefinedTabIndex
-  });
-
 
   // ----
   // Internal Handlers
@@ -138,9 +130,9 @@ const Slider: UIVoidComponent<SliderProps> = (receivedProps) => {
     }
   };
 
-  const handleSliderChange = (newValue: number) => {
+  const handleSliderChange = (newValue: number | number[]) => {
     /** If slider can't move, return */
-    if (!canSlide) {
+    if (!canSlide || Array.isArray(newValue)) {
       return;
     }
 
@@ -153,9 +145,9 @@ const Slider: UIVoidComponent<SliderProps> = (receivedProps) => {
     trySetValue(newValue);
   };
 
-  const handleSliderAfterChange = (newValue: number) => {
+  const handleSliderAfterChange = (newValue: number | number[]) => {
     /** If slider can't move, return */
-    if (!canSlide) {
+    if (!canSlide || Array.isArray(newValue)) {
       return;
     }
 
@@ -193,26 +185,21 @@ const Slider: UIVoidComponent<SliderProps> = (receivedProps) => {
   // ----
   // Build Component Handler
   // ----
-  const handle = (handleProps: any) => {
-    /** Strip props */
-    const { value: currentValue, dragging, index, ...restHandleProps } = handleProps;
-
+  const handle: SliderProps['handleRender'] = (node, renderProps) => {
     /** If no tooltip exists, return the handler */
-    if (!tooltip || dragging) {
-      return (<Handle {...restHandleProps} />);
+    if (!tooltip || renderProps.dragging) {
+      return node;
     }
 
     /** Set tooltip text */
-    const tooltipText = typeof tooltip === 'function' ? tooltip(currentValue) : value;
+    const tooltipText = typeof tooltip === 'function' ? tooltip(renderProps.value) : value;
 
     /** Return wrapped handler */
     return (
       <Popup
         content={tooltipText}
-        trigger={(
-          <Handle {...restHandleProps} />
-        )}
-        updateDependencies={[ currentValue ]}
+        trigger={node}
+        updateDependencies={[ renderProps.value ]}
       />
     );
   };
@@ -240,8 +227,7 @@ const Slider: UIVoidComponent<SliderProps> = (receivedProps) => {
         startPoint={startPoint}
         className={classes}
         value={value}
-        tabIndex={tabIndex}
-        handle={handle}
+        handleRender={handle}
         onAfterChange={handleSliderAfterChange}
         onBeforeChange={handleSliderBeforeChange}
         onBlur={handleSliderBlur}

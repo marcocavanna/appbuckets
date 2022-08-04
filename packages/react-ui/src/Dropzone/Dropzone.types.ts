@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { FileRejection } from 'react-dropzone';
+import { Accept, FileRejection } from 'react-dropzone';
 import { IconName } from '@fortawesome/fontawesome-svg-core';
 
 import { ButtonProps } from '../Button';
@@ -14,8 +14,13 @@ export interface DropzoneProps extends StrictDropzoneProps {
 }
 
 export interface StrictDropzoneProps {
-  /** Set the accepted files mimeType */
-  accept?: string[];
+  /**
+   * Set the accepted files mimeType
+   *
+   * The value must be an object with a common MIME type as keys
+   * and an array of file extensions as values (similar to showOpenFilePicker's types accept option).
+   */
+  accept?: Accept;
 
   /** Dropzone children are forbidden */
   children?: never;

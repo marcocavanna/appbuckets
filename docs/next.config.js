@@ -4,7 +4,6 @@ const workspaceRoot = path.join(__dirname, '../');
 
 module.exports = {
   typescript : {
-    ignoreDevErrors  : true,
     ignoreBuildErrors: true
   },
   webpack    : (config, options) => {
@@ -12,16 +11,11 @@ module.exports = {
     if (options.isServer) {
       const [ nextExternals, ...externals ] = config.externals;
 
-      if (externals.length > 0) {
-        // currently not the case but other next plugins might introduce additional
-        // rules for externals. We would need to handle those in the callback
-        throw new Error('There are other externals in the webpack config.');
-      }
-
       config.externals = [
-        (context, request, callback) => {
-          return nextExternals(context, request, callback);
-        }
+        (ctx, callback) => {
+          return nextExternals(ctx, callback);
+        },
+        ...externals
       ];
     }
 
@@ -37,10 +31,11 @@ module.exports = {
         modules   : [
           ...config.resolve.modules,
           path.resolve(__dirname, '..', 'node_modules')
-        ]
-      },
-      node   : {
-        fs: 'empty'
+        ],
+        fallback  : {
+          ...config.fallback,
+          fs: false
+        }
       },
       module : {
         ...config.module,

@@ -13,7 +13,7 @@ export interface SliderProps extends UIVoidComponentProps<StrictSliderProps> {
 
 }
 
-export interface StrictSliderProps extends StrictFieldProps, Omit<RCSliderProps, OverriddenSliderProps> {
+export interface StrictSliderProps extends StrictFieldProps, Omit<RCSliderProps<number>, OverriddenSliderProps> {
   /** Called after slider value change */
   onAfterChange?: (nothing: null, props: SliderProps) => void;
 
@@ -30,5 +30,5 @@ export interface StrictSliderProps extends StrictFieldProps, Omit<RCSliderProps,
   onFocus?: (e: React.FocusEvent<HTMLDivElement>, props: SliderProps) => void;
 
   /** Show Tooltip on Mouse Over, pass a function to format value */
-  tooltip?: boolean | ((value: number) => React.ReactNode)
+  tooltip?: boolean | ((value: number) => React.ReactNode);
 }

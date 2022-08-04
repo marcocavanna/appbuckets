@@ -11,7 +11,7 @@ import Panel from '@appbuckets/react-ui/Panel';
 
 import AppFrame from '../src/components/AppFrame';
 import HighlightedCode from '../src/components/HighlightedCode';
-import { Text } from '../src/components/Text';
+import { DocText } from '../src/components/DocText';
 
 import AppLogo from '../src/components/Navbar/atoms/AppLogo';
 
@@ -33,9 +33,9 @@ export default function Home(props: { version: string }) {
           />
 
           <Box textAlign={'center'}>
-            <Text>
+            <DocText>
               Current Documented version is <b>{props.version}</b>
-            </Text>
+            </DocText>
             <div className={'mt-4'}>
               <Button
                 href={'https://github.com/marcocavanna/appbuckets'}
@@ -71,9 +71,9 @@ export default function Home(props: { version: string }) {
           }}
           content={(
             <React.Fragment>
-              <Text>
+              <DocText>
                 You could install ReactBucket framework using NPM or Yarn
-              </Text>
+              </DocText>
               <HighlightedCode
                 language={'bash'}
                 code={`# Using YARN
@@ -82,9 +82,9 @@ yarn add @appbuckets/react-ui
 # Using NPM
 npm install --save-dev @appbuckets/react-ui`}
               />
-              <Text>
+              <DocText>
                 Every other dependencies like font, icons and style are included in this package.
-              </Text>
+              </DocText>
             </React.Fragment>
           )}
         />
@@ -100,10 +100,10 @@ npm install --save-dev @appbuckets/react-ui`}
           }}
           content={(
             <React.Fragment>
-              <Text>
+              <DocText>
                 To start using ReactBucket UI Framework you only need to import{' '}
                 the starting CSS file from installed package and you are ready to go!
-              </Text>
+              </DocText>
               <HighlightedCode
                 language={'tsx'}
                 code={`import * as React from 'react';

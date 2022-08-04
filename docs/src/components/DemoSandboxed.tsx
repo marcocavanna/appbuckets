@@ -12,7 +12,7 @@ export interface DemoSandboxProps {
 /* --------
  * Component Definition
  * -------- */
-const DemoSandbox: React.FunctionComponent<DemoSandboxProps> = (props) => {
+const DemoSandbox: React.FunctionComponent<DemoSandboxProps> = () => {
 
   return null;
 };

@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 
 
-export default class MyDocument extends Document {
+export default class MyDocument extends NextDocument {
   // ----
   // Page Render
   // ----
