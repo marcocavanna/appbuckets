@@ -32,19 +32,19 @@
     "@appbuckets/react-ui": "1.9.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.1.2"
   },
   "devDependencies": {
     "@appbuckets/postcss-appbuckets-react-ui": "0.1.7",
-    "@craco/craco": "6.4.3",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/react": "^17.0.37",
-    "@types/react-dom": "^17.0.11",
+    "@craco/craco": "6.4.5",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/react": "^17.0.48",
+    "@types/react-dom": "^17.0.17",
     "react-scripts": "4.0.3",
-    "sass": "1.49.0",
-    "typescript": "^4.5.2"
+    "sass": "1.54.2",
+    "typescript": "^4.7.4"
   },
   "browserslist": {
     "production": [

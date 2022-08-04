@@ -45,10 +45,10 @@
   "dependencies": {
     "@appbuckets/react-ui": "1.9.10",
     "@appbuckets/react-ui-core": "0.4.4",
-    "@hookform/resolvers": "^2.8.4",
-    "clsx": "^1.1.1",
+    "@hookform/resolvers": "^2.9.7",
+    "clsx": "^1.2.1",
     "get-value": "^3.0.1",
-    "react-hook-form": "^7.21.0"
+    "react-hook-form": "^7.34.0"
   },
   "gitHead": "0e1adf23d12b2915000667ed4503fabf9c709574"
 }
