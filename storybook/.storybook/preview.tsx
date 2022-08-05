@@ -5,6 +5,9 @@ import type { DecoratorFn } from '@storybook/react';
 
 import { Client, ClientProvider } from '@appbuckets/react-app-client';
 
+import Icon from '@appbuckets/react-ui/Icon';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+
 import '@appbuckets/react-ui/styles/index.scss';
 import './stories.scss';
 
@@ -14,6 +17,12 @@ import theme from './theme';
 addons.setConfig({
   theme
 });
+
+
+/* --------
+ * Attach default FontAwesome Icon Pack
+ * -------- */
+Icon.addToLibrary(fas);
 
 
 /* --------

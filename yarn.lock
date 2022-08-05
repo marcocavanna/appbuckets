@@ -169,6 +169,7 @@ __metadata:
   dependencies:
     "@appbuckets/react-ui": 1.10.0
     "@babel/core": ^7.18.10
+    "@fortawesome/free-solid-svg-icons": ^6.1.2
     "@storybook/addon-actions": ^6.5.10
     "@storybook/addon-essentials": ^6.5.10
     "@storybook/addon-links": ^6.5.10
@@ -203,9 +204,6 @@ __metadata:
     "@appbuckets/react-ui-core": 0.4.5
     "@appbuckets/react-ui-styles": 0.1.4
     "@fortawesome/fontawesome-svg-core": ^6.1.2
-    "@fortawesome/free-brands-svg-icons": ^6.1.2
-    "@fortawesome/free-regular-svg-icons": ^6.1.2
-    "@fortawesome/free-solid-svg-icons": ^6.1.2
     "@fortawesome/react-fontawesome": ^0.2.0
     "@popperjs/core": ^2.11.5
     "@semantic-ui-react/event-stack": ^3.1.3
@@ -2599,24 +2597,6 @@ __metadata:
   dependencies:
     "@fortawesome/fontawesome-common-types": 6.1.2
   checksum: bb82ed1e79ade9977746b4bb28ac0d03de7557e7c923446adec78cb3447740aca0859e91d6310007d758055a1b8f3a6f740915f04cac738931135c9bdbfe5d32
-  languageName: node
-  linkType: hard
-
-"@fortawesome/free-brands-svg-icons@npm:^6.1.2":
-  version: 6.1.2
-  resolution: "@fortawesome/free-brands-svg-icons@npm:6.1.2"
-  dependencies:
-    "@fortawesome/fontawesome-common-types": 6.1.2
-  checksum: 178b7f97bf64dcc1589bff74fc73cd0de32f002d585254e5dfb362d16c21011a77c61439dd507873d288f3c93de615cfc63235622968b037d8d8ded2d56f1d81
-  languageName: node
-  linkType: hard
-
-"@fortawesome/free-regular-svg-icons@npm:^6.1.2":
-  version: 6.1.2
-  resolution: "@fortawesome/free-regular-svg-icons@npm:6.1.2"
-  dependencies:
-    "@fortawesome/fontawesome-common-types": 6.1.2
-  checksum: 1485773e16a019fd4af0053ab7e7f51558fe016dcfd8b975d5fc14069dd494d0c345477c1ceddc0356634a53add780761242aa4b20fc5ce616274aa7808bff39
   languageName: node
   linkType: hard
 

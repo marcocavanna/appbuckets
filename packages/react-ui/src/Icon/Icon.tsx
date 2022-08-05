@@ -7,13 +7,8 @@ import {
 } from '@appbuckets/react-ui-core';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { far } from '@fortawesome/free-regular-svg-icons';
-
-import { Creatable, UIMutableComponent } from '../generic';
+import type { IconDefinition, IconPack } from '@fortawesome/fontawesome-svg-core';
 
 import {
   useSharedClassName,
@@ -25,13 +20,16 @@ import { useWithDefaultProps } from '../BucketTheme';
 import { IconProps } from './Icon.types';
 
 
-library.add(fas, fab, far);
+/* --------
+ * Component Type
+ * -------- */
+type IconComponent = CreatableFunctionComponent<IconProps> & { addToLibrary: typeof library.add };
 
 
 /* --------
  * Component Render
  * -------- */
-const Icon: Creatable<UIMutableComponent<IconProps>> = React.memo<IconProps>((
+const Icon: IconComponent = React.memo<IconProps>((
   receivedProps
 ) => {
 
@@ -121,11 +119,14 @@ const Icon: Creatable<UIMutableComponent<IconProps>> = React.memo<IconProps>((
       />
     </Container>
   );
-}) as unknown as CreatableFunctionComponent<IconProps>;
+}) as unknown as IconComponent;
 
 Icon.displayName = 'Icon';
 
 /** Icon could be created using a Shorthand */
 Icon.create = createShorthandFactory(Icon, (name) => ({ name: name as any }));
+
+/** Add FontAwesome Icon Library */
+Icon.addToLibrary = (...definitions: (IconDefinition | IconPack)[]) => library.add(...definitions);
 
 export default Icon;

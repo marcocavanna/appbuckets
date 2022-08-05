@@ -1,4 +1,4 @@
-import { IconName } from '@fortawesome/free-regular-svg-icons';
+import { IconName } from '@fortawesome/fontawesome-svg-core';
 
 
 /** Build a Fast Cache Object to avoid multiple match */
