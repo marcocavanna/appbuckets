@@ -410,7 +410,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: MouseEvent<HTMLElement, MouseEvent>, props: DropdownMenuProps) => void"
+        "name": "DropdownMenuStateChangeHandler"
       }
     },
     "onItemClick": {
@@ -429,7 +429,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: MouseEvent<HTMLElement, MouseEvent>, props: MenuItemProps) => void"
+        "name": "MenuItemClickHandler"
       }
     },
     "onOpen": {
@@ -448,7 +448,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: MouseEvent<HTMLElement, MouseEvent>, props: DropdownMenuProps) => void"
+        "name": "DropdownMenuStateChangeHandler"
       }
     },
     "open": {

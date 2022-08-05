@@ -374,7 +374,7 @@
       ],
       "required": false,
       "type": {
-        "name": "FocusHandler<HTMLInputElement, NumericInputProps>"
+        "name": "NumericInputFocusHandler"
       }
     },
     "onChange": {
@@ -393,7 +393,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(nothing: null, props: NumericInputProps) => void"
+        "name": "NumericInputChangeHandler"
       }
     },
     "onFocus": {
@@ -412,7 +412,7 @@
       ],
       "required": false,
       "type": {
-        "name": "FocusHandler<HTMLInputElement, NumericInputProps>"
+        "name": "NumericInputFocusHandler"
       }
     },
     "ref": {

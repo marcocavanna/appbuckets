@@ -391,7 +391,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: MouseEvent<HTMLElement, MouseEvent>, props: ItemProps) => void"
+        "name": "ItemClickHandler"
       }
     },
     "solid": {

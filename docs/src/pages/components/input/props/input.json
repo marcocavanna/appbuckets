@@ -336,7 +336,7 @@
       ],
       "required": false,
       "type": {
-        "name": "FocusHandler<HTMLInputElement, InputProps>"
+        "name": "InputFocusHandler"
       }
     },
     "onChange": {
@@ -355,7 +355,7 @@
       ],
       "required": false,
       "type": {
-        "name": "ChangeHandler<HTMLInputElement, InputProps>"
+        "name": "InputChangeHandler"
       }
     },
     "onClick": {
@@ -374,7 +374,7 @@
       ],
       "required": false,
       "type": {
-        "name": "ClickHandler<HTMLInputElement, InputProps>"
+        "name": "InputClickHandler"
       }
     },
     "onFocus": {
@@ -393,7 +393,7 @@
       ],
       "required": false,
       "type": {
-        "name": "FocusHandler<HTMLInputElement, InputProps>"
+        "name": "InputFocusHandler"
       }
     },
     "ref": {

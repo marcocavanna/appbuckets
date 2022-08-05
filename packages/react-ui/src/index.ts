@@ -1,5 +1,7 @@
 export * from './generic';
 
+export * from './hooks';
+
 export { default as Accordions } from './Accordions';
 export * from './Accordions';
 

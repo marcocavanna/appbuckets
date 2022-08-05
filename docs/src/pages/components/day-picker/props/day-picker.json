@@ -448,7 +448,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(date: Date) => string"
+        "name": "DayPickerFormatter"
       }
     },
     "onCalendarClose": {
@@ -467,7 +467,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(nothing: null, props: DayPickerProps<ParsableDate>) => void"
+        "name": "DayPickerChangeHandler"
       }
     },
     "onCalendarOpen": {
@@ -486,7 +486,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(nothing: null, props: DayPickerProps<ParsableDate>) => void"
+        "name": "DayPickerChangeHandler"
       }
     },
     "onDayChange": {
@@ -505,7 +505,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(nothing: null, props: DayPickerProps<ParsableDate>) => void"
+        "name": "DayPickerChangeHandler"
       }
     },
     "onInputChange": {
@@ -524,7 +524,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: FormEvent<HTMLInputElement>, props: InputProps) => void"
+        "name": "InputChangeHandler"
       }
     },
     "open": {
@@ -562,7 +562,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(date: ParsableDate) => Date"
+        "name": "DayPickerParser"
       }
     },
     "showInputMask": {

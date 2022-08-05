@@ -372,7 +372,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(state: CollapsableState) => void"
+        "name": "CollapseStateChangeHandler"
       }
     },
     "onClose": {
@@ -391,7 +391,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(state: CollapsableState) => void"
+        "name": "CollapseStateChangeHandler"
       }
     },
     "onOpen": {
@@ -410,7 +410,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(state: CollapsableState) => void"
+        "name": "CollapseStateChangeHandler"
       }
     },
     "open": {

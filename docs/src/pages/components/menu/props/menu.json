@@ -410,12 +410,12 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: MouseEvent<HTMLElement, MouseEvent>, props: MenuItemProps) => void"
+        "name": "MenuItemClickHandler"
       }
     },
     "section": {
       "defaultValue": null,
-      "description": "Display an Header over the Menu",
+      "description": "Display a Header over the Menu",
       "name": "section",
       "parent": {
         "fileName": "react-ui/src/Menu/Menu.types.ts",

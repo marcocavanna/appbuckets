@@ -315,7 +315,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(nothing: null, props: SliderProps) => void"
+        "name": "SliderChangeHandler"
       }
     },
     "onBeforeChange": {
@@ -334,7 +334,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(nothing: null, props: SliderProps) => void"
+        "name": "SliderChangeHandler"
       }
     },
     "onBlur": {
@@ -353,7 +353,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: FocusEvent<HTMLDivElement, Element>, props: SliderProps) => void"
+        "name": "SliderFocusHandler"
       }
     },
     "onChange": {
@@ -372,7 +372,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(nothing: null, props: SliderProps) => void"
+        "name": "SliderChangeHandler"
       }
     },
     "onFocus": {
@@ -391,7 +391,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: FocusEvent<HTMLDivElement, Element>, props: SliderProps) => void"
+        "name": "SliderFocusHandler"
       }
     },
     "tooltip": {
@@ -410,7 +410,7 @@
       ],
       "required": false,
       "type": {
-        "name": "boolean | ((value: number) => ReactNode)"
+        "name": "boolean | SliderValueFormatter"
       }
     },
     "actions": {

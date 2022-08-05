@@ -391,7 +391,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(isSticky: boolean) => void"
+        "name": "StickyStateChangeHandler"
       }
     },
     "style": {

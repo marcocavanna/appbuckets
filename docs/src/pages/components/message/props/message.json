@@ -372,7 +372,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: MouseEvent<SVGSVGElement, MouseEvent>, props: MessageProps) => void"
+        "name": "MessageDismissHandler"
       }
     },
     "children": {

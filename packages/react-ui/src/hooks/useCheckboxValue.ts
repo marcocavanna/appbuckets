@@ -1,29 +1,44 @@
 import * as React from 'react';
 
-import { ClickHandler } from '../generic';
-
-import { CheckboxProps } from '../Checkbox';
+import type { CheckboxChangeHandler } from '../Checkbox';
 
 
-export function useCheckboxValue(initialValue?: boolean): readonly [
-  boolean,
-  ClickHandler<HTMLLabelElement, CheckboxProps>,
-  React.Dispatch<React.SetStateAction<boolean | undefined>>
-] {
+/* --------
+ * Internal Type
+ * -------- */
+export type UseCheckboxValueReturn = [ boolean, CheckboxChangeHandler, React.Dispatch<React.SetStateAction<boolean>> ];
 
-  const [ checked, setChecked ] = React.useState(initialValue);
 
-  const handleCheckboxChange = React.useCallback<ClickHandler<HTMLLabelElement, CheckboxProps>>(
+/**
+ * Use this hook to get automatically the checkbox value
+ * and the handler function to attach to checkbox.
+ * Additionally function to force change will be returned
+ *
+ * @param initialValue
+ */
+export function useCheckboxValue(initialValue?: boolean | null): UseCheckboxValueReturn {
+
+  // ----
+  // Internal State
+  // ----
+  const [ checked, setChecked ] = React.useState<boolean>(!!initialValue);
+
+
+  // ----
+  // Handler
+  // ----
+  const handleCheckboxChange = React.useCallback<CheckboxChangeHandler>(
     (e, props) => {
-      setChecked(props.checked);
+      /** Update the value */
+      setChecked(!!props.checked);
     },
     []
   );
 
-  return [
-    checked ?? false,
-    handleCheckboxChange,
-    setChecked
-  ] as const;
+
+  // ----
+  // Hook Return
+  // ----
+  return [ checked, handleCheckboxChange, setChecked ];
 
 }

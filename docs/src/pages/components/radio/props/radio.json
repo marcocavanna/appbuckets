@@ -334,7 +334,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: MouseEvent<HTMLLabelElement, MouseEvent>, props: RadioProps) => void"
+        "name": "RadioChangeHandler"
       }
     },
     "options": {

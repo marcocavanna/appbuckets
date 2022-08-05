@@ -436,7 +436,7 @@
     },
     "defaultOpen": {
       "defaultValue": null,
-      "description": "Set initial open prop and let it to be auto controlled",
+      "description": "Set initial open prop and let it be auto controlled",
       "name": "defaultOpen",
       "parent": {
         "fileName": "react-ui/src/Modal/Modal.types.ts",
@@ -564,7 +564,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: MouseEvent<HTMLElement, MouseEvent>, props: ButtonProps) => void"
+        "name": "ButtonClickHandler"
       }
     },
     "onClose": {
@@ -583,7 +583,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: MouseEvent<HTMLElement, MouseEvent>, props: ModalProps) => void"
+        "name": "ModalStateChangeHandler"
       }
     },
     "onOpen": {
@@ -602,7 +602,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: MouseEvent<HTMLElement, MouseEvent>, props: ModalProps) => void"
+        "name": "ModalStateChangeHandler"
       }
     },
     "open": {

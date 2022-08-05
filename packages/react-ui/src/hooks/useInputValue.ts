@@ -1,41 +1,47 @@
-import { useState } from 'react';
+import * as React from 'react';
 
-import { ChangeHandler } from '../generic';
-
-import { InputProps } from '../Input';
+import type { InputChangeHandler } from '../Input';
 
 
-type InputValue<T> = { raw: string, casted: T | null };
+/* --------
+ * Internal Type
+ * -------- */
+export type UseInputValueReturn = [ string, InputChangeHandler, React.Dispatch<React.SetStateAction<string>> ];
 
-export function useInputValue<T = string>(
-  initialValue?: T
-): [ T, ChangeHandler<HTMLInputElement, InputProps>, string ] {
 
-  const [ inputValue, setInputValue ] = useState<InputValue<T>>({
-    raw   : initialValue ? String(initialValue) : '',
-    casted: initialValue ?? null
-  });
+/**
+ * Use this hook to get automatically the input value
+ * and the handler function to attach to input.
+ * Additionally function to force change will be returned
+ *
+ * @param initialValue
+ */
+export function useInputValue(initialValue?: string | null): UseInputValueReturn {
 
-  const handleInputChange: ChangeHandler<HTMLInputElement, InputProps> = (e, props) => {
-    const { value, type } = props;
+  // ----
+  // Internal State
+  // ----
+  const [ inputValue, setInputValue ] = React.useState<string>(initialValue ?? '');
 
-    const raw: string = value?.toString() ?? '';
 
-    switch (type) {
-      case 'number':
-        const casted = +(value ?? '');
-        setInputValue({ raw, casted: casted as unknown as T });
-        break;
+  // ----
+  // Handler
+  // ----
+  const handleInputChange = React.useCallback<InputChangeHandler>(
+    (e, props) => {
+      /** Get the value */
+      const { value } = props;
 
-      default:
-        setInputValue({ raw, casted: value as unknown as T });
-    }
-  };
+      /** Set new value */
+      setInputValue(value ?? '');
+    },
+    []
+  );
 
-  return [
-    inputValue.casted as unknown as T,
-    handleInputChange,
-    inputValue.raw
-  ];
+
+  // ----
+  // Hook Return
+  // ----
+  return [ inputValue, handleInputChange, setInputValue ];
 
 }

@@ -45,7 +45,7 @@ const HeroButton: React.VoidFunctionComponent<HeroButtonProps> = (receivedProps)
   const [ stateClasses, rest ] = useSplitStateClassName(rawRest);
 
   /** Handle Buttons Click */
-  const handleClick = (e: React.MouseEvent) => {
+  const handleClick = (e: React.MouseEvent<HTMLElement>) => {
     /** A disable button could not be clicked */
     if (disabled) {
       e.preventDefault();

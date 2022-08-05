@@ -433,7 +433,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: MouseEvent<HTMLElement, MouseEvent>, props: ToastProps) => void"
+        "name": "ToastClickHandler"
       }
     },
     "className": {

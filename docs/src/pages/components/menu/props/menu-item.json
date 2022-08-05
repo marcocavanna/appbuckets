@@ -486,7 +486,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: MouseEvent<HTMLElement, MouseEvent>, props: MenuItemProps) => void"
+        "name": "MenuItemClickHandler"
       }
     },
     "children": {

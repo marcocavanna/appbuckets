@@ -334,7 +334,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: FormEvent<HTMLFormElement>, props: FormProps) => void"
+        "name": "FormSubmitHandler"
       }
     },
     "ref": {

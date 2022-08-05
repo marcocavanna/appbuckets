@@ -533,7 +533,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(event: MouseEvent<HTMLButtonElement, MouseEvent>, props: ButtonProps) => void"
+        "name": "ButtonClickHandler"
       }
     },
     "rounded": {

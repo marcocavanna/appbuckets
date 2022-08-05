@@ -353,7 +353,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: MouseEvent<HTMLElement, MouseEvent>, props: LabelProps) => void"
+        "name": "LabelClickHandler"
       }
     },
     "onRemove": {
@@ -372,7 +372,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: MouseEvent<HTMLButtonElement, MouseEvent>, props: LabelProps) => void"
+        "name": "LabelRemoveHandler"
       }
     },
     "removable": {

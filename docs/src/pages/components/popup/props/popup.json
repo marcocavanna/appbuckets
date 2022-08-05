@@ -467,7 +467,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(event: MouseEvent<HTMLElement, MouseEvent>, props: PopupProps) => void"
+        "name": "PopupStateChangeHandler"
       }
     },
     "onMount": {
@@ -486,7 +486,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(nothing: null, props: PopupProps) => void"
+        "name": "PopupMountChangeHandler"
       }
     },
     "onOpen": {
@@ -505,7 +505,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(event: MouseEvent<HTMLElement, MouseEvent>, props: PopupProps) => void"
+        "name": "PopupStateChangeHandler"
       }
     },
     "onUnmount": {
@@ -524,7 +524,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(nothing: null, props: PopupProps) => void"
+        "name": "PopupMountChangeHandler"
       }
     },
     "openOn": {

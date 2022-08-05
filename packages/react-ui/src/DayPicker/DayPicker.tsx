@@ -251,7 +251,7 @@ const DayPicker: React.VoidFunctionComponent<DayPickerProps> = (receivedProps) =
     evalDayChange(day, false);
   };
 
-  const handleInputChange = (e: React.FormEvent<HTMLInputElement>, inputProps: InputProps) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>, inputProps: InputProps) => {
     /** Change Input Value */
     setInputValue(inputProps.value!);
     /** Trigger Handler */

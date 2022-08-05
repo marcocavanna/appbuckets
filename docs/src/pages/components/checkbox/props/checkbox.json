@@ -355,7 +355,7 @@
       ],
       "required": false,
       "type": {
-        "name": "ClickHandler<HTMLLabelElement, CheckboxProps>"
+        "name": "CheckboxChangeHandler"
       }
     },
     "onClick": {
@@ -374,7 +374,7 @@
       ],
       "required": false,
       "type": {
-        "name": "ClickHandler<HTMLLabelElement, CheckboxProps>"
+        "name": "CheckboxChangeHandler"
       }
     },
     "onUnchecked": {
@@ -393,7 +393,7 @@
       ],
       "required": false,
       "type": {
-        "name": "ClickHandler<HTMLLabelElement, CheckboxProps>"
+        "name": "CheckboxChangeHandler"
       }
     },
     "radio": {

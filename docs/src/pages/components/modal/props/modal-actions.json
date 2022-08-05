@@ -334,7 +334,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(e: MouseEvent<HTMLButtonElement, MouseEvent>, props: ButtonProps) => void"
+        "name": "ButtonClickHandler"
       }
     },
     "children": {
