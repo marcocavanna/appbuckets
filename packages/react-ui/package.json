@@ -60,7 +60,7 @@
     "clsx": "^1.2.1",
     "deepmerge": "^4.2.2",
     "kind-of": "^6.0.3",
-    "p-limit": "^4.0.0",
+    "p-limit": "3.1.0",
     "pretty-bytes": "^6.0.0",
     "rc-slider": "^10.0.1",
     "react-color": "^2.19.3",

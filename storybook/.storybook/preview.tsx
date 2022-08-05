@@ -33,7 +33,8 @@ export const parameters = {
  * Apply Default Decorators
  * -------- */
 const mockedClient = Client.getInstance<any, {}>({
-  api: { getUserData: { url: '/api/me' } }
+  initialStore: {},
+  api         : { getUserData: { url: '/api/me' } }
 });
 
 export const decorators: DecoratorFn[] = [
