@@ -52,6 +52,7 @@ const Icon: IconComponent = React.memo<IconProps>((
       rotate,
       solid,
       spin,
+      swapOpacity,
       transform,
       unspaced,
       ...rawRest
@@ -113,6 +114,7 @@ const Icon: IconComponent = React.memo<IconProps>((
         inverse={inverse}
         listItem={listItem}
         rotation={rotate}
+        swapOpacity={swapOpacity}
         transform={transform}
         onClick={handleClick}
         style={rawRest.style}

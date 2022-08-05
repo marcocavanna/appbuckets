@@ -60,6 +60,9 @@ export interface StrictIconProps {
   /** Apply `spin` animation to icon */
   spin?: boolean;
 
+  /** Swap DuoTone Opacity */
+  swapOpacity?: boolean;
+
   /** Apply Transformation */
   transform?: Transform;
 
