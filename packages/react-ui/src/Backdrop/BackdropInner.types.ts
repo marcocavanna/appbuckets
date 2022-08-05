@@ -1,7 +1,6 @@
-import * as React from 'react';
-
 import {
   FlexContentVerticalAlign,
+  MouseHandler,
   UIComponentStrictProps
 } from '../generic';
 
@@ -13,10 +12,10 @@ export interface BackdropInnerProps extends UIComponentStrictProps<StrictBackdro
 
 export interface StrictBackdropInnerProps {
   /** Handle Click Event */
-  onClick?: (event: React.MouseEvent<HTMLElement>, props: BackdropInnerProps) => void;
+  onClick?: BackdropInnerClickHandler;
 
   /** Handle Click Event occurred outside Backdrop Content, but in Backdrop Area */
-  onClickOutside?: (event: React.MouseEvent<HTMLElement>, props: BackdropInnerProps) => void;
+  onClickOutside?: BackdropInnerClickHandler;
 
   /** Callback used once the BackdropInner has completed the fade in animation */
   onEntered?: FadeProps['onEntered'];
@@ -39,3 +38,5 @@ export interface StrictBackdropInnerProps {
   /** Set the backdrop and its content as visible */
   visible?: boolean;
 }
+
+export type BackdropInnerClickHandler = MouseHandler<HTMLElement, BackdropInnerProps>;

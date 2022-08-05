@@ -1,4 +1,4 @@
-import { Merge, UIVoidComponentProps } from '../generic';
+import { Merge, UIVoidComponentProps, VoidHandler } from '../generic';
 
 import { StrictFieldProps } from '../Field';
 import { StrictItemProps } from '../Item';
@@ -24,7 +24,7 @@ export interface StrictColorPickerProps extends StrictFieldProps {
   disabled?: boolean;
 
   /** On Change Color event Handler */
-  onChange?: (nothing: null, props: ColorPickerProps) => void;
+  onChange?: ColorPickerChangeHandler;
 
   /** Handler for Picker Close event */
   onPickerClose?: () => void;
@@ -44,3 +44,5 @@ export interface StrictColorPickerProps extends StrictFieldProps {
   /** Show the Color Value */
   showColorValue?: boolean;
 }
+
+export type ColorPickerChangeHandler = VoidHandler<ColorPickerProps>;

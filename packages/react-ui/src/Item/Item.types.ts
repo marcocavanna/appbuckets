@@ -1,10 +1,9 @@
-import * as React from 'react';
-
 import { ShorthandItem, ShorthandCollection } from '@appbuckets/react-ui-core';
 
 import {
   UIMutableComponentProps,
-  AppearanceProps
+  AppearanceProps,
+  MouseHandler
 } from '../generic';
 
 import { AvatarProps } from '../Avatar';
@@ -30,7 +29,7 @@ export interface StrictItemProps extends StrictItemContentProps {
   disabled?: boolean;
 
   /** On Click event Handler */
-  onClick?: (e: React.MouseEvent<HTMLElement>, props: ItemProps) => void;
+  onClick?: ItemClickHandler;
 
   /** Put the Item into a Solid Box */
   solid?: boolean;
@@ -38,3 +37,5 @@ export interface StrictItemProps extends StrictItemContentProps {
   /** Shorthand tools */
   tools?: ShorthandCollection<ButtonProps>;
 }
+
+export type ItemClickHandler = MouseHandler<HTMLElement, ItemProps>;

@@ -289,7 +289,9 @@ export type ChangeHandler<H, P> = (e: ChangeEvent<H>, props: P) => void;
 
 export type FocusHandler<H, P> = (e: ReactFocusEvent<H>, props: P) => void;
 
-export type ClickHandler<H, P> = (e: ReactMouseEvent<H>, props: P) => void;
+export type MouseHandler<H, P> = (e: ReactMouseEvent<H>, props: P) => void;
+
+export type VoidHandler<P> = (nothing: null, props: P) => void;
 
 
 /* --------

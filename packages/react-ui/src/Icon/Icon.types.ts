@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 import type {
   IconName,
   IconPrefix,
@@ -10,7 +8,8 @@ import type {
 
 import {
   UIMutableComponentProps,
-  AppearanceProps
+  AppearanceProps,
+  MouseHandler
 } from '../generic';
 
 
@@ -41,7 +40,7 @@ export interface StrictIconProps {
   listItem?: boolean;
 
   /** Handle icon Click event */
-  onClick?: (event: React.MouseEvent<SVGSVGElement>, props: IconProps) => void;
+  onClick?: IconClickHandler;
 
   /** Apply an Icon Mask */
   mask?: IconName;
@@ -67,6 +66,8 @@ export interface StrictIconProps {
   /** Remove icon margin */
   unspaced?: boolean;
 }
+
+export type IconClickHandler = MouseHandler<SVGSVGElement, IconProps>;
 
 export type {
   FlipProp as IconFlip,

@@ -1,11 +1,10 @@
-import * as React from 'react';
-
 import { ShorthandItem } from '@appbuckets/react-ui-core';
 
 import {
   UIMutableComponentProps,
   AppBucketsIcon,
-  AppearanceProps
+  AppearanceProps,
+  MouseHandler
 } from '../generic';
 
 import { IconProps } from '../Icon';
@@ -46,5 +45,7 @@ export interface StrictMenuItemProps {
   menuIsOpen?: boolean;
 
   /** On Click Element Handler */
-  onClick?: (e: React.MouseEvent<HTMLElement>, props: MenuItemProps) => void;
+  onClick?: MenuItemClickHandler;
 }
+
+export type MenuItemClickHandler = MouseHandler<HTMLElement, MenuItemProps>;

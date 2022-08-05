@@ -66,7 +66,7 @@ export interface StrictSelectProps<Option extends SelectOption, Value = string |
   /** Focus the control when it is mounted */
   autoFocus?: boolean;
 
-  /** Remove the currently focused option when the user presses backspace */
+  /** Remove the focused option when the user presses backspace */
   backspaceRemovesValue?: boolean;
 
   /** Remove focus from the input when the user selects an option (handy for dismissing the keyboard on touch devices) */

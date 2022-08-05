@@ -1,9 +1,8 @@
-import * as React from 'react';
-
 import {
   UIMutableVoidComponentProps,
   AppearanceProps,
-  ShorthandCollection
+  ShorthandCollection,
+  MouseHandler
 } from '../generic';
 
 import { StrictFieldProps } from '../Field';
@@ -20,7 +19,7 @@ export interface StrictRadioProps extends StrictFieldProps {
   defaultValue?: string | number;
 
   /** On Change Value event */
-  onChange?: (e: React.MouseEvent<HTMLLabelElement>, props: RadioProps) => void;
+  onChange?: RadioChangeHandler;
 
   /** Options shorthand collections */
   options?: ShorthandCollection<RadioOptionProps>;
@@ -31,3 +30,5 @@ export interface StrictRadioProps extends StrictFieldProps {
   /** Set value as controlled component */
   value?: string | number;
 }
+
+export type RadioChangeHandler = MouseHandler<HTMLLabelElement, RadioProps>;

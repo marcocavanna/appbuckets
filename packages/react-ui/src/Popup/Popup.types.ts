@@ -5,7 +5,7 @@ import { PortalProps, ShorthandItem } from '@appbuckets/react-ui-core';
 import { Placement, Rect } from '@popperjs/core';
 import { Modifier, StrictModifierNames } from 'react-popper';
 
-import { UIMutableComponentProps } from '../generic';
+import { MouseHandler, UIMutableComponentProps, VoidHandler } from '../generic';
 
 import { HeaderProps } from '../Header';
 
@@ -62,16 +62,16 @@ export interface StrictPopupProps {
   offset?: PopperOffsetFunction | [ number, number ];
 
   /** On Close Handler */
-  onClose?: (event: React.MouseEvent<HTMLElement>, props: PopupProps) => void;
+  onClose?: PopupStateChangeHandler;
 
   /** On Mount Event Handler */
-  onMount?: (nothing: null, props: PopupProps) => void;
+  onMount?: PopupMountChangeHandler;
 
   /** On Open Event Handler */
-  onOpen?: (event: React.MouseEvent<HTMLElement>, props: PopupProps) => void;
+  onOpen?: PopupStateChangeHandler;
 
   /** On Unmount Event Handler */
-  onUnmount?: (nothing: null, props: PopupProps) => void;
+  onUnmount?: PopupMountChangeHandler;
 
   /** Open Triggers Event */
   openOn?: PopupOpenEvent[];
@@ -91,3 +91,7 @@ export interface StrictPopupProps {
   /** The trigger element */
   trigger?: React.ReactElement;
 }
+
+export type PopupStateChangeHandler = MouseHandler<HTMLElement, PopupProps>;
+
+export type PopupMountChangeHandler = VoidHandler<PopupProps>;

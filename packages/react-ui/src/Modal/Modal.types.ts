@@ -5,7 +5,8 @@ import { ShorthandContent, ShorthandCollection, ShorthandItem } from '@appbucket
 import {
   UIMutableComponentProps,
   AppBucketsIcon,
-  ElementSize
+  ElementSize,
+  MouseHandler
 } from '../generic';
 
 import { ButtonProps } from '../Button';
@@ -15,6 +16,7 @@ import { StrictBackdropProps } from '../Backdrop';
 
 import { ModalHeaderProps } from './ModalHeader.types';
 import { ModalContentProps } from './ModalContent.types';
+import { ModalActionClickHandler } from './ModalActions.types';
 
 
 export interface ModalProps extends UIMutableComponentProps<StrictModalProps> {
@@ -42,7 +44,7 @@ export interface StrictModalProps {
   /** Modal Content Shorthand */
   content?: ShorthandItem<ModalContentProps>;
 
-  /** Set initial open prop and let it to be auto controlled */
+  /** Set initial open prop and let it be auto controlled */
   defaultOpen?: boolean;
 
   /** Modal Header Shorthand */
@@ -61,13 +63,13 @@ export interface StrictModalProps {
   mountNode?: HTMLElement;
 
   /** When using Actions Shorthand, a global callback could be applied */
-  onActionClick?: (e: React.MouseEvent<HTMLElement>, props: ButtonProps) => void;
+  onActionClick?: ModalActionClickHandler;
 
   /** On Modal Close callback */
-  onClose?: (e: React.MouseEvent<HTMLElement>, props: ModalProps) => void;
+  onClose?: ModalStateChangeHandler;
 
   /** On Modal Open callback */
-  onOpen?: (e: React.MouseEvent<HTMLElement>, props: ModalProps) => void;
+  onOpen?: ModalStateChangeHandler;
 
   /** Control if Modal is Open or Not */
   open?: boolean;
@@ -93,3 +95,5 @@ export interface StrictModalProps {
   /** Called with a ref to the trigger node */
   triggerRef?: React.Ref<HTMLElement>;
 }
+
+export type ModalStateChangeHandler = MouseHandler<HTMLElement, ModalProps>;

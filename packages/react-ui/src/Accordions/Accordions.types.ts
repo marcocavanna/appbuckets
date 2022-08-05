@@ -35,14 +35,18 @@ export interface StrictAccordionsProps {
   iconRotation?: number;
 
   /** On Section Change Shorthand */
-  onSectionChange?: (action: 'open' | 'close', props: AccordionsProps) => void;
+  onSectionChange?: AccordionSectionChangeHandler;
 
   /** On Section Close Event */
-  onSectionClose?: (nothing: null, props: AccordionsProps) => void;
+  onSectionClose?: AccordionSectionStateChangeHandler;
 
   /** On Section Open Event */
-  onSectionOpen?: (nothing: null, props: AccordionsProps) => void;
+  onSectionOpen?: AccordionSectionStateChangeHandler;
 
   /** Accordion Sections */
   sections?: AccordionSection[];
 }
+
+export type AccordionSectionChangeHandler = (action: 'open' | 'close', props: AccordionsProps) => void;
+
+export type AccordionSectionStateChangeHandler = (nothing: null, props: AccordionsProps) => void;

@@ -1,11 +1,10 @@
-import * as React from 'react';
-
 import { ShorthandContent } from '@appbuckets/react-ui-core';
 
 import {
   UIMutableComponentProps,
   AppBucketsIcon,
-  AppearanceProps
+  AppearanceProps,
+  MouseHandler
 } from '../generic';
 
 import { IconProps } from '../Icon';
@@ -49,7 +48,7 @@ export interface StrictButtonProps {
   loading?: boolean;
 
   /** Defined onClick function */
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>, props: ButtonProps) => void;
+  onClick?: ButtonClickHandler;
 
   /** Make the Button rounded */
   rounded?: boolean;
@@ -63,3 +62,5 @@ export interface StrictButtonProps {
   /** Add a Tooltip Text, showed using basic popup */
   tooltip?: ShorthandContent;
 }
+
+export type ButtonClickHandler = MouseHandler<HTMLButtonElement, ButtonProps>;

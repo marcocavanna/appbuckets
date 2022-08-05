@@ -1,9 +1,7 @@
-import * as React from 'react';
-
 import { ShorthandItem, ShorthandCollection } from '@appbuckets/react-ui-core';
 import { UIMutableComponentProps } from '../generic';
 
-import { MenuItemProps } from './MenuItem.types';
+import { MenuItemProps, MenuItemClickHandler } from './MenuItem.types';
 
 
 export interface MenuProps extends UIMutableComponentProps<StrictMenuProps> {
@@ -26,9 +24,9 @@ export interface StrictMenuProps {
   items?: ShorthandCollection<MenuItemProps>;
 
   /** On item Click callback */
-  onItemClick?: (e: React.MouseEvent<HTMLElement>, props: MenuItemProps) => void;
+  onItemClick?: MenuItemClickHandler;
 
-  /** Display an Header over the Menu */
+  /** Display a Header over the Menu */
   section?: ShorthandItem<MenuItemProps>;
 
   /** Use tab style to render the menu */

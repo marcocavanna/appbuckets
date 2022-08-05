@@ -1,6 +1,4 @@
-import * as React from 'react';
-
-import { UIVoidComponentProps } from '../generic';
+import { MouseHandler, UIVoidComponentProps } from '../generic';
 
 import { StrictCheckboxProps } from '../Checkbox';
 
@@ -11,8 +9,10 @@ export interface RadioOptionProps extends UIVoidComponentProps<StrictRadioOption
 
 export interface StrictRadioOptionProps extends Omit<StrictCheckboxProps, 'onClick'> {
   /** On radio click event */
-  onClick?: (e: React.MouseEvent<HTMLLabelElement>, props: RadioOptionProps) => void;
+  onClick?: RadioOptionsClickHandler;
 
   /** Radio value */
   value: string | number;
 }
+
+export type RadioOptionsClickHandler = MouseHandler<HTMLLabelElement, RadioOptionProps>;

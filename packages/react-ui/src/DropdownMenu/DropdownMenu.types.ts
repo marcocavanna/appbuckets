@@ -1,13 +1,11 @@
-import * as React from 'react';
-
 import { ShorthandValue, ShorthandCollection } from '@appbuckets/react-ui-core';
 
-import { UIMutableComponentProps } from '../generic';
+import { MouseHandler, UIMutableComponentProps } from '../generic';
 
 import { ButtonProps } from '../Button';
 import { PopupOpenEvent, PopupPosition } from '../Popup';
 
-import { MenuItemProps } from '../Menu/MenuItem.types';
+import { MenuItemProps, MenuItemClickHandler } from '../Menu/MenuItem.types';
 
 
 export interface DropdownMenuProps extends UIMutableComponentProps<StrictDropdownMenuProps> {
@@ -30,13 +28,13 @@ export interface StrictDropdownMenuProps {
   items?: ShorthandCollection<MenuItemProps>;
 
   /** Handler Menu Close */
-  onClose?: (e: React.MouseEvent<HTMLElement>, props: DropdownMenuProps) => void;
+  onClose?: DropdownMenuStateChangeHandler;
 
   /** On Menu Item Click */
-  onItemClick?: (e: React.MouseEvent<HTMLElement>, props: MenuItemProps) => void;
+  onItemClick?: MenuItemClickHandler;
 
   /** Handler Menu Open */
-  onOpen?: (e: React.MouseEvent<HTMLElement>, props: DropdownMenuProps) => void;
+  onOpen?: DropdownMenuStateChangeHandler;
 
   /** Control open state */
   open?: boolean;
@@ -50,3 +48,5 @@ export interface StrictDropdownMenuProps {
   /** Trigger Element */
   trigger?: ShorthandValue<ButtonProps>;
 }
+
+export type DropdownMenuStateChangeHandler = MouseHandler<HTMLElement, DropdownMenuProps>;

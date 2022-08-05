@@ -26,11 +26,11 @@ export interface StrictFadeProps extends TransitionUtilsProps, TransitionHandler
    * `<Transition>` component mounts. If you want to transition on the first
    * mount set  appear to true, and the component will transition in as soon
    * as the `<Transition>` mounts. Note: there are no specific "appear" states.
-   * appear only adds an additional enter transition.
+   * appear only adds an enter transition.
    */
   appear?: boolean;
 
-  /** Children is limited to one element only */
+  /** Children are limited to one element only */
   children?: React.ReactElement & React.RefAttributes<any>;
 
   /** Mount component on enter */

@@ -1,11 +1,10 @@
-import * as React from 'react';
-
 import { ShorthandContent, ShorthandItem } from '@appbuckets/react-ui-core';
 
 import {
   UIMutableComponentProps,
   AppBucketsIcon,
-  AppearanceProps
+  AppearanceProps,
+  MouseHandler
 } from '../generic';
 
 import { BadgeProps } from '../Badge';
@@ -33,7 +32,7 @@ export interface StrictAvatarProps {
   icon?: AppBucketsIcon<IconProps>;
 
   /** On Click Event Handler */
-  onClick?: (e: React.MouseEvent<HTMLElement>, props: AvatarProps) => void;
+  onClick?: AvatarClickHandler;
 
   /** Set avatar tooltip */
   tooltip?: ShorthandContent;
@@ -41,3 +40,5 @@ export interface StrictAvatarProps {
   /** Avatar type */
   type?: 'round' | 'square' | 'flex';
 }
+
+export type AvatarClickHandler = MouseHandler<HTMLElement, AvatarProps>;

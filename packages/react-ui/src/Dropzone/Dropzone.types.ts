@@ -77,16 +77,16 @@ export interface StrictDropzoneProps {
   on?: ('click' | 'drop')[];
 
   /** Fired every time file changed */
-  onChange?: (files: DropzoneFile[], rejectedFiles: FileRejection[]) => void;
+  onChange?: DropzoneChangeHandler;
 
   /** On file read error handler */
   onFilesReadError?: (error: Error) => void;
 
   /** On Files Upload */
-  onUpload?: (filesToUpload: DropzoneFile[], helpers: DropzoneHelpers) => Promise<void>;
+  onUpload?: DropzoneUploadHandler;
 
   /** On Upload Ended handler */
-  onUploadEnd?: (uploadedFiles: DropzoneFile[]) => void;
+  onUploadEnd?: DropzoneUploadEndHandler;
 
   /** On Upload Error */
   onUploadError?: (error: any) => void;
@@ -107,6 +107,12 @@ export interface StrictDropzoneProps {
   withoutUploadController?: boolean;
 }
 
+export type DropzoneChangeHandler = (files: DropzoneFile[], rejectedFiles: FileRejection[]) => void;
+
+export type DropzoneUploadHandler = (filesToUpload: DropzoneFile[], helpers: DropzoneHelpers) => Promise<void>;
+
+export type DropzoneUploadEndHandler = (uploadedFiles: DropzoneFile[]) => void;
+
 export interface DropzoneHelpers {
   /** Remove file from the list */
   removeFiles: (files: DropzoneFile[]) => void;
@@ -119,7 +125,7 @@ export interface DropzoneFileState {
   /** File upload error */
   error: boolean;
 
-  /** Is currently uploading */
+  /** Is uploading */
   isUploading: boolean;
 
   /** File upload success */

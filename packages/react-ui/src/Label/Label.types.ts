@@ -1,11 +1,10 @@
-import * as React from 'react';
-
 import { ShorthandItem } from '@appbuckets/react-ui-core';
 
 import {
   UIMutableComponentProps,
   AppBucketsIcon,
-  AppearanceProps
+  AppearanceProps,
+  MouseHandler
 } from '../generic';
 
 import { IconProps } from '../Icon';
@@ -23,11 +22,15 @@ export interface StrictLabelProps {
   icon?: AppBucketsIcon<IconProps>;
 
   /** On click Handler */
-  onClick?: (e: React.MouseEvent<HTMLElement>, props: LabelProps) => void;
+  onClick?: LabelClickHandler;
 
   /** On label remove handler */
-  onRemove?: (e: React.MouseEvent<HTMLButtonElement>, props: LabelProps) => void;
+  onRemove?: LabelRemoveHandler;
 
   /** Set the label as removable */
   removable?: boolean | ShorthandItem<ButtonProps>;
 }
+
+export type LabelClickHandler = MouseHandler<HTMLElement, LabelProps>;
+
+export type LabelRemoveHandler = MouseHandler<HTMLButtonElement, LabelProps>;

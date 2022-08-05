@@ -4,11 +4,11 @@ import { ShorthandItem } from '@appbuckets/react-ui-core';
 
 import { DayPickerProps as ReactDayPickerProps } from 'react-day-picker';
 
-import { UIVoidComponentProps } from '../generic';
+import { UIVoidComponentProps, VoidHandler } from '../generic';
 
 import { ButtonProps } from '../Button';
 import { FieldProps } from '../Field';
-import { InputProps } from '../Input';
+import { InputChangeHandler } from '../Input';
 
 
 export type ParsableDate = null | string | number | Date;
@@ -40,25 +40,25 @@ export interface StrictDayPickerProps<DateType> extends ReactDayPickerProps, Fie
   disabled?: boolean;
 
   /** Custom format function to show date */
-  format?: (date: Date) => string;
+  format?: DayPickerFormatter;
 
   /** On calendar close event handler */
-  onCalendarClose?: (nothing: null, props: DayPickerProps) => void;
+  onCalendarClose?: DayPickerChangeHandler;
 
   /** On calendar open event handler */
-  onCalendarOpen?: (nothing: null, props: DayPickerProps) => void;
+  onCalendarOpen?: DayPickerChangeHandler;
 
   /** On day change event handler */
-  onDayChange?: (nothing: null, props: DayPickerProps) => void;
+  onDayChange?: DayPickerChangeHandler;
 
   /** On input value change handler */
-  onInputChange?: (e: React.FormEvent<HTMLInputElement>, props: InputProps) => void;
+  onInputChange?: InputChangeHandler;
 
   /** Control the open props */
   open?: boolean;
 
   /** Custom parse function to transform any value into a date */
-  parse?: (date: Exclude<ParsableDate, null>) => Date | null;
+  parse?: DayPickerParser;
 
   /** Show input mask */
   showInputMask?: boolean;
@@ -75,3 +75,9 @@ export interface StrictDayPickerProps<DateType> extends ReactDayPickerProps, Fie
   /** Set the type of the DayPicker */
   type?: 'input' | 'modal';
 }
+
+export type DayPickerChangeHandler = VoidHandler<DayPickerProps>;
+
+export type DayPickerFormatter = (date: Date) => string;
+
+export type DayPickerParser = (date: Exclude<ParsableDate, null>) => Date | null;

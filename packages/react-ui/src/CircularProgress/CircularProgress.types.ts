@@ -26,7 +26,7 @@ export interface StrictCircularProgressProps extends StrictSharedProgressProps {
 
   /**
    * Set the base Circle Stroke
-   * this value will be used as a base and blended with size if present-
+   * this value will be used as a base and blended with size if present.
    * Default to 9
    */
   strokeWidth?: number;

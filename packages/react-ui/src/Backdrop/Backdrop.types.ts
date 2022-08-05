@@ -1,7 +1,6 @@
-import * as React from 'react';
 import { PortalProps } from '@appbuckets/react-ui-core';
 
-import { UIComponentStrictProps } from '../generic';
+import { MouseHandler, UIComponentStrictProps, VoidHandler } from '../generic';
 
 import { LoaderProps } from '../Loader';
 
@@ -31,17 +30,21 @@ export interface StrictBackdropProps extends Pick<PortalProps, BackdropPortalPro
   loaderProps?: LoaderProps;
 
   /** Callback fired on Backdrop try to close */
-  onClose?: (e: React.MouseEvent<HTMLElement>, props: BackdropProps) => void;
+  onClose?: BackdropStateChangeHandler;
 
   /** Callback fired on Backdrop Mount */
-  onMount?: (nothing: null, props: BackdropProps) => void;
+  onMount?: BackdropMountChangeHandler;
 
   /** Callback fired on Backdrop try to open */
-  onOpen?: (e: React.MouseEvent<HTMLElement>, props: BackdropProps) => void;
+  onOpen?: BackdropStateChangeHandler;
 
   /** Callback fired on Backdrop Unmount */
-  onUnmount?: (nothing: null, props: BackdropProps) => void;
+  onUnmount?: BackdropMountChangeHandler;
 
   /** Set the backdrop as full page */
   page?: boolean;
 }
+
+export type BackdropStateChangeHandler = MouseHandler<HTMLElement, BackdropProps>;
+
+export type BackdropMountChangeHandler = VoidHandler<BackdropProps>;

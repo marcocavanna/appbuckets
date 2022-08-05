@@ -1,11 +1,10 @@
-import * as React from 'react';
-
 import { ShorthandItem } from '@appbuckets/react-ui-core';
 
 import {
   UIMutableComponentProps,
   AppBucketsIcon,
-  AppearanceProps
+  AppearanceProps,
+  MouseHandler
 } from '../generic';
 
 import { HeaderContentProps, HeaderSubheaderProps } from '../Header';
@@ -32,7 +31,7 @@ export interface StrictHeroButtonProps {
   icon?: AppBucketsIcon<IconProps>;
 
   /** On Click Handler */
-  onClick?: (event: React.MouseEvent, props: HeroButtonProps) => void;
+  onClick?: HeroButtonClickHandler;
 
   /** Button Subheader */
   subheader?: ShorthandItem<HeaderSubheaderProps>;
@@ -40,3 +39,5 @@ export interface StrictHeroButtonProps {
   /** A variation index number to change appearance, useful when using inside a map */
   variation?: number;
 }
+
+export type HeroButtonClickHandler = MouseHandler<HTMLElement, HeroButtonProps>;

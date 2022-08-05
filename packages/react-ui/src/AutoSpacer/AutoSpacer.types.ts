@@ -33,7 +33,7 @@ export interface AutoSpacerProps {
   /** Disable re render on height change */
   disableHeight?: boolean;
 
-  /** Disable re render on width change */
+  /** Disable re-render on width change */
   disableWidth?: boolean;
 
   /** Set maximum height */
@@ -49,10 +49,10 @@ export interface AutoSpacerProps {
   minimumWidth?: number;
 
   /** On Resized event Callback */
-  onResize?: (size: AutoSpacerRenderProps) => void;
+  onResize?: AutoSpacerResizeHandler;
 
   /**
-   * By default the AutoSpacer won't render children
+   * By default, the AutoSpacer won't render children
    * if one of height or width is equal to 0.
    * To avoid this prop could be set to true
    */
@@ -67,3 +67,5 @@ export interface AutoSpacerProps {
   /** Subtract from computed Width */
   subtractWidth?: number;
 }
+
+export type AutoSpacerResizeHandler = (size: AutoSpacerRenderProps) => void;

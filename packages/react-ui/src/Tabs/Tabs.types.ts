@@ -1,8 +1,7 @@
-import * as React from 'react';
-
 import { ShorthandItem } from '@appbuckets/react-ui-core';
 
 import {
+  MouseHandler,
   UIMutableVoidComponentProps,
   ResponsiveContentWidth
 } from '../generic';
@@ -32,7 +31,7 @@ export interface StrictTabsProps {
   menu?: MenuProps;
 
   /** On Tab Change handler */
-  onTabChange?: (e: React.MouseEvent<HTMLElement>, props: TabsProps) => void;
+  onTabChange?: TabsChangeHandler;
 
   /** Panels shorthand */
   panels?: TabPanelsShorthand[];
@@ -43,3 +42,5 @@ export interface StrictTabsProps {
   /** Render tab with vertical menu */
   vertical?: boolean;
 }
+
+export type TabsChangeHandler = MouseHandler<HTMLElement, TabsProps>;

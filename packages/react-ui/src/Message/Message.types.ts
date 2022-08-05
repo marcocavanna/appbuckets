@@ -1,11 +1,10 @@
-import * as React from 'react';
-
 import { ShorthandItem } from '@appbuckets/react-ui-core';
 
 import {
   UIMutableComponentProps,
   AppBucketsIcon,
-  AppearanceProps
+  AppearanceProps,
+  MouseHandler
 } from '../generic';
 
 import { HeaderContentProps, HeaderSubheaderProps } from '../Header';
@@ -26,5 +25,7 @@ export interface StrictMessageProps {
   icon?: AppBucketsIcon<IconProps>;
 
   /** Message could be dismissed, this callback will be fired on dismiss icon click */
-  onDismiss?: (e: React.MouseEvent<SVGSVGElement>, props: MessageProps) => void;
+  onDismiss?: MessageDismissHandler;
 }
+
+export type MessageDismissHandler = MouseHandler<SVGSVGElement, MessageProps>;

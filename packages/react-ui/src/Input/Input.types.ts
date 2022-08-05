@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Props as InputMaskProps } from 'react-input-mask';
 import { TextareaAutosizeProps } from 'react-textarea-autosize';
 
-import { ChangeHandler, ClickHandler, FocusHandler, UIVoidComponentProps } from '../generic';
+import { ChangeHandler, MouseHandler, FocusHandler, UIVoidComponentProps } from '../generic';
 
 import { StrictFieldProps } from '../Field';
 
@@ -19,16 +19,16 @@ export interface StrictInputProps extends StrictFieldProps {
   masked?: Pick<InputMaskProps, 'mask' | 'alwaysShowMask'> & { maskChar: string };
 
   /** On Blur Event */
-  onBlur?: FocusHandler<HTMLInputElement, InputProps>;
+  onBlur?: InputFocusHandler;
 
   /** On Change Event */
-  onChange?: ChangeHandler<HTMLInputElement, InputProps>;
+  onChange?: InputChangeHandler;
 
   /** On Click Event */
-  onClick?: ClickHandler<HTMLInputElement, InputProps>;
+  onClick?: InputClickHandler;
 
   /** On Focus Event */
-  onFocus?: FocusHandler<HTMLInputElement, InputProps>;
+  onFocus?: InputFocusHandler;
 
   /** Ref to Input */
   ref?: React.Ref<HTMLInputElement>;
@@ -45,3 +45,9 @@ export interface StrictInputProps extends StrictFieldProps {
   /** Limit value to string only */
   value?: string;
 }
+
+export type InputFocusHandler = FocusHandler<HTMLInputElement, InputProps>;
+
+export type InputChangeHandler = ChangeHandler<HTMLInputElement, InputProps>;
+
+export type InputClickHandler = MouseHandler<HTMLInputElement, InputProps>;

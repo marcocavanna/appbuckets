@@ -3,6 +3,7 @@ import * as React from 'react';
 import { ShorthandItem, ShorthandContent } from '@appbuckets/react-ui-core';
 
 import {
+  MouseHandler,
   UIMutableComponentProps,
   AppBucketsIcon,
   AppearanceProps
@@ -35,5 +36,7 @@ export interface StrictToastProps {
   icon?: AppBucketsIcon<IconProps>;
 
   /** On Click Callback */
-  onClick?: (e: React.MouseEvent<HTMLElement>, props: ToastProps) => void;
+  onClick?: ToastClickHandler;
 }
+
+export type ToastClickHandler = MouseHandler<HTMLElement, ToastProps>;

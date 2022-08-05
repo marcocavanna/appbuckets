@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ClickHandler, UIVoidComponentProps } from '../generic';
+import { MouseHandler, UIVoidComponentProps } from '../generic';
 
 import { StrictFieldProps } from '../Field';
 
@@ -20,13 +20,13 @@ export interface StrictCheckboxProps extends Omit<StrictFieldProps, 'actions' | 
   indeterminate?: boolean;
 
   /** On Checked Event */
-  onChecked?: ClickHandler<HTMLLabelElement, CheckboxProps>;
+  onChecked?: CheckboxChangeHandler;
 
   /** On Click Handler */
-  onClick?: ClickHandler<HTMLLabelElement, CheckboxProps>;
+  onClick?: CheckboxChangeHandler;
 
   /** On Unchecked Event */
-  onUnchecked?: ClickHandler<HTMLLabelElement, CheckboxProps>;
+  onUnchecked?: CheckboxChangeHandler;
 
   /** Format the Checkbox as a Radio Button */
   radio?: boolean;
@@ -37,3 +37,5 @@ export interface StrictCheckboxProps extends Omit<StrictFieldProps, 'actions' | 
   /** Format the Checkbox as a Switch */
   switch?: boolean;
 }
+
+export type CheckboxChangeHandler = MouseHandler<HTMLLabelElement, CheckboxProps>;

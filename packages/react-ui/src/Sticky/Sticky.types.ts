@@ -21,7 +21,7 @@ export interface StrictStickyProps {
   disableHardwareAcceleration?: boolean;
 
   /** On sticky state change handler */
-  onStickyStateChange?: (isSticky: boolean) => void;
+  onStickyStateChange?: StickyStateChangeHandler;
 
   /** User defined style */
   style?: React.CSSProperties;
@@ -29,3 +29,5 @@ export interface StrictStickyProps {
   /** Set the top offset */
   topOffset?: number;
 }
+
+export type StickyStateChangeHandler = (isSticky: boolean) => void;

@@ -4,7 +4,8 @@ import { IFormatNumberConfig } from '@appbuckets/formatters';
 
 import {
   UIComponentProps,
-  FocusHandler
+  FocusHandler,
+  VoidHandler
 } from '../generic';
 
 import { StrictFieldProps } from '../Field';
@@ -27,13 +28,13 @@ export interface StrictNumericInputProps extends StrictFieldProps, IFormatNumber
   min?: number;
 
   /** On Blur Event */
-  onBlur?: FocusHandler<HTMLInputElement, NumericInputProps>;
+  onBlur?: NumericInputFocusHandler;
 
   /** On Change Event */
-  onChange?: (nothing: null, props: NumericInputProps) => void;
+  onChange?: NumericInputChangeHandler;
 
   /** On Focus Event */
-  onFocus?: FocusHandler<HTMLInputElement, NumericInputProps>;
+  onFocus?: NumericInputFocusHandler;
 
   /** Ref to Input element */
   ref?: React.Ref<HTMLInputElement>;
@@ -44,3 +45,7 @@ export interface StrictNumericInputProps extends StrictFieldProps, IFormatNumber
   /** Set the input value */
   value?: number | null;
 }
+
+export type NumericInputFocusHandler = FocusHandler<HTMLInputElement, NumericInputProps>;
+
+export type NumericInputChangeHandler = VoidHandler<NumericInputProps>;

@@ -6,7 +6,7 @@ import { UIComponentProps } from '../generic';
 export interface CollapsableState {
   collapse: 'collapsed' | 'collapsing' | 'expanding' | 'expanded';
 
-  style: React.CSSProperties
+  style: React.CSSProperties;
 }
 
 export interface CollapsableProps extends UIComponentProps<StrictCollapsableProps> {
@@ -23,13 +23,13 @@ export interface StrictCollapsableProps {
   disabled?: boolean;
 
   /** On Change Event */
-  onChange?: (state: CollapsableState) => void;
+  onChange?: CollapseStateChangeHandler;
 
   /** On Close Change Event */
-  onClose?: (state: CollapsableState) => void;
+  onClose?: CollapseStateChangeHandler;
 
   /** On Open Change Event */
-  onOpen?: (state: CollapsableState) => void;
+  onOpen?: CollapseStateChangeHandler;
 
   /** Manual Control Open State */
   open?: boolean;
@@ -43,3 +43,5 @@ export interface StrictCollapsableProps {
   /** The trigger Ref */
   triggerRef?: React.MutableRefObject<HTMLElement>;
 }
+
+export type CollapseStateChangeHandler = (state: CollapsableState) => void;
