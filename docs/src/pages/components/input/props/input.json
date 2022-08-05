@@ -1,6 +1,7 @@
 {
   "filename": "packages/react-ui/src/Input/Input.tsx",
   "tags": {},
+  "filePath": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui/src/Input/Input.tsx",
   "description": "",
   "displayName": "Input",
   "props": {
@@ -156,11 +157,7 @@
           "name": "ComponentDisplayProps"
         },
         {
-          "fileName": "react-ui/src/generic.ts",
-          "name": "ComponentDisplayProps"
-        },
-        {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "InputHTMLAttributes"
         }
       ],
@@ -643,7 +640,7 @@
     },
     "hint": {
       "defaultValue": null,
-      "description": "An hint, appended after field content",
+      "description": "Field hint, appended after field content",
       "name": "hint",
       "parent": {
         "fileName": "react-ui/src/Field/Field.types.ts",
@@ -1072,7 +1069,7 @@
           "name": "CoreUIVoidComponentProps"
         },
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "HTMLAttributes"
         }
       ],

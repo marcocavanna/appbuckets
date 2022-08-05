@@ -7,7 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import {
   useSharedClassName,
@@ -33,7 +33,7 @@ type TableCellChildren = {
 /* --------
  * Component Render
  * -------- */
-const TableCell: Creatable<UIMutableComponent<TableCellProps>> & TableCellChildren = (
+const TableCell: Creatable<React.FunctionComponent<TableCellProps>> & TableCellChildren = (
   receivedProps
 ) => {
 

@@ -1,6 +1,7 @@
 {
   "filename": "packages/react-ui/src/Label/LabelGroup.tsx",
   "tags": {},
+  "filePath": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui/src/Label/LabelGroup.tsx",
   "description": "",
   "displayName": "LabelGroup",
   "props": {
@@ -331,11 +332,11 @@
           "name": "CoreUIComponentProps"
         },
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "DOMAttributes"
         },
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "TypeLiteral"
         }
       ],
@@ -377,7 +378,7 @@
           "name": "CoreUIVoidComponentProps"
         },
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "HTMLAttributes"
         }
       ],

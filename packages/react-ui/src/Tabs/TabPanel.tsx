@@ -7,7 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -19,7 +19,7 @@ import { TabPanelProps } from './TabPanel.types';
 /* --------
  * Component Render
  * -------- */
-const TabPanel: Creatable<UIMutableComponent<TabPanelProps>> = (receivedProps) => {
+const TabPanel: Creatable<React.FunctionComponent<TabPanelProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('tabPanel', receivedProps);
 

@@ -1,6 +1,7 @@
 {
   "filename": "packages/react-ui/src/Radio/Radio.tsx",
   "tags": {},
+  "filePath": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui/src/Radio/Radio.tsx",
   "description": "",
   "displayName": "Radio",
   "props": {
@@ -495,7 +496,7 @@
       "required": false,
       "type": {
         "name": "enum",
-        "raw": "\"input\" | \"switch\" | \"color\" | \"radio\" | \"select input\" | \"checkbox\" | \"slider\"",
+        "raw": "\"input\" | \"switch\" | \"color\" | \"select input\" | \"checkbox\" | \"radio\" | \"slider\"",
         "value": [
           {
             "value": "\"input\""
@@ -507,13 +508,13 @@
             "value": "\"color\""
           },
           {
-            "value": "\"radio\""
-          },
-          {
             "value": "\"select input\""
           },
           {
             "value": "\"checkbox\""
+          },
+          {
+            "value": "\"radio\""
           },
           {
             "value": "\"slider\""
@@ -542,7 +543,7 @@
     },
     "hint": {
       "defaultValue": null,
-      "description": "An hint, appended after field content",
+      "description": "Field hint, appended after field content",
       "name": "hint",
       "parent": {
         "fileName": "react-ui/src/Field/Field.types.ts",
@@ -971,7 +972,7 @@
           "name": "CoreUIComponentProps"
         },
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "DOMAttributes"
         }
       ],
@@ -1013,7 +1014,7 @@
           "name": "CoreUIVoidComponentProps"
         },
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "HTMLAttributes"
         }
       ],

@@ -1,6 +1,7 @@
 {
   "filename": "packages/react-ui/src/Item/ItemTools.tsx",
   "tags": {},
+  "filePath": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui/src/Item/ItemTools.tsx",
   "description": "",
   "displayName": "ItemTools",
   "props": {
@@ -312,7 +313,7 @@
           "name": "StrictItemToolsProps"
         },
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "TypeLiteral"
         }
       ],
@@ -392,7 +393,7 @@
           "name": "CoreUIVoidComponentProps"
         },
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "HTMLAttributes"
         }
       ],

@@ -73,8 +73,6 @@
 import {
   ReactNode,
   ElementType,
-  FunctionComponent,
-  VoidFunctionComponent,
   ChangeEvent,
   FocusEvent as ReactFocusEvent,
   MouseEvent as ReactMouseEvent,
@@ -135,22 +133,6 @@ export type AppBucketsIcon<T> = IconName | T;
 export type Creatable<C extends keyof JSX.IntrinsicElements | JSXElementConstructor<any>> =
   & C
   & { create: CreateFunction<ComponentProps<C>> };
-
-
-/* --------
- * Component Type
- * -------- */
-export type UIMutableComponent<P extends {}, E extends keyof JSX.IntrinsicElements = 'div'> =
-  FunctionComponent<UIMutableComponentProps<P, E>>;
-
-export type UIMutableVoidComponent<P extends {}, E extends keyof JSX.IntrinsicElements = 'div'> =
-  VoidFunctionComponent<UIMutableVoidComponentProps<P, E>>;
-
-export type UIComponent<P extends {}, E extends keyof JSX.IntrinsicElements = 'div'> =
-  FunctionComponent<UIComponentProps<P, E>>;
-
-export type UIVoidComponent<P extends {}, E extends keyof JSX.IntrinsicElements = 'div'> =
-  VoidFunctionComponent<UIComponentProps<P, E>>;
 
 
 /* --------
@@ -279,7 +261,7 @@ export interface FlexboxContainerProps {
   /** Set content vertical disposition */
   verticalAlign?: ResponsiveProps<FlexContentVerticalAlign>;
 
-  /** Set if must avoid gutter between columns */
+  /** Set if it must avoid gutter between columns */
   withoutGap?: ResponsiveProps<boolean>;
 }
 

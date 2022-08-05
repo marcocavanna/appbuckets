@@ -6,8 +6,6 @@ import { useAutoControlledValue, useForkRef } from '@appbuckets/react-ui-core';
 import ReactInputMask from 'react-input-mask';
 import TextareaAutosize from 'react-textarea-autosize';
 
-import { UIVoidComponent } from '../generic';
-
 import { useSharedClassName, useSplitStateClassName } from '../utils';
 
 import { useTabIndex } from '../hooks/useTabIndex';
@@ -22,7 +20,7 @@ import { InputProps } from './Input.types';
 /* --------
  * Component Render
  * -------- */
-const Input: UIVoidComponent<InputProps> = React.forwardRef<HTMLInputElement, InputProps>((
+const Input: React.VoidFunctionComponent<InputProps> = React.forwardRef<HTMLInputElement, InputProps>((
   receivedProps, ref
 ) => {
 

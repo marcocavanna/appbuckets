@@ -7,7 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -19,7 +19,7 @@ import { ContainerProps } from './Container.types';
 /* --------
  * Component Render
  * -------- */
-const Container: Creatable<UIMutableComponent<ContainerProps>> = (receivedProps) => {
+const Container: Creatable<React.FunctionComponent<ContainerProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('container', receivedProps);
 

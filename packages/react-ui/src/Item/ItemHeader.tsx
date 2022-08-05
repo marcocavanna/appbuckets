@@ -7,10 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import {
-  Creatable,
-  UIMutableComponent
-} from '../generic';
+import { Creatable } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -22,7 +19,7 @@ import { ItemHeaderProps } from './ItemHeader.types';
 /* --------
  * Component Render
  * -------- */
-const ItemHeader: Creatable<UIMutableComponent<ItemHeaderProps>> = (receivedProps) => {
+const ItemHeader: Creatable<React.FunctionComponent<ItemHeaderProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('itemHeader', receivedProps);
 

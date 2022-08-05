@@ -9,7 +9,7 @@ import {
   useAutoControlledValue
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -31,7 +31,7 @@ function nextFrame(callback: FrameRequestCallback): void {
 /* --------
  * Component Render
  * -------- */
-const Collapsable: Creatable<UIComponent<CollapsableProps>> = (
+const Collapsable: Creatable<React.FunctionComponent<CollapsableProps>> = (
   receivedProps
 ) => {
 

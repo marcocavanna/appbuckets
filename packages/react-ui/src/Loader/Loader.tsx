@@ -7,7 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import {
   useSharedClassName,
@@ -22,7 +22,7 @@ import { LoaderProps } from './Loader.types';
 /* --------
  * Component Render
  * -------- */
-const Loader: Creatable<UIMutableComponent<LoaderProps>> = (receivedProps) => {
+const Loader: Creatable<React.FunctionComponent<LoaderProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('loader', receivedProps);
 

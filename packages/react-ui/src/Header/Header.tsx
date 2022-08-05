@@ -7,7 +7,7 @@ import {
   getElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { getSharedClassNames, useSplitStateClassName } from '../utils';
 
@@ -34,7 +34,7 @@ export type HeaderChildren = {
 /* --------
  * Component Render
  * -------- */
-const Header: Creatable<UIMutableComponent<HeaderProps>> & HeaderChildren = (
+const Header: Creatable<React.FunctionComponent<HeaderProps>> & HeaderChildren = (
   receivedProps
 ) => {
 

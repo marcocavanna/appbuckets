@@ -8,7 +8,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -23,7 +23,7 @@ import { ItemToolsProps } from './ItemTools.types';
 /* --------
  * Component Render
  * -------- */
-const ItemTools: Creatable<UIMutableComponent<ItemToolsProps>> = (receivedProps) => {
+const ItemTools: Creatable<React.FunctionComponent<ItemToolsProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('itemTools', receivedProps);
 

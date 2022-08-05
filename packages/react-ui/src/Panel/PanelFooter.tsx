@@ -7,7 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -19,7 +19,7 @@ import { PanelFooterProps } from './PanelFooter.types';
 /* --------
  * Component Render
  * -------- */
-const PanelFooter: Creatable<UIMutableComponent<PanelFooterProps>> = (receivedProps) => {
+const PanelFooter: Creatable<React.FunctionComponent<PanelFooterProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('panelFooter', receivedProps);
 

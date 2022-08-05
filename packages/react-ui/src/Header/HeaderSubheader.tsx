@@ -7,7 +7,7 @@ import {
   childrenUtils
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { getSharedClassNames } from '../utils';
 
@@ -19,7 +19,7 @@ import { HeaderSubheaderProps } from './HeaderSubheader.types';
 /* --------
  * Component Render
  * -------- */
-const HeaderSubheader: Creatable<UIMutableComponent<HeaderSubheaderProps>> = (
+const HeaderSubheader: Creatable<React.FunctionComponent<HeaderSubheaderProps>> = (
   receivedProps
 ) => {
 

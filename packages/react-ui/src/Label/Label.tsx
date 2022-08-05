@@ -7,7 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import {
   useSharedClassName,
@@ -34,7 +34,7 @@ export type LabelChildren = {
 /* --------
  * Component Render
  * -------- */
-const Label: Creatable<UIMutableComponent<LabelProps>> & LabelChildren = (
+const Label: Creatable<React.FunctionComponent<LabelProps>> & LabelChildren = (
   receivedProps
 ) => {
 

@@ -8,7 +8,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -18,8 +18,7 @@ import { ButtonGroupProps } from './ButtonGroup.types';
 
 import { ButtonProps } from './Button.types';
 
-// eslint-disable-next-line import/no-named-default
-import type { default as ButtonComponent } from './Button';
+import type ButtonComponent from './Button';
 
 
 /* --------
@@ -35,7 +34,7 @@ import('./Button').then(({ default: buttonComponent }) => {
 /* --------
  * Component Render
  * -------- */
-const ButtonGroup: Creatable<UIMutableComponent<ButtonGroupProps>> = (receivedProps) => {
+const ButtonGroup: Creatable<React.FunctionComponent<ButtonGroupProps>> = (receivedProps) => {
 
   /** Get component props */
   const props = useWithDefaultProps('buttonGroup', receivedProps);

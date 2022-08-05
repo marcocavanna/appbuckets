@@ -6,7 +6,7 @@ import {
   childrenUtils
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import {
   useSharedClassName,
@@ -213,8 +213,8 @@ const FieldRender: FieldRenderFunction = (
   );
 };
 
-const Field: Creatable<UIComponent<FieldProps>> = (
-  React.forwardRef(FieldRender) as unknown as Creatable<UIComponent<FieldProps>>
+const Field: Creatable<React.FunctionComponent<FieldProps>> = (
+  React.forwardRef(FieldRender) as unknown as Creatable<React.FunctionComponent<FieldProps>>
 );
 
 Field.defaultProps = {

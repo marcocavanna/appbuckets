@@ -6,8 +6,6 @@ import { useAutoControlledValue } from '@appbuckets/react-ui-core';
 import { DayModifiers } from 'react-day-picker';
 import ReactDayPicker from 'react-day-picker/DayPicker';
 
-import { UIVoidComponent } from '../generic';
-
 import {
   splitFieldProps,
   useSharedClassName,
@@ -29,7 +27,7 @@ import { DayPickerProps, ParsableDate } from './DayPicker.types';
 /* --------
  * Component Render
  * -------- */
-const DayPicker: UIVoidComponent<DayPickerProps> = (receivedProps) => {
+const DayPicker: React.VoidFunctionComponent<DayPickerProps> = (receivedProps) => {
 
   /** Get component default props */
   const props = useWithDefaultProps('dayPicker', receivedProps);

@@ -1,6 +1,7 @@
 {
   "filename": "packages/react-ui/src/Row/Row.tsx",
   "tags": {},
+  "filePath": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui/src/Row/Row.tsx",
   "description": "",
   "displayName": "Row",
   "props": {
@@ -357,7 +358,7 @@
     },
     "withoutGap": {
       "defaultValue": null,
-      "description": "Set if must avoid gutter between columns",
+      "description": "Set if it must avoid gutter between columns",
       "name": "withoutGap",
       "parent": {
         "fileName": "react-ui/src/generic.ts",
@@ -388,11 +389,11 @@
           "name": "CoreUIComponentProps"
         },
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "DOMAttributes"
         },
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "TypeLiteral"
         }
       ],
@@ -434,7 +435,7 @@
           "name": "CoreUIVoidComponentProps"
         },
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "HTMLAttributes"
         }
       ],

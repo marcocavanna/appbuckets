@@ -7,7 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import {
   useSharedClassName,
@@ -38,7 +38,7 @@ export type ItemChildren = {
 /* --------
  * Component Render
  * -------- */
-const Item: Creatable<UIMutableComponent<ItemProps>> & ItemChildren = (
+const Item: Creatable<React.FunctionComponent<ItemProps>> & ItemChildren = (
   receivedProps
 ) => {
 

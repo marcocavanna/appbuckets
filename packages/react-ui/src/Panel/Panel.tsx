@@ -7,7 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import {
   useSharedClassName,
@@ -37,7 +37,7 @@ type PanelChildren = {
 /* --------
  * Component Render
  * -------- */
-const Panel: Creatable<UIMutableComponent<PanelProps>> & PanelChildren = (receivedProps) => {
+const Panel: Creatable<React.FunctionComponent<PanelProps>> & PanelChildren = (receivedProps) => {
 
   const props = useWithDefaultProps('panel', receivedProps);
 

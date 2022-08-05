@@ -7,14 +7,11 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { UIMutableComponent } from '../generic';
-
 import { useSharedClassName } from '../utils';
 
 import { useWithDefaultProps } from '../BucketTheme';
 
-// eslint-disable-next-line import/no-named-default
-import type { default as ItemComponent } from './Item';
+import type ItemComponent from './Item';
 import { ItemProps } from './Item.types';
 
 import { ItemGroupProps } from './ItemGroup.types';
@@ -33,7 +30,7 @@ import('./Item').then(({ default: itemComponent }) => {
 /* --------
  * Component Render
  * -------- */
-const ItemGroup: UIMutableComponent<ItemGroupProps> = (receivedProps) => {
+const ItemGroup: React.FunctionComponent<ItemGroupProps> = (receivedProps) => {
 
   const props = useWithDefaultProps('itemGroup', receivedProps);
 

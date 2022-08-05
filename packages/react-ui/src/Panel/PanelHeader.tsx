@@ -7,7 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -21,7 +21,7 @@ import { PanelHeaderProps } from './PanelHeader.types';
 /* --------
  * Component Render
  * -------- */
-const PanelHeader: Creatable<UIMutableComponent<PanelHeaderProps>> = (receivedProps) => {
+const PanelHeader: Creatable<React.FunctionComponent<PanelHeaderProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('panelHeader', receivedProps);
 

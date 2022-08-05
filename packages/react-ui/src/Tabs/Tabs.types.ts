@@ -3,7 +3,7 @@ import * as React from 'react';
 import { ShorthandItem } from '@appbuckets/react-ui-core';
 
 import {
-  UIMutableComponentProps,
+  UIMutableVoidComponentProps,
   ResponsiveContentWidth
 } from '../generic';
 
@@ -15,15 +15,12 @@ import { TabPanelProps } from './TabPanel.types';
 export type TabPanelsShorthand = { trigger: ShorthandItem<MenuItemProps>, panel: ShorthandItem<TabPanelProps> };
 
 
-export interface TabsProps extends UIMutableComponentProps<StrictTabsProps> {
+export interface TabsProps extends UIMutableVoidComponentProps<StrictTabsProps> {
 }
 
 export interface StrictTabsProps {
   /** Set the tab active index */
   activeIndex?: number;
-
-  /** Avoid declared children */
-  children?: never;
 
   /** Set the default active index */
   defaultActiveIndex?: number;

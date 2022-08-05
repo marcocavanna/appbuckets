@@ -7,7 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -21,7 +21,7 @@ import Header from '../Header';
 /* --------
  * Component Render
  * -------- */
-const ModalHeader: Creatable<UIMutableComponent<ModalHeaderProps>> = (receivedProps) => {
+const ModalHeader: Creatable<React.FunctionComponent<ModalHeaderProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('modalHeader', receivedProps);
 

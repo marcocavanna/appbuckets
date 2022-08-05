@@ -7,7 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -22,7 +22,7 @@ import { EmptyContentProps } from './EmptyContent.types';
 /* --------
  * Component Render
  * -------- */
-const EmptyContent: Creatable<UIMutableComponent<EmptyContentProps>> = (receivedProps) => {
+const EmptyContent: Creatable<React.FunctionComponent<EmptyContentProps>> = (receivedProps) => {
 
   /** Get component props */
   const props = useWithDefaultProps('emptyContent', receivedProps);

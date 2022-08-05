@@ -3,8 +3,6 @@ import clsx from 'clsx';
 
 import { useAutoControlledValue, useElementType, ShorthandItem } from '@appbuckets/react-ui-core';
 
-import { UIMutableComponent } from '../generic';
-
 import { useSharedClassName } from '../utils';
 
 import { useWithDefaultProps } from '../BucketTheme';
@@ -24,7 +22,7 @@ import { AccordionsProps } from './Accordions.types';
 /* --------
  * Component Render
  * -------- */
-const Accordions: UIMutableComponent<AccordionsProps> = (receivedProps) => {
+const Accordions: React.VoidFunctionComponent<AccordionsProps> = (receivedProps) => {
 
   const props = useWithDefaultProps('accordions', receivedProps);
 

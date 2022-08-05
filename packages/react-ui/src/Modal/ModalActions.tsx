@@ -8,7 +8,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import {
   useSharedClassName
@@ -25,7 +25,7 @@ import type { ButtonProps } from '../Button';
 /* --------
  * Component Render
  * -------- */
-const ModalActions: Creatable<UIMutableComponent<ModalActionsProps>> = (receivedProps) => {
+const ModalActions: Creatable<React.FunctionComponent<ModalActionsProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('modalActions', receivedProps);
 

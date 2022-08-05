@@ -7,7 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -19,7 +19,7 @@ import { TableCellContentProps } from './TableCellContent.types';
 /* --------
  * Component Render
  * -------- */
-const TableCellContent: Creatable<UIMutableComponent<TableCellContentProps>> = (receivedProps) => {
+const TableCellContent: Creatable<React.FunctionComponent<TableCellContentProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('tableCellContent', receivedProps);
   const {

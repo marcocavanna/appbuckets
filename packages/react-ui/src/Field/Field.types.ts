@@ -34,7 +34,7 @@ export interface StrictFieldProps extends AppearanceProps {
   /** Set the field as Disabled */
   disabled?: boolean;
 
-  /** An hint, appended after field content */
+  /** Field hint, appended after field content */
   hint?: ShorthandContent;
 
   /** User defined className used for hint element */

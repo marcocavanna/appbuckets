@@ -1,6 +1,7 @@
 {
   "filename": "packages/react-ui/src/ColorPicker/ColorPicker.tsx",
   "tags": {},
+  "filePath": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui/src/ColorPicker/ColorPicker.tsx",
   "description": "",
   "displayName": "ColorPicker",
   "props": {
@@ -668,7 +669,7 @@
     },
     "hint": {
       "defaultValue": null,
-      "description": "An hint, appended after field content",
+      "description": "Field hint, appended after field content",
       "name": "hint",
       "parent": {
         "fileName": "react-ui/src/Field/Field.types.ts",
@@ -1097,7 +1098,7 @@
           "name": "CoreUIVoidComponentProps"
         },
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "HTMLAttributes"
         }
       ],

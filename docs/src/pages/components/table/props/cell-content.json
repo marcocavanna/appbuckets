@@ -1,9 +1,9 @@
 {
-  "filename": "packages/react-ui/src/Header/HeaderSubheader.tsx",
+  "filename": "packages/react-ui/src/Table/TableCellContent.tsx",
   "tags": {},
-  "filePath": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui/src/Header/HeaderSubheader.tsx",
+  "filePath": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui/src/Table/TableCellContent.tsx",
   "description": "",
-  "displayName": "HeaderSubheader",
+  "displayName": "CellContent",
   "props": {
     "backgroundColor": {
       "defaultValue": null,
@@ -297,6 +297,56 @@
             "value": "\"cloud dark\""
           }
         ]
+      }
+    },
+    "type": {
+      "defaultValue": null,
+      "description": "",
+      "name": "type",
+      "parent": {
+        "fileName": "react-ui/src/Table/TableCellContent.types.ts",
+        "name": "StrictTableCellContentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Table/TableCellContent.types.ts",
+          "name": "StrictTableCellContentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "enum",
+        "raw": "\"content\" | \"meta\" | \"title\"",
+        "value": [
+          {
+            "value": "\"content\""
+          },
+          {
+            "value": "\"meta\""
+          },
+          {
+            "value": "\"title\""
+          }
+        ]
+      }
+    },
+    "truncate": {
+      "defaultValue": null,
+      "description": "Truncate the cell Content with Ellipsis",
+      "name": "truncate",
+      "parent": {
+        "fileName": "react-ui/src/Table/TableCellContent.types.ts",
+        "name": "StrictTableCellContentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Table/TableCellContent.types.ts",
+          "name": "StrictTableCellContentProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "boolean"
       }
     },
     "children": {

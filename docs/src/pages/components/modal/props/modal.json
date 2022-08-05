@@ -1,6 +1,7 @@
 {
   "filename": "packages/react-ui/src/Modal/Modal.tsx",
   "tags": {},
+  "filePath": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui/src/Modal/Modal.tsx",
   "description": "",
   "displayName": "Modal",
   "props": {
@@ -151,10 +152,6 @@
         "name": "ComponentDisplayProps"
       },
       "declarations": [
-        {
-          "fileName": "react-ui/src/generic.ts",
-          "name": "ComponentDisplayProps"
-        },
         {
           "fileName": "react-ui/src/generic.ts",
           "name": "ComponentDisplayProps"
@@ -352,7 +349,7 @@
           "name": "StrictModalProps"
         },
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "TypeLiteral"
         }
       ],
@@ -755,7 +752,7 @@
           "name": "CoreUIVoidComponentProps"
         },
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "HTMLAttributes"
         }
       ],

@@ -5,8 +5,6 @@ import RCSlider from 'rc-slider';
 
 import { useAutoControlledValue } from '@appbuckets/react-ui-core';
 
-import { UIVoidComponent } from '../generic';
-
 import { useField } from '../hooks/useField';
 import Popup from '../Popup';
 
@@ -25,7 +23,7 @@ import { SliderProps } from './Slider.types';
 /* --------
  * Component Definition
  * -------- */
-const Slider: UIVoidComponent<SliderProps> = (receivedProps) => {
+const Slider: React.VoidFunctionComponent<SliderProps> = (receivedProps) => {
 
   /** Get component props */
   const props = useWithDefaultProps('slider', receivedProps);

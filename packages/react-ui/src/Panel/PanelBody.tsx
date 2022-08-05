@@ -7,7 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -21,7 +21,7 @@ import Button from '../Button';
 /* --------
  * Component Render
  * -------- */
-const PanelBody: Creatable<UIMutableComponent<PanelBodyProps>> = (receivedProps) => {
+const PanelBody: Creatable<React.FunctionComponent<PanelBodyProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('panelBody', receivedProps);
 

@@ -562,7 +562,7 @@
     },
     "hint": {
       "defaultValue": null,
-      "description": "An hint, appended after field content",
+      "description": "Field hint, appended after field content",
       "name": "hint",
       "parent": {
         "fileName": "react-ui/src/Field/Field.types.ts",

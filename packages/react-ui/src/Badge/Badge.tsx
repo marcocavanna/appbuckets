@@ -7,7 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import {
   useSharedClassName,
@@ -24,7 +24,7 @@ import { BadgeProps } from './Badge.types';
 /* --------
  * Component Render
  * -------- */
-const Badge: Creatable<UIMutableComponent<BadgeProps>> = (receivedProps) => {
+const Badge: Creatable<React.FunctionComponent<BadgeProps>> = (receivedProps) => {
 
   /** Get component props */
   const props = useWithDefaultProps('badge', receivedProps);

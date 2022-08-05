@@ -8,7 +8,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { useRipples } from '../hooks/useRipples';
 
@@ -21,8 +21,7 @@ import { useWithDefaultProps } from '../BucketTheme';
 
 import Icon from '../Icon';
 
-// eslint-disable-next-line import/no-named-default
-import type { default as MenuComponent } from './Menu';
+import type MenuComponent from './Menu';
 import { MenuItemProps } from './MenuItem.types';
 
 
@@ -39,7 +38,7 @@ import ('./Menu').then(({ default: menuComponent }) => {
 /* --------
  * Component Render
  * -------- */
-const MenuItem: Creatable<UIMutableComponent<MenuItemProps>> = (receivedProps) => {
+const MenuItem: Creatable<React.FunctionComponent<MenuItemProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('menuItem', receivedProps);
 
@@ -129,7 +128,7 @@ const MenuItem: Creatable<UIMutableComponent<MenuItemProps>> = (receivedProps) =
     () => {
       /**
        * If no menu prop has been defined, or the
-       * Menu component is still no imported from
+       * Menu component is still not imported from
        * async import, return the content element
        */
       if (!menu || !Menu || !menuIsOpen) {

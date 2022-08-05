@@ -6,14 +6,11 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { UIMutableComponent } from '../generic';
-
 import { useSharedClassName } from '../utils';
 
 import { useWithDefaultProps } from '../BucketTheme';
 
-// eslint-disable-next-line import/no-named-default
-import type { default as LabelComponent } from './Label';
+import type LabelComponent from './Label';
 
 import { LabelGroupProps } from './LabelGroup.types';
 
@@ -31,7 +28,7 @@ import('./Label').then(({ default: labelComponent }) => {
 /* --------
  * Component Render
  * -------- */
-const LabelGroup: UIMutableComponent<LabelGroupProps> = (receivedProps) => {
+const LabelGroup: React.FunctionComponent<LabelGroupProps> = (receivedProps) => {
 
   const props = useWithDefaultProps('labelGroup', receivedProps);
 

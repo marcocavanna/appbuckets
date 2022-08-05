@@ -7,7 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { useRipples } from '../hooks/useRipples';
 
@@ -36,7 +36,7 @@ type ButtonChildren = {
 /* --------
  * Component Render
  * -------- */
-const Button: Creatable<UIMutableComponent<ButtonProps>> & ButtonChildren = (
+const Button: Creatable<React.FunctionComponent<ButtonProps>> & ButtonChildren = (
   receivedProps
 ) => {
 

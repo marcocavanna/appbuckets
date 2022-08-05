@@ -7,7 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -19,7 +19,7 @@ import { ModalContentProps } from './ModalContent.types';
 /* --------
  * Component Render
  * -------- */
-const ModalContent: Creatable<UIMutableComponent<ModalContentProps>> = (receivedProps) => {
+const ModalContent: Creatable<React.FunctionComponent<ModalContentProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('modalContent', receivedProps);
 

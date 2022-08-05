@@ -6,8 +6,6 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { UIMutableComponent } from '../generic';
-
 import { useSharedClassName } from '../utils';
 
 import { useWithDefaultProps } from '../BucketTheme';
@@ -20,7 +18,7 @@ import Column from '../Column';
 /* --------
  * Component Render
  * -------- */
-const Row: UIMutableComponent<RowProps> = (receivedProps) => {
+const Row: React.FunctionComponent<RowProps> = (receivedProps) => {
 
   const props = useWithDefaultProps('row', receivedProps);
 

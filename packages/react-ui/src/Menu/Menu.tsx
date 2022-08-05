@@ -9,7 +9,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -32,7 +32,7 @@ export type MenuChildren = {
 /* --------
  * Component Declare
  * -------- */
-const Menu: Creatable<UIMutableComponent<MenuProps>> & MenuChildren = (receivedProps) => {
+const Menu: Creatable<React.FunctionComponent<MenuProps>> & MenuChildren = (receivedProps) => {
 
   const props = useWithDefaultProps('menu', receivedProps);
 

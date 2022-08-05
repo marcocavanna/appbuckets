@@ -7,7 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -19,7 +19,7 @@ import { ItemTextProps } from './ItemText.types';
 /* --------
  * Component Render
  * -------- */
-const ItemText: Creatable<UIMutableComponent<ItemTextProps>> = (receivedProps) => {
+const ItemText: Creatable<React.FunctionComponent<ItemTextProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('itemText', receivedProps);
 

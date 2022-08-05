@@ -7,7 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -19,7 +19,7 @@ import { ColumnProps } from './Column.types';
 /* --------
  * Component Render
  * -------- */
-const Column: Creatable<UIComponent<ColumnProps>> = (receivedProps) => {
+const Column: Creatable<React.FunctionComponent<ColumnProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('column', receivedProps);
 

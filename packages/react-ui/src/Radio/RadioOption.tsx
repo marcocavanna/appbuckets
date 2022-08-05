@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { createShorthandFactory } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIVoidComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { useWithDefaultProps } from '../BucketTheme';
 
@@ -13,63 +13,69 @@ import { useRadioContext } from './Radio.context';
 
 
 /* --------
+ * Component Type Declaration
+ * -------- */
+type RadioOptionComponent = Creatable<React.VoidFunctionComponent<RadioOptionProps>>;
+
+
+/* --------
  * Component Definition
  * -------- */
-const RadioOption: UIVoidComponent<RadioOptionProps> = React.forwardRef<HTMLInputElement, RadioOptionProps>((
-  receivedProps, ref
-) => {
+const RadioOption: RadioOptionComponent = React.forwardRef<HTMLInputElement, RadioOptionProps>(
+  (receivedProps, ref) => {
 
-  const props = useWithDefaultProps('radioOption', receivedProps);
+    const props = useWithDefaultProps('radioOption', receivedProps);
 
-  const {
-    /** Strict radio props */
-    value,
+    const {
+      /** Strict radio props */
+      value,
 
-    /** All other props passed to Checkbox */
-    ...rest
-  } = props;
-
-
-  // ----
-  // Hook Usage
-  // ----
-  const {
-    currentValue,
-    setValue
-  } = useRadioContext() || {};
+      /** All other props passed to Checkbox */
+      ...rest
+    } = props;
 
 
-  // ----
-  // Render the Component
-  // ----
-  return Checkbox.create(rest, {
-    autoGenerateKey: false,
-    overrideProps  : () => ({
-      ref,
-      checked: !!rest.checked || (currentValue === value),
-      radio  : true,
-      onClick: (event) => {
-        /** Call user defined click event if exists */
-        if (typeof rest.onClick === 'function') {
-          rest.onClick(event, props);
+    // ----
+    // Hook Usage
+    // ----
+    const {
+      currentValue,
+      setValue
+    } = useRadioContext() || {};
+
+
+    // ----
+    // Render the Component
+    // ----
+    return Checkbox.create(rest, {
+      autoGenerateKey: false,
+      overrideProps  : () => ({
+        ref,
+        checked: !!rest.checked || (currentValue === value),
+        radio  : true,
+        onClick: (event) => {
+          /** Call user defined click event if exists */
+          if (typeof rest.onClick === 'function') {
+            rest.onClick(event, props);
+          }
+
+          /** Set the new value */
+          if (typeof setValue === 'function') {
+            setValue(event, value);
+          }
         }
+      })
+    });
 
-        /** Set the new value */
-        if (typeof setValue === 'function') {
-          setValue(event, value);
-        }
-      }
-    })
-  });
-
-});
+  }
+) as any as RadioOptionComponent;
 
 RadioOption.displayName = 'RadioOption';
 
-(RadioOption as Creatable<UIVoidComponent<RadioOptionProps>>).create = createShorthandFactory(
+RadioOption.create = createShorthandFactory(
   RadioOption,
   (value) => ({ value: value as string | number }),
   (props) => props.value
 );
 
-export default RadioOption as Creatable<UIVoidComponent<RadioOptionProps>>;
+export default RadioOption;

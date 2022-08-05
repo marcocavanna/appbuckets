@@ -8,8 +8,6 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { UIMutableComponent } from '../generic';
-
 import { useSharedClassName } from '../utils';
 
 import { useWithDefaultProps } from '../BucketTheme';
@@ -40,7 +38,7 @@ type ModalChildren = {
 /* --------
  * Component Render
  * -------- */
-const Modal: UIMutableComponent<ModalProps> & ModalChildren = (
+const Modal: React.FunctionComponent<ModalProps> & ModalChildren = (
   receivedProps
 ) => {
 

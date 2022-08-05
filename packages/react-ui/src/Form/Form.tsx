@@ -1,8 +1,6 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
-import { UIComponent } from '../generic';
-
 import { useWithDefaultProps } from '../BucketTheme';
 
 import { useSharedClassName } from '../utils';
@@ -13,7 +11,7 @@ import { FormProps } from './Form.types';
 /* --------
  * Component Render
  * -------- */
-const Form: UIComponent<FormProps> = React.forwardRef<HTMLFormElement, FormProps>((
+const Form: React.FunctionComponent<FormProps> = React.forwardRef<HTMLFormElement, FormProps>((
   receivedProps,
   ref
 ) => {

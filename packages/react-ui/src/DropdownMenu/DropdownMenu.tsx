@@ -3,8 +3,6 @@ import clsx from 'clsx';
 
 import { useAutoControlledValue, useElementType } from '@appbuckets/react-ui-core';
 
-import { UIMutableComponent } from '../generic';
-
 import { useWithDefaultProps } from '../BucketTheme';
 
 import Button from '../Button';
@@ -20,7 +18,7 @@ import { DropdownMenuProps } from './DropdownMenu.types';
 /* --------
  * Component Render
  * -------- */
-const DropdownMenu: UIMutableComponent<DropdownMenuProps> = (receivedProps) => {
+const DropdownMenu: React.FunctionComponent<DropdownMenuProps> = (receivedProps) => {
 
   const props = useWithDefaultProps('dropdownMenu', receivedProps);
 

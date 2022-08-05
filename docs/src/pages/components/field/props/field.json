@@ -1,6 +1,7 @@
 {
   "filename": "packages/react-ui/src/Field/Field.tsx",
   "tags": {},
+  "filePath": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui/src/Field/Field.tsx",
   "description": "",
   "displayName": "Field",
   "props": {
@@ -449,7 +450,7 @@
     },
     "hint": {
       "defaultValue": null,
-      "description": "An hint, appended after field content",
+      "description": "Field hint, appended after field content",
       "name": "hint",
       "parent": {
         "fileName": "react-ui/src/Field/Field.types.ts",
@@ -880,11 +881,11 @@
           "name": "CoreUIComponentProps"
         },
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "DOMAttributes"
         },
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "TypeLiteral"
         }
       ],
@@ -926,7 +927,7 @@
           "name": "CoreUIVoidComponentProps"
         },
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "HTMLAttributes"
         }
       ],

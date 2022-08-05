@@ -9,7 +9,7 @@ import {
   useAutoControlledValue
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -37,7 +37,7 @@ type TabsChildren = {
 /* --------
  * Component Render
  * -------- */
-const Tabs: Creatable<UIMutableComponent<TabsProps>> & TabsChildren = (receivedProps) => {
+const Tabs: Creatable<React.VoidFunctionComponent<TabsProps>> & TabsChildren = (receivedProps) => {
 
   const props = useWithDefaultProps('tabs', receivedProps);
 
@@ -45,7 +45,6 @@ const Tabs: Creatable<UIMutableComponent<TabsProps>> & TabsChildren = (receivedP
     className,
     rest: {
       activeIndex: userDefinedActiveIndex,
-      children,
       content,
       defaultActiveIndex,
       layout,

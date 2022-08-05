@@ -1,6 +1,7 @@
 {
   "filename": "packages/react-ui/src/Tabs/Tabs.tsx",
   "tags": {},
+  "filePath": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui/src/Tabs/Tabs.tsx",
   "description": "",
   "displayName": "Tabs",
   "props": {
@@ -317,29 +318,6 @@
         "name": "number"
       }
     },
-    "children": {
-      "defaultValue": null,
-      "description": "Avoid declared children",
-      "name": "children",
-      "parent": {
-        "fileName": "react-ui/src/Tabs/Tabs.types.ts",
-        "name": "StrictTabsProps"
-      },
-      "declarations": [
-        {
-          "fileName": "react-ui/src/Tabs/Tabs.types.ts",
-          "name": "StrictTabsProps"
-        },
-        {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
-          "name": "TypeLiteral"
-        }
-      ],
-      "required": false,
-      "type": {
-        "name": "never"
-      }
-    },
     "defaultActiveIndex": {
       "defaultValue": null,
       "description": "Set the default active index",
@@ -473,6 +451,29 @@
         "name": "boolean"
       }
     },
+    "children": {
+      "defaultValue": null,
+      "description": "Main Component Content",
+      "name": "children",
+      "parent": {
+        "fileName": "react-ui/src/generic.ts",
+        "name": "CoreUIComponentProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/generic.ts",
+          "name": "CoreUIComponentProps"
+        },
+        {
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
+          "name": "DOMAttributes"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "ReactNode"
+      }
+    },
     "content": {
       "defaultValue": null,
       "description": "Content Shorthand",
@@ -506,7 +507,7 @@
           "name": "CoreUIVoidComponentProps"
         },
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "HTMLAttributes"
         }
       ],

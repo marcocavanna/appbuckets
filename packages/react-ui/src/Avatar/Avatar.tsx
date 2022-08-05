@@ -7,7 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import {
   useSharedClassName,
@@ -26,7 +26,7 @@ import { AvatarProps } from './Avatar.types';
 /* --------
  * Component Render
  * -------- */
-const Avatar: Creatable<UIMutableComponent<AvatarProps>> = (receivedProps) => {
+const Avatar: Creatable<React.FunctionComponent<AvatarProps>> = (receivedProps) => {
 
   /** Get component props */
   const props = useWithDefaultProps('avatar', receivedProps);

@@ -1,6 +1,7 @@
 {
   "filename": "packages/react-ui/src/Accordions/Accordions.tsx",
   "tags": {},
+  "filePath": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/packages/react-ui/src/Accordions/Accordions.tsx",
   "description": "",
   "displayName": "Accordions",
   "props": {
@@ -409,7 +410,7 @@
       ],
       "required": false,
       "type": {
-        "name": "(action: \"open\" | \"close\", props: AccordionsProps) => void"
+        "name": "(action: \"close\" | \"open\", props: AccordionsProps) => void"
       }
     },
     "onSectionClose": {
@@ -483,12 +484,8 @@
           "name": "CoreUIComponentProps"
         },
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "DOMAttributes"
-        },
-        {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
-          "name": "TypeLiteral"
         }
       ],
       "required": false,
@@ -529,7 +526,7 @@
           "name": "CoreUIVoidComponentProps"
         },
         {
-          "fileName": "/Users/marcocavanna/Work/AppBuckets/Library/appbuckets/node_modules/@types/react/index.d.ts",
+          "fileName": "appbuckets/node_modules/@types/react/index.d.ts",
           "name": "HTMLAttributes"
         }
       ],

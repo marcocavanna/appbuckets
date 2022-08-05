@@ -3,8 +3,6 @@ import clsx from 'clsx';
 
 import { useAutoControlledValue, childrenUtils } from '@appbuckets/react-ui-core';
 
-import { UIMutableVoidComponent } from '../generic';
-
 import { useWithDefaultProps } from '../BucketTheme';
 import { useField } from '../hooks/useField';
 
@@ -22,7 +20,7 @@ import { RadioProps } from './Radio.types';
  * -------- */
 type RadioGroupChildren = { Option: typeof RadioOption };
 
-const Radio: UIMutableVoidComponent<RadioProps> & RadioGroupChildren = (
+const Radio: React.VoidFunctionComponent<RadioProps> & RadioGroupChildren = (
   receivedProps
 ) => {
 

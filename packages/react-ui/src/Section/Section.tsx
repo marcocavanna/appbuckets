@@ -7,7 +7,7 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { Creatable, UIMutableComponent } from '../generic';
+import { Creatable } from '../generic';
 
 import { useSharedClassName } from '../utils';
 
@@ -21,7 +21,7 @@ import { SectionProps } from './Section.types';
 /* --------
  * Component Render
  * -------- */
-const Section: Creatable<UIMutableComponent<SectionProps>> = (receivedProps) => {
+const Section: Creatable<React.FunctionComponent<SectionProps>> = (receivedProps) => {
 
   const props = useWithDefaultProps('section', receivedProps);
 

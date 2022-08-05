@@ -6,8 +6,6 @@ import {
   useElementType
 } from '@appbuckets/react-ui-core';
 
-import { UIMutableComponent } from '../generic';
-
 import {
   useSharedClassName,
   useSplitStateClassName
@@ -24,7 +22,7 @@ import { ToastProps } from './Toast.types';
 /* --------
  * Component Render
  * -------- */
-const Toast: UIMutableComponent<ToastProps> = (receivedProps) => {
+const Toast: React.FunctionComponent<ToastProps> = (receivedProps) => {
 
   const props = useWithDefaultProps('toast', receivedProps);
 
