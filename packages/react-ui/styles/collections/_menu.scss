@@ -22,6 +22,14 @@
 
 
   // ----
+  //  TextRight Menu must revert Row Elements
+  // ----
+  &.has-text-right {
+    flex-direction: row-reverse;
+  }
+
+
+  // ----
   //  Menu Item Style
   // ----
   > .menu-item {
