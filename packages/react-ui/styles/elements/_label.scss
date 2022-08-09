@@ -25,6 +25,18 @@
     display: inline-block;
     line-height: 1;
     color: inherit;
+
+    // ----
+    //  Change Margin
+    // ----
+    > :not([hidden]) {
+      margin-left: 0;
+      margin-right: 0;
+
+      ~ :not([hidden]) {
+        margin-left: $label-content-spacer;
+      }
+    }
   }
 
   @include color-property-variation(
@@ -60,24 +72,4 @@
 ******/
 .disabled.label {
   opacity: $disabled-element-opacity;
-}
-
-
-/******
-    Adjust Button on Removable Labels
-******/
-.removable.label .remove.button {
-  margin-left: .5em;
-
-  &,
-  > .icon {
-    width: 1em;
-    height: 1em;
-    line-height: 1;
-    color: inherit !important;
-  }
-
-  > .icon {
-    vertical-align: bottom;
-  }
 }
