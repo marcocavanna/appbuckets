@@ -41,11 +41,13 @@ const Input: React.VoidFunctionComponent<InputProps> = React.forwardRef<HTMLInpu
       textareaProps,
 
       /** Overridden Input Handlers */
-      onClick : userDefinedOnClick,
-      onClear : userDefinedOnClear,
-      onChange: userDefinedOnChange,
-      onBlur  : userDefinedOnBlur,
-      onFocus : userDefinedOnFocus,
+      onClick  : userDefinedOnClick,
+      onClear  : userDefinedOnClear,
+      onChange : userDefinedOnChange,
+      onBlur   : userDefinedOnBlur,
+      onFocus  : userDefinedOnFocus,
+      onSubmit : userDefinedOnSubmit,
+      onKeyDown: userDefinedOnKeyDown,
 
       /** Shared Input/Field Props */
       disabled,
@@ -202,6 +204,23 @@ const Input: React.VoidFunctionComponent<InputProps> = React.forwardRef<HTMLInpu
     }
   };
 
+  const handleInputKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    /** Abort if Disabled or Readonly */
+    if (disabled || readOnly) {
+      return;
+    }
+
+    /** Call user defined handler */
+    if (userDefinedOnKeyDown) {
+      userDefinedOnKeyDown(e);
+    }
+
+    /** If enter has been pressed */
+    if ((e.key === 'Enter' || e.key === 'NumpadEnter') && userDefinedOnSubmit) {
+      userDefinedOnSubmit(null, { ...props, value });
+    }
+  };
+
   const handleInputClear = React.useCallback(
     (e: React.MouseEvent<SVGSVGElement>) => {
       /** Manually set the input value, and after trigger the change event */
@@ -264,7 +283,8 @@ const Input: React.VoidFunctionComponent<InputProps> = React.forwardRef<HTMLInpu
       onBlur      : handleInputBlur,
       onChange    : handleInputChange,
       onClick     : handleInputClick,
-      onFocus     : handleInputFocus
+      onFocus     : handleInputFocus,
+      onKeyDown   : handleInputKeyDown
     };
 
     if (masked) {

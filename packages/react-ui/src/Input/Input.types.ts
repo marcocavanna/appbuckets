@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Props as InputMaskProps } from 'react-input-mask';
 import { TextareaAutosizeProps } from 'react-textarea-autosize';
 
-import { ChangeHandler, MouseHandler, FocusHandler, UIVoidComponentProps } from '../generic';
+import { ChangeHandler, MouseHandler, FocusHandler, VoidHandler, UIVoidComponentProps } from '../generic';
 
 import { StrictFieldProps } from '../Field';
 
@@ -30,6 +30,9 @@ export interface StrictInputProps extends StrictFieldProps {
   /** On Focus Event */
   onFocus?: InputFocusHandler;
 
+  /** Handler to execute on Submit */
+  onSubmit?: InputSubmitHandler;
+
   /** Ref to Input */
   ref?: React.Ref<HTMLInputElement>;
 
@@ -51,3 +54,5 @@ export type InputFocusHandler = FocusHandler<HTMLInputElement, InputProps>;
 export type InputChangeHandler = ChangeHandler<HTMLInputElement, InputProps>;
 
 export type InputClickHandler = MouseHandler<HTMLInputElement, InputProps>;
+
+export type InputSubmitHandler = VoidHandler<InputProps>;
