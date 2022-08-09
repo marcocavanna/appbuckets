@@ -81,6 +81,7 @@
   }
 
   &.flex {
+    min-width: $avatar-base-size;
     padding-left: $avatar-flex-horizontal-padding;
     padding-right: $avatar-flex-horizontal-padding;
   }
