@@ -16,9 +16,9 @@ import {
 
 import { useWithDefaultProps } from '../BucketTheme';
 
-import Button from '../Button';
 import Icon from '../Icon';
 
+import { IconClickHandler } from '../Icon';
 import { LabelProps } from './Label.types';
 
 import LabelGroup from './LabelGroup';
@@ -93,20 +93,19 @@ const Label: Creatable<React.FunctionComponent<LabelProps>> & LabelChildren = (
         return null;
       }
 
-      const handleLabelRemove = (e: React.MouseEvent<HTMLButtonElement>) => {
+      const handleLabelRemove: IconClickHandler = (e) => {
         if (!disabled && onRemove) {
           onRemove(e, props);
         }
       };
 
-      return Button.create(typeof removable === 'boolean'
-        ? { icon: 'times' }
+      return Icon.create(typeof removable === 'boolean'
+        ? { name: 'times' }
         : removable, {
         autoGenerateKey: false,
-        defaultProps   : { className: 'remove', icon: 'times' },
+        defaultProps   : { className: 'remove', name: 'times' },
         overrideProps  : {
           disabled,
-          flat   : true,
           onClick: handleLabelRemove
         }
       });
