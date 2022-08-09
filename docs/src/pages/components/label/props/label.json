@@ -391,7 +391,7 @@
       ],
       "required": false,
       "type": {
-        "name": "ShorthandItem<ButtonProps>"
+        "name": "boolean | AppBucketsIcon<IconProps>"
       }
     },
     "children": {
