@@ -379,7 +379,7 @@ $label-font-weight: $button-font-weight !default;
 $label-border-radius: $border-radius-rounded !default;
 $label-padding-vertical: .35em !default;
 $label-padding-horizontal: .75em !default;
-$label-content-spacer: .5em;
+$label-content-spacer: .5em !default;
 $labels-spacer: .25em !default;
 
 
@@ -688,6 +688,7 @@ $table-footer-border-width: 2px !default;
 $table-cell-header-font-weight: $semi-bold !default;
 $table-cell-content-font-size: .85em !default;
 $table-cell-content-opacity: .75 !default;
+$table-cell-content-spacer: .25em !default;
 
 $table-color-variation-transparency: .9 !default;
 

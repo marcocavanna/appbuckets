@@ -188,6 +188,18 @@ table > .head,
 
 
     // ----
+    //  Elements Margin
+    // ----
+    .cell-text-meta + .cell-text-title {
+      margin-top: $table-cell-content-spacer;
+    }
+
+    .cell-text-title + .cell-text-content {
+      margin-top: $table-cell-content-spacer;
+    }
+
+
+    // ----
     //  Set Text Style for not Wrapped Cell
     // ----
     &:not(.wrapped) {
