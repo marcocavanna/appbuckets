@@ -1,6 +1,6 @@
 {
   "name": "@appbuckets/react-ui-forms",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "An utilities package to manage and create Form using AppBuckets ReactUI",
   "keywords": [
     "react",
@@ -43,8 +43,8 @@
     "react-dom": "^17.0.0"
   },
   "dependencies": {
-    "@appbuckets/react-ui": "1.11.0",
-    "@appbuckets/react-ui-core": "0.4.5",
+    "@appbuckets/react-ui": "1.11.1",
+    "@appbuckets/react-ui-core": "0.4.6",
     "@hookform/resolvers": "^2.9.7",
     "clsx": "^1.2.1",
     "get-value": "^3.0.1",
