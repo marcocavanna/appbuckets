@@ -101,6 +101,9 @@ const Portal: React.FunctionComponent<PortalProps> = (props) => {
   // ----
   const openPortal = React.useCallback(
     (e: React.MouseEvent<HTMLElement>) => {
+      /** Avoid event propagation */
+      e.stopPropagation();
+
       if (typeof userDefinedOnOpenHandler === 'function') {
         userDefinedOnOpenHandler(e);
       }
@@ -119,6 +122,9 @@ const Portal: React.FunctionComponent<PortalProps> = (props) => {
 
   const closePortal = React.useCallback(
     (e: React.MouseEvent<HTMLElement>) => {
+      /** Avoid event propagation */
+      e.stopPropagation();
+
       if (typeof userDefinedOnCloseHandler === 'function') {
         userDefinedOnCloseHandler(e);
       }
