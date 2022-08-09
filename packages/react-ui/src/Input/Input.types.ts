@@ -31,7 +31,7 @@ export interface StrictInputProps extends StrictFieldProps {
   onFocus?: InputFocusHandler;
 
   /** Handler to execute on Submit */
-  onSubmit?: InputSubmitHandler;
+  onInputSubmit?: InputSubmitHandler;
 
   /** Ref to Input */
   ref?: React.Ref<HTMLInputElement>;

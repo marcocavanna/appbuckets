@@ -396,6 +396,25 @@
         "name": "InputFocusHandler"
       }
     },
+    "onInputSubmit": {
+      "defaultValue": null,
+      "description": "Handler to execute on Submit",
+      "name": "onInputSubmit",
+      "parent": {
+        "fileName": "react-ui/src/Input/Input.types.ts",
+        "name": "StrictInputProps"
+      },
+      "declarations": [
+        {
+          "fileName": "react-ui/src/Input/Input.types.ts",
+          "name": "StrictInputProps"
+        }
+      ],
+      "required": false,
+      "type": {
+        "name": "InputSubmitHandler"
+      }
+    },
     "ref": {
       "defaultValue": null,
       "description": "Ref to Input",

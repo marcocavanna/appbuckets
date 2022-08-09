@@ -41,13 +41,13 @@ const Input: React.VoidFunctionComponent<InputProps> = React.forwardRef<HTMLInpu
       textareaProps,
 
       /** Overridden Input Handlers */
-      onClick  : userDefinedOnClick,
-      onClear  : userDefinedOnClear,
-      onChange : userDefinedOnChange,
-      onBlur   : userDefinedOnBlur,
-      onFocus  : userDefinedOnFocus,
-      onSubmit : userDefinedOnSubmit,
-      onKeyDown: userDefinedOnKeyDown,
+      onClick      : userDefinedOnClick,
+      onClear      : userDefinedOnClear,
+      onChange     : userDefinedOnChange,
+      onBlur       : userDefinedOnBlur,
+      onFocus      : userDefinedOnFocus,
+      onInputSubmit: userDefinedOnSubmit,
+      onKeyDown    : userDefinedOnKeyDown,
 
       /** Shared Input/Field Props */
       disabled,
