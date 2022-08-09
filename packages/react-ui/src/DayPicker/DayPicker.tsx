@@ -16,10 +16,11 @@ import { useWithDefaultProps } from '../BucketTheme';
 
 import Button from '../Button';
 import Input from '../Input';
-import type { InputProps } from '../Input';
-
 import Modal from '../Modal';
 import Popup from '../Popup';
+
+import type { InputProps } from '../Input';
+import type { ModalStateChangeHandler } from '../Modal';
 
 import { DayPickerProps, ParsableDate } from './DayPicker.types';
 
@@ -210,6 +211,14 @@ const DayPicker: React.VoidFunctionComponent<DayPickerProps> = (receivedProps) =
       onCalendarClose(null, propsForEvent);
     }
     trySetOpen(false);
+  };
+
+  const handleCalendarModalClose: ModalStateChangeHandler = (e) => {
+    /** Stop event Propagation */
+    e.stopPropagation();
+
+    /** Close the Calendar */
+    handleCalendarClose();
   };
 
   const evalDayChange = (value: string | Date, triggeredByInput: boolean) => {
@@ -409,7 +418,7 @@ const DayPicker: React.VoidFunctionComponent<DayPickerProps> = (receivedProps) =
       open={open}
       trigger={modalTrigger}
       content={dayPickerElement}
-      onClose={handleCalendarClose}
+      onClose={handleCalendarModalClose}
     />
   );
 };

@@ -124,6 +124,9 @@ const Modal: React.FunctionComponent<ModalProps> & ModalChildren = (
   );
 
   const handleModalClose = (e: React.MouseEvent<HTMLElement>) => {
+    /** Stop Event Propagation */
+    e.stopPropagation();
+
     /** Call User Handler if Exists */
     if (onClose) {
       onClose(e, props);
@@ -133,6 +136,9 @@ const Modal: React.FunctionComponent<ModalProps> & ModalChildren = (
   };
 
   const handleModalOpen = (e: React.MouseEvent<HTMLElement>) => {
+    /** Stop Event Propagation */
+    e.stopPropagation();
+
     /** Call User Handler if Exists */
     if (onOpen) {
       onOpen(e, props);

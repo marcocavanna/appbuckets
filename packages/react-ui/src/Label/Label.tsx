@@ -72,6 +72,8 @@ const Label: Creatable<React.FunctionComponent<LabelProps>> & LabelChildren = (
   /** Use an Hook to define the click handler */
   const handleClick = (e: React.MouseEvent<HTMLElement>) => {
     if (onClick) {
+      /** Force the Stop Propagation of event */
+      e.stopPropagation();
       onClick(e, props);
     }
   };
