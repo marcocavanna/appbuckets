@@ -114,9 +114,9 @@
 
 
 /******
-    Modal Content
+    Modal Content Spacing
 ******/
-.modal .modal-content {
+.modal .modal-header + .modal-content {
   margin-top: $modal-vertical-padding;
 }
 
