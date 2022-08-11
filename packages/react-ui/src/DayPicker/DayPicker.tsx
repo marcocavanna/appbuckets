@@ -251,11 +251,13 @@ const DayPicker: React.VoidFunctionComponent<DayPickerProps> = (receivedProps) =
     trySetRawDate(newDateObject);
   };
 
-  const handleDayClick = (day: Date, modifiers: DayModifiers) => {
+  const handleDayClick = (day: Date, modifiers: DayModifiers, e: React.MouseEvent) => {
     /** If calendar is disabled, or day is disabled, return */
     if (disabled || modifiers.disabled) {
       return;
     }
+    /** Stop event Propagation */
+    e.stopPropagation();
     /** Eval Day Change */
     evalDayChange(day, false);
   };
