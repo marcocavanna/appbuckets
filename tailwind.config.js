@@ -2,7 +2,8 @@
 module.exports = {
   content: [
     './packages/react-ui/**/*.{js,jsx,ts,tsx}',
-    './packages/react-ui-core/**/*.{js,jsx,ts,tsx}'
+    './packages/react-ui-core/**/*.{js,jsx,ts,tsx}',
+    './packages/react-ui-styles/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
     extend: {},

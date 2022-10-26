@@ -28,7 +28,7 @@
   "homepage": "https://react-bucket.appbuckets.io",
   "license": "MIT",
   "scripts": {
-    "build": "rollup --config ../../rollup.config.js --input src/index.ts",
+    "build": "rollup --config ../../rollup.config.js --bundleConfigAsCjs --input src/index.ts",
     "build:types": "tsc -p tsconfig.declaration.json",
     "prebuild": "rimraf build tsconfig.declaration.tsbuildinfo && yarn eslint",
     "postbuild": "yarn build:types && yarn prettier",
@@ -40,6 +40,9 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@appbuckets/react-ui-core": "1.0.0-alpha.1"
+    "@appbuckets/react-ui-core": "1.0.0-alpha.1",
+    "clsx": "^1.2.1",
+    "deepmerge": "^4.2.2",
+    "rfdc": "^1.3.0"
   }
 }

@@ -28,7 +28,7 @@
   "homepage": "https://react-ui.appbuckets.io",
   "license": "MIT",
   "scripts": {
-    "build": "rollup --config ../../rollup.config.js --input src/index.ts",
+    "build": "rollup --config ../../rollup.config.js --bundleConfigAsCjs --input src/index.ts",
     "build:types": "tsc -p tsconfig.declaration.json",
     "prebuild": "rimraf build tsconfig.declaration.tsbuildinfo && yarn eslint",
     "postbuild": "yarn build:types && yarn prettier",
