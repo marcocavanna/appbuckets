@@ -72,6 +72,10 @@ module.exports = {
     'react/prop-types'                 : [ 'off' ],
     'react/require-default-props'      : [ 'off' ],
     'react/state-in-constructor'       : [ 'error', 'never' ],
-    'react/static-property-placement'  : [ 'off' ]
+    'react/static-property-placement'  : [ 'off' ],
+
+    "react-hooks/exhaustive-deps": ["warn", {
+      "additionalHooks": "(useEnhancedEffect)"
+    }]
   }
 };

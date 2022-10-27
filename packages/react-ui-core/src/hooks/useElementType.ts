@@ -35,6 +35,7 @@ type ElementTypeMapper<P extends AnyObject, K extends keyof KeysMatching<P, stri
 
 /**
  * Get the ElementType that must be used to render a Component
+ *
  * @param Component The Component to render
  * @param props Props received by Component
  * @param defaultElementType A default element type to use
